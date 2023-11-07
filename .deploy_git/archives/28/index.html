@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>什么是绝对地址和相对地址？ | 胖子君</title><meta name="author" content="胖子君·clarance"><meta name="copyright" content="胖子君·clarance"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="绝对地址和相对地址概念是网站开发基础知识中很重要的知识点，相对地址、绝对地址也有人称为相对路径、绝对路径。那么绝对地址和相对地址究竟是什么？它们又有什么区别呢？今天益吾库就来系统的讲一讲。绝对地址根据所处环境不同又可以细分为两种：一种是网络绝对地址，一种是本地绝对地址。其中网络绝对地址就是以http:&#x2F;&#x2F;、ftp:&#x2F;&#x2F;或https:&#x2F;&#x2F;等网络协议名开头的地址，如：http:&#x2F;&#x2F;www.yiwu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是绝对地址和相对地址？">
+<meta property="og:url" content="https://www.v-li.com/archives/28/index.html">
+<meta property="og:site_name" content="胖子君">
+<meta property="og:description" content="绝对地址和相对地址概念是网站开发基础知识中很重要的知识点，相对地址、绝对地址也有人称为相对路径、绝对路径。那么绝对地址和相对地址究竟是什么？它们又有什么区别呢？今天益吾库就来系统的讲一讲。绝对地址根据所处环境不同又可以细分为两种：一种是网络绝对地址，一种是本地绝对地址。其中网络绝对地址就是以http:&#x2F;&#x2F;、ftp:&#x2F;&#x2F;或https:&#x2F;&#x2F;等网络协议名开头的地址，如：http:&#x2F;&#x2F;www.yiwu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.v-li.com/img/bk_img/img11.jpg">
+<meta property="article:published_time" content="2020-06-11T06:37:53.000Z">
+<meta property="article:modified_time" content="2023-11-07T01:50:11.735Z">
+<meta property="article:author" content="胖子君·clarance">
+<meta property="article:tag" content="网站技巧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.v-li.com/img/bk_img/img11.jpg"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://www.v-li.com/archives/28/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '什么是绝对地址和相对地址？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-11-07 09:50:11'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bk_img/img11.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="胖子君"><span class="site-name">胖子君</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">什么是绝对地址和相对地址？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-06-11T06:37:53.000Z" title="发表于 2020-06-11 14:37:53">2020-06-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-07T01:50:11.735Z" title="更新于 2023-11-07 09:50:11">2023-11-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="什么是绝对地址和相对地址？"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container">  <p>绝对地址和相对地址概念是网站开发基础知识中很重要的知识点，相对地址、绝对地址也有人称为相对路径、绝对路径。那么绝对地址和相对地址究竟是什么？它们又有什么区别呢？今天益吾库就来系统的讲一讲。</p><p><strong>绝对地址</strong></p><p>根据所处环境不同又可以细分为两种：一种是网络绝对地址，一种是本地绝对地址。</p><p>其中网络绝对地址就是以http://、ftp://或https://等网络协议名开头的地址，如：http://www.yiwuku.com/a/19983.html，其中www.yiwuku.com是指网站域名，a是指目录，19983.html是指文件；本地绝对地址是指在本地计算机存储器（硬盘、U盘等）上面的地址，通常以盘符&quot;C:/&quot;开始。如：c:/website/img/photo.jpg、D:/website/index.html等，其中&quot;C:/&quot;是指C盘，“website”是指目录（文件夹）。</p><p>理论上，互联网上的绝对地址，被任何网站链接都能通过这个地址直接到达目标。</p><p><strong>相对地址</strong></p><p>相对地址是指相对于当前位置的引用地址，是一种忽略最高层级或上级位置，改变相对环境也能使用的地址。</p><p>相对地址在网站前端开发中较为常见，我们通常用符号“.”来表示当前目录，用符号“..”来表示当前目录的父目录，符号“/”则代表根目录，前提是以它开头。下面我以在一个名为index.html的网页文件中插入一张图片为例说明：</p><blockquote><p>&lt;img src=&quot;./images/a.jpg&quot;&gt;</p></blockquote><p>./代表当前所在目录，即与index.html是在同一级目录；</p><blockquote><p>&lt;img src=&quot;../images/a.jpg&quot;&gt;</p></blockquote><p>../代表的是上一层目录，即父目录，同时也是index.html的父目录；</p><blockquote><p>&lt;img src=&quot;../../images/a.jpg&quot;&gt;</p></blockquote><p>../../代表的是上一层目录的上一层目录，即父目录的父目录；</p><blockquote><p>&lt;img src=&quot;/images/a.jpg&quot;&gt;</p></blockquote><p>/代表根目录，即网站域名所指向的最高层目录；（参考阅读：到底什么是网站根目录？）</p><p><strong>绝对地址和相对地址区别</strong></p><p>首先，我们要明确这两种地址只是不同的文件索引方式，它们并没有好坏之分，不同场景灵活运用才是关键。</p><p>绝对地址和相对地址对于网站开发方面的区别就在于，使用相对地址时，在将网站文件整体迁移到其他服务器或环境的时候，原来使用的文件地址还是可以用，而这时候绝对地址则是引用原来域名对应服务器的文件，域名失效就意味着文件引用失败。</p><p>我们再来以在网页中引用一张图片为例：</p><blockquote><p>&lt;img src=&quot;http://www.yiwuku.com/pictures/1.jpg&quot;&gt;</p></blockquote><p>这句代码意思是插入一张图片，图片绝对地址是“http://www.yiwuku.com/pictures/1.jpg”，即：这张图片是放在www.yiwuku.com网站下pictures目录中，图片文件名是：“1.jpg”。实际上我们若是在本站使用这样的代码，那么图片地址则可以写为/pictures/1.jpg，跨站引用时则必须用绝对地址，很多时候为了解决跨目录和目录层级复杂的问题，开发者们常常更偏爱使用绝对地址。</p><p>另外，在SEO优化方面绝对地址也常常具有很重要的实际意义：<br /></p><p>1、使用绝对地址做站内链接，当网页被转载或被RSS阅读器爬取时，链接不会发生变化。如：到底什么是网站根目录&nbsp;这个链接锚文本使用的是绝对地址：http://www.yiwuku.com/a/19980.html，如果使用相对地址：/a/19980.html 那么本文被转载到其它网站时，可能变为：其它网站域名/a/19980.html。</p><p>&nbsp;2、首页链接尽可能使用绝对地址，特别是一些独立IP的网站，使用绝对地址可以防止网站被其他域名镜像。假如&nbsp;www.yiwuku.com&nbsp;首页都用相对地址，那么当有其它域名指向本站IP时，在搜索引擎和用户看来，镜像域名指向和本站的内容将是一模一样，首页使用绝对地址后，用户就只有第一次点击是在镜像域名之下，其后都将来到www.yiwuku.com域名下。</p>  </article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.v-li.com">胖子君·clarance</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.v-li.com/archives/28/">https://www.v-li.com/archives/28/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.v-li.com" target="_blank">胖子君</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99%E6%8A%80%E5%B7%A7/">网站技巧</a></div><div class="post_share"><div class="social-share" data-image="/img/bk_img/img11.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/33/" title="关于字体图标那些事你知道多少？"><img class="cover" src="/img/bk_img/img02.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">关于字体图标那些事你知道多少？</div></div></a></div><div class="next-post pull-right"><a href="/archives/13/" title="怎样查看网页源代码和审查元素？"><img class="cover" src="/img/bk_img/img06.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">怎样查看网页源代码和审查元素？</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/archives/41/" title="12种最常用的网页编程语言"><img class="cover" src="/img/bk_img/img03.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-26</div><div class="title">12种最常用的网页编程语言</div></div></a></div><div><a href="/archives/40/" title="99%的人都搞不懂HTTP中GET与POST的区别？"><img class="cover" src="/img/bk_img/img07.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-11</div><div class="title">99%的人都搞不懂HTTP中GET与POST的区别？</div></div></a></div><div><a href="/archives/8/" title="GB2312、GBK与UTF-8网页编码区别解惑"><img class="cover" src="/img/bk_img/img10.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-11</div><div class="title">GB2312、GBK与UTF-8网页编码区别解惑</div></div></a></div><div><a href="/archives/7/" title="H1标签到底要怎么用才对？"><img class="cover" src="/img/bk_img/img08.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-11</div><div class="title">H1标签到底要怎么用才对？</div></div></a></div><div><a href="/archives/6/" title="H5网页文档头部meta标签功能大全"><img class="cover" src="/img/bk_img/img07.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-11</div><div class="title">H5网页文档头部meta标签功能大全</div></div></a></div><div><a href="/archives/5/" title="HTML5 div article section标签区别与应用"><img class="cover" src="/img/bk_img/img06.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-11</div><div class="title">HTML5 div article section标签区别与应用</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">胖子君·clarance</div><div class="author-info__description">简简单单的一个个人blog！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">简简单单的一个个人blog！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/43/" title="git 使用记录"><img src="/img/bk_img/img12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git 使用记录"/></a><div class="content"><a class="title" href="/archives/43/" title="git 使用记录">git 使用记录</a><time datetime="2023-11-06T07:38:03.000Z" title="发表于 2023-11-06 15:38:03">2023-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签"><img src="/img/bk_img/img05.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何为typecho&amp;amp;wordpress添加og标签"/></a><div class="content"><a class="title" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签">如何为typecho&amp;amp;wordpress添加og标签</a><time datetime="2023-02-03T02:11:00.000Z" title="发表于 2023-02-03 10:11:00">2023-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容"><img src="/img/bk_img/img11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SEO|网站结构化数据优化该展示哪些内容"/></a><div class="content"><a class="title" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容">SEO|网站结构化数据优化该展示哪些内容</a><time datetime="2023-01-31T01:05:25.000Z" title="发表于 2023-01-31 09:05:25">2023-01-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/41/" title="12种最常用的网页编程语言"><img src="/img/bk_img/img03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="12种最常用的网页编程语言"/></a><div class="content"><a class="title" href="/archives/41/" title="12种最常用的网页编程语言">12种最常用的网页编程语言</a><time datetime="2021-06-26T04:56:00.000Z" title="发表于 2021-06-26 12:56:00">2021-06-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"><img src="/img/bk_img/img01.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"/></a><div class="content"><a class="title" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事">《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事</a><time datetime="2021-06-17T03:50:00.000Z" title="发表于 2021-06-17 11:50:00">2021-06-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2013 - 2023 By 胖子君·clarance</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>胖子君 - 一个互联网边缘胖子君</title><meta name="author" content="胖子君·clarance"><meta name="copyright" content="胖子君·clarance"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="胖子君">
+<meta property="og:url" content="https://www.v-li.com/page/4/index.html">
+<meta property="og:site_name" content="胖子君">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/39393864?v=4">
+<meta property="article:author" content="胖子君·clarance">
+<meta property="article:tag" content="胖子君,clarance,互联网胖子君">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/39393864?v=4"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://www.v-li.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '胖子君',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-11-07 16:38:05'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/background6.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="胖子君"><span class="site-name">胖子君</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">胖子君</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/archives/33/" title="关于字体图标那些事你知道多少？"><img class="post-bg" src="/img/bk_img/img02.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于字体图标那些事你知道多少？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/33/" title="关于字体图标那些事你知道多少？">关于字体图标那些事你知道多少？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:55.000Z" title="发表于 2020-06-11 14:37:55">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">什么是字体图标？
+简单的说，就是将一种特殊的字体，通过特定方式，在网页上像传统图片一样显示的图标。如下图：
+
+字体图标(font-icon)通常是将一套图标集以字体文件的形式封装，并通过 CSS 的 @font-face 方式作为 Web Font 调用。为了解决不同环境不同浏览器的兼容和效率问题，常见封装文件格式有otf、eot、svg、ttf、woff、woff2等。比较知名的字体图标库有Glyphicons（Bootstrap）、Font Awesome（奥森图标）、Iconfont（阿里巴巴）、IcoMoon等，前两种是各自统一风格并且所有图标整体封装，文件相对较大但使用方便，后两种则更像是一种平台，需要自定义选取封装，按需生成文件在网页中加载时更有优势，但更新增减操作稍显麻烦。
+
+为什么要用字体图标？
+轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染显示，不需要下载一个个图像。与css sprite技术一样，可以减少HTTP的请求次数，而且和HTML5的离线存储配合，可以对性能做出优化。灵活性：可以像网页中的文字一样，通过font-size属性来对其 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/28/" title="什么是绝对地址和相对地址？"><img class="post-bg" src="/img/bk_img/img11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是绝对地址和相对地址？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/28/" title="什么是绝对地址和相对地址？">什么是绝对地址和相对地址？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:53.000Z" title="发表于 2020-06-11 14:37:53">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  绝对地址和相对地址概念是网站开发基础知识中很重要的知识点，相对地址、绝对地址也有人称为相对路径、绝对路径。那么绝对地址和相对地址究竟是什么？它们又有什么区别呢？今天益吾库就来系统的讲一讲。绝对地址根据所处环境不同又可以细分为两种：一种是网络绝对地址，一种是本地绝对地址。其中网络绝对地址就是以http://、ftp://或https://等网络协议名开头的地址，如：http://www.yiwuku.com/a/19983.html，其中www.yiwuku.com是指网站域名，a是指目录，19983.html是指文件；本地绝对地址是指在本地计算机存储器（硬盘、U盘等）上面的地址，通常以盘符&quot;C:/&quot;开始。如：c:/website/img/photo.jpg、D:/website/index.html等，其中&quot;C:/&quot;是指C盘，“website”是指目录（文件夹）。理论上，互联网上的绝对地址，被任何网站链接都能通过这个地址直接到达目标。相对地址相对地址是指相对于当前位置的引用地址，是一种忽略最高层级或上级位置，改变相对环境也能使用的地址。相对地 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/13/" title="怎样查看网页源代码和审查元素？"><img class="post-bg" src="/img/bk_img/img06.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="怎样查看网页源代码和审查元素？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/13/" title="怎样查看网页源代码和审查元素？">怎样查看网页源代码和审查元素？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:52.000Z" title="发表于 2020-06-11 14:37:52">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">什么是网页源代码？
+通俗地讲，就是构造出网页的一种机器语言，我们通过浏览器看到网页中的图片、文字等内容，就是网页源代码呈现的结果。浏览器是客户端，经它“翻译”的就是html、css、js等静态代码，网页源代码在服务器端通常还包括php、asp、java等程序类代码语言。程序一般是负责输出和交互网站数据，只在服务器端运行。
+如何查看网页源代码？
+我们通常所指的查看源代码是指在浏览器中查看，各种PC版本浏览器几乎都能简单直接的“查看源代码”，方式大同小异：共同点是在网页空白处点击鼠标右键会出现菜单，菜单中基本都有“查看源代码”选项，按下F12键都能出现开发者工具，在该工具窗口中也能看到源代码。
+
+不同则是通过菜单查看方法存在差异：
+
+微软IE浏览器以IE9为例默认情况下隐藏了浏览器菜单栏，因此在打开IE9浏览器以后，需要按键盘上的ALT键来显示浏览器工具栏。在显示出来的IE菜单栏上点击菜单“查看”→“源文件”。IE浏览器会自动打开一个新的窗口来显示网页源代码。
+使用Firefox火狐浏览器查看网页源代码，点击Firefox浏览器左上角的快捷菜单，在下拉菜单中点击“Web开发者”→“查看页面 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/36/" title="对付DDoS攻击的一些绝招"><img class="post-bg" src="/img/bk_img/img01.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对付DDoS攻击的一些绝招"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/36/" title="对付DDoS攻击的一些绝招">对付DDoS攻击的一些绝招</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:45.000Z" title="发表于 2020-06-11 14:37:45">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">DDoS攻击全名叫做分布式拒绝服务(DDoS：Distributed Denial of Service)，攻击者往往将多个计算机平台联合起来对同一个目标或者多个目标进行攻击，攻击所造成的后果也因此而严重程度不同。
+DDoS攻击出现至今已将近三十年，可是至今依然未能出现有效的应对手段。上次里约奥运会期间，DDoS攻击再次大行其道。全球攻击峰值达到了今年的最高值，可见只是一种人来疯而且还不怕见光的攻击手段。
+那么DDoS攻击为何如此无解呢?因为DDoS攻击常常会采用通过大量合法的请求的手段占用服务器网络资源，由此而达到瘫痪网络的目的。服务器在面对DDoS攻击时很难合理的判定和区分请求，因此遭受攻击时往往束手无策，只能等待攻击者停止攻击。
+
+拒绝服务攻击的发展
+
+从拒绝服务攻击诞生到现在已经有了很多的发展，从最初的简单Dos到现在的DdoS。那么什么是Dos和DdoS呢？DoS是一种利用单台计算机的攻击 方式。而DdoS(Distributed Denial of Service，分布式拒绝服务)是一种基于DoS的特殊形式的拒绝服务攻击，是一种分布、协作的大规模攻击方式，主要瞄准比较大的站 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/5/" title="HTML5 div article section标签区别与应用"><img class="post-bg" src="/img/bk_img/img06.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML5 div article section标签区别与应用"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/5/" title="HTML5 div article section标签区别与应用">HTML5 div article section标签区别与应用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:42.000Z" title="发表于 2020-06-11 14:37:42">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  HTML5推出了一系列新元素，被广泛应用。然而，有一些元素在使用时易与传统div元素混淆，特别是这两个新元素：&lt;section&gt;和&lt;article&gt;。 我们最常被新手问到的问题是：在什么情况下我们应该使用这些元素？以及我们应该如何正确的使用这些元素？ 今天我们就来探讨一下它们之间的区别。一、section元素&nbsp; &nbsp; &nbsp; &nbsp;从字面理解就是区块、部分的意思，相对于article元素更加广泛，每个区块都可以使用，比如页面里的导航菜单、文章正文、文章的评论等。&nbsp; &nbsp; &nbsp; &nbsp;1、section元素用于对网站或应用程序中页面上的内容进行分块，section元素的作用是对页面上的内容进行分块，或者说对文章进行分段，；&nbsp; &nbsp; &nbsp; &nbsp;2、一个section元素通常由内容及其标题组成。通常不推荐为那些没有标题的内容使用section元素，&nbsp; &nbsp; &nbsp; &nbsp;3、section元素并非一个普通的容器元素；当一个内容需要被直接定义 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/34/" title="各大知名邮箱介绍及SMTP群发送量限制情况"><img class="post-bg" src="/img/bk_img/img02.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="各大知名邮箱介绍及SMTP群发送量限制情况"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/34/" title="各大知名邮箱介绍及SMTP群发送量限制情况">各大知名邮箱介绍及SMTP群发送量限制情况</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:41.000Z" title="发表于 2020-06-11 14:37:41">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">网络产品推广和消息资讯推送，经常用到的工具就是用客户邮箱发送邮件，如果是要发送的邮件量非常大的话，一般的建议是搭建自己的邮局服务器，或者是花钱购买专业的邮件群发服务，免费邮箱的SMTP适合少量的邮件群发需求。随着自动注册机和发帖机的泛滥，很多站长也使用邮箱验证的方式注册用户，但国内免费邮箱限制颇多，建议有条件的站长尽量使用收费邮箱或者企业邮箱。今天我们就来了解一下各大知名邮箱的历史及SMTP群发送量限制情况。
+QQ邮箱 mail.qq.com
+QQ邮箱是腾讯公司2002年推出免费邮箱服务，最早的QQ邮箱还只是QQ用户之间发送域内消息的工具，不支持向外域发送邮件。后来开放了向外域发送功能，这是才能成为真正的邮箱。QQ邮箱开始改变是在06年，到2007版以后，QQ邮箱便频繁发力，几乎在不停的更新。开发换肤功能、增加POP文件夹、增加QQ邮件订阅、添加邮件记事本等各种各样的功能开始出现，邮箱也变得完善起来。
+QQ邮箱POP3服务器（端口995）：qq.com，SMTP服务器（端口465或587）：smtp.qq.com，账户名：您的QQ邮箱账户名（如果您是VIP帐号或Foxmail帐号，账户 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/35/" title="个性化网页字体格式引用详解"><img class="post-bg" src="/img/bk_img/img06.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个性化网页字体格式引用详解"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/35/" title="个性化网页字体格式引用详解">个性化网页字体格式引用详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:38.000Z" title="发表于 2020-06-11 14:37:38">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  作为网页设计师，我们希望用精美的字体来帮助我们为网页排版，好的排版是组成优秀网页设计的重要组成部分，字体在网页设计中扮演了相对重要的一个角色,所以在网站中，选用什么样的字体也是一个相对比较重要的工作。而网页使用的字体缺受制于操作系统，也就是说在一般情况下网页能呈现什么的字体取决于用户的操作系统有没有安装某个字体，若未预装即使被样式指定，网页也会退而求其次的启用系统自带的其它字体。这也是我们在不同电脑、不同手机上同一网页中看到不同字体的原因。基于操作系统WEB可直接引用的字体就叫做网页安全字体，有关英文安全字体可以参阅本站《网页前端设计常用Web安全字体》，中文则可以参阅《CSS常用中文字体名转Unicode编码对照表》。使用安全字体外的个性化网页字体，则需要上传相应字体文件到网页服务器中引用。不同浏览器所支持的字体格式不一样，以下是几种常见字体格式介绍：TureTrpe（.ttf）格式.ttf字体是Windows和Mac的最常见字体，是一种RAW格式，支持这种字体的浏览器有IE9、Firefox3.5+、Chrome4+、Safari3+、Opera10+、IOS Mobile、S ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/22/" title="提高网站内容吸引力的10个技巧"><img class="post-bg" src="/img/bk_img/img04.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="提高网站内容吸引力的10个技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/22/" title="提高网站内容吸引力的10个技巧">提高网站内容吸引力的10个技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:37.000Z" title="发表于 2020-06-11 14:37:37">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  互联网当道的当下网站数以亿计，在这样一个信息时代背景下，制造优质内容去赢得更多“眼球”尤为重要，为何有些内容能那么具有吸引力？另外一些却给人感觉很无聊？为何你每天更新文章，却几乎没有人来浏览或者留言？为何你的网站天天发布原创，流量始终上不去？经过笔者这些年的观察和思考，我总结出优秀内容所具备的10点特质，现在就把秘诀分享给大家：　　1）”F扫视区域”给人的启示　　著名的Nielsen对用户浏览网页的行为作了一番研究，此研究是基于232个用户观看上千个页面后得出的结论，他们发现用户的阅读行为习惯相当的一致即使是不同的站点和任务。这个显著地阅读轨迹看起来有点像一个字母 “F” ，它包括如下三部分：　　?用户首先会做横向阅读，较为仔细地阅读内容的上方部位，这样的一个阅读轨迹组成了F的上横线；　　?接下来，顺着页面往下读，用户会做第二次横向阅读，但这次阅读的字数明显比第一次少和短，第二次的横向构成了F的第二条横线。　　?最后，用户顺着页面阅读到最底部，有时候这个过程有时候相当缓慢，有时候则很快。　　2）增加内容的“信噪比”　　不知道大家有没有注意，我们说话的时候很喜欢说 “恩…” “这个… ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/8/" title="GB2312、GBK与UTF-8网页编码区别解惑"><img class="post-bg" src="/img/bk_img/img10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GB2312、GBK与UTF-8网页编码区别解惑"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/8/" title="GB2312、GBK与UTF-8网页编码区别解惑">GB2312、GBK与UTF-8网页编码区别解惑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:34.000Z" title="发表于 2020-06-11 14:37:34">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  GB2312、GBK和UTF-8都是字符编码，除此之外，全世界还有很多种字符编码，对于我们中国网站来说，用这三种编码比较多。那么为什么会有编码这个问题呢？在计算机内，储存文本信息用ASC II码，每一个字符对应着唯一的ASCII码。最初计算机是由美国发明的，他们也用的是键盘和上面的字母，所以他们的字符ASCII好解决。但是我们国家就不同了，每个汉字要对应唯一的ASCII码。这样，就出来了国家制定的字符编码标准：GB2312、GBK等。其他国家，其他语言也有他们对应的编码 标准。 GB 就是国标的意思，GB2312和GBK主要用于汉字的编码，而UTF-8是全世界通用的。意思就是说，如果你的网页主要面对使用汉语的中国人的话，使用 GB2312和GBK就好，文字储存体积要小，有一些优点。如果你的网页要面向世界的话，你再用GB2312和GBK作为网页编码的话，有些电脑上的浏 览器没有这种编码，你的网页汉字内容就会变成无法识别的乱码。 它们通常用在网页的meta标签内，例如：meta charset=&quot;gb2312&quot;，表示这个页面使用的是GB2312编码。这个信息是给浏览 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/27/" title="什么是网站备案？备案和不备案有何区别？"><img class="post-bg" src="/img/bk_img/img07.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是网站备案？备案和不备案有何区别？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/27/" title="什么是网站备案？备案和不备案有何区别？">什么是网站备案？备案和不备案有何区别？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:34.000Z" title="发表于 2020-06-11 14:37:34">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  什么是网站备案？网站备案是指根据国家法律法规需要网站的所有者向国家有关部门申请的备案，目前主要有ICP备案和公安局备案，通常指ICP备案。ICP备案根据主办主体不同，又分为个人备案和企业备案两种。网站备案成功后可以在工信部网站beian.miit.gov.cn查询到形如“京ICP备12345678号”的备案号，根据规定该备案号应以链接形式加到网站网页中。网站备案是域名备案还是空间备案？简单来讲，域名如果绑定指向到国内网站空间就要备案。也就是说如果你这个域名只是纯粹注册下来，用作投资或者暂时不用，是无需备案的。域名指向到国外网站空间，也是无需备案的。2013年10月30日，所有新注册的.cn/.中国/.公司/.网络域名，将不再设置“ClientHold”暂停解析状态，对已设置展示页的域名发布交易、PUSH过户、域名信息变更、取消展示页、修改 DNS解析等操作，域名将不再加上ClientHold状态。但解除“ClientHold”的域名，仍需备案通过才可以解析到大陆IP。网站备案、ICP备案和域名备案的区别其实网站备案就是ICP备案，两者没有本质区别，即为网站申请ICP备案号，最终的目 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">胖子君·clarance</div><div class="author-info__description">简简单单的一个个人blog！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">简简单单的一个个人blog！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/43/" title="git 使用记录"><img src="/img/bk_img/img12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git 使用记录"/></a><div class="content"><a class="title" href="/archives/43/" title="git 使用记录">git 使用记录</a><time datetime="2023-11-06T07:38:03.000Z" title="发表于 2023-11-06 15:38:03">2023-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签"><img src="/img/bk_img/img05.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何为typecho&amp;amp;wordpress添加og标签"/></a><div class="content"><a class="title" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签">如何为typecho&amp;amp;wordpress添加og标签</a><time datetime="2023-02-03T02:11:00.000Z" title="发表于 2023-02-03 10:11:00">2023-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容"><img src="/img/bk_img/img11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SEO|网站结构化数据优化该展示哪些内容"/></a><div class="content"><a class="title" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容">SEO|网站结构化数据优化该展示哪些内容</a><time datetime="2023-01-31T01:05:25.000Z" title="发表于 2023-01-31 09:05:25">2023-01-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/41/" title="12种最常用的网页编程语言"><img src="/img/bk_img/img03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="12种最常用的网页编程语言"/></a><div class="content"><a class="title" href="/archives/41/" title="12种最常用的网页编程语言">12种最常用的网页编程语言</a><time datetime="2021-06-26T04:56:00.000Z" title="发表于 2021-06-26 12:56:00">2021-06-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"><img src="/img/bk_img/img01.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"/></a><div class="content"><a class="title" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事">《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事</a><time datetime="2021-06-17T03:50:00.000Z" title="发表于 2021-06-17 11:50:00">2021-06-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/"><span class="card-category-list-name">书籍</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">技术笔记</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/"><span class="card-category-list-name">网站百科</span><span class="card-category-list-count">39</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/SEO/" style="font-size: 1.3em; color: #99a1ac">SEO</a> <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE/" style="font-size: 1.1em; color: #999">结构化数据</a> <a href="/tags/pdf%E4%B8%8B%E8%BD%BD/" style="font-size: 1.1em; color: #999">pdf下载</a> <a href="/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">书籍推荐</a> <a href="/tags/%E7%BD%91%E7%AB%99%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: #99a9bf">网站技巧</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 1.1em; color: #999">资源分享</a> <a href="/tags/%E6%B4%BB%E7%9D%80/" style="font-size: 1.1em; color: #999">活着</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">38</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">43</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-11-07T08:38:05.560Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2013 - 2023 By 胖子君·clarance</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  getScript('https://yijuzhan.com/api/word.php?m=js').then(() => {
+    const con = str[0]
+    if (true) {
+      const from = '出自 ' + str[1]
+      const sub = []
+      sub.unshift(con, from)
+      typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = con
+    }
+  })
+}
+typedJSFn.run(subtitleType)
+</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

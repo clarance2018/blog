@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>胖子君 - 一个互联网边缘胖子君</title><meta name="author" content="胖子君·clarance"><meta name="copyright" content="胖子君·clarance"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="胖子君">
+<meta property="og:url" content="https://www.v-li.com/index.html">
+<meta property="og:site_name" content="胖子君">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/39393864?v=4">
+<meta property="article:author" content="胖子君·clarance">
+<meta property="article:tag" content="胖子君,clarance,互联网胖子君">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/39393864?v=4"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://www.v-li.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '胖子君',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-11-07 16:38:05'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/background6.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="胖子君"><span class="site-name">胖子君</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">胖子君</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/archives/43/" title="git 使用记录"><img class="post-bg" src="/img/bk_img/img12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git 使用记录"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/43/" title="git 使用记录">git 使用记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-06T07:38:03.000Z" title="发表于 2023-11-06 15:38:03">2023-11-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a></span></div><div class="content">设置Git本地仓库的步骤:选择一个目录作为本地仓库,进入该目录下:1cd path/to/project-folder
+初始化本地仓库:1git init
+这会在当前目录下创建一个隐藏的.git目录,用来跟踪版本信息。
+添加文件到版本控制:1git add file1 file2 
+或者添加所有文件:
+1git add .
+提交文件到本地仓库:1git commit -m &quot;first commit&quot;
+设置用户信息(可选):12git config user.name &quot;Your Name&quot;git config user.email &quot;email@example.com&quot;
+检查状态:1git status
+查看历史记录:1git log
+以上步骤就完成了本地仓库的初始化和文件提交。还可以进一步:
+
+关联远程仓库
+推送文件到远程仓库
+从远程仓库拉取更新
+使用分支管理开发这样就可以在本地对项目进行版本控制了。
+
+使用Git进行版本控制时，关联远程仓库、推送文件到远程仓库、从远程仓库拉取更新以及使用分支管理开发是非常常见的操作。下面 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签"><img class="post-bg" src="/img/bk_img/img05.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何为typecho&amp;amp;wordpress添加og标签"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签">如何为typecho&amp;amp;wordpress添加og标签</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-03T02:11:00.000Z" title="发表于 2023-02-03 10:11:00">2023-02-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a></span></div><div class="content">og标签用于社交分享时第三方网站获取网页基本信息，诸如网页封面图片、网页标题、网页描述等。
+Open Graph Protocol（开放图谱协议），简称 OG 协议或 OGP。它是 Facebook 在 2010 年 F8 开发者大会公布的一种网页元信息（Meta Information）标记协议，是一种制定一套Metatags的规格，用来标注你的页面，即这种协议可以让网页成为一个“富媒体对象”。是一种 Meta 标签。作用就是为社交分享而生的 Meta 标签。它是目前社交媒体优化（SMO）的基本操作。
+更多og标签设置：SEO|网站结构化数据优化该展示哪些内容 
+如何为wordpress添加og标签？function sk_og_meta() &#123; 
+    if(is_single())&#123;
+        $og_image = catch_that_image(); //如果是文章页面，把文章中的第一张图片作为og:image
+    &#125;
+    if(!$og_image)&#123;
+        $og_image = &#39;image_u ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容"><img class="post-bg" src="/img/bk_img/img11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SEO|网站结构化数据优化该展示哪些内容"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容">SEO|网站结构化数据优化该展示哪些内容</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-31T01:05:25.000Z" title="发表于 2023-01-31 09:05:25">2023-01-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a></span></div><div class="content">一、什么是网站结构化数据优化？
+这个最开始是主要是google那边用得多，简单理解就是不再是搜索单一标题和描述，做了这个搜索相关评价等数据也会显示出来，让搜索用户了解更多。
+百度2013年上线该功能，一是描述摘要是在普通摘要基础上增加了一些结构化内容，给用户提供更丰富的摘要内容。比如问答类结果中的回复数、提问时间，资料下载中的资料大小，下载条件，软件下载类结果中的软件大小、更新时间等。
+百度针对此推出的结构化数据工具是百度引入优质结构化数据的入口，现在互联网中的资源类型越来越多，内容越来越丰富，为了给用户展示更丰富的搜索结果，同时给予网站内容更合适的展现，提高搜索结果的点击率。
+百度站长资源平台结构化数据工具二、提交的结构化数据都会展现结构化摘要吗？
+百度对已提交的结构化数据，不保证一定会展现。展现结构化摘要的条件包括但不限于：
+1、结构化字段表述准确，符合规范。
+2、结构化字段内容与页面相应内容一致。
+3、页面内容质量高，如问答页，答案需有助于提问者解决疑问。
+4、url已被百度收录。
+三、各类型网站结构化数据优化代码
+1、短视频类
+&lt;!--必填--&gt;
+
+&lt;meta ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/41/" title="12种最常用的网页编程语言"><img class="post-bg" src="/img/bk_img/img03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="12种最常用的网页编程语言"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/41/" title="12种最常用的网页编程语言">12种最常用的网页编程语言</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-26T04:56:00.000Z" title="发表于 2021-06-26 12:56:00">2021-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  随着互联网的发展，网站已经越来越普及，相关数据显示目前全球有超过10亿个网站，庞大的基数必定促进相关技术的发展。不难发现时下与Web相关的开发技术持续热门，从前端到后端，从标记语言到开发语言，各种技术层出不穷，从开始简单的html到复杂的web开发语言asp、asp.net、php、jsp等等，不知不觉网页编程语言目前至少已有十几种，今天小编就跟大家简单的介绍一下常见的12种网页编程语言：1、PHPPHP是一个嵌套的缩写名称，是英文“超级文本预处理语言”（PHP:Hypertext Preprocessor）的缩写。PHP是一种HTML内嵌式的语言，与微软的ASP颇有几分相似，都是一种在服务器端执行的“嵌入HTML文档的脚本语言”，语言的风格有类似于C语言，现在被很多的网站编程人员广泛的运用。PHP独特的语法混合了C、Java、Perl以及PHP自创新的语法。它可以比CGI或者Perl更快速的执行动态网页。用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；与同样是嵌入HTML文档的脚本语言JavaS ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"><img class="post-bg" src="/img/bk_img/img01.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事">《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-17T03:50:00.000Z" title="发表于 2021-06-17 11:50:00">2021-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B9%A6%E7%B1%8D/">书籍</a></span></div><div class="content">  
+精彩书评这是真正意义上，让我觉得无话可说的小说。言语让我觉得自己苍白肤浅。——读者评论
+第1次看的时候还是个学生，在宿舍里 ，躲在床上，大家沉默着看着这本书。最后始终忍不住，对面的女孩带着哭腔开始骂人，怎么可以这样，怎么可以这样？一抬头，大家的眼睛都是红的。——读者评论
+最后的结束，其实作者也对我们昭示着生命的希望，无论这个生命正经历着怎样的悲苦？——读者评论
+高中时看过，对我触动很大。然后就把余华的其他基本书都看了。感动。改变了我的人生观。——读者评论
+精彩书摘我比现在年轻十岁的时候，获得了一个游手好闲的职业，去乡间收集民间歌谣。那一年的整个夏天，我如同一只乱飞的麻雀，游荡在知了和阳光充斥的农村。我喜欢喝农民那种带有苦味的茶水，他们的茶桶就放在田埂的树下，我毫无顾忌地拿起积满茶垢的茶碗舀水喝，还把自己的水壶灌满，与田里干活的男人说上几句废话，在姑娘因我而起的窃窃私笑里扬长而去。我曾经和一位守着瓜田的老人聊了整整一个下午，这是我有生以来瓜吃得最多的一次，当我站起来告辞时，突然发现自己像个孕妇一样步履艰难了。然后我与一位当上了祖母的女人坐在门槛上，她编着草鞋为我唱了一支《十月怀胎》 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/31/" title="判断一个网站是由哪种语言开发的方法"><img class="post-bg" src="/img/bk_img/img03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="判断一个网站是由哪种语言开发的方法"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/31/" title="判断一个网站是由哪种语言开发的方法">判断一个网站是由哪种语言开发的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:42.000Z" title="发表于 2020-06-11 14:38:42">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  现在网页开发语言有很多种，有时出于某种需要，或者一时好奇，很想查看一个网站是由哪种语言所写，那么有没有什么方法和技巧呢？一般而言，对于许多没有使用静态和伪静态技术的网站，我们可以直接查看网站页面的后缀名，例如：Server&nbsp;Side&nbsp;Includes&nbsp;技术，拓展名为.shtml或.html或.htm&nbsp;PHP技术，拓展名为.php&nbsp;JSP技术，拓展名为.jsp或.jsf(JSF技术是JSP技术的拓展)&nbsp;ASP.NET技术，拓展名为.aspx&nbsp;(x&nbsp;代表extension)&nbsp;ASP技术，拓展名为.aspColdFusion技术，拓展名为.cfc而大型一点的网站，一般用资源转向功能（就像JSP中web.xml定义的名字，把HOME转向到home.jsp，这样就隐藏了拓展名）。或者用Apache有一个URL&nbsp;Rewriting的Module，PHP网站的拓展名改变，就常用这个URL&nbsp;Rewriting，可以把.php拓展名改成任意名字。此时我们仍有5种方法进行判断：方法（1）：&n ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/21/" title="网页打开太慢？快试试这6招"><img class="post-bg" src="/img/bk_img/img06.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页打开太慢？快试试这6招"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/21/" title="网页打开太慢？快试试这6招">网页打开太慢？快试试这6招</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:41.000Z" title="发表于 2020-06-11 14:38:41">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  据安伯丁集团的一份研究结果显示，页面加载时间如果延迟了1秒，那么页面浏览量就会减少11%，客户满意度会下降16%，转化率下降7%。亚马逊的研究结果也证明了这一点，他们的报告结果显示，只要网站的速度每提高100毫秒，就会增加1%的收益。还可以引用很多其它的例子，但所有的例子都很清晰的揭示了同一个很简单的道理，那就是网页加载时间是金钱。这就是为什么企业和个人都需要竭尽所能来减少网页加载时间。记住，时间就是金钱——从字面上来说，时间往往就取决于那几微秒。这里有6种技巧来可以帮助你大大减少网页加载时间，随之而来的转化率也会相应增加。1.优化图片统计数据显示，如果网站在3秒钟之内还没有加载成功，那么大多数用户都会选择关闭。由于图片在Web页面的可下载字节空间中占大多数，所以如果能够成功的对图片进行优化，那么Web页面的下载时间也会大大的减少。确保图片正确优化的最佳方法之一是采用正确的大小和格式(JPEG、GIF或PNG)。目标是在不牺牲质量的情况下尽可能减少文件的大小，现在Web上有许多工具可以帮助解决这个问题。2.试试内容分发网络(CDN)内容分发网络的价值在于它可以获取网站的静态文件，如 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/16/" title="网站虚拟主机知识6问"><img class="post-bg" src="/img/bk_img/img09.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网站虚拟主机知识6问"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/16/" title="网站虚拟主机知识6问">网站虚拟主机知识6问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:40.000Z" title="发表于 2020-06-11 14:38:40">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  一、什么是虚拟主机？虚拟主机（Virtual Host Virtual Server）又称网站空间或网络空间网页空间是使用特殊的软硬件技术，把一台计算机主机分成一台台“虚拟”的主机，每一台虚拟主机都具有独立的域名和IP地址（或共享的IP地址），具有完整的Internet服务器功能。在同一台硬件、同一个操作系统上，运行着为多个用户打开的不同的服务器程序，互不干扰；而各个用户拥有自己的一部分系统资源（IP地址、文件存储空间、内存、CPU时间等）。虚拟主机之间完全独立， 在外界看来， 每一台虚拟主机和一台独立的主机的表现完全一样。&nbsp;随着业界的发展，虚拟主机从最开始的雏形模式慢慢的走向了高端模式。在虚拟主机上，越来越多的功能被挖掘，他将是网络的主流。二、什么是绑定域名？绑定域名也就是“主机名头”，简单的说，如果我们希望一个域名访问虚拟主机，那么我们需要做的事情是：第一步：将域名的IP解析到虚拟主机所在服务器的IP。第二步，将虚拟主机绑定该域名。做完以上两步，即可用域名访问空间了。&nbsp;什么是国际域名和国内域名互联网上的域名可谓千姿百态，但从域名的结构来划分，总体上可把域名分 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/3/" title="IIS服务器网站防盗链解决方案"><img class="post-bg" src="/img/bk_img/img08.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IIS服务器网站防盗链解决方案"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/3/" title="IIS服务器网站防盗链解决方案">IIS服务器网站防盗链解决方案</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:37.000Z" title="发表于 2020-06-11 14:38:37">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  我们知道，如果网站内容被盗链，那么流量和带宽都将有额外损耗，盗链严重时对网站运行会有明显的拖累影响。盗链最常见的情形就是图片地址被第三方网站直接引用，而拒绝本站文件被别人直接引用则可以从服务器层面寻求解决方案，今天我们就来讲讲在iis环境服务器上操作防盗链的方法。盗链是指服务提供商自己不提供服务的内容，通过技术手段绕过其它有利益的最终用户界面（如广告），直接在自己的网站上向最终用户提供其它服务提供商的服务内容，骗取最终用户的浏览和点击率。受益者不提供资源或提供很少的资源，而真正的服务提供商却得不到任何的收益。　　为什么会产生盗链？　　一般浏览有一个重要的现象就是一个完整的页面并不是一次全部传送到客户端的。如果请求的是一个带有许多图片和其它信息的页面，那么最先的一个Http请求被传送回来的是这个页面的文本，然后通过客户端的浏览器对这段文本的解释执行，发现其中还有图片，那么客户端的浏览器会再发送一条Http请求，当这个请求被处理后那么这个图片文件会被传送到客户端，然后浏览器回将图片安放到页面的正确位置，就这样一个完整的页面也许要经过发送多条Http请求才能够被完整的显示。基于这样的机制 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/9/" title="自适应网页设计制作技巧"><img class="post-bg" src="/img/bk_img/img04.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自适应网页设计制作技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/9/" title="自适应网页设计制作技巧">自适应网页设计制作技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:37.000Z" title="发表于 2020-06-11 14:38:37">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/">网站百科</a></span></div><div class="content">  自适应网页设计（Adaptive Web Design）是指能使网页自适应显示在不同大小终端设备上新网页设计方式及技术。随着4G的普及，越来越多的人使用手机上网。移动设备正超过桌面设备，成为访问互联网的最常见终端。于是，网页设计师不得不面对一个难题：如何才能在不同大小的设备上呈现同样的网页？手机的屏幕比较小，宽度通常在640像素以下；PC的屏幕宽度，一般都在1000像素以上（目前主流宽度是1920×1080），有的还达到了2000像素以上。同样的内容，要在大小迥异的屏幕上，都呈现出满意的效果，并不是一件容易的事。很多网站的解决方法，是为不同的设备提供不同的网页，比如专门提供一个mobile版本，或者iPhone / iPad版本。这样做固然保证了效果，但是比较麻烦，同时要维护好几个版本，而且如果一个网站有多个portal（入口），会大大增加架构设计的复杂度。于是，很早就有人设想，能不能&quot;一次设计，普遍适用&quot;，让同一张网页自动适应不同大小的屏幕，根据屏幕宽度，自动调整布局（layout）。网上关于这方面的文章有很多，重复的东西本文不再赘述，仅提供思路，并解释一些其 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">胖子君·clarance</div><div class="author-info__description">简简单单的一个个人blog！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">简简单单的一个个人blog！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/43/" title="git 使用记录"><img src="/img/bk_img/img12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git 使用记录"/></a><div class="content"><a class="title" href="/archives/43/" title="git 使用记录">git 使用记录</a><time datetime="2023-11-06T07:38:03.000Z" title="发表于 2023-11-06 15:38:03">2023-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签"><img src="/img/bk_img/img05.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何为typecho&amp;amp;wordpress添加og标签"/></a><div class="content"><a class="title" href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签">如何为typecho&amp;amp;wordpress添加og标签</a><time datetime="2023-02-03T02:11:00.000Z" title="发表于 2023-02-03 10:11:00">2023-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容"><img src="/img/bk_img/img11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SEO|网站结构化数据优化该展示哪些内容"/></a><div class="content"><a class="title" href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容">SEO|网站结构化数据优化该展示哪些内容</a><time datetime="2023-01-31T01:05:25.000Z" title="发表于 2023-01-31 09:05:25">2023-01-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/41/" title="12种最常用的网页编程语言"><img src="/img/bk_img/img03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="12种最常用的网页编程语言"/></a><div class="content"><a class="title" href="/archives/41/" title="12种最常用的网页编程语言">12种最常用的网页编程语言</a><time datetime="2021-06-26T04:56:00.000Z" title="发表于 2021-06-26 12:56:00">2021-06-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"><img src="/img/bk_img/img01.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事"/></a><div class="content"><a class="title" href="/archives/42/" title="《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事">《活着》余华：不失朴素粗粝的史诗，斗争和生存的故事</a><time datetime="2021-06-17T03:50:00.000Z" title="发表于 2021-06-17 11:50:00">2021-06-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B9%A6%E7%B1%8D/"><span class="card-category-list-name">书籍</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">技术笔记</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/"><span class="card-category-list-name">网站百科</span><span class="card-category-list-count">39</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/SEO/" style="font-size: 1.3em; color: #99a1ac">SEO</a> <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE/" style="font-size: 1.1em; color: #999">结构化数据</a> <a href="/tags/pdf%E4%B8%8B%E8%BD%BD/" style="font-size: 1.1em; color: #999">pdf下载</a> <a href="/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">书籍推荐</a> <a href="/tags/%E7%BD%91%E7%AB%99%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: #99a9bf">网站技巧</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 1.1em; color: #999">资源分享</a> <a href="/tags/%E6%B4%BB%E7%9D%80/" style="font-size: 1.1em; color: #999">活着</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">38</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">43</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-11-07T08:38:05.560Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2013 - 2023 By 胖子君·clarance</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  getScript('https://yijuzhan.com/api/word.php?m=js').then(() => {
+    const con = str[0]
+    if (true) {
+      const from = '出自 ' + str[1]
+      const sub = []
+      sub.unshift(con, from)
+      typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = con
+    }
+  })
+}
+typedJSFn.run(subtitleType)
+</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
