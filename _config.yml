@@ -104,4 +104,4 @@ theme: butterfly
 deploy:
   type: git
   repo: git@github.com:clarance2018/clarance2018.github.io.git
-  branch: master
+  branch: main
