@@ -1,0 +1,27 @@
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: 胖子君
+      link: https://www.v-li.com
+      avatar: https://avatars.githubusercontent.com/u/39393864?v=4
+      descr: 简简单单的个人blog!
+    - name: 胖子君起始页
+      link: https://nav.v-li.com
+      avatar: https://avatars.githubusercontent.com/u/39393864?v=4
+      descr: 一个包含各种搜索的起始页，也可以添加自己常用的页面。不断优化中。。。
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: 阮一峰
+      link: https://www.ruanyifeng.com/
+      avatar: https://www.ruanyifeng.com/favicon.ico
+      descr: 科技博客
+    - name: 酷 壳 – CoolShell
+      link: https://coolshell.cn/
+      avatar: https://coolshell.cn/favicon.ico
+      descr: 享受编程和技术所带来的快乐
+    - name: 廖雪峰
+      link: https://www.liaoxuefeng.com/
+      avatar: https://www.liaoxuefeng.com/favicon.ico
+      descr: 技术分享平台
