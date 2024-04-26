@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>git 使用记录 | 胖子君</title><meta name="author" content="飞鲤"><meta name="copyright" content="飞鲤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git本地仓库设置与操作指南1. 设置Git本地仓库 选择一个目录作为本地仓库：首先，确定一个目录作为你的本地Git仓库。 进入该目录：打开终端或命令行界面，并导航到所选目录。 初始化本地仓库：在该目录下运行git init命令来初始化一个新的Git仓库。1git init 这会在当前目录下创建一个隐藏的.git目录,用来跟踪版本信息。  2. 设置用户信息（可选）在开始使用Git之前，你可以设置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 使用记录">
+<meta property="og:url" content="https://www.v-li.com/archives/43/index.html">
+<meta property="og:site_name" content="胖子君">
+<meta property="og:description" content="Git本地仓库设置与操作指南1. 设置Git本地仓库 选择一个目录作为本地仓库：首先，确定一个目录作为你的本地Git仓库。 进入该目录：打开终端或命令行界面，并导航到所选目录。 初始化本地仓库：在该目录下运行git init命令来初始化一个新的Git仓库。1git init 这会在当前目录下创建一个隐藏的.git目录,用来跟踪版本信息。  2. 设置用户信息（可选）在开始使用Git之前，你可以设置">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.v-li.com/img/bk_img/img06.webp">
+<meta property="article:published_time" content="2023-11-06T07:38:03.000Z">
+<meta property="article:modified_time" content="2024-02-28T08:21:14.571Z">
+<meta property="article:author" content="飞鲤">
+<meta property="article:tag" content="技术笔记">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.v-li.com/img/bk_img/img06.webp"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://www.v-li.com/archives/43/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c3b47e462e0d37228d939555eff17bc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'git 使用记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-02-28 16:21:14'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/img/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bk_img/img06.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="胖子君"><img class="site-icon" src="/img/icon/favicon.ico"/><span class="site-name">胖子君</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/img/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">git 使用记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-06T07:38:03.000Z" title="发表于 2023-11-06 15:38:03">2023-11-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-28T08:21:14.571Z" title="更新于 2024-02-28 16:21:14">2024-02-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="git 使用记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Git本地仓库设置与操作指南"><a href="#Git本地仓库设置与操作指南" class="headerlink" title="Git本地仓库设置与操作指南"></a>Git本地仓库设置与操作指南</h2><h4 id="1-设置Git本地仓库"><a href="#1-设置Git本地仓库" class="headerlink" title="1. 设置Git本地仓库"></a>1. 设置Git本地仓库</h4><ul>
+<li><strong>选择一个目录作为本地仓库</strong>：首先，确定一个目录作为你的本地Git仓库。</li>
+<li><strong>进入该目录</strong>：打开终端或命令行界面，并导航到所选目录。</li>
+<li><strong>初始化本地仓库</strong>：在该目录下运行<code>git init</code>命令来初始化一个新的Git仓库。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+这会在当前目录下创建一个隐藏的.git目录,用来跟踪版本信息。</li>
+</ul>
+<h4 id="2-设置用户信息（可选）"><a href="#2-设置用户信息（可选）" class="headerlink" title="2. 设置用户信息（可选）"></a>2. 设置用户信息（可选）</h4><p>在开始使用Git之前，你可以设置你的姓名和电子邮件地址，这些信息将会与你的提交记录关联。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-添加文件到版本控制"><a href="#3-添加文件到版本控制" class="headerlink" title="3. 添加文件到版本控制"></a>3. 添加文件到版本控制</h4><ul>
+<li>使用<code>git add</code>命令将文件添加到暂存区。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add file1 file2 </span><br></pre></td></tr></table></figure>
+或者添加所有文件:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="4-提交文件到本地仓库"><a href="#4-提交文件到本地仓库" class="headerlink" title="4. 提交文件到本地仓库"></a>4. 提交文件到本地仓库</h4><ul>
+<li>使用<code>git commit</code>命令提交暂存区的更改到本地仓库，并添加提交信息。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="5-查看仓库状态和历史记录"><a href="#5-查看仓库状态和历史记录" class="headerlink" title="5. 查看仓库状态和历史记录"></a>5. 查看仓库状态和历史记录</h4><ul>
+<li>使用<code>git status</code>命令查看当前仓库的状态。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>git log</code>命令查看提交历史记录。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="6-关联远程仓库"><a href="#6-关联远程仓库" class="headerlink" title="6. 关联远程仓库"></a>6. 关联远程仓库</h4><ul>
+<li>使用<code>git remote add</code>命令关联一个远程仓库。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;远程仓库URL&gt;</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/clarance2018/blog.git</span><br></pre></td></tr></table></figure>
+<h4 id="7-推送文件到远程仓库"><a href="#7-推送文件到远程仓库" class="headerlink" title="7. 推送文件到远程仓库"></a>7. 推送文件到远程仓库</h4><ul>
+<li>使用<code>git push</code>命令将本地仓库的更改推送到远程仓库。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+<p>当你完成了在本地的工作并想要将更改推送到远程仓库时，可以使用git push命令。要推送当前分支的更改，可以运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/clarance2018/blog.git</span><br></pre></td></tr></table></figure>
+<p>如果你想推送所有分支的更改，可以运行git push -u origin all。</p>
+<h4 id="8-从远程仓库拉取更新"><a href="#8-从远程仓库拉取更新" class="headerlink" title="8. 从远程仓库拉取更新"></a>8. 从远程仓库拉取更新</h4><ul>
+<li>使用<code>git pull</code>命令从远程仓库拉取最新的更改并合并到本地仓库。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Git分支管理中有哪些常见操作？"><a href="#Git分支管理中有哪些常见操作？" class="headerlink" title="Git分支管理中有哪些常见操作？"></a>Git分支管理中有哪些常见操作？</h2><p>在Git中，分支是一个非常重要的功能，它允许你创建一个独立的开发线（称为“分支”），以便进行实验或开发新功能。Git分支管理中常见的操作包括：</p>
+<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><p>使用 <code>git branch</code> 命令可以查看当前仓库的所有分支。如果想要查看包含远程分支的完整列表，可以使用 <code>git branch -a</code> 命令。</p>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p>使用 <code>git branch</code> 命令加上新分支的名称可以创建一个新的分支。例如，<code>git branch new_branch</code> 会在当前提交上创建一个名为 <code>new_branch</code> 的新分支。</p>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><p>使用 <code>git checkout</code> 命令加上分支名称可以切换到另一个分支。例如，<code>git checkout new_branch</code> 会将当前工作目录切换到 <code>new_branch</code> 分支。</p>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>使用 <code>git merge</code> 命令可以将一个分支的更改合并到当前分支。例如，<code>git merge feature_branch</code> 会将 <code>feature_branch</code> 分支的更改合并到当前分支。</p>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除Git本地和远程分支的步骤:</p>
+<h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><p>当前所有本地分支:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>远程分支:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>本地分支:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d feature-branch</span><br></pre></td></tr></table></figure>
+<p>远程分支:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branch name&gt; </span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete feature-branch</span><br></pre></td></tr></table></figure>
+<h4 id="强制删除"><a href="#强制删除" class="headerlink" title="强制删除"></a>强制删除</h4><p>本地分支(包含未合并的commit):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D &lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<p>远程分支:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :&lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="删除本地和远程同时进行"><a href="#删除本地和远程同时进行" class="headerlink" title="删除本地和远程同时进行"></a>删除本地和远程同时进行</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;branch name&gt; </span><br><span class="line">git push origin --delete &lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<p>删除分支后,如果分支代码还需要,可以使用git branch <new branch name> <branch name>命令重新建立分支。</p>
+<h3 id="创建并切换分支"><a href="#创建并切换分支" class="headerlink" title="创建并切换分支"></a>创建并切换分支</h3><p>使用 <code>git checkout -b</code> 命令加上新分支的名称可以创建一个新分支并立即切换到该分支。这通常是开始新特性或修复bug时的常用操作。</p>
+<h3 id="分支重命名"><a href="#分支重命名" class="headerlink" title="分支重命名"></a>分支重命名</h3><p>使用 <code>git branch -m</code> 命令可以重命名当前分支。例如，<code>git branch -m new_name</code> 会将当前分支重命名为 <code>new_name</code>。</p>
+<h3 id="查看分支差异"><a href="#查看分支差异" class="headerlink" title="查看分支差异"></a>查看分支差异</h3><p>使用 <code>git show-branch</code> 命令可以查看不同分支之间的差异。</p>
+<h3 id="追踪远程分支"><a href="#追踪远程分支" class="headerlink" title="追踪远程分支"></a>追踪远程分支</h3><p>使用 <code>git branch --set-upstream-to</code> 命令可以设置本地分支追踪远程分支，以便在执行 <code>git pull</code> 或 <code>git push</code> 时知道与哪个远程分支进行交互。</p>
+<h3 id="推送和拉取分支"><a href="#推送和拉取分支" class="headerlink" title="推送和拉取分支"></a>推送和拉取分支</h3><p>使用 <code>git push</code> 命令可以将本地分支推送到远程仓库，而 <code>git pull</code> 命令则可以从远程仓库拉取分支的更新。</p>
+<p>这些操作是Git分支管理中常见的任务，它们帮助开发者在项目中并行工作，保持代码的整洁和可维护性。</p>
+<p><strong>注意</strong>：在执行任何Git命令之前，请确保你已经在正确的目录下，并且了解每个命令的作用和可能的影响。</p>
+<h2 id="将仓库克隆到非空目录处理方案"><a href="#将仓库克隆到非空目录处理方案" class="headerlink" title="将仓库克隆到非空目录处理方案"></a>将仓库克隆到非空目录处理方案</h2><p>错误信息表明，您尝试将仓库克隆到名为<code>my_blog</code>的目录，但该目录已经存在，并且不是空目录。Git不允许您将仓库克隆到已存在且非空的目录中，因为这可能会导致数据丢失或覆盖。</p>
+<p>要解决这个问题，您可以采取以下几种方法之一：</p>
+<ol>
+<li><p><strong>删除已存在的目录</strong>：<br>如果<code>my_blog</code>目录中的内容不重要，或者您可以安全地删除它，您可以使用<code>rm -rf</code>命令来删除整个目录。请确保在执行此操作前备份任何重要数据。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf my_blog</span><br><span class="line">git <span class="built_in">clone</span> ssh://git@github.com/clarance2018/blog.git my_blog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用不同的目录名</strong>：<br>如果您不想删除现有的<code>my_blog</code>目录，您可以尝试将仓库克隆到一个不同的目录中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://git@github.com/clarance2018/blog.git my_blog_new</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>清空已存在的目录</strong>：<br>如果您想保留<code>my_blog</code>目录，但想要清空其内容以便克隆新仓库，您可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf my_blog/*</span><br><span class="line">git <span class="built_in">clone</span> ssh://git@github.com/clarance2018/blog.git my_blog</span><br></pre></td></tr></table></figure>
+
+<p>这将删除<code>my_blog</code>目录下的所有文件和子目录，但不会删除<code>my_blog</code>目录本身。</p>
+</li>
+<li><p><strong>检查仓库URL</strong>：<br>在尝试克隆之前，请确保仓库的URL是正确的。虽然您提供的URL看起来是正确的，但总是好的习惯再次确认。</p>
+</li>
+</ol>
+<p>请注意，使用<code>rm -rf</code>命令时要格外小心，因为它会无条件地删除文件和目录，且不会询问确认。确保您指定的路径是正确的，以避免不必要的数据丢失。</p>
+<h2 id="服务器拉取仓库更新"><a href="#服务器拉取仓库更新" class="headerlink" title="服务器拉取仓库更新"></a>服务器拉取仓库更新</h2><p>要拉取线上的更新，您可以按照以下步骤进行操作：</p>
+<ol>
+<li><p>首先，确保您已经在本地仓库的目录中。您可以使用<code>cd</code>命令切换到该目录。</p>
+</li>
+<li><p>使用<code>git fetch</code>命令从远程仓库获取最新的代码和分支信息。这将从远程仓库拉取更新，但不会自动合并到您的本地分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br></pre></td></tr></table></figure>
+
+<p>这里的<code>origin</code>通常是远程仓库的别名，它应该在您之前执行<code>git clone</code>命令时自动设置。</p>
+</li>
+<li><p>检查远程仓库的更新情况。使用<code>git log</code>命令可以查看本地和远程仓库的提交历史记录，以便了解有哪些更新。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> origin/master..master</span><br></pre></td></tr></table></figure>
+
+<p>上面的命令将显示本地<code>master</code>分支上尚未合并到远程<code>master</code>分支的提交。</p>
+</li>
+<li><p>如果您想要将远程仓库的更新合并到您的本地分支，可以使用<code>git merge</code>命令。在合并之前，请确保您当前的工作目录是干净的，即没有未提交的更改。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge origin/master</span><br></pre></td></tr></table></figure>
+
+<p>这将合并远程<code>master</code>分支到您的当前本地分支。</p>
+</li>
+<li><p>如果在合并过程中出现冲突，您需要手动解决冲突并提交更改。使用<code>git status</code>查看冲突文件，编辑文件解决冲突，然后使用<code>git add</code>将解决后的文件标记为已解决状态，并使用<code>git commit</code>提交更改。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">git add &lt;conflicted_file&gt;</span><br><span class="line">git commit -m <span class="string">&quot;Resolve merge conflicts&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后，如果您想要将本地仓库的更改推送到远程仓库，可以使用<code>git push</code>命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>这将把您的本地<code>master</code>分支的更改推送到远程仓库的<code>master</code>分支。</p>
+<p>请注意，上述步骤中的<code>master</code>分支应替换为您实际使用的分支名称。如果您在使用其他分支进行开发，请相应地更改分支名称。</p>
+<p>此外，如果您只想拉取远程仓库的更新并覆盖本地的更改，您可以使用<code>git reset</code>和<code>git pull</code>命令组合。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br><span class="line">git reset --hard origin/master</span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p>这将重置您的本地分支到远程<code>master</code>分支的状态，并拉取最新的代码。但是，请注意，这将丢弃您本地的所有未提交的更改，因此请确保您已经备份或保存了重要的更改。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.v-li.com">飞鲤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.v-li.com/archives/43/">https://www.v-li.com/archives/43/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.v-li.com" target="_blank">胖子君</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><a class="post-meta__tags" href="/tags/git/">git</a></div><div class="post_share"><div class="social-share" data-image="/img/bk_img/img06.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wx.png" target="_blank"><img class="post-qr-code-img" src="/img/wx.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/zfb.png" target="_blank"><img class="post-qr-code-img" src="/img/zfb.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/44/" title="糖尿病饮食推荐"><img class="cover" src="/img/2023/eat.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">糖尿病饮食推荐</div></div></a></div><div class="next-post pull-right"><a href="/archives/29/" title="如何为typecho&amp;amp;wordpress添加og标签"><img class="cover" src="/img/bk_img/img11.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">如何为typecho&amp;amp;wordpress添加og标签</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/archives/46/" title="AI内容创作常用指令分享"><img class="cover" src="/img/bk_img/img11.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-22</div><div class="title">AI内容创作常用指令分享</div></div></a></div><div><a href="/archives/2/" title="SEO|网站结构化数据优化该展示哪些内容"><img class="cover" src="/img/bk_img/img05.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-31</div><div class="title">SEO|网站结构化数据优化该展示哪些内容</div></div></a></div><div><a href="/archives/45/" title="个人blog可以更新哪些内容？"><img class="cover" src="/img/bk_img/img09.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-17</div><div class="title">个人blog可以更新哪些内容？</div></div></a></div><div><a href="/archives/29/" title="如何为typecho&amp;wordpress添加og标签"><img class="cover" src="/img/bk_img/img11.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-03</div><div class="title">如何为typecho&amp;wordpress添加og标签</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">飞鲤</div><div class="author-info__description">总是需要一个自留地，记录一些自己的事情！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">想来想去后面署名改成‘飞鲤’：一个是瘦了不再胖；二是鲤鱼跃龙门，总希望自己能够跳出现在这个状态。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97"><span class="toc-number">1.</span> <span class="toc-text">Git本地仓库设置与操作指南</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AEGit%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 设置Git本地仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 设置用户信息（可选）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%88%B0%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 添加文件到版本控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 提交文件到本地仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81%E5%92%8C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 查看仓库状态和历史记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.0.6.</span> <span class="toc-text">6. 关联远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E6%8E%A8%E9%80%81%E6%96%87%E4%BB%B6%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.0.7.</span> <span class="toc-text">7. 推送文件到远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E4%BB%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E6%8B%89%E5%8F%96%E6%9B%B4%E6%96%B0"><span class="toc-number">1.0.8.</span> <span class="toc-text">8. 从远程仓库拉取更新</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">Git分支管理中有哪些常见操作？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="toc-number">2.1.</span> <span class="toc-text">查看分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF"><span class="toc-number">2.2.</span> <span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="toc-number">2.3.</span> <span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-number">2.4.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-number">2.5.</span> <span class="toc-text">删除分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B"><span class="toc-number">2.5.1.</span> <span class="toc-text">查看</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">2.5.2.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4"><span class="toc-number">2.5.3.</span> <span class="toc-text">强制删除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%97%B6%E8%BF%9B%E8%A1%8C"><span class="toc-number">2.5.4.</span> <span class="toc-text">删除本地和远程同时进行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="toc-number">2.6.</span> <span class="toc-text">创建并切换分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E9%87%8D%E5%91%BD%E5%90%8D"><span class="toc-number">2.7.</span> <span class="toc-text">分支重命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF%E5%B7%AE%E5%BC%82"><span class="toc-number">2.8.</span> <span class="toc-text">查看分支差异</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%BD%E8%B8%AA%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">2.9.</span> <span class="toc-text">追踪远程分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%92%8C%E6%8B%89%E5%8F%96%E5%88%86%E6%94%AF"><span class="toc-number">2.10.</span> <span class="toc-text">推送和拉取分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E4%BB%93%E5%BA%93%E5%85%8B%E9%9A%86%E5%88%B0%E9%9D%9E%E7%A9%BA%E7%9B%AE%E5%BD%95%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">将仓库克隆到非空目录处理方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%9B%B4%E6%96%B0"><span class="toc-number">4.</span> <span class="toc-text">服务器拉取仓库更新</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/57/" title="《穷查理宝典》：解锁查理·芒格的投资智慧与人生哲学，让你决策更明智，生活更精彩！"><img src="/img/bk_img/img05.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《穷查理宝典》：解锁查理·芒格的投资智慧与人生哲学，让你决策更明智，生活更精彩！"/></a><div class="content"><a class="title" href="/archives/57/" title="《穷查理宝典》：解锁查理·芒格的投资智慧与人生哲学，让你决策更明智，生活更精彩！">《穷查理宝典》：解锁查理·芒格的投资智慧与人生哲学，让你决策更明智，生活更精彩！</a><time datetime="2024-04-23T14:00:34.000Z" title="发表于 2024-04-23 22:00:34">2024-04-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/56/" title="《为什么没人早点告诉我？-应对人生起起落落》书评"><img src="/img/bk_img/img02.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《为什么没人早点告诉我？-应对人生起起落落》书评"/></a><div class="content"><a class="title" href="/archives/56/" title="《为什么没人早点告诉我？-应对人生起起落落》书评">《为什么没人早点告诉我？-应对人生起起落落》书评</a><time datetime="2024-04-22T14:00:34.000Z" title="发表于 2024-04-22 22:00:34">2024-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/55/" title="《五维思考法》：解锁职场高手的秘籍，让你的思维瞬间升级！"><img src="/img/bk_img/img07.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《五维思考法》：解锁职场高手的秘籍，让你的思维瞬间升级！"/></a><div class="content"><a class="title" href="/archives/55/" title="《五维思考法》：解锁职场高手的秘籍，让你的思维瞬间升级！">《五维思考法》：解锁职场高手的秘籍，让你的思维瞬间升级！</a><time datetime="2024-04-21T14:00:34.000Z" title="发表于 2024-04-21 22:00:34">2024-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/54/" title="职场人的5堂逻辑思考课"><img src="/img/bk_img/img09.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="职场人的5堂逻辑思考课"/></a><div class="content"><a class="title" href="/archives/54/" title="职场人的5堂逻辑思考课">职场人的5堂逻辑思考课</a><time datetime="2024-04-21T14:00:34.000Z" title="发表于 2024-04-21 22:00:34">2024-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/53/" title="《脑雾修复：21天清除脑雾，唤回你的注意力、记忆力与喜悦》书评"><img src="/img/bk_img/img02.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《脑雾修复：21天清除脑雾，唤回你的注意力、记忆力与喜悦》书评"/></a><div class="content"><a class="title" href="/archives/53/" title="《脑雾修复：21天清除脑雾，唤回你的注意力、记忆力与喜悦》书评">《脑雾修复：21天清除脑雾，唤回你的注意力、记忆力与喜悦》书评</a><time datetime="2024-04-20T14:00:34.000Z" title="发表于 2024-04-20 22:00:34">2024-04-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2013 - 2024 By 飞鲤</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>赣ICP备2024020403号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
