@@ -1,0 +1,498 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>软考高项笔记·一·概念 | 胖子君</title><meta name="author" content="飞鲤"><meta name="copyright" content="飞鲤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="软考高项笔记·一现代科学三论信息论、控制论、系统论 软件四种维护 更正性维护：改BUG 完善性维护：扩充原有功能 适应性维护：为了使系统适应环境的变化而进行的维护工作（环境已经变了） 预防性维护：针对未来  系统分析与系统设计系统分析侧重业务方面，系统设计侧重技术方面 信息的特征 变换性：通过处理被变换，如：语音变换为文字 转化性：可以将信息转化为物质或能量  信息的显著特点面向管理、面向生产 信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软考高项笔记·一·概念">
+<meta property="og:url" content="https://www.v-li.com/archives/60/index.html">
+<meta property="og:site_name" content="胖子君">
+<meta property="og:description" content="软考高项笔记·一现代科学三论信息论、控制论、系统论 软件四种维护 更正性维护：改BUG 完善性维护：扩充原有功能 适应性维护：为了使系统适应环境的变化而进行的维护工作（环境已经变了） 预防性维护：针对未来  系统分析与系统设计系统分析侧重业务方面，系统设计侧重技术方面 信息的特征 变换性：通过处理被变换，如：语音变换为文字 转化性：可以将信息转化为物质或能量  信息的显著特点面向管理、面向生产 信">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.v-li.com/img/bk_img/img07.webp">
+<meta property="article:published_time" content="2024-04-29T13:52:44.387Z">
+<meta property="article:modified_time" content="2024-04-28T09:22:45.094Z">
+<meta property="article:author" content="飞鲤">
+<meta property="article:tag" content="资源分享">
+<meta property="article:tag" content="学习经验">
+<meta property="article:tag" content="软考高项">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.v-li.com/img/bk_img/img07.webp"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://www.v-li.com/archives/60/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c3b47e462e0d37228d939555eff17bc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '软考高项笔记·一·概念',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-28 17:22:45'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/img/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bk_img/img07.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="胖子君"><img class="site-icon" src="/img/icon/favicon.ico"/><span class="site-name">胖子君</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/img/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">软考高项笔记·一·概念</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-29T13:52:44.387Z" title="发表于 2024-04-29 21:52:44">2024-04-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-28T09:22:45.094Z" title="更新于 2024-04-28 17:22:45">2024-04-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="软考高项笔记·一·概念"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="软考高项笔记·一"><a href="#软考高项笔记·一" class="headerlink" title="软考高项笔记·一"></a>软考高项笔记·一</h2><h3 id="现代科学三论"><a href="#现代科学三论" class="headerlink" title="现代科学三论"></a>现代科学三论</h3><p>信息论、控制论、系统论</p>
+<h3 id="软件四种维护"><a href="#软件四种维护" class="headerlink" title="软件四种维护"></a>软件四种维护</h3><ul>
+<li>更正性维护：改BUG</li>
+<li>完善性维护：扩充原有功能</li>
+<li>适应性维护：为了使系统适应环境的变化而进行的维护工作（环境已经变了）</li>
+<li>预防性维护：针对未来</li>
+</ul>
+<h3 id="系统分析与系统设计"><a href="#系统分析与系统设计" class="headerlink" title="系统分析与系统设计"></a>系统分析与系统设计</h3><p>系统分析侧重业务方面，系统设计侧重技术方面</p>
+<h3 id="信息的特征"><a href="#信息的特征" class="headerlink" title="信息的特征"></a>信息的特征</h3><ul>
+<li>变换性：通过处理被变换，如：语音变换为文字</li>
+<li>转化性：可以将信息转化为物质或能量</li>
+</ul>
+<h3 id="信息的显著特点"><a href="#信息的显著特点" class="headerlink" title="信息的显著特点"></a>信息的显著特点</h3><p>面向管理、面向生产</p>
+<h3 id="信息化从小到大分为五个层次"><a href="#信息化从小到大分为五个层次" class="headerlink" title="信息化从小到大分为五个层次"></a>信息化从小到大分为五个层次</h3><p>产品信息化、企业信息化、产业信息化、国民经济信息化、社会生活信息化</p>
+<h3 id="开发阶段包括"><a href="#开发阶段包括" class="headerlink" title="开发阶段包括"></a>开发阶段包括</h3><p>系统分析、系统设计、系统实施</p>
+<h3 id="国家信息化六要素"><a href="#国家信息化六要素" class="headerlink" title="国家信息化六要素"></a>国家信息化六要素</h3><p>上鹰下鸡左人右龟<br>图1：国家信息化体系六要素关系图</p>
+<ul>
+<li>信息资源：核心任务</li>
+<li>信息网络：基础设施</li>
+<li>信息技术应用：龙头、主阵地</li>
+<li>信息技术和产业：物质基础</li>
+<li>信息化人才：成功之本</li>
+<li>信息化政策法规和标准规范：保障</li>
+</ul>
+<h3 id="信息化系统生命周期"><a href="#信息化系统生命周期" class="headerlink" title="信息化系统生命周期"></a>信息化系统生命周期</h3><ul>
+<li>系统规划：可行性分析，建立备选方案&#x3D;》系统设计任务书</li>
+<li>系统分析：需求分析，建立逻辑模型&#x3D;》系统说明书</li>
+<li>系统设计：概要设计、详细设计、建立物理模型&#x3D;》系统设计说明书</li>
+<li>系统实施：编码、测试</li>
+<li>系统运维</li>
+</ul>
+<h3 id="信息系统开发方法"><a href="#信息系统开发方法" class="headerlink" title="信息系统开发方法"></a>信息系统开发方法</h3><ul>
+<li>结构化方法</li>
+<li>面向对象方法：一些大型信息的卡法通常是将结构化方法和OO方法结合起来，首先使用结构化方法进行自顶向下的整体划分，然后，自底向上地采用OO方法进行开发</li>
+<li>原型化方法：水平原型，不能实现功能；垂直原型，可实现功能；原型法是“以用户为中心”</li>
+<li>面向服务的方法：解决<strong>信息孤岛</strong>问题</li>
+</ul>
+<h3 id="网络协议的三要素"><a href="#网络协议的三要素" class="headerlink" title="网络协议的三要素"></a>网络协议的三要素</h3><p>语义、语法、时序</p>
+<h3 id="OSI七层模型（超级重要！）"><a href="#OSI七层模型（超级重要！）" class="headerlink" title="OSI七层模型（超级重要！）"></a>OSI七层模型（超级重要！）</h3><ul>
+<li>物理层：RJ-45(水晶头)</li>
+<li>数据链路层：IEEE 802.3&#x2F;.2、PPP（点对点）、ATM(异步传输)</li>
+<li>网络层：IP、ICMP（纠错）、ARP(地址解析)，路由器位于网络层，目标完成异构网络之间的互联互通</li>
+<li>传输层：TCP、UDP</li>
+<li>会话层：SQL、RPC(远程过程调用)</li>
+<li>表示层：JPEG、ASCII、GIF</li>
+<li>应用层：HTTP、FTP、SMTP、SNMP（简单网络管理）、DHCP（动态主机配置）</li>
+</ul>
+<h3 id="网络存储技术（重要，后2个经常考）"><a href="#网络存储技术（重要，后2个经常考）" class="headerlink" title="网络存储技术（重要，后2个经常考）"></a>网络存储技术（重要，后2个经常考）</h3><p>直接附加存储（DAS）<br>网络附加存储（NAS）：支持即插即用<br>存储区域网络（SAN）：是通过专用交换机将磁盘阵列与服务器连接起来的高速专用子网</p>
+<h3 id="网络接入技术"><a href="#网络接入技术" class="headerlink" title="网络接入技术"></a>网络接入技术</h3><p>ASDL非对称数字用户线路</p>
+<p>FTTx+LAN 接入：FTTC（Curb，光纤到路边）、FTTZ（Zone，光纤到小区）、FTTB（Building，光纤到楼）、FTTF（Floor，光纤到楼层）、FTTH（Home，光纤到户）</p>
+<p>无线接入：WiFi、4G、5G</p>
+<h3 id="数据仓库技术"><a href="#数据仓库技术" class="headerlink" title="数据仓库技术"></a>数据仓库技术</h3><p>MongoDB是“非”关系型数据库</p>
+<p>OLAP服务器：对分析需要的数据进行有效集成、组织，以便进行分析。OLAP是联机分析处理（这个名词要记住）</p>
+<h3 id="中间件技术（重要）"><a href="#中间件技术（重要）" class="headerlink" title="中间件技术（重要）"></a>中间件技术（重要）</h3><p>三套车：操作系统、数据库管理系统、中间件</p>
+<h4 id="中间件分类："><a href="#中间件分类：" class="headerlink" title="中间件分类："></a>中间件分类：</h4><p>底层型中间件：JVM（java虚拟机）、CLR（公共语言运行库）、JDBC、ODBC<br>通用型中间件：CORBA（公共对象请求代理体系结构）、J2EE、MOM（面向消息）、COM<br>集成型中间件：Workflow、EAI<br>18.高可用性</p>
+<p>计算机系统的可用性：MTTF平均无故障时间&#x2F;(MTTF+MTTR平均维修时间)x100%</p>
+<p>19.系统需求（重要）</p>
+<p>系统需求是从系统的角度来说明软件的需求，分为功能需求、非功能需求、设计约束</p>
+<p>20.3个图（这三个图的英文要记住，能区分）</p>
+<p>实体联系图（E-R图）：数据模型 （用于数据库）<br>数据流图（DFD）：功能模型<br>状态转化图（STD）：行为模型<br>21.UML视图</p>
+<p>逻辑视图也称为设计视图</p>
+<p>用例视图是最基本的需求分析模型</p>
+<p>21.类之间的主要关系（注意区分聚合和组合的区别）</p>
+<p>关联、依赖、泛化、聚合、组合、实现<br>聚合：部分与整体之间的关系，部分与整体的生命周期可以不相同，如：轮胎与汽车，可拆<br>组合：部分与整体之间的关系，部分与整体的生命周期相同，如：窗口与菜单，不可拆<br>22.软件测试（重要）</p>
+<p>静态测试（不运行测试）：桌前检查、代码走查、代码审查<br>动态测试（运行测试）：白盒测试（主要用于单元测试中）；黑盒测试（主要用于集成测试、确认测试、系统测试中）<br>23.EAI 企业应用集成（重要，这向个例子要记住）</p>
+<p>包括表示集成（黑盒集成，如：屏幕截取、模拟输入）、数据集成、控制集成、业务流程集成</p>
+<p>24.物联网</p>
+<p>主要解决物与物（T2T）、人与物（H2T)、人与人（H2Ｈ)之间的互连<br>RFID射频技术<br>物联网架构可分为三层：感知层、网络层、应用层<br>25.云计算（重要，不用多说）</p>
+<p>云计算的服务类型：IaaS（基础设置即服务）、PaaS（平台即服务，需要开发）、SaaS（软件即服务，不需要开发）</p>
+<p>26.马斯洛需求理论：（超级重要）</p>
+<p>1）生理需求<br>激励措施：增加工资、改善劳动条件、给予更多的业余时间和工间休息、提高福利待遇。<br>2）安全需求<br>激励措施：强调规章制度、职业保障、福利待遇，并保护员工不致失业，提供医疗保险、失业保险和退休福利、避免员工收到双重的指令而混乱。<br>3）社交需求<br>激励措施：提供同事间社交往来机会，支持与赞许员工寻找及建立和谐温馨的人际关系，开展有组织的体育比赛和集体聚会。<br>4）尊重需求<br>激励措施：公开奖励和表扬，强调工作任务的艰巨性以及成功所需要的高超技巧，颁发荣誉奖章、在公司刊物发表文章表扬、优秀员工光荣榜。<br>5）自我实现需求<br>激励措施：设计工作时运用复杂情况的适应策略，给有特长的人委派特别任务，在设计工作和执行计划时为下级留有余地。<br>27.E-R图 (Entity Relationship Diagram)（重要）</p>
+<p>矩形表示实体，椭圆表示属性，菱形表示联系；</p>
+<p>28.可靠性与可用性</p>
+<p>可靠性：判断标准出故障的次数；</p>
+<p>可用性：判断标准可使用的时间;</p>
+<p>29.软件过程管理</p>
+<p>问题解决是过程改进的核心。</p>
+<p>软件过程改进是受知识驱动的；</p>
+<p>30.常用的构件标准（考过几次，最好记住）</p>
+<p>1）COM&#x2F;DCOM&#x2F;COM+<br>2）CORBA 公共对象请求代理 (Common Object Request Broker Architecture)<br>3）EJB (Enterprise Java Bean)<br>31.EJB的三种类型</p>
+<p>1）会话Bean(Session Bean)<br>2）实体Bean(Entity Bean)<br>3）消息驱动Bean (Message-driven Bean)<br><a target="_blank" rel="noopener" href="http://32.com(重要)/">http://32.COM（重要）</a></p>
+<p>DCOM是COM的进一步扩展，DCOM具有位置独立性，DCOM具有语言无关性；COM+“并不是COM的新版本”，我们可以把它理解为COM的新发展；</p>
+<p>33.CORBA标准的三个层次</p>
+<p>对象请求代理(最低层、最核心)、公共对象服务、公共设施(最上层)</p>
+<p>34.对象</p>
+<p>对象三要素：对象标志、属性、服务；消息通信(Communication with Message)也是面向对象方法学习中的一条重要原则，消息通信则为它们提供了唯一合法的动态联系途径；</p>
+<p>35.UML (Unified Modeling Language 统一建模语言)（重要）</p>
+<p>是用于系统的可视化建模语言；UML是一种语言，是一种可视化语言，是一种可用于详细描述的语言，是一种构造语言，是一种文档化语言，是建模语言不是设计语言，简单并可扩展；比较适用迭代开发过程；</p>
+<p>36.用例图、顺序图、状态图、活动图、构建图、布署图（很重要）</p>
+<p>1）用例图：它确定了一个和系统参与者进行交互、并可由系统执行的动作序列。<br>2）顺序图：用来描述对象之间动态的交互关系，着重体现对象间消息传递的时间顺序。顺序图存在两个轴，水平轴表示不同的对象，垂直轴表示时间。<br>3）状态图：用来描述对象状态和事件之间的关系。<br>4）活动图：用来表示系统中各种活动的次序，可以用来描述用例的工作流程，带泳道的活动图可以各个活动由哪个对象做。<br>5）构件图：用于物理方面建模，它可以有效的显示一组构件以及它们之间的关系。构建图就是用来显示编译、链接或执行时构件之间的依赖关系。<br>6）部署图：用于物理方面建模，主要是显示分布式系统结点的拓扑结构。接口用带小圆圈的直线表示。</p>
+<p>37.BPEL业务流程建模语言</p>
+<p>是一种用于工作流技术相关的Web服务规范，其作用是将现有的服务组合起来，从而定义一个新的Web服务；</p>
+<p>38.Web Service</p>
+<p>是解决应用程序之间相互通信的一项技术；它使用标准规范的XML描述接口；</p>
+<p>不适合使用 WebService 的场景：</p>
+<p>1）单机应用程序；</p>
+<p>2）局域网上的同构应用程序：使用同一种语言开发的在相同平台的同一个局域网中运行的应用程序直接通过TCP等协议调用会更有效；</p>
+<p>39.Web Service模型的解决方案共有3种角色：（很重要，特别是第3点是可选的）</p>
+<p>服务提供者、服务请求者、服务注册中心(可选)；</p>
+<p>40.UDDI(Universal Description Discovery and Integeration，统一描述、发现和集成)</p>
+<p>提供了一种Web Service的发布、查找和定位的方法。Web Service提供者使用UDDI将服务发布到服务注册中心，而WebService使用者通过UDDI查找并定位服务；</p>
+<p>41.知识产权的特征</p>
+<p>专有性，地域性，时间性；</p>
+<p>42.模型（重要）</p>
+<p>螺旋模型：强调了风险分析，特别适用于庞大而复杂的、高风险的系统；<br>喷泉模型：喷泉体现了迭代和无间隙特性。是为一种以用户需求为动力，以对象为驱动的模型，主要用于描述面向对象的软件开发过程；<br>43.信息信息监理的依据(重要)</p>
+<p>国家政策法律法规、行业标准、建设合同、监理合同；</p>
+<p>44.猜答案策略（针对实现是不会了的题目！！！！！！！！！！！！！！）</p>
+<p>最大值-中间偏大的选项；最小值-中间偏小的选项；不涉及最大最小选C；</p>
+<p>45.监理活动的主要内容“四控三管一协调”(重要)</p>
+<p>1）四控制：质量控制、进度控制、投资控制、变更控制；<br>2）三管理：合同管理、信息管理、安全管理；<br>3）一协调：组织协调<br>46.黑盒子测试的种类：(超级重要)</p>
+<p>1）等价类划分<br>2）边界值分析(应该包含正确边界值和错误边界值)<br>3）错误推断法<br>错误推测法:人们也可以靠经验和直觉推测程序中可能存在的各种错误，从而有针对性地编写检查这些错误的例子；<br>4）因果图<br>常用场景是从因果图转为判定表<br>47.IPV6：（ 要记住128这个数字）</p>
+<p>使用16进制表示IP地址，地址为128位；</p>
+<p>48.ERP 企业资源计划 (Enterprise Resource Planning)（考过几次）</p>
+<p>ERP不是技术的变革，而是管理的变革，一般需要进行二次开发；<br>ERP功能：1）财会管理 2）生产控制管理 3）物流管理 4）人力资源管理<br>ERP特点：1）是统一的集成系统 2）是面向业务流程的系统 3）是模块化可配置的 4）是开放的系统<br>49.CRM 客户关系管理(Customer Relationship Management)（最好记住）</p>
+<p>坚持以客户为中心，提高客户满意度、增加客户忠诚度，以达到企业的最大利润。</p>
+<p>1）CRM是一种以客户为中心的商业策略；<br>2）CRM注重提高客户的满意度的同时，一定要把帮助企业提高利润作为重要指标；<br>3）CRM实施要求企业对其业务功能进行重新设计，将业务的中心转移到客户；<br>客户数据分为描述性、促销性、交易性数据三类；</p>
+<p>50.SCM 供应链管理 (Supply Chain Management)</p>
+<p>51.BI 商业智能 (Bussiness Intelligence)（很重要）</p>
+<p>它不是一门新技术，只有多种技术综合应用；商业智能的三个层次：数据报表、多维数据分析、数据挖掘</p>
+<p>52.企业门户分类</p>
+<p>信息门户EIP；知识门户EKP；应用门户EAP；</p>
+<p>53.电子商务模式</p>
+<p>1）B2C 2）B2B 3）C2C 4）G2B</p>
+<p>电子商务安全交易中最重要的两个协议是SSL和SET；</p>
+<p>54.以太网（Ethernet）：（很重要，重点是3种电缆，中英文名称及距离）</p>
+<p>是一种计算机组网技术。IEEE制定的IEEE 802.3标准给出了以太网的技术标准。它规定了包括物理层的连线、电信号和介质访问层协议的内容。以太网是当前应用最普遍的局域网技术。它很大程度上取代了其他局域网标准，如令牌环网（token ring）。</p>
+<p>10BASE5 10BASE2 10BASE-T</p>
+<p>同轴粗缆 同轴细缆 非屏蔽双绞线</p>
+<p>500m 185m 100m</p>
+<p>55.简称（重要的地方加粗）</p>
+<p>FDDI Fiber Destributed Data Interface 光纤分布式数据接口；</p>
+<p>DDN 数字传输专线，如公安网，军队网是物理独立；</p>
+<p>RADID 廉价的冗余磁盘阵列，RADID 0 没有提供冗余或错误修复能力，但实现了成本最低，利用率 100%； RADID 1 称为磁盘镜像,利用率50%；</p>
+<p>56.常用网络命令</p>
+<p>nslookup：可以查到DNS记录的生存时间还可以指定使用哪个DNS服务器进行解释；</p>
+<p>tracert：（跟踪路由）是路由跟踪实用程序，用于确定 IP 数据包访问目标所采取的路径；</p>
+<p>57.Wi-Fi速率</p>
+<p>Wi-Fi速率可以达到54Mb&#x2F;s</p>
+<p>WLAN是一个无线局域网,而WIFI是无线局域网的一种技术;</p>
+<p>58.布线系统（非常重要！这几个子系统要记住，加粗的数字要记住）</p>
+<p>我国通信行业标准《大楼通信综合布线系统》的适用范围规定是跨越距离不超过3000m、建筑面积不超过100万平方米的布线区域，其人数为50~5万人；</p>
+<p>建筑群子系统、设备间子系统、垂直干线子系统、管理间子系统、水平布线子系统、工作区子系统</p>
+<p>59.综合布线规范（重要，水晶头的计算方法及加粗的部分要记住）</p>
+<p>1）计算RJ-45接口的用量 m&#x3D;n×4.6 ，n表示信息点的总量；</p>
+<p>2）综合布线的配置标准分三种</p>
+<p>基本型：适应于标准较低的场合，用铜芯对绞电缆组网，每个工作区有一个信息插座；</p>
+<p>增强型：适用于中等配置的场合，用铜芯对绞电缆组网，每个工作区有两个或以上信息插座；</p>
+<p>综合型：应用于配置标准较高的场合，用光缆和铜芯对绞电缆混合组网；</p>
+<p>3）信息插座安装在墙体上，宜高出地面300mm；</p>
+<p>60.机房设计规范</p>
+<p>3）辅助区面积宜为主机房面积的0.2~1倍（1&#x2F;5到1倍）；</p>
+<p>4）信息系统机房划分为A、B、C三级</p>
+<p>A级机房电子信息系统运行中断将造成重大经济损失，或造成公共场所秩序严重混乱；</p>
+<p>B级机房电子信息系统运行中断将造成较大经济损失，或造成公共场所秩序混乱；</p>
+<p>5）机房设备布置相关标准</p>
+<p>搬运设备的通道净宽不应小于1.5m（人躺下）；</p>
+<p>主机房宜设备单独出入口，当与其它功能用房共同用出入口时，应避免人流、物流的交叉；</p>
+<p>面积大于100平米的主机房，安全出口不应少于两个，且应分散布置。面积不大于100平米的主机方，可设一个安全出口，并可通过其他相临房间的门进行疏散。门应向疏散方向开启，且应自动关闭，并应保证在任何情况下都能从机房内开启。</p>
+<p>电子信息系统机房耐火等级不应低于二级；</p>
+<p>在机房吊顶上和活动地板下都设置火灾探测器；</p>
+<p>电子信息系统机房内的照明线路宜穿钢管暗敷或在吊顶内穿钢管明敷；</p>
+<p>A级B级电子信息系统机房的主机房不宜设备外窗。当主机房设有外窗时，应采用双层固定窗，并应有良好的所密性，不间断电源系统的电池室设有外窗时，应避免阳光直射；</p>
+<p>6）接地装置接地方式：</p>
+<p>交流工作接地，接地电阻不应大于4欧姆；</p>
+<p>安全保护接地，接地电阻不应大于4欧姆；</p>
+<p>直流工作接地，接地电阻不应大于1欧姆；</p>
+<p>防雷接地，接地电阻不应大于10欧姆；</p>
+<p>7）排水</p>
+<p>与主机房无关的给排水管道不得穿主机房；</p>
+<p>机房不宜设置在用水设备的下层。</p>
+<p>安装排水地漏处的楼地面应低于机房内的其他楼地面。</p>
+<p>8）电磁屏蔽</p>
+<p>主机房内绝缘体的静电电位不大于1KV。</p>
+<p>所有进入电磁屏蔽室的电线都应通过电源滤波器进行处理。进出电磁屏蔽室的网络线宜用光缆或屏蔽线缆，光缆不应带有金属加强芯。</p>
+<p>61.信息安全（重要）</p>
+<p>信息本身的安全属性：秘密性、完整性、可用性（随时可以正常使用）<br>信息系统的安全保护等级：<br>一级：损害公民<br>二级：损害社会秩序<br>三级：损害国家安全<br>四级：严重损害国家安全<br>五级：特别严重损害国家安全<br>RSA 非对称加密：利用RSA可以实现，数字签名、数据加密<br>蜜罐技术：蜜罐系统是一个包含漏洞的诈骗系统，用于吸引攻击<br>操作系统的安全威胁按照行为划分：<br>切断，对“可用性”的威胁<br>截取，对“机密性”的威胁<br>篡改，对“完整性”的威胁<br>伪造，对“合法性”的威胁<br>62.信息系统安全管理（超级重要！！！）</p>
+<p>3.信息系统安全技术体系包括：物理安全，运行安全，数据安全；</p>
+<p>5.计算机信息安全保护等级</p>
+<p>①用户自主保护级：适用于普通内联网用户；<br>②系统审计保护级：适用于通过内联网或国际网进行商务活动，需要保密的非重要单位；<br>③安全标记保护级：适用于地方各级国家机关、金融单位机构、邮电通信、能源与水源供给部门、交通运输、大型工商与信息技术企业、重点工程建设等单位；<br>④结构化保护级：适用于中央级国家机关、广播电视部门、重要物资储备单位、社会应急服务部门、尖端科技企业集团、国家重点科研单位和国防建设等部门；<br>⑤访问验证保护级：适用于国防关键部门和依法需要对计算机信息系统实施特殊隔离的单位；<br>信息安全系统三种架构体系：</p>
+<p>MIS+S系统（初级）、S-MIS系统（标准）、S2-MIS系统（超安全）</p>
+<p>PKI&#x2F;CA架构：</p>
+<p>PKI公钥基础设施，基于不对称密钥加密技术；</p>
+<p>CA认证中心，是PKI的核心，是第三方认证机构；</p>
+<p>一个重要标准 X.509标准；</p>
+<p>PKI：主要用于身份鉴别</p>
+<p>PMI：主要用于授权管理</p>
+<p>PMI支持体系，主要有以下4种：</p>
+<p>MAC 强制访问控制：使用安全标签，安全性最高<br>DAC 自主访问控制：每个用户指明能够访问的资源，对于不在指定的资源列表中的对象不允许访问，用户可以将权限授权给别的用户，（基于用户）<br>ACL访问控制列表：使用最多，（基于资源）<br>RBAC基于角色的访问控制：用户不能将权限授权给别的用户，角色由系统管理员定义<br>63.信息安全审计：</p>
+<p>为了保证安全规划被正确执行，并帮助分析安全事故产生的原因。</p>
+<p>64.招标投标法（重要！）</p>
+<p>第二十三条：招标人对已发出的招标文件进行必要的澄清或者修改的，应该在招标文件要求提交投标文件截止时间至少十五日前以书面形式通知所有招标文件收受人。该澄清或者修改的内容为招标文件的组成部分。<br>第二十四条：自招标文件开始发出之日起至招标人提交投标文件截止之日止，最短不得少于二十日。<br>第三十三条：投标人不得以低于成本的报价竞标；<br>第三十七条：评标委员会由招标人的代表和有关技术、经济等方面的专家组成，成员人数为五人以上单数，其中技术、经济方面的专家不得少于成员总数的三分之二。评标委员会成员的名单在中标结果确定前应当保密。<br>开标应当在招标文件确定的提交投标文件截止时间的同一时间公开进行。<br>第四十五条：中标人确定后，招标人应当向中标人发出中标通知书，并同时将中标结果通知所有未中标的投标人。中标通知书对招标人和中标人具有法律效力。中标通知书发出后，招标人改变中标结果的，或者中标人放弃中标项目的，应当依法承担法律责任。<br>第四十六条：招标人和中标人应当自中标通知书发出之日起三十日内，按照招标文件和中标人的投标文件订立书面合同。<br>第四十八条：中标人不得向他人转让中标项目，也不得将中标项目肢解后分别向他人转让。中标人按照合同约定或经招标人同意，可以将中标项目的部分非主体、非关键性工作分包给他们完成。接受分包的人应当具备相应的资格条件，并不得再次分包。中标人应当就分包项向招标人负责，接受分包的人就分包项目承担连带责任。<br>65.政府采购法</p>
+<p>政府采购实行集中采购和分散采购相结合。集中采购的范围由省级以上人民政府公布的集中采购目录确定。<br>公开招标应作为政府采购的主要采购方式；因特殊情况需要采用公开招标以外的采购方式的，应当在采购活动开始前获得设区的市、自治州以上人民政府采购监督管理部门的批准。<br>第二十九条：符合下列情形之一的货物或者服务，可以依照本法采用邀请招标方式采购<br>1）具有特殊性，只能从有限范围的供应商处采购的；<br>2）采用公开招标方式的费用占政府采购项目总价值的比例过大的。<br>第三十条：符合下列情形之一的货物或服务，可以依照本法采用竞争性谈判方式采购<br>1）招标后没有供应商投标或者没有合格标的或者重新招标未能成立的。<br>2）技术复杂或者特性特殊，不能确定详细规格或者具体要求的。<br>3）采用招标所需时间不能满足用户紧急需要的。<br>4）不能事先计算出价格总额的。<br>第三十一条：符合下列情形之一的货物或服务，可以依照本法采用单一来源方式采购<br>1）只能从唯一供应商处采购的；<br>2）发生了不可预见的紧急情况不能从其他供应商处采购的；<br>3）必须保证原有采购项目一致性或者服务配套的要求，需要继续从原供应商处添购，且添购资金总额不超过原合同采购金额百分之十的。<br>第三十二条：采购的货物规格、标准统一、现货货源充足且价格变化幅度小的政府采购项目，可以依照本法采用询价方式采购。<br>第三十八条：采用竞争性谈判方式采购的，谈判小组由采购人的代表和有关专家共三人以上的单数组成，其中专家的人数不得少于成员总人数的三分之二。<br>第四十二条：采购文件的保存期限为从采购结束之日起至少保存十五年。<br>66.合同法</p>
+<p>要约是希望和他人签订合同的意向表示<br>下列合同，当事人有权请求人发法院撤销：<br>1）因重大误解订立的<br>2）在订立合同同时显失公平的<br>第六十二条：履行期限不明确的，债务人可以随时履行，债权人也可以随时要求履行，但应给对方必要的准备时间；<br>67.著作权法（只记加粗部分）</p>
+<p>第十六条：公民为完成法人或者其他组织工作任务所创作的作品是职务作品，除本条第二款的规定以外，著作权由作者享有，但法人或者其他组织有权在其业务范围内优先使用。作品完成两年内，未经单位同意，作者不得许可第三人以与单位使用的相同方式使用该作品。有下列情形之一的职务作品，作者享有署名权，著作权的其他权利由法人或者其他组织享有，法人或者其他组织可以给予作者奖励：<br>（一）主要是利用法人或者其他组织的物质技术条件创作，并由法人或者其他组织承担责任的工程设计图、产品设计图、地图、计算机软件等职务作品；<br>（二）法律、行政法规规定或者合同约定著作权由法人或者其他组织享有的职务作品。<br>第十七条：受委托创作的作品，著作权的归属由委托人和受托人通过合同约定。合同未作明确约定或者没有订立合同的，著作权属于受托人。<br>第二十条：作者的署名权、修改权、保护作品完整权的保护期不受限制。<br>第二十一条：公民的作品，其发表权、本法第十条第一款第（五）项至第（十七）项规定的权利的保护期为作者终生及其死亡后五十年，截止于作者死亡后第五十年的12月31日；如果是合作作品，截止于最后死亡的作者死亡后第五十年的12月31日。法人或者其他组织的作品、著作权（署名权除外）由法人或者其他组织享有的职务作品，其发表权、本法第十条第一款第（五）项至第（十七）项规定的权利的保护期为五十年，截止于作品首次发表后第五十年的12月31日，但作品自创作完成后五十年内未发表的，本法不再保护。<br>为他人创作进行组织、提供咨询意见、物质条件或进行其他辅助工作的，不属于创作的范围，不被确认为著作权人。<br>68.招标投标法实施条例</p>
+<p>第二十六条：招标人在招标文件中要求投标人提交投标保证金的，投标保证金不得超过招标项目估算价的2%。投标保证金有效期应当与投标有效期一致。<br>第五十条：招标项目设有标底的，招标人应当在开标时公布。标底只能作为评标的参考，不得以投标报价是否接近标底作为中标条件，也不得以投标报价超过标底上下浮动范围作为否决投标的条件<br>第五十四条：依法必须进行招标的项目，招标人应当自收到评标报告之日起3日内公示中标候选人，公示期不得少于3日。<br>第五十八条：招标文件要求中标人提交履约保证金的，中标人应当按照招标文件的要求提交。履约保证金不得超过中标合同金额的10%。<br>69.政府采购法实施条例</p>
+<p>第三十四条：政府采购招标评标方法分为最低评标价法和综合评分法。最低评标价法，是指投标文件满足招标文件全部实质性要求且投标报价最低的供应商为中标候选人的评标方法。综合评分法，是指投标文件满足招标文件全部实质性要求且按照评审因素的量化指标评审得分最高的供应商为中标候选人的评标方法。技术、服务等标准统一的货物和服务项目，应当采用最低评标价法。采用综合评分法的，评审标准中的分值设置应当与评审因素的量化指标相对应。招标文件中没有规定的评标标准不得作为评审的依据。</p>
+<p>综合评分法通常：商务占10%；技术占60%；价格占30%；</p>
+<p>70.其它 （重要）</p>
+<p>1）报价单中总价和分项单价与工程量乘积之和的金额不一致时，以分项单价与工程量乘积之和为准；金额大写与小写不一致时，以大写为准；</p>
+<p>71.直接成本与间接成本（重要）</p>
+<p>直接成本、间接成本：即使项目暂停了，间接成本仍然存在。<br>固定成本、可变成本：固定成本和产量没关系。<br>税金属于间接成本<br>72.事业环境因素（不针对某个项目）</p>
+<p>（1）组织或公司文化和结构；<br>（2）政府或行业标准（如规章制度、产品标准、质量标准、劳务关系标准）：<br>（3）基础设施，如：已存在的设施和固定资产；<br>（4）现有的人力资源，如：技能、专业知识（设计、开发、法律、合同和采购）<br>（5）人力资源管理，如：招聘和解聘的指导方针，员工绩效评估和培训记录等；<br>（6）市场条件；<br>（7）项目关系人对风险的容忍度；<br>（8）商业数据库，如业界的风险研究信息和风险数据库、成本预算数据等；<br>（9）项目管理信息系统，如：一个自动工具集，一个与配置管理系统相结合的进度制定工具。<br>73.软件需求包括 3 个不同的层次――业务需求、用户需求和功能需求</p>
+<p>除此之外，每个系统还有各种非功能需求、设计约束。</p>
+<p>1）业务需求（ Business requirement ） 表示组织或客户高层次的目标。业务需求通常来自项目投资人、购买产品的客户、实际用户的管理者、市场营销部门或产品策划部门。业务需求描述了组织为什么要开发一个系统，即组织希望达到的目标。使用前景和范围（ vision and scope ）文档来记录业务需求，这份文档有时也被称作项目轮廓图或市场需求（ project charter 或 market requirement ）文档。<br>2）用户需求（ user requirement ） 描述的是用户的目标，或用户要求系统必须能完成的任务。用例、场景描述和事件――响应表都是表达用户需求的有效途径。也就是说用户需求描述了用户能使用系统来做些什么。<br>3）功能需求（ functional requirement ） 规定开发人员必须在产品中实现的软件功能，用户利用这些功能来完成任务，满足业务需求。功能需求有时也被称作行为需求（ behavioral requirement ），因为习惯上总是用“应该”对其进行描述：“系统应该发送电子邮件来通知用户已接受其预定”。功能需求描述是开发人员需要实现什么。<br>74.工作包</p>
+<p>工作包是位于WBS每条分支最底层的可交付成果或项目工作组成部分。工作包的大小应符合8&#x2F;80原则，即工作量应该在一个人工作8小时(1天)~80小时（两周）之间。</p>
+<p>75.缩短活动工期的方法（超级重要！！！！一定要背诵出来）</p>
+<p>1）赶工，投入更多的资源或增加工作时间，以缩短关键活动的工期；<br>2）快速跟进，并行施工，以缩短关键路径的长度，这样做可能增大风险；<br>3）使用高素质的资源或经验更丰富的人员；（人）<br>4）经甲方同意，减小活动范围或降低活动要求；（甲方）<br>5）改进方法或技术，以提高生产效率；（技）<br>6）加强质量管理，及时发现问题，减少返工，从而缩短工期；（乙方）<br>76.全面质量管理（TQM）</p>
+<p>全面质量管理（TQM）是一种全员、全过程、全企业的品质管理。它是一个组织以质量为中心，以全员参与为基础，通过让顾客满意和本组织所有成员及社会受益而达到永续经营的目的。它的4个核心的特征：全员参加的质量管理、全过程的质量管理、全面方法的质量管理和全面结果的质量管理；</p>
+<p>77.六西格玛</p>
+<p>六西格玛由摩托罗拉公司首先提出，意为“六倍标准差”，99.99966%，百万产品中缺陷产品不超过3.4个。</p>
+<p>78.风险</p>
+<p>风险具有不确定性，但并非所有的不确定性都是风险，即不确定性是风险的必要而非充分条件。 当事件、活动或项目有损失或收益与之相联系，涉及到某种或然性或不确定性和涉及到某种选择时，才称为有风险。</p>
+<p>79.质量管理趋势：（重要）</p>
+<p>质量问题，员工只须对15%的问题负责，另外85%归咎于制度流程。</p>
+<p>80.质量成本COQ：因质量而造成的成本！（重要）</p>
+<p>（未发生）一致性成本：预防成本、评价成本<br>（已发生）非一致性成本：补救成本，补求成本分为：内部失败成本（内部发现），外部失败成本（客户发现）<br>81.成本效益分析：</p>
+<p>用来估算备选方案优势和劣势的工具，以确定可以创造最佳效益的备选方案。（规划质量管理工具）</p>
+<p>82.对人员的培训</p>
+<p>各个角色都有责任，但方向不同，职能经理主要是培训技术相关，项目经理主要是培训项目相关，人力资源经理主要是培训规章制度相关。</p>
+<p>83.冲突的解决方法（超级重要！！！）</p>
+<p>撤退回避：搁置，不解决问题<br>缓和包容：求同存异，不解决问题<br>合作解决：共赢，解决问题<br>妥协调解：各退一步，解决问题，（寻找各方都满意的方案）<br>84.双因素理论（最好记住）</p>
+<p>保健因素：必须满足的条件，保健因素满足了不会让员工更满意，但如果不满足会让员工不满意</p>
+<p>激励因素</p>
+<p>期望理论</p>
+<p>通过考察人们的努力行为与其所获得的最终奖酬之间的因果关系，选择合适的行为以达到最终的奖励目标</p>
+<p>另外还有个X理论和Y理论（经常考！！！）</p>
+<p>很多人容易搞混哪个是基于“人性本善”出发的，哪个是基于“人性本恶”出发的，记住一点：带错号（“X”）的是基于人性本恶的。</p>
+<p>85.相关方参与程度评估矩阵</p>
+<p>相关方参与度评估矩阵用于将相关方当前参与水平与期望参与水平进行比较。针对差距，开展必要的沟通，有效引导相关方参与项目。</p>
+<p>86.敏感性分析（重点）</p>
+<p>敏感性分析是定量分析，敏感性分析图像龙卷风也叫风卷图。从多个不确定性因素中逐一找出对投资项目经济效益指标有重要影响的敏感性因素，并分析、测算其对项目经济效益指标的影响程度和敏感性程度，进而判断项目承受风险的能力。</p>
+<p>87.控制图（重要）</p>
+<p>控制图用于确定一个过程是否稳定，或者是否具有可预测的绩效。</p>
+<p>控制图有3种情况下需要停工检查（失控状态）</p>
+<p>控制的上下限一般设置为正负3个标准差</p>
+<p>88.FPIF总价加激励费合同：</p>
+<p>成本按预算控制另加约定费用，如果成本超支或节约，按约定的比例分担或分享，并设置天花板价格。天花板价格限制的是给乙方的所有费用的总和。</p>
+<p>CPIF成本+激励费合同：</p>
+<p>与FPIF总价加激励费合同区别是没有设置天花板价格。</p>
+<p>89.工料类合同（适用于在无法快速编制出准确的工作说明书，或可行性研究时）</p>
+<p>合同主要是报人工单价、材料单价。</p>
+<p>90.风险定性分析（给风险排队）</p>
+<p>对风险进行优先级排序，从而为后续分析或行动提供基础的过程。本过程的主要作用是重点关注高优先级的风险。工具如：风险概率和影响矩阵。</p>
+<p>91.软件工程国家标准</p>
+<p>标准的层次：</p>
+<p>国际标准&lt;国家标准&lt;行业标准&lt;地方标准&lt;企业标准</p>
+<p>92.组织结构：</p>
+<p>平衡矩阵型才开始出现项目经理</p>
+<p>93.项目管理计划（超级重要）</p>
+<p>项目管理计划包含3个基准（范围基准、进度基准、成本基准）、13个子计划（范围、进度、成本、质量、人力资源、沟通、风险、采购、干系人、配置、变更、过程改进）</p>
+<p>94.群体决策的方法</p>
+<p>一致同意、大多数原则、相对大多数原则（不超过50%）、独裁</p>
+<p>95.项目范围说明书</p>
+<p>是对项目范围、主要可交付成果、假设条件、制约因素的描述</p>
+<p>96.WBS词典内容（超级重要，常考默写）</p>
+<p>账户编码标识、工作描述、假设条件、制约因素、负责的组织、进度进程碑、相关的进度活动、所需资源、成本估算、质量要求、验收标准、技术参考文献、协议信息</p>
+<p>97.偏差分析</p>
+<p>是一种确定实际绩效与基准的差异程度及原因的技术</p>
+<p>98.ISO 9000质量管理的八项管理原则（最好记住）</p>
+<p>以顾客为中心、领导作用、全员参与、过程方法、管理的系统方法、持续改进、基于事实的决策方法、与供方互利的关系</p>
+<p>99.直方图</p>
+<p>用于描述集中趋势、分散程度和统计分布形状</p>
+<p>100.PDPC</p>
+<p>过程决策程序图用于理解一个目标与达成这个目标的步骤之间的关系</p>
+<p>101.质量审计的目标（口诀“惩恶扬善互助淀”，超级重要！！！！！！！）</p>
+<p>识别全部违规做法、差距及不足<br>识别全部正在实施的良好及最佳实践<br>分享所在组织或行业中类似项目的良好实践<br>积极主动的提供协助，以改进过程的执行，从而帮助团队提高生产效率<br>强调每次审计都应对组织经验教训的积累做出贡献<br>102.专家权力与参照权力的区别</p>
+<p>专家权限来源于个人的专业技能，让员工意识到他是专家</p>
+<p>参考权力是成为别人的学习榜样，导致他人愿意模仿和服从</p>
+<p>103.推式沟通（重要）</p>
+<p>信件、备忘录、报告、电子邮件、传真、语音邮件、日志、新闻稿</p>
+<p>104.干系人登记册内容</p>
+<p>基本信息、干系人分类（内部、外部、支持者、中立者、反对者等）、评估信息（主要需求、主要期望、对项目的潜在影响、与生命周期的哪个阶段最密切相关）</p>
+<p>105.干系人的参与程度分类</p>
+<p>不知晓、抵制、中立、支持、领导（支持与领导的区别是，领导是主动的）</p>
+<p>106.影响干系人风险态度的因素</p>
+<p>风险偏好、风险承受力、风险临界值</p>
+<p>107.信息系统集成项目</p>
+<p>一定要需要根据用户需求定制，而不是买成品</p>
+<p>108.风险审计</p>
+<p>风险审计是检查并记录风险应对措施在处理已识别风险及其根源方面的有效性，以及风险管理过程的有效性。</p>
+<p>109.风险应对措施（超级重要，注意区分）</p>
+<p>规避、转移、减轻、开拓（确保机会出现）、提高（提高机会发生的概率）、接受</p>
+<p>110.质量</p>
+<p>质量一组固有特性满足要求的程度。</p>
+<p>111.一致性成本中评价成本包含</p>
+<p>测试、破坏性测试导致的损失、检查</p>
+<p>112.管理</p>
+<p>精益：最小投入，产生最多的价值<br>零缺陷之父：克劳士比<br>六西格玛：美国摩托罗拉<br>113.权力利益方格（常考）</p>
+<p>权力高、利益高——重点管理<br>权力高、利益低——令其满意<br>权力低、利益高——及时告知<br>权力低、利益低——定期监督<br>114.企业信息化结构</p>
+<p>产品服务层、作业层、管理层、决策层</p>
+<p>115.网页防篡改技术包括：（常考）</p>
+<p>时间轮询、核心内嵌、事件触发、文件过滤驱动</p>
+<p>116.名义小组</p>
+<p>分组比较随意，主要用于筛选头脑风暴的结果</p>
+<p>117.战略组织类型</p>
+<p>118.配置库（超级重要）</p>
+<p>119.智能城市建设参考模型（记住红框）</p>
+<p>120.物联网</p>
+<p>物联网不是一种物理上独立存在的完整网络，而是架构在现有互联网或下一代公网或专网基础上的联网应用和通信能力，是具有整合感知识别、传输互联和计算处理等能力的智能型应用。</p>
+<p>121.当与客户签署合同之后，许多供应商会进行内部立项。内部立项的主要作用包括：</p>
+<p>通过内部立项方式为项目分配资源<br>通过内部立项方式确定合理的项目绩效目标<br>通过内部立项方式提升项目实施效率<br>122.工作说明书与项目范围说明书的区别：</p>
+<p>工作说明书是对项目所要提供的产品或服务的叙述性的描述；项目范围说明书则通过明确项目应该完成的工作来确定项目的范围。</p>
+<p>123.业务流程重构（BPR）遵循一定的原则：</p>
+<p>坚持以流程为中心、团队式管理原则（以人为本的原则）、以顾客为导向的原则。</p>
+<p>124.战略管理包含3个层次：</p>
+<p>目标层、方针层、行为层</p>
+<p>125.版本 （重要）</p>
+<p>处于“草稿”状态的配置项的版本号格式为0.YZ，YZ的数字范围为01～99。随着草稿的修正，YZ的取值应递增。YZ的初值和增幅由用户自己把握。<br>处于“正式”状态的配置项的版本号格式为X.Y，X为主版本号，取值范围为1～9。Y为次版本号，取值范围为0～9。配置项第一次成为“正式”文件时，版本号为1.0。如果配置项升级幅度比较小，可以将变动部分制作成配置项的附件，附件版本依次为1.0，1.1，……。当附件的变动积累到一定程度时，配置项的Y值可适量增加，Y值增加一定程度时，X值将适量增加。当配置项升级幅度比较大时，才允许直接增大X值。<br>处于“修改”状态的配置项的版本号格式为X.YZ。配置项正在修改时，一般只增大Z值，X.Y值保持不变。当配置项修改完毕，状态成为“正式”时，将Z值设置为0，增加X.Y值。<br>126.英文</p>
+<p>artificial intelligence 人工智能<br>matrix 矩阵<br>individual project 单个项目<br>improvement 改善<br>communication 沟通<br>Work performance information 工作绩效信息<br>formal change control precedures 变更控制过程<br>approved 批准的<br>excluding 不包含<br>implementing 实施<br>perform quality assurance 执行质量保证<br>internet of things 物联网<br>consumer sales trends and user preference 消费者销售趋势和用户偏好<br>127.移动互联网有以下特点：</p>
+<p>1 终端移动性：<br>2 业务使用的私密性：<br>3 终端和网络的局限性：<br>在网络能力方面，受到无线网络传输环境、技术能力等因素限制；在终端能力方面，受到终端大小、处理能力、电池容量等的限制。无线资源的稀缺性决定了移动互联网必须遵循按流量计费的商业模式。<br>4 业务与终端、网络的强关联性：<br>由于移动互联网业务受到了网络及终端能力的限制，因此，其业务内容和形式也需要适合特定的网络技术规格和终端类型。<br>128.特殊：</p>
+<p>将已经发表的汉族文字作品翻译成少数民族文字在国内出版发行，将已经发表的作品改成盲文出版，可以不经著作权人许可。</p>
+<p>129.项目经理有管理者和领导者双重身份</p>
+<p>130.团队发展的五个阶段（常考）</p>
+<p>形成阶段、震荡阶段、规范阶段、成熟阶段、解散阶段</p>
+<p>131.安全策略的核心内容“七定”：</p>
+<p>定方案、定岗、定位、定员、定目标、定制度、定工作流程</p>
+<p>132.CMMI连续式模型（常考）</p>
+<p>过程管理：组织XXXX（除环境，支持）<br>项目管理：XXXX管理（除配置，支持）<br>工程：需求管理、需求开发、技术解决方案、产品集成、验证、确认<br>支持：其它</p>
+<p>133.信息系统安全的四个层次：（常考）</p>
+<p>设备安全：硬件损坏<br>数据安全：数据泄露、数据篡改<br>内容安全：内容是否违背法律、道德、政治<br>行为安全：数据安全本质上是一种静态的安全，而行为安全是一种动态安全，侧重执行顺序。<br>134.软件生存周期过程：</p>
+<p>主要过程：获取过程、供应过程、开发过程、运作过程、维护过程。<br>支持过程：文档编制过程、配置管理过程、质量保证过程、验证过程、确认过程、联合评审过程、审核过程、问题,解决过程、易用性过程。<br>组织过程：管理过程、基础设施过程、改进过程、人力资源过程、资产管理过程、重用大纲管理过程、领域工程过程。<br>135.P&#x2F;O矩阵、R&#x2F;D矩阵、IPO图、CU矩阵（记加 粗）</p>
+<p>为把企业组织结构与企业过程联系起来，说明每个过程与组织的联系，指出过程决策人，可以采用建立过程&#x2F;组织（Process&#x2F;Organization，P&#x2F;O）矩阵的方法。<br>为定义数据类，在调查研究和访谈的基础上，可以采用实体法归纳出数据类。实俸法首先列出企业资源，再列出一个资源&#x2F;数据（Resource&#x2F;Data，R&#x2F;D）矩阵。<br>功能法也称为过程法，它利用所识别的企业过程，分析每个过程的输入数据类和输出数据类，与RD矩阵进行比较并调整，最后归纳出系统的数据类。功能法可以用IPO（Input-Process-Output，输入 . 处理，输出）图。<br>CU矩阵。企业过程和数据类定义好后，可以企业过程为行，以数据类为列，按照企业过程生成数据类关系填写c （Create），使用数据类关系填写u（User），形成CU矩阵。<br>136.合同索赔（记天数）</p>
+<p>28天</p>
+<p>137.项目论证</p>
+<p>项目论证应该围绕着市场需求、开发技术、财务经济三个方面开展。</p>
+<p>138.拉式沟通</p>
+<p>对于信息量很大或受众很多的情况，建议采用（ 拉式）沟通方式。</p>
+<p>139.测试执行过程中的工作效率指标：</p>
+<p>1、执行效率；2、进度偏离度；3、缺陷发现率</p>
+<p>140.风险</p>
+<p>纯粹风险和投机风险在一定条件下可以相互转化</p>
+<p>141.参数估算</p>
+<p>利用历史数据之间的统计关系和其他变量，来进行项目工作的成本估算</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.v-li.com">飞鲤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.v-li.com/archives/60/">https://www.v-li.com/archives/60/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.v-li.com" target="_blank">胖子君</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</a><a class="post-meta__tags" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</a></div><div class="post_share"><div class="social-share" data-image="/img/bk_img/img07.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wx.png" target="_blank"><img class="post-qr-code-img" src="/img/wx.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/zfb.png" target="_blank"><img class="post-qr-code-img" src="/img/zfb.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/61/" title="软考高项笔记·一·计算"><img class="cover" src="/img/bk_img/img02.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">软考高项笔记·一·计算</div></div></a></div><div class="next-post pull-right"><a href="/archives/57/" title="《穷查理宝典》：解锁查理·芒格的投资智慧与人生哲学，让你决策更明智，生活更精彩！"><img class="cover" src="/img/bk_img/img05.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《穷查理宝典》：解锁查理·芒格的投资智慧与人生哲学，让你决策更明智，生活更精彩！</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/archives/61/" title="软考高项笔记·一·计算"><img class="cover" src="/img/bk_img/img02.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">软考高项笔记·一·计算</div></div></a></div><div><a href="/archives/62/" title="软考高项笔记·二·计算"><img class="cover" src="/img/bk_img/img06.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">软考高项笔记·二·计算</div></div></a></div><div><a href="/archives/63/" title="软考高项笔记·二·找茬"><img class="cover" src="/img/bk_img/img02.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">软考高项笔记·二·找茬</div></div></a></div><div><a href="/archives/64/" title="软考高项笔记·如何速记10大领域5大过程组47个过程的输入、输出、工具技术？"><img class="cover" src="/img/bk_img/img08.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">软考高项笔记·如何速记10大领域5大过程组47个过程的输入、输出、工具技术？</div></div></a></div><div><a href="/archives/65/" title="软考高项笔记·论文"><img class="cover" src="/img/bk_img/img07.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">软考高项笔记·论文</div></div></a></div><div><a href="/archives/66/" title="软考高项笔记·47个过程的输入、输出、工具技术汇总篇"><img class="cover" src="/img/bk_img/img08.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">软考高项笔记·47个过程的输入、输出、工具技术汇总篇</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">飞鲤</div><div class="author-info__description">总是需要一个自留地，记录一些自己的事情！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">想来想去后面署名改成‘飞鲤’：一个是瘦了不再胖；二是鲤鱼跃龙门，总希望自己能够跳出现在这个状态。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9%E7%AC%94%E8%AE%B0%C2%B7%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">软考高项笔记·一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E4%BB%A3%E7%A7%91%E5%AD%A6%E4%B8%89%E8%AE%BA"><span class="toc-number">1.1.</span> <span class="toc-text">现代科学三论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%9B%9B%E7%A7%8D%E7%BB%B4%E6%8A%A4"><span class="toc-number">1.2.</span> <span class="toc-text">软件四种维护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.3.</span> <span class="toc-text">系统分析与系统设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-number">1.4.</span> <span class="toc-text">信息的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%9A%84%E6%98%BE%E8%91%97%E7%89%B9%E7%82%B9"><span class="toc-number">1.5.</span> <span class="toc-text">信息的显著特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E5%8C%96%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E5%88%86%E4%B8%BA%E4%BA%94%E4%B8%AA%E5%B1%82%E6%AC%A1"><span class="toc-number">1.6.</span> <span class="toc-text">信息化从小到大分为五个层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E9%98%B6%E6%AE%B5%E5%8C%85%E6%8B%AC"><span class="toc-number">1.7.</span> <span class="toc-text">开发阶段包括</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%AE%B6%E4%BF%A1%E6%81%AF%E5%8C%96%E5%85%AD%E8%A6%81%E7%B4%A0"><span class="toc-number">1.8.</span> <span class="toc-text">国家信息化六要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E5%8C%96%E7%B3%BB%E7%BB%9F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.9.</span> <span class="toc-text">信息化系统生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95"><span class="toc-number">1.10.</span> <span class="toc-text">信息系统开发方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-number">1.11.</span> <span class="toc-text">网络协议的三要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B%EF%BC%88%E8%B6%85%E7%BA%A7%E9%87%8D%E8%A6%81%EF%BC%81%EF%BC%89"><span class="toc-number">1.12.</span> <span class="toc-text">OSI七层模型（超级重要！）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8%E6%8A%80%E6%9C%AF%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%8C%E5%90%8E2%E4%B8%AA%E7%BB%8F%E5%B8%B8%E8%80%83%EF%BC%89"><span class="toc-number">1.13.</span> <span class="toc-text">网络存储技术（重要，后2个经常考）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%85%A5%E6%8A%80%E6%9C%AF"><span class="toc-number">1.14.</span> <span class="toc-text">网络接入技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%8A%80%E6%9C%AF"><span class="toc-number">1.15.</span> <span class="toc-text">数据仓库技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">1.16.</span> <span class="toc-text">中间件技术（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">1.16.1.</span> <span class="toc-text">中间件分类：</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/66/" title="软考高项笔记·47个过程的输入、输出、工具技术汇总篇"><img src="/img/bk_img/img08.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·47个过程的输入、输出、工具技术汇总篇"/></a><div class="content"><a class="title" href="/archives/66/" title="软考高项笔记·47个过程的输入、输出、工具技术汇总篇">软考高项笔记·47个过程的输入、输出、工具技术汇总篇</a><time datetime="2024-04-29T13:52:44.477Z" title="发表于 2024-04-29 21:52:44">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/65/" title="软考高项笔记·论文"><img src="/img/bk_img/img07.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·论文"/></a><div class="content"><a class="title" href="/archives/65/" title="软考高项笔记·论文">软考高项笔记·论文</a><time datetime="2024-04-29T13:52:44.470Z" title="发表于 2024-04-29 21:52:44">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/64/" title="软考高项笔记·如何速记10大领域5大过程组47个过程的输入、输出、工具技术？"><img src="/img/bk_img/img08.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·如何速记10大领域5大过程组47个过程的输入、输出、工具技术？"/></a><div class="content"><a class="title" href="/archives/64/" title="软考高项笔记·如何速记10大领域5大过程组47个过程的输入、输出、工具技术？">软考高项笔记·如何速记10大领域5大过程组47个过程的输入、输出、工具技术？</a><time datetime="2024-04-29T13:52:44.457Z" title="发表于 2024-04-29 21:52:44">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/63/" title="软考高项笔记·二·找茬"><img src="/img/bk_img/img02.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·二·找茬"/></a><div class="content"><a class="title" href="/archives/63/" title="软考高项笔记·二·找茬">软考高项笔记·二·找茬</a><time datetime="2024-04-29T13:52:44.440Z" title="发表于 2024-04-29 21:52:44">2024-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/62/" title="软考高项笔记·二·计算"><img src="/img/bk_img/img06.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·二·计算"/></a><div class="content"><a class="title" href="/archives/62/" title="软考高项笔记·二·计算">软考高项笔记·二·计算</a><time datetime="2024-04-29T13:52:44.425Z" title="发表于 2024-04-29 21:52:44">2024-04-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2013 - 2024 By 飞鲤</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>赣ICP备2024020403号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
