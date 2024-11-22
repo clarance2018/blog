@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>飞鲤自留地</title>
+    <link>https://www.v-li.com/</link>
+    
+    <image>
+      <url>https://www.v-li.com/icon.png</url>
+      <title>飞鲤自留地</title>
+      <link>https://www.v-li.com/</link>
+    </image>
+    
+    <atom:link href="https://www.v-li.com/atom.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。</description>
+    <pubDate>Thu, 21 Nov 2024 07:21:43 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>服务器搭建 Moon 节点指南，为你的ZeroTier加速</title>
+      <link>https://www.v-li.com/archives/85/</link>
+      <guid>https://www.v-li.com/archives/85/</guid>
+      <pubDate>Thu, 21 Nov 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;服务器搭建-Moon-节点指南&quot;&gt;&lt;a href=&quot;#服务器搭建-Moon-节点指南&quot; class=&quot;headerlink&quot; title=&quot;服务器搭建 Moon 节点指南&quot;&gt;&lt;/a&gt;服务器搭建 Moon 节点指南&lt;/h3&gt;&lt;h4 id=&quot;一、前期准备&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/85/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>梦见自己开了一家小酒馆</title>
+      <link>https://www.v-li.com/archives/83/</link>
+      <guid>https://www.v-li.com/archives/83/</guid>
+      <pubDate>Sun, 17 Nov 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;在那悠长而温柔的梦境里，我悄然成为了一家微醺小酒馆的主人，它宛如从旧日电影中走出，带着一抹不经意的复古风情，静静坐落在喧嚣都市的一隅。这家小酒馆，不大，却足以容纳每一个渴望逃离尘嚣、寻觅片刻宁静的心灵。&lt;/p&gt;
+&lt;p&gt;这里没有繁复的装饰，只有暖黄的灯光温柔地洒在每一个角落，</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E6%B8%B8-%E8%AE%B0/">游&amp;记</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/">个人感悟</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/83/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>去了一趟北方——哈尔滨</title>
+      <link>https://www.v-li.com/archives/83/</link>
+      <guid>https://www.v-li.com/archives/83/</guid>
+      <pubDate>Wed, 09 Oct 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;自小便对北方抱有无限的憧憬，这份情愫或许源于对饺子的痴迷。第一次品尝那皮薄馅厚的饺子时，我便被其美味深深吸引，以至于后来从电视上得知北方逢年过节必吃饺子的习俗后，更是对北方充满了无限的向往，梦想着有一天能亲身体验那份属于北方的幸福。&lt;/p&gt;
+&lt;p&gt;这次哈尔滨之行，得益于妹妹</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E6%B8%B8-%E8%AE%B0/">游&amp;记</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/">个人感悟</category>
+      
+      <category domain="https://www.v-li.com/tags/%E6%B8%B8%E8%AE%B0/">游记</category>
+      
+      
+      <comments>https://www.v-li.com/archives/83/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>NAS内网穿透工具ZeroTier——Docker Compose配置方案</title>
+      <link>https://www.v-li.com/archives/82/</link>
+      <guid>https://www.v-li.com/archives/82/</guid>
+      <pubDate>Tue, 08 Oct 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;NAS内网穿透工具ZeroTier——Docker-Compose配置方案&quot;&gt;&lt;a href=&quot;#NAS内网穿透工具ZeroTier——Docker-Compose配置方案&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/82/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>外贸行业ChatGPT提示词有哪些？</title>
+      <link>https://www.v-li.com/archives/81/</link>
+      <guid>https://www.v-li.com/archives/81/</guid>
+      <pubDate>Mon, 26 Aug 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;最近在研究coze,希望通过这个coze来实现自动创作一些高质量的营销内容，从而达到让我有更多时间摸鱼的效果。&lt;/p&gt;
+&lt;p&gt;在这个过程中，发现很多外贸营销可能用上的一些ChatGPT提示词，在这里做个记录，能用上的自取。&lt;/p&gt;
+&lt;h2 id=&quot;广告创意&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      <category domain="https://www.v-li.com/tags/ChatGPT/">ChatGPT</category>
+      
+      
+      <comments>https://www.v-li.com/archives/81/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>对同文件夹内所有文件进行批量重命名</title>
+      <link>https://www.v-li.com/archives/80/</link>
+      <guid>https://www.v-li.com/archives/80/</guid>
+      <pubDate>Fri, 09 Aug 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;今天将blog内容从服务器打包到自己新弄的黑群里面，准备搭一个本地的玩玩。但是发现一个问题，由于我的post都是中文命名，打包下载解压之后变成了乱码……这就有点难搞！虽然我这边链接规则是使用id,网页的链接展示都没有问题，但是看到这个还是很不习惯，于是就在网上找找有没有什么</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/80/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>生活的随笔：小妹的大学、健康小记与回家的思绪</title>
+      <link>https://www.v-li.com/archives/78/</link>
+      <guid>https://www.v-li.com/archives/78/</guid>
+      <pubDate>Wed, 31 Jul 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;这个七月发生了很多事情，我觉得还是值得纪念一下。主要还是小妹从高中毕业成功的成为了一名大学生，对于我和我的家庭来说都是一个难得的喜讯。算是从我确证以来最高兴的事情了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一、小妹的飞跃&lt;/strong&gt;&lt;br&gt;在我毕业那么多年，看到很多学历比我高</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/">每日思考</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/">个人感悟</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%A1%E5%88%92/">计划</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%90%90%E6%A7%BD/">吐槽</category>
+      
+      
+      <comments>https://www.v-li.com/archives/78/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Google广告投放完整笔记</title>
+      <link>https://www.v-li.com/archives/79/</link>
+      <guid>https://www.v-li.com/archives/79/</guid>
+      <pubDate>Tue, 30 Jul 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;1-了解Google-Ads基础&quot;&gt;&lt;a href=&quot;#1-了解Google-Ads基础&quot; class=&quot;headerlink&quot; title=&quot;1. 了解Google Ads基础&quot;&gt;&lt;/a&gt;1. 了解Google</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/79/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>轻松搭建个人博客：Docker中Hexo的详细安装与配置指南</title>
+      <link>https://www.v-li.com/archives/77/</link>
+      <guid>https://www.v-li.com/archives/77/</guid>
+      <pubDate>Tue, 09 Jul 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;strong&gt;轻松搭建个人博客：Docker中Hexo的详细安装与配置指南&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/77/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>安装 CasaOS 之前需要先安装 Docker</title>
+      <link>https://www.v-li.com/archives/76/</link>
+      <guid>https://www.v-li.com/archives/76/</guid>
+      <pubDate>Wed, 19 Jun 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;安装 CasaOS 之前需要先安装 Docker&lt;/p&gt;
+&lt;p&gt;出现这个错误提示意味着在安装 CasaOS 之前需要先安装 Docker，因为 CasaOS 可能依赖于 Docker 来运行容器。错误提示建议你运行 Docker 的安装脚本，但你可能已经遇到了之前因为</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/76/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>curl 未安装而不能运行的问题</title>
+      <link>https://www.v-li.com/archives/75/</link>
+      <guid>https://www.v-li.com/archives/75/</guid>
+      <pubDate>Tue, 18 Jun 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;curl&amp;#96; 未安装而不能运行的问题&lt;/p&gt;
+&lt;p&gt;如果你在使用 &lt;code&gt;curl -fsSL https://get.casaos.io | sudo bash&lt;/code&gt; 命令时遇到因为 &lt;code&gt;curl&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/75/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>在Ubuntu上配置SSH</title>
+      <link>https://www.v-li.com/archives/74/</link>
+      <guid>https://www.v-li.com/archives/74/</guid>
+      <pubDate>Mon, 17 Jun 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;在Ubuntu上配置SSH服务通常涉及以下步骤：&lt;/p&gt;
+&lt;h3 id=&quot;步骤-1-安装SSH服务&quot;&gt;&lt;a href=&quot;#步骤-1-安装SSH服务&quot; class=&quot;headerlink&quot; title=&quot;步骤 1: 安装SSH服务&quot;&gt;&lt;/a&gt;步骤 1:</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/74/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>闭眼掉秤的50条冷知识分享</title>
+      <link>https://www.v-li.com/archives/72/</link>
+      <guid>https://www.v-li.com/archives/72/</guid>
+      <pubDate>Mon, 03 Jun 2024 08:33:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;ul&gt;
+&lt;li&gt;1.早餐可以放心大胆吃&lt;/li&gt;
+&lt;li&gt;2.优质碳水可以多吃：玉米、山药、土豆、南瓜、芋头等&lt;/li&gt;
+&lt;li&gt;3.多吃碱性食物瘦得快：冬瓜、海带、豆芽等&lt;/li&gt;
+&lt;li&gt;4.多喝茶和黑咖啡有助于减肥&lt;/li&gt;
+&lt;li&gt;5.青菜随便吃不会胖，还能补充膳食纤维</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/">生活小贴士</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/">个人感悟</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%A1%E5%88%92/">计划</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%90%90%E6%A7%BD/">吐槽</category>
+      
+      
+      <comments>https://www.v-li.com/archives/72/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·信息系统项目管理师知识点口诀（汇总）</title>
+      <link>https://www.v-li.com/archives/71/</link>
+      <guid>https://www.v-li.com/archives/71/</guid>
+      <pubDate>Sun, 12 May 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;strong&gt;一、IT部分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、信息系统生命周期划分为几个阶段&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;四阶段法：花开云散&lt;/p&gt;
+&lt;p&gt;立项（规划），开发，运维，消亡&lt;/p&gt;
+&lt;p&gt;五阶段法：划分设时运&lt;/p&gt;
+&lt;p&gt;系统规划、系</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/71/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·论文模板</title>
+      <link>https://www.v-li.com/archives/70/</link>
+      <guid>https://www.v-li.com/archives/70/</guid>
+      <pubDate>Fri, 10 May 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;项目整体管理&quot;&gt;&lt;a href=&quot;#项目整体管理&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/70/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·高项知识集锦（完整版）</title>
+      <link>https://www.v-li.com/archives/69/</link>
+      <guid>https://www.v-li.com/archives/69/</guid>
+      <pubDate>Thu, 09 May 2024 15:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;第1章-信息化与系统集成技术&quot;&gt;&lt;a href=&quot;#第1章-信息化与系统集成技术&quot; class=&quot;headerlink&quot; title=&quot;第1章 信息化与系统集成技术&quot;&gt;&lt;/a&gt;第1章 信息化与系统集成技术&lt;/h1&gt;&lt;h2 id=&quot;1考情分析&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/69/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·考前精要</title>
+      <link>https://www.v-li.com/archives/68/</link>
+      <guid>https://www.v-li.com/archives/68/</guid>
+      <pubDate>Thu, 09 May 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;信息系统项目管理师背记精要&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;选择题必备&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;人工智能即AI。人工智能应用研究的两个最重要最广泛领域为:</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/68/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·信息系统项目管理师考前几页纸</title>
+      <link>https://www.v-li.com/archives/67/</link>
+      <guid>https://www.v-li.com/archives/67/</guid>
+      <pubDate>Wed, 08 May 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;一、信息化与主流IT技术&quot;&gt;&lt;a href=&quot;#一、信息化与主流IT技术&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/67/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·47个过程的输入、输出、工具技术汇总篇</title>
+      <link>https://www.v-li.com/archives/66/</link>
+      <guid>https://www.v-li.com/archives/66/</guid>
+      <pubDate>Tue, 07 May 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;47个过程的输入、输出、工具技术汇总&lt;/p&gt;
+&lt;h2 id=&quot;整体管理&quot;&gt;&lt;a href=&quot;#整体管理&quot; class=&quot;headerlink&quot; title=&quot;整体管理&quot;&gt;&lt;/a&gt;整体管理&lt;/h2&gt;&lt;h3 id=&quot;制定项目章程&quot;&gt;&lt;a href=&quot;#制定项目章程&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/66/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>软考高项笔记·论文</title>
+      <link>https://www.v-li.com/archives/65/</link>
+      <guid>https://www.v-li.com/archives/65/</guid>
+      <pubDate>Mon, 06 May 2024 14:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;论文经验：&lt;/p&gt;
+&lt;p&gt;论文的本质是套公式！！！你的目标不是让文字多优美，而是让老师找不到扣分点！！&lt;br&gt;论文考试之前一定要先写一篇适合自己的范文并背熟，即使没有考到押中的题，换内容也只需把理论部分换换就可以了，如果考场现构思，很可能时间不够用！&lt;br&gt;论文考试之前一定</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
+      
+      
+      <comments>https://www.v-li.com/archives/65/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
