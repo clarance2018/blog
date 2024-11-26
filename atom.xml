@@ -15,8 +15,42 @@
     <atom:link href="https://www.v-li.com/atom.xml" rel="self" type="application/rss+xml"/>
     
     <description>独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。</description>
-    <pubDate>Thu, 21 Nov 2024 07:21:43 GMT</pubDate>
+    <pubDate>Tue, 26 Nov 2024 01:42:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>百度Url提交的两种方式</title>
+      <link>https://www.v-li.com/archives/86/</link>
+      <guid>https://www.v-li.com/archives/86/</guid>
+      <pubDate>Tue, 26 Nov 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;自从百度取消小站的sitemap权限，提交链接到百度的方式真是越来越少。&lt;br&gt;我这边找到两种方法，或者说只有一种，另外一种是基于我自己的Nas,通过青龙面板自动执行。在这里记录一下。&lt;/p&gt;
+&lt;h3 id=&quot;方法一：通过curl主动提交&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/SEO/">SEO</category>
+      
+      <category domain="https://www.v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/86/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>服务器搭建 Moon 节点指南，为你的ZeroTier加速</title>
@@ -607,38 +641,6 @@
       
       
       <comments>https://www.v-li.com/archives/66/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>软考高项笔记·论文</title>
-      <link>https://www.v-li.com/archives/65/</link>
-      <guid>https://www.v-li.com/archives/65/</guid>
-      <pubDate>Mon, 06 May 2024 14:00:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;论文经验：&lt;/p&gt;
-&lt;p&gt;论文的本质是套公式！！！你的目标不是让文字多优美，而是让老师找不到扣分点！！&lt;br&gt;论文考试之前一定要先写一篇适合自己的范文并背熟，即使没有考到押中的题，换内容也只需把理论部分换换就可以了，如果考场现构思，很可能时间不够用！&lt;br&gt;论文考试之前一定</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
-      
-      
-      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
-      
-      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
-      
-      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
-      
-      
-      <comments>https://www.v-li.com/archives/65/#disqus_thread</comments>
       
     </item>
     
