@@ -15,8 +15,39 @@
     <atom:link href="https://www.v-li.com/atom.xml" rel="self" type="application/rss+xml"/>
     
     <description>独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。</description>
-    <pubDate>Tue, 26 Nov 2024 01:42:33 GMT</pubDate>
+    <pubDate>Fri, 13 Dec 2024 00:27:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>安装部署指南：使用Lucky实现IPv6动态解析和HTTPS访问NAS服务</title>
+      <link>https://www.v-li.com/archives/87/</link>
+      <guid>https://www.v-li.com/archives/87/</guid>
+      <pubDate>Mon, 09 Dec 2024 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/87/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>百度Url提交的两种方式</title>
@@ -609,38 +640,6 @@
       
       
       <comments>https://www.v-li.com/archives/67/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>软考高项笔记·47个过程的输入、输出、工具技术汇总篇</title>
-      <link>https://www.v-li.com/archives/66/</link>
-      <guid>https://www.v-li.com/archives/66/</guid>
-      <pubDate>Tue, 07 May 2024 14:00:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;47个过程的输入、输出、工具技术汇总&lt;/p&gt;
-&lt;h2 id=&quot;整体管理&quot;&gt;&lt;a href=&quot;#整体管理&quot; class=&quot;headerlink&quot; title=&quot;整体管理&quot;&gt;&lt;/a&gt;整体管理&lt;/h2&gt;&lt;h3 id=&quot;制定项目章程&quot;&gt;&lt;a href=&quot;#制定项目章程&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
-      
-      
-      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
-      
-      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
-      
-      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
-      
-      
-      <comments>https://www.v-li.com/archives/66/#disqus_thread</comments>
       
     </item>
     
