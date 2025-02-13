@@ -15,8 +15,101 @@
     <atom:link href="https://www.v-li.com/atom.xml" rel="self" type="application/rss+xml"/>
     
     <description>独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。</description>
-    <pubDate>Tue, 24 Dec 2024 06:24:56 GMT</pubDate>
+    <pubDate>Thu, 13 Feb 2025 09:03:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Blossom笔记软件Docker Compose部署指南</title>
+      <link>https://www.v-li.com/archives/92/</link>
+      <guid>https://www.v-li.com/archives/92/</guid>
+      <pubDate>Fri, 17 Jan 2025 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;一、Blossom简介&quot;&gt;&lt;a href=&quot;#一、Blossom简介&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/92/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Clash for Docker 容器配置指南：从安装到自动化更新</title>
+      <link>https://www.v-li.com/archives/91/</link>
+      <guid>https://www.v-li.com/archives/91/</guid>
+      <pubDate>Tue, 07 Jan 2025 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h4 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h4&gt;&lt;p&gt;欢迎来到 Clash for Docker 容器的详细配置指南。无论你是 Docker</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/91/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Clash for Linux 配置指南：轻松解决 Docker 镜像拉取难题</title>
+      <link>https://www.v-li.com/archives/90/</link>
+      <guid>https://www.v-li.com/archives/90/</guid>
+      <pubDate>Mon, 06 Jan 2025 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;面对网络限制及国内 Docker 镜像源服务的减少，拉取 Docker</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/90/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>使用Frp实现内网穿透详细步骤</title>
@@ -539,104 +632,6 @@
       
       
       <comments>https://www.v-li.com/archives/72/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>软考高项笔记·信息系统项目管理师知识点口诀（汇总）</title>
-      <link>https://www.v-li.com/archives/71/</link>
-      <guid>https://www.v-li.com/archives/71/</guid>
-      <pubDate>Sun, 12 May 2024 14:00:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;&lt;strong&gt;一、IT部分&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1、信息系统生命周期划分为几个阶段&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;四阶段法：花开云散&lt;/p&gt;
-&lt;p&gt;立项（规划），开发，运维，消亡&lt;/p&gt;
-&lt;p&gt;五阶段法：划分设时运&lt;/p&gt;
-&lt;p&gt;系统规划、系</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
-      
-      
-      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
-      
-      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
-      
-      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
-      
-      
-      <comments>https://www.v-li.com/archives/71/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>软考高项笔记·论文模板</title>
-      <link>https://www.v-li.com/archives/70/</link>
-      <guid>https://www.v-li.com/archives/70/</guid>
-      <pubDate>Fri, 10 May 2024 14:00:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h3 id=&quot;项目整体管理&quot;&gt;&lt;a href=&quot;#项目整体管理&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
-      
-      
-      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
-      
-      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
-      
-      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
-      
-      
-      <comments>https://www.v-li.com/archives/70/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>软考高项笔记·高项知识集锦（完整版）</title>
-      <link>https://www.v-li.com/archives/69/</link>
-      <guid>https://www.v-li.com/archives/69/</guid>
-      <pubDate>Thu, 09 May 2024 15:00:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;第1章-信息化与系统集成技术&quot;&gt;&lt;a href=&quot;#第1章-信息化与系统集成技术&quot; class=&quot;headerlink&quot; title=&quot;第1章 信息化与系统集成技术&quot;&gt;&lt;/a&gt;第1章 信息化与系统集成技术&lt;/h1&gt;&lt;h2 id=&quot;1考情分析&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
-      
-      
-      <category domain="https://www.v-li.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</category>
-      
-      <category domain="https://www.v-li.com/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</category>
-      
-      <category domain="https://www.v-li.com/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/">软考高项</category>
-      
-      
-      <comments>https://www.v-li.com/archives/69/#disqus_thread</comments>
       
     </item>
     
