@@ -15,8 +15,40 @@
     <atom:link href="https://www.v-li.com/atom.xml" rel="self" type="application/rss+xml"/>
     
     <description>独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。</description>
-    <pubDate>Fri, 28 Feb 2025 01:40:41 GMT</pubDate>
+    <pubDate>Fri, 28 Feb 2025 01:59:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Linux常用代码大集锦</title>
+      <link>https://www.v-li.com/archives/94/</link>
+      <guid>https://www.v-li.com/archives/94/</guid>
+      <pubDate>Sat, 01 Mar 2025 01:00:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;在Linux系统中，掌握一些常用的代码命令，能够帮助我们更高效地进行文件管理、系统配置、网络操作等任务。以下是一些常用的Linux命令代码，按功能分类整理，希望对你有所帮助。&lt;/p&gt;
+&lt;h2 id=&quot;一、文件和目录操作&quot;&gt;&lt;a href=&quot;#一、文件和目录操作&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
+      
+      
+      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      
+      <category domain="https://www.v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</category>
+      
+      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      
+      <comments>https://www.v-li.com/archives/94/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>BAT 文件进阶用法：10 个高效自动化示例</title>
@@ -597,36 +629,6 @@
       
       
       <comments>https://www.v-li.com/archives/75/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>在Ubuntu上配置SSH</title>
-      <link>https://www.v-li.com/archives/74/</link>
-      <guid>https://www.v-li.com/archives/74/</guid>
-      <pubDate>Mon, 17 Jun 2024 14:00:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;在Ubuntu上配置SSH服务通常涉及以下步骤：&lt;/p&gt;
-&lt;h3 id=&quot;步骤-1-安装SSH服务&quot;&gt;&lt;a href=&quot;#步骤-1-安装SSH服务&quot; class=&quot;headerlink&quot; title=&quot;步骤 1: 安装SSH服务&quot;&gt;&lt;/a&gt;步骤 1:</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://www.v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</category>
-      
-      
-      <category domain="https://www.v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
-      
-      <category domain="https://www.v-li.com/tags/%E8%AE%B0%E5%BD%95/">记录</category>
-      
-      
-      <comments>https://www.v-li.com/archives/74/#disqus_thread</comments>
       
     </item>
     
