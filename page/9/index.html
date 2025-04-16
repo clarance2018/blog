@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>飞鲤的自留地 - 闲来拾笔书心事，留与清风共月眠</title><meta name="author" content="飞鲤"><meta name="copyright" content="飞鲤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="飞鲤的自留地">
+<meta property="og:url" content="https://v-li.com/page/9/index.html">
+<meta property="og:site_name" content="飞鲤的自留地">
+<meta property="og:description" content="独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/39393864?v=4">
+<meta property="article:author" content="飞鲤">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/39393864?v=4"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://v-li.com/page/9/index.html"><link rel="preconnect"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c3b47e462e0d37228d939555eff17bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '飞鲤的自留地',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css_js/v-li.css"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"JngdjtGDf2twJL8Y",ck:"JngdjtGDf2twJL8Y",autoTrack:true,screenRecord:true})</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="飞鲤的自留地" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-tags"></i><span> 标签</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-archive"></i><span> 汇总</span></a></li><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-archive"></i><span> 软考高项</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><i class="fa-fw fas fa-folder-open"></i><span> 知识充电</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><i class="fa-fw fas fa-folder-open"></i><span> 生活小贴士</span></a></li><li><a class="site-page child" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><i class="fa-fw fas fa-folder-open"></i><span> 每日思考</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fas fa-tool"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fas fa-link"></i><span> 活动</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://bf.zzxworld.com/"><span> BlogFinder</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.boyouquan.com/planet-shuttle"><span> 博友圈</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://bokelu.suijiboke.gs/"><span> 博客录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://foreverblog.cn/go.html"><span> 十年之约</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/bk_img/background5.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/icon/favicon.ico" alt="Logo"><span class="site-name">飞鲤的自留地</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-tags"></i><span> 标签</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-archive"></i><span> 汇总</span></a></li><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-archive"></i><span> 软考高项</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><i class="fa-fw fas fa-folder-open"></i><span> 知识充电</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><i class="fa-fw fas fa-folder-open"></i><span> 生活小贴士</span></a></li><li><a class="site-page child" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><i class="fa-fw fas fa-folder-open"></i><span> 每日思考</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fas fa-tool"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fas fa-link"></i><span> 活动</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://bf.zzxworld.com/"><span> BlogFinder</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.boyouquan.com/planet-shuttle"><span> 博友圈</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://bokelu.suijiboke.gs/"><span> 博客录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://foreverblog.cn/go.html"><span> 十年之约</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">飞鲤的自留地</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/225919844" target="_blank" title="BiliBili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=928836584" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/archives/25/" title="使用记事本编辑网页代码有哪些坑？"><img class="post-bg" src="/img/bk_img/background3.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用记事本编辑网页代码有哪些坑？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/25/" title="使用记事本编辑网页代码有哪些坑？">使用记事本编辑网页代码有哪些坑？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:03.000Z" title="发表于 2020-06-11 14:38:03">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">  在Windows操作系统中，记事本是一个小的应用程序，采用一个简单的文本编辑器进行文字信息的记录和存储。自从1985年发布的Windows 1.0开始，所有的Microsoft Windows版本都内置这个软件。从“记事本”本意来看，简单记录和存储代码还行，用来编辑修改程序代码，哪怕是最普通的HTML代码，想要避免出现问题就应该尽量不要采用。至于为什么，今天我们就来聊聊使用记事本编辑网页代码有哪些坑？1，无法完美保存utf-8字符编码的网页内容简体中文Windows操作系统中的记事本保存文件编码默认不是utf-8，现在多数网页都是该编码，使用记事本保存的最直观结果就是乱码。基于Windows尿性，记事本即使能设置保存文件为utf-8编码，它也十有八九会为给你加上不该有的BOM标记，UTF-8-BOM是指在文件开头增加的0xef 0xbb...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/1/" title="Table作为网页布局代码被弃用的原因"><img class="post-bg" src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Table作为网页布局代码被弃用的原因"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/1/" title="Table作为网页布局代码被弃用的原因">Table作为网页布局代码被弃用的原因</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:00.000Z" title="发表于 2020-06-11 14:38:00">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/32/" title="解决phpMyAdmin最大上传限制问题"><img class="post-bg" src="/img/bk_img/background5.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决phpMyAdmin最大上传限制问题"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/32/" title="解决phpMyAdmin最大上传限制问题">解决phpMyAdmin最大上传限制问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:38:00.000Z" title="发表于 2020-06-11 14:38:00">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">phpMyAdmin使用方便，已成为大多数站长的常用工具，对于小型网站来讲phpmyadmin已经绰绰有余。大文件导入mysql一直以来都是个问题，一般情况下，phpMyAdmin默认最大限制上传2M以内的文件，但是当网站运营一段时间后，即使把sql格式的数据库压缩成zip格式，也可能无法控制在2M以内。 通常行业内并不推荐使用phpMyAdmin来导入大数据库，因为大多数用户使用的是虚拟主机，很多文件没有服务器权限是无法修改的，而且phpMyAdmin对大数据库的执行效率也非常低，容易出现错误。但对于只是大于2M而并非上百兆的文件，我们仍可以通过phpMyAdmin来进行数据库导入操作。网上已经有很多相关教程，但大多数都不全，只解决了一部分问题，所以今天益吾库整理出了相对比较靠谱的两种方案，希望对大家有所帮助。 解决方案一： 打开phpMyAdmin安装目录下的配置文件config.inc.php并查找： $cfg['UploadDir'] = ”;  $cfg[‘SaveDir’] &#x3D;...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/37/" title="到底什么是网站根目录？"><img class="post-bg" src="/img/bk_img/background6.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="到底什么是网站根目录？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/37/" title="到底什么是网站根目录？">到底什么是网站根目录？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:58.000Z" title="发表于 2020-06-11 14:37:58">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content"> ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/33/" title="关于字体图标那些事你知道多少？"><img class="post-bg" src="/img/bk_img/background3.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于字体图标那些事你知道多少？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/33/" title="关于字体图标那些事你知道多少？">关于字体图标那些事你知道多少？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:55.000Z" title="发表于 2020-06-11 14:37:55">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">什么是字体图标？ 简单的说，就是将一种特殊的字体，通过特定方式，在网页上像传统图片一样显示的图标。如下图：  字体图标(font-icon)通常是将一套图标集以字体文件的形式封装，并通过 CSS 的 @font-face 方式作为 Web Font 调用。为了解决不同环境不同浏览器的兼容和效率问题，常见封装文件格式有otf、eot、svg、ttf、woff、woff2等。比较知名的字体图标库有Glyphicons（Bootstrap）、Font Awesome（奥森图标）、Iconfont（阿里巴巴）、IcoMoon等，前两种是各自统一风格并且所有图标整体封装，文件相对较大但使用方便，后两种则更像是一种平台，需要自定义选取封装，按需生成文件在网页中加载时更有优势，但更新增减操作稍显麻烦。  为什么要用字体图标？ 轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染显示，不需要下载一个个图像。与css...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/28/" title="什么是绝对地址和相对地址？"><img class="post-bg" src="/img/bk_img/background4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是绝对地址和相对地址？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/28/" title="什么是绝对地址和相对地址？">什么是绝对地址和相对地址？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:53.000Z" title="发表于 2020-06-11 14:37:53">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content"> ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/13/" title="怎样查看网页源代码和审查元素？"><img class="post-bg" src="/img/bk_img/background9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="怎样查看网页源代码和审查元素？"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/13/" title="怎样查看网页源代码和审查元素？">怎样查看网页源代码和审查元素？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:52.000Z" title="发表于 2020-06-11 14:37:52">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/36/" title="对付DDoS攻击的一些绝招"><img class="post-bg" src="/img/bk_img/background5.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对付DDoS攻击的一些绝招"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/36/" title="对付DDoS攻击的一些绝招">对付DDoS攻击的一些绝招</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:45.000Z" title="发表于 2020-06-11 14:37:45">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">DDoS攻击全名叫做分布式拒绝服务(DDoS：Distributed Denial of Service)，攻击者往往将多个计算机平台联合起来对同一个目标或者多个目标进行攻击，攻击所造成的后果也因此而严重程度不同。 DDoS攻击出现至今已将近三十年，可是至今依然未能出现有效的应对手段。上次里约奥运会期间，DDoS攻击再次大行其道。全球攻击峰值达到了今年的最高值，可见只是一种人来疯而且还不怕见光的攻击手段。 那么DDoS攻击为何如此无解呢?因为DDoS攻击常常会采用通过大量合法的请求的手段占用服务器网络资源，由此而达到瘫痪网络的目的。服务器在面对DDoS攻击时很难合理的判定和区分请求，因此遭受攻击时往往束手无策，只能等待攻击者停止攻击。  拒绝服务攻击的发展  从拒绝服务攻击诞生到现在已经有了很多的发展，从最初的简单Dos到现在的DdoS。那么什么是Dos和DdoS呢？DoS是一种利用单台计算机的攻击 方式。而DdoS(Distributed Denial of...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/5/" title="HTML5 div article section标签区别与应用"><img class="post-bg" src="/img/bk_img/background6.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML5 div article section标签区别与应用"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/5/" title="HTML5 div article section标签区别与应用">HTML5 div article section标签区别与应用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:42.000Z" title="发表于 2020-06-11 14:37:42">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">  HTML5推出了一系列新元素，被广泛应用。然而，有一些元素在使用时易与传统div元素混淆，特别是这两个新元素：&lt;section&gt;和&lt;article&gt;。 我们最常被新手问到的问题是：在什么情况下我们应该使用这些元素？以及我们应该如何正确的使用这些元素？ 今天我们就来探讨一下它们之间的区别。一、section元素&nbsp; &nbsp; &nbsp; &nbsp;从字面理解就是区块、部分的意思，相对于article元素更加广泛，每个区块都可以使用，比如页面里的导航菜单、文章正文、文章的评论等。&nbsp; &nbsp; &nbsp; &nbsp;1、section元素用于对网站或应用程序中页面上的内容进行分块，section元素的作用是对页面上的内容进行分块，或者说对文章进行分段，；&nbsp; &nbsp; &nbsp; &nbsp;2、一个section元素通常由内容及其标题组成。通常不推荐为那些没有标题的内容使用section元素，&nbsp; &nbsp; &nbsp;...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/34/" title="各大知名邮箱介绍及SMTP群发送量限制情况"><img class="post-bg" src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="各大知名邮箱介绍及SMTP群发送量限制情况"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/34/" title="各大知名邮箱介绍及SMTP群发送量限制情况">各大知名邮箱介绍及SMTP群发送量限制情况</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T06:37:41.000Z" title="发表于 2020-06-11 14:37:41">2020-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">网络产品推广和消息资讯推送，经常用到的工具就是用客户邮箱发送邮件，如果是要发送的邮件量非常大的话，一般的建议是搭建自己的邮局服务器，或者是花钱购买专业的邮件群发服务，免费邮箱的SMTP适合少量的邮件群发需求。随着自动注册机和发帖机的泛滥，很多站长也使用邮箱验证的方式注册用户，但国内免费邮箱限制颇多，建议有条件的站长尽量使用收费邮箱或者企业邮箱。今天我们就来了解一下各大知名邮箱的历史及SMTP群发送量限制情况。 QQ邮箱...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/8/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/#content-inner">10</a><a class="extend next" rel="next" href="/page/10/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">飞鲤</div><div class="author-info-description">独辟心园一亩田，耕耘往事与今缘。<br>闲来拾笔书心事，留与清风共月眠。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/225919844" target="_blank" title="BiliBili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=928836584" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">每天都是新的一天！新增一个字符的计数工具</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/97/" title="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南"><img src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南"/></a><div class="content"><a class="title" href="/archives/97/" title="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南">2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南</a><time datetime="2025-04-16T01:00:34.000Z" title="发表于 2025-04-16 09:00:34">2025-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/96/" title="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略"><img src="/img/bk_img/background7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略"/></a><div class="content"><a class="title" href="/archives/96/" title="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略">Memos：你的私有化知识管理神器，飞牛NAS部署全攻略</a><time datetime="2025-04-14T01:00:34.000Z" title="发表于 2025-04-14 09:00:34">2025-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/95/" title="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南"><img src="/img/bk_img/background9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南"/></a><div class="content"><a class="title" href="/archives/95/" title="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南">高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南</a><time datetime="2025-03-28T01:00:34.000Z" title="发表于 2025-03-28 09:00:34">2025-03-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/94/" title="Linux常用代码大集锦"><img src="/img/bk_img/background10.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux常用代码大集锦"/></a><div class="content"><a class="title" href="/archives/94/" title="Linux常用代码大集锦">Linux常用代码大集锦</a><time datetime="2025-03-01T01:00:34.000Z" title="发表于 2025-03-01 09:00:34">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/93/" title="BAT 文件进阶用法：10 个高效自动化示例"><img src="/img/bk_img/background4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BAT 文件进阶用法：10 个高效自动化示例"/></a><div class="content"><a class="title" href="/archives/93/" title="BAT 文件进阶用法：10 个高效自动化示例">BAT 文件进阶用法：10 个高效自动化示例</a><time datetime="2025-02-28T01:00:34.000Z" title="发表于 2025-02-28 09:00:34">2025-02-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><span class="card-category-list-name">每日思考</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8-%E8%AE%B0/"><span class="card-category-list-name">游&记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><span class="card-category-list-name">生活小贴士</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><span class="card-category-list-name">知识充电</span><span class="card-category-list-count">87</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/" style="font-size: 1.35em; color: #99a3b0">软考高项</a> <a href="/tags/SEO/" style="font-size: 1.16em; color: #999b9f">SEO</a> <a href="/tags/docker/" style="font-size: 1.28em; color: #99a0ab">docker</a> <a href="/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" style="font-size: 1.32em; color: #99a2ad">书籍推荐</a> <a href="/tags/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/" style="font-size: 1.5em; color: #99a9bf">网站百科</a> <a href="/tags/%E8%87%AA%E5%AA%92%E4%BD%93/" style="font-size: 1.1em; color: #999">自媒体</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.41em; color: #99a5b6">记录</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 1.1em; color: #999">分享</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 1.44em; color: #99a7b9">资源分享</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 1.1em; color: #999">游记</a> <a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.38em; color: #99a4b3">经验分享</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 1.19em; color: #999da2">吐槽</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" style="font-size: 1.47em; color: #99a8bc">技术笔记</a> <a href="/tags/pdf%E4%B8%8B%E8%BD%BD/" style="font-size: 1.32em; color: #99a2ad">pdf下载</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" style="font-size: 1.38em; color: #99a4b3">学习经验</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 1.22em; color: #999ea5">计划</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/" style="font-size: 1.25em; color: #999fa8">个人感悟</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE/" style="font-size: 1.1em; color: #999">结构化数据</a> <a href="/tags/ChatGPT/" style="font-size: 1.1em; color: #999">ChatGPT</a> <a href="/tags/%E7%BD%91%E7%AB%99%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: #99a9bf">网站技巧</a> <a href="/tags/%E6%B4%BB%E7%9D%80/" style="font-size: 1.13em; color: #999a9c">活着</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">97</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-16T02:30:41.771Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div class="footer-copyright"> <div class="footer-copyright-wrapper"> <p class="footer-copyright-text"> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>赣ICP备2024020403号</span></a> | <a href="https://beian.mps.gov.cn/#/query/webSearch?code=36073202360902" rel="noreferrer" target="_blank"><img class="logos" src="/img/icp-logo.png" height="14px;">赣公网安备36073202360902</a> | 互联网违法和不良信息举报邮箱：hcshi@outlook.com | <a href="https://v-li.com/sitemap.xml">网站地图</a> </p> </div> </div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('/pluginsSrc/typed.js/dist/typed.umd.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const from = '出自 ' + data.from
+      typedJSFn.processSubtitle(data.hitokoto, [from])
+    })
+    .catch(err => {
+      console.error('Failed to get the Hitokoto API:', err)
+      typedJSFn.processSubtitle([])
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

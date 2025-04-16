@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>飞鲤的自留地 - 闲来拾笔书心事，留与清风共月眠</title><meta name="author" content="飞鲤"><meta name="copyright" content="飞鲤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="飞鲤的自留地">
+<meta property="og:url" content="https://v-li.com/page/3/index.html">
+<meta property="og:site_name" content="飞鲤的自留地">
+<meta property="og:description" content="独辟心园一亩田，耕耘往事与今缘。闲来拾笔书心事，留与清风共月眠。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/39393864?v=4">
+<meta property="article:author" content="飞鲤">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/39393864?v=4"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://v-li.com/page/3/index.html"><link rel="preconnect"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c3b47e462e0d37228d939555eff17bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '飞鲤的自留地',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css_js/v-li.css"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"JngdjtGDf2twJL8Y",ck:"JngdjtGDf2twJL8Y",autoTrack:true,screenRecord:true})</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="飞鲤的自留地" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-tags"></i><span> 标签</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-archive"></i><span> 汇总</span></a></li><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-archive"></i><span> 软考高项</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><i class="fa-fw fas fa-folder-open"></i><span> 知识充电</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><i class="fa-fw fas fa-folder-open"></i><span> 生活小贴士</span></a></li><li><a class="site-page child" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><i class="fa-fw fas fa-folder-open"></i><span> 每日思考</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fas fa-tool"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fas fa-link"></i><span> 活动</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://bf.zzxworld.com/"><span> BlogFinder</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.boyouquan.com/planet-shuttle"><span> 博友圈</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://bokelu.suijiboke.gs/"><span> 博客录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://foreverblog.cn/go.html"><span> 十年之约</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/bk_img/background5.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/icon/favicon.ico" alt="Logo"><span class="site-name">飞鲤的自留地</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-tags"></i><span> 标签</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-archive"></i><span> 汇总</span></a></li><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-archive"></i><span> 软考高项</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><i class="fa-fw fas fa-folder-open"></i><span> 知识充电</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><i class="fa-fw fas fa-folder-open"></i><span> 生活小贴士</span></a></li><li><a class="site-page child" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><i class="fa-fw fas fa-folder-open"></i><span> 每日思考</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fas fa-tool"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fas fa-link"></i><span> 活动</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://bf.zzxworld.com/"><span> BlogFinder</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.boyouquan.com/planet-shuttle"><span> 博友圈</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://bokelu.suijiboke.gs/"><span> 博客录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://foreverblog.cn/go.html"><span> 十年之约</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">飞鲤的自留地</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/225919844" target="_blank" title="BiliBili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=928836584" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/archives/77/" title="轻松搭建个人博客：Docker中Hexo的详细安装与配置指南"><img class="post-bg" src="/img/bk_img/background6.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="轻松搭建个人博客：Docker中Hexo的详细安装与配置指南"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/77/" title="轻松搭建个人博客：Docker中Hexo的详细安装与配置指南">轻松搭建个人博客：Docker中Hexo的详细安装与配置指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-09T01:00:34.000Z" title="发表于 2024-07-09 09:00:34">2024-07-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">轻松搭建个人博客：Docker中Hexo的详细安装与配置指南 引言想要拥有一个属于自己的博客吗？Hexo和Docker的结合可以帮您轻松实现这一目标。Hexo是一个快速、简洁且高效的博客框架，而Docker则能让您无需关心复杂的安装和环境配置。接下来，我们将指导您如何在Docker中安装和配置Hexo，以及如何解决常见问题。 一、拉取Hexo镜像首先，从Docker Hub上拉取最新的Hexo镜像： 1docker pull spurin/hexo https://hub.docker.com/r/spurin/hexo  二、创建并配置Hexo容器使用以下命令创建Docker容器，并根据您的需求进行配置： 1234567docker create --name=hexo-blog \-e HEXO_SERVER_PORT=4000 \-e GIT_USER=&quot;Your Git Username&quot; \-e GIT_EMAIL=&quot;your.email@example.com&quot; \-v /path/to/your/hexo-blog:/app...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/76/" title="安装 CasaOS 之前需要先安装 Docker"><img class="post-bg" src="/img/bk_img/background3.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装 CasaOS 之前需要先安装 Docker"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/76/" title="安装 CasaOS 之前需要先安装 Docker">安装 CasaOS 之前需要先安装 Docker</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-19T14:00:34.000Z" title="发表于 2024-06-19 22:00:34">2024-06-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">安装 CasaOS 之前需要先安装 Docker 出现这个错误提示意味着在安装 CasaOS 之前需要先安装 Docker，因为 CasaOS 可能依赖于 Docker 来运行容器。错误提示建议你运行 Docker 的安装脚本，但你可能已经遇到了之前因为 curl 未安装而导致的问题。 以下是你应该遵循的步骤来安装 Docker 并再次尝试安装 CasaOS：  首先，确保你已经安装了 curl。如果还没有安装，使用以下命令安装它：  12sudo apt updatesudo apt install curl   安装 Docker。使用 Docker 官方提供的安装脚本：  1curl -fsSL https://get.docker.com | sudo bash  这个脚本会自动检测你的 Linux 发行版并为你安装 Docker。安装过程中可能需要你输入用户密码以进行确认。  安装 Docker 后，确保 Docker 服务正在运行：  1sudo systemctl start docker  并且设置 Docker 服务在开机时自启： 1sudo...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/75/" title="curl 未安装而不能运行的问题"><img class="post-bg" src="/img/bk_img/background10.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="curl 未安装而不能运行的问题"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/75/" title="curl 未安装而不能运行的问题">curl 未安装而不能运行的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-18T14:00:34.000Z" title="发表于 2024-06-18 22:00:34">2024-06-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">curl&#96; 未安装而不能运行的问题 如果你在使用 curl -fsSL https://get.casaos.io | sudo bash 命令时遇到因为 curl 未安装而不能运行的问题，你可以按照以下步骤使用 apt 来安装 curl 并再次尝试运行该命令：  打开终端。  使用 apt 更新软件包列表（如果尚未更新）：   1sudo apt update   安装 curl：  1sudo apt install curl  如果系统提示你是否继续安装，输入 Y 并按回车键以确认。  安装完成后，重新运行 CasaOS 的安装命令：  1curl -fsSL https://get.casaos.io | sudo bash  如果 apt 命令本身也无法运行，那么可能是你的系统有问题，或者 apt 相关的软件包没有正确安装。这通常不会发生在一个标准的 Ubuntu 或 Debian 系统上，但如果你使用的是一个非标准的系统或者是一个受损的系统，你可能需要采取额外的步骤来修复 apt。 以下是一些可能的修复步骤：  确保你的网络连接正常。 尝试重新配置 apt...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/74/" title="在Ubuntu上配置SSH"><img class="post-bg" src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在Ubuntu上配置SSH"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/74/" title="在Ubuntu上配置SSH">在Ubuntu上配置SSH</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-17T14:00:34.000Z" title="发表于 2024-06-17 22:00:34">2024-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">在Ubuntu上配置SSH服务通常涉及以下步骤： 步骤 1: 安装SSH服务首先，确保您的Ubuntu系统是最新的，并安装OpenSSH服务器。 12sudo apt updatesudo apt install openssh-server  步骤 2: 启动SSH服务安装完成后，启动SSH服务。 1sudo systemctl start ssh  步骤 3: 设置SSH服务开机自启为了确保每次系统启动时SSH服务都能自动运行，设置其开机自启。 1sudo systemctl enable ssh  步骤 4: 配置防火墙以允许SSH连接默认情况下，SSH服务监听端口22。配置防火墙以允许通过此端口的连接。 1sudo ufw allow ssh  步骤 5: （可选）修改SSH配置（sshd_config）如果您需要个性化SSH服务（如修改默认端口或禁用root登录），可以编辑/etc/ssh/sshd_config文件。  修改默认端口（确保新端口未被占用）： 在sshd_config文件中找到#Port 22（如果已存在则取消注释并修改），或者添加一行Port...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/72/" title="闭眼掉秤的50条冷知识分享"><img class="post-bg" src="/img/bk_img/background7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闭眼掉秤的50条冷知识分享"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/72/" title="闭眼掉秤的50条冷知识分享">闭眼掉秤的50条冷知识分享</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-03T08:33:34.000Z" title="发表于 2024-06-03 16:33:34">2024-06-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/">生活小贴士</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/71/" title="软考高项笔记·信息系统项目管理师知识点口诀（汇总）"><img class="post-bg" src="/img/bk_img/background9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·信息系统项目管理师知识点口诀（汇总）"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/71/" title="软考高项笔记·信息系统项目管理师知识点口诀（汇总）">软考高项笔记·信息系统项目管理师知识点口诀（汇总）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-12T14:00:34.000Z" title="发表于 2024-05-12 22:00:34">2024-05-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">一、IT部分 1、信息系统生命周期划分为几个阶段 四阶段法：花开云散 立项（规划），开发，运维，消亡 五阶段法：划分设时运 系统规划、系统分析、系统设计、系统实施、系统运行和维护 2、信息系统开发方法 口诀：不愿对象；门清接福 解析：需求不清—原型法；需求明确—结构化方法； 符合人类思维、可复用—-面向对象方法；接口、构件、系统之间共享—-面向服务 3、网络存储计算 口诀：打哪傻存，犯傻、怕傻、不傻 解析：DAS-达斯-直接附加存在；NAS-纳斯-网络附加存储； SAN-撒们-网络附加存储；FC SAN-光纤通道；IP SAN—IP存储；IB...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/70/" title="软考高项笔记·论文模板"><img class="post-bg" src="/img/bk_img/background10.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·论文模板"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/70/" title="软考高项笔记·论文模板">软考高项笔记·论文模板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-10T14:00:34.000Z" title="发表于 2024-05-10 22:00:34">2024-05-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/69/" title="软考高项笔记·高项知识集锦（完整版）"><img class="post-bg" src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·高项知识集锦（完整版）"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/69/" title="软考高项笔记·高项知识集锦（完整版）">软考高项笔记·高项知识集锦（完整版）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-09T15:00:34.000Z" title="发表于 2024-05-09 23:00:34">2024-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">第1章...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/68/" title="软考高项笔记·考前精要"><img class="post-bg" src="/img/bk_img/background7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·考前精要"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/68/" title="软考高项笔记·考前精要">软考高项笔记·考前精要</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-09T14:00:34.000Z" title="发表于 2024-05-09 22:00:34">2024-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">信息系统项目管理师背记精要 选择题必备  人工智能即AI。人工智能应用研究的两个最重要最广泛领域为: 专家系统、机器学习。 区块链(Block-chain)是比特币的一个重要概念，本质是一个去中心化的数据库。是一种按照时间顺序将数据区块以顺序相连的方式组合成的一种链式数据结构。 智慧城市是利用新一代信息技术来感知、监测、分析、整合城市资源，对各种需求做出迅速、灵活、准确反应，为公众创造绿色、和谐环境，提供泛在、便捷、高效服务的城市形态。智慧城市建设参考模型包括功能层（物联感知层、通信网络层、计算与存储层、数据及服务支撑层、智慧应用层）和支撑体系（安全保障体系、建设和运营管理体系、标准规范体系） 第五代移动通信系统设备（5G）具备高性能、低延迟与高容量特性，这些优点体现在毫米波、小基站、Massive...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/67/" title="软考高项笔记·信息系统项目管理师考前几页纸"><img class="post-bg" src="/img/bk_img/background4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软考高项笔记·信息系统项目管理师考前几页纸"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/67/" title="软考高项笔记·信息系统项目管理师考前几页纸">软考高项笔记·信息系统项目管理师考前几页纸</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-08T14:00:34.000Z" title="发表于 2024-05-08 22:00:34">2024-05-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/">知识充电</a></span></div><div class="content">一、信息化与主流IT技术1、展望2035年，我国将基本实现社会主义现代化。经济实力、科技实力、综合国力将大幅跃升，经济总量和城乡居民人均收入将再迈上新的大台阶，关键核心技术实现重大突破，进入创新型国家前列。基本实现新型工业化、信息化、城镇化、农业现代化，建成现代化经济体系。信息技术发展的总趋势是向应用驱动与技术驱动相结合的模式转变，信息技术发展趋势和新技术应用主要包括：（1）高速度大容量；（2）集成化和平台化；（3）智能化；（4）虚拟计算；（5）通信技术；（6）遥感和传感技术；（7）移动智能终端；（8）以人为本；（9）信息安全； 2、区块链（Blockchain）是比特币的一个重要概念，它本质上是一个去中介化的数据库，同时作为比特币的底层技术，是一串使用密码学方法相关联产生的数据块，每一个数据块中包含了一次比特币网络交易的信息，用于验证其信息的有效性（防伪）和生成下一个区块。区块链是一种按照时间顺序将数据区块以顺序相连的方式组合成的一种链式数据结构，...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#content-inner">10</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">飞鲤</div><div class="author-info-description">独辟心园一亩田，耕耘往事与今缘。<br>闲来拾笔书心事，留与清风共月眠。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/225919844" target="_blank" title="BiliBili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=928836584" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">每天都是新的一天！新增一个字符的计数工具</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/97/" title="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南"><img src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南"/></a><div class="content"><a class="title" href="/archives/97/" title="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南">2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南</a><time datetime="2025-04-16T01:00:34.000Z" title="发表于 2025-04-16 09:00:34">2025-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/96/" title="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略"><img src="/img/bk_img/background7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略"/></a><div class="content"><a class="title" href="/archives/96/" title="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略">Memos：你的私有化知识管理神器，飞牛NAS部署全攻略</a><time datetime="2025-04-14T01:00:34.000Z" title="发表于 2025-04-14 09:00:34">2025-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/95/" title="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南"><img src="/img/bk_img/background9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南"/></a><div class="content"><a class="title" href="/archives/95/" title="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南">高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南</a><time datetime="2025-03-28T01:00:34.000Z" title="发表于 2025-03-28 09:00:34">2025-03-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/94/" title="Linux常用代码大集锦"><img src="/img/bk_img/background10.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux常用代码大集锦"/></a><div class="content"><a class="title" href="/archives/94/" title="Linux常用代码大集锦">Linux常用代码大集锦</a><time datetime="2025-03-01T01:00:34.000Z" title="发表于 2025-03-01 09:00:34">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/93/" title="BAT 文件进阶用法：10 个高效自动化示例"><img src="/img/bk_img/background4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BAT 文件进阶用法：10 个高效自动化示例"/></a><div class="content"><a class="title" href="/archives/93/" title="BAT 文件进阶用法：10 个高效自动化示例">BAT 文件进阶用法：10 个高效自动化示例</a><time datetime="2025-02-28T01:00:34.000Z" title="发表于 2025-02-28 09:00:34">2025-02-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><span class="card-category-list-name">每日思考</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8-%E8%AE%B0/"><span class="card-category-list-name">游&记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><span class="card-category-list-name">生活小贴士</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><span class="card-category-list-name">知识充电</span><span class="card-category-list-count">87</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/" style="font-size: 1.35em; color: #99a3b0">软考高项</a> <a href="/tags/SEO/" style="font-size: 1.16em; color: #999b9f">SEO</a> <a href="/tags/docker/" style="font-size: 1.28em; color: #99a0ab">docker</a> <a href="/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" style="font-size: 1.32em; color: #99a2ad">书籍推荐</a> <a href="/tags/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/" style="font-size: 1.5em; color: #99a9bf">网站百科</a> <a href="/tags/%E8%87%AA%E5%AA%92%E4%BD%93/" style="font-size: 1.1em; color: #999">自媒体</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.41em; color: #99a5b6">记录</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 1.1em; color: #999">分享</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 1.44em; color: #99a7b9">资源分享</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 1.1em; color: #999">游记</a> <a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.38em; color: #99a4b3">经验分享</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 1.19em; color: #999da2">吐槽</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" style="font-size: 1.47em; color: #99a8bc">技术笔记</a> <a href="/tags/pdf%E4%B8%8B%E8%BD%BD/" style="font-size: 1.32em; color: #99a2ad">pdf下载</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" style="font-size: 1.38em; color: #99a4b3">学习经验</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 1.22em; color: #999ea5">计划</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/" style="font-size: 1.25em; color: #999fa8">个人感悟</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE/" style="font-size: 1.1em; color: #999">结构化数据</a> <a href="/tags/ChatGPT/" style="font-size: 1.1em; color: #999">ChatGPT</a> <a href="/tags/%E7%BD%91%E7%AB%99%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: #99a9bf">网站技巧</a> <a href="/tags/%E6%B4%BB%E7%9D%80/" style="font-size: 1.13em; color: #999a9c">活着</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">97</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-16T02:30:41.771Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div class="footer-copyright"> <div class="footer-copyright-wrapper"> <p class="footer-copyright-text"> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>赣ICP备2024020403号</span></a> | <a href="https://beian.mps.gov.cn/#/query/webSearch?code=36073202360902" rel="noreferrer" target="_blank"><img class="logos" src="/img/icp-logo.png" height="14px;">赣公网安备36073202360902</a> | 互联网违法和不良信息举报邮箱：hcshi@outlook.com | <a href="https://v-li.com/sitemap.xml">网站地图</a> </p> </div> </div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('/pluginsSrc/typed.js/dist/typed.umd.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const from = '出自 ' + data.from
+      typedJSFn.processSubtitle(data.hitokoto, [from])
+    })
+    .catch(err => {
+      console.error('Failed to get the Hitokoto API:', err)
+      typedJSFn.processSubtitle([])
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

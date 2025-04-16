@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>飞鲤的自留地</title>
+  <icon>https://v-li.com/icon.png</icon>
+  <subtitle>闲来拾笔书心事，留与清风共月眠</subtitle>
+  <link href="https://v-li.com/atom.xml" rel="self"/>
+  
+  <link href="https://v-li.com/"/>
+  <updated>2025-04-16T01:02:02.394Z</updated>
+  <id>https://v-li.com/</id>
+  
+  <author>
+    <name>飞鲤</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南</title>
+    <link href="https://v-li.com/archives/97/"/>
+    <id>https://v-li.com/archives/97/</id>
+    <published>2025-04-16T01:00:34.000Z</published>
+    <updated>2025-04-16T01:02:02.394Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;精选15个顶级数据分析个人博客及平台，提供URL和RSS订阅地址，涵盖Excel、SPSS、R语言等工具教程及行业趋势分析，助力数据技能提升。&lt;/p&gt;
+&lt;h3 id=&quot;一、个人博主精选&quot;&gt;&lt;a href=&quot;#一、个人博主精选&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Memos：你的私有化知识管理神器，飞牛NAS部署全攻略</title>
+    <link href="https://v-li.com/archives/96/"/>
+    <id>https://v-li.com/archives/96/</id>
+    <published>2025-04-14T01:00:34.000Z</published>
+    <updated>2025-04-14T08:04:07.174Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在数字化时代，信息爆炸式增长，高效的知识管理工具成为职场人和学习达人的刚需。你是否厌倦了将私密笔记存储在第三方平台，时刻担心数据泄露？是否渴望一款既能跨平台同步，又能完全掌控数据的笔记工具？今天，让我们深度解析一款开源轻量级的自托管笔记应用——&lt;strong&gt;Memos&lt;/</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南</title>
+    <link href="https://v-li.com/archives/95/"/>
+    <id>https://v-li.com/archives/95/</id>
+    <published>2025-03-28T01:00:34.000Z</published>
+    <updated>2025-04-15T09:03:48.879Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;高效排版神器：doocs-md-微信Markdown编辑器全栈部署指南&quot;&gt;&lt;a href=&quot;#高效排版神器：doocs-md-微信Markdown编辑器全栈部署指南&quot; class=&quot;headerlink&quot; title=&quot;高效排版神器：doocs&amp;#x2F;md</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用代码大集锦</title>
+    <link href="https://v-li.com/archives/94/"/>
+    <id>https://v-li.com/archives/94/</id>
+    <published>2025-03-01T01:00:34.000Z</published>
+    <updated>2025-02-28T01:59:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在Linux系统中，掌握一些常用的代码命令，能够帮助我们更高效地进行文件管理、系统配置、网络操作等任务。以下是一些常用的Linux命令代码，按功能分类整理，希望对你有所帮助。&lt;/p&gt;
+&lt;h2 id=&quot;一、文件和目录操作&quot;&gt;&lt;a href=&quot;#一、文件和目录操作&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BAT 文件进阶用法：10 个高效自动化示例</title>
+    <link href="https://v-li.com/archives/93/"/>
+    <id>https://v-li.com/archives/93/</id>
+    <published>2025-02-28T01:00:34.000Z</published>
+    <updated>2025-02-28T01:40:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在日常工作中，我们常常会遇到一些重复性的任务，比如启动应用程序、运行脚本、配置网络、维护系统等。如果手动执行这些任务，不仅耗时耗力，还容易出错。而利用 BAT 文件（Windows 批处理文件），我们可以轻松实现这些任务的自动化，从而节省大量时间和精力。本文将为你介绍</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blossom笔记软件Docker Compose部署指南</title>
+    <link href="https://v-li.com/archives/92/"/>
+    <id>https://v-li.com/archives/92/</id>
+    <published>2025-01-17T01:00:34.000Z</published>
+    <updated>2025-04-15T09:04:08.751Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、Blossom简介&quot;&gt;&lt;a href=&quot;#一、Blossom简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clash for Docker 容器配置指南：从安装到自动化更新</title>
+    <link href="https://v-li.com/archives/91/"/>
+    <id>https://v-li.com/archives/91/</id>
+    <published>2025-01-07T01:00:34.000Z</published>
+    <updated>2025-04-15T09:05:59.820Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h4&gt;&lt;p&gt;欢迎来到 Clash for Docker 容器的详细配置指南。无论你是 Docker</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clash for Linux 配置指南：轻松解决 Docker 镜像拉取难题</title>
+    <link href="https://v-li.com/archives/90/"/>
+    <id>https://v-li.com/archives/90/</id>
+    <published>2025-01-06T01:00:34.000Z</published>
+    <updated>2025-02-13T09:03:45.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;面对网络限制及国内 Docker 镜像源服务的减少，拉取 Docker</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Frp实现内网穿透详细步骤</title>
+    <link href="https://v-li.com/archives/88/"/>
+    <id>https://v-li.com/archives/88/</id>
+    <published>2024-12-24T01:00:34.000Z</published>
+    <updated>2025-04-15T09:06:32.782Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在实现内网穿透时，若IPv6访问受限（例如公司网络未启用IPv6），Lucky等工具将无法正常工作。这时，我们可以使用Frp这样的内网穿透软件。Frp部署包括服务端（frps）和客户端（frpc），需要在拥有固定公网IP的云服务器上部署frps，在内网设备（如飞牛）上部署f</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装本地音乐套件：music-tags-web + musicn + navidrome</title>
+    <link href="https://v-li.com/archives/89/"/>
+    <id>https://v-li.com/archives/89/</id>
+    <published>2024-12-24T01:00:34.000Z</published>
+    <updated>2025-04-15T09:06:23.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果你希望在你的本地环境中搭建一个功能强大的音乐管理系统，那么将 &lt;code&gt;music-tags-web&lt;/code&gt;、&lt;code&gt;musicn&lt;/code&gt; 和 &lt;code&gt;navidrome&lt;/code&gt; 这三个服务结合起来是一个很好的选择。本文将指导你如何使用</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装部署指南：使用Lucky实现IPv6动态解析和HTTPS访问NAS服务</title>
+    <link href="https://v-li.com/archives/87/"/>
+    <id>https://v-li.com/archives/87/</id>
+    <published>2024-12-09T01:00:34.000Z</published>
+    <updated>2025-04-15T09:06:47.887Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>百度Url提交的两种方式</title>
+    <link href="https://v-li.com/archives/86/"/>
+    <id>https://v-li.com/archives/86/</id>
+    <published>2024-11-26T01:00:34.000Z</published>
+    <updated>2024-11-26T01:42:33.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自从百度取消小站的sitemap权限，提交链接到百度的方式真是越来越少。&lt;br&gt;我这边找到两种方法，或者说只有一种，另外一种是基于我自己的Nas,通过青龙面板自动执行。在这里记录一下。&lt;/p&gt;
+&lt;h3 id=&quot;方法一：通过curl主动提交&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="SEO" scheme="https://v-li.com/tags/SEO/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器搭建 Moon 节点指南，为你的ZeroTier加速</title>
+    <link href="https://v-li.com/archives/85/"/>
+    <id>https://v-li.com/archives/85/</id>
+    <published>2024-11-21T01:00:34.000Z</published>
+    <updated>2024-11-21T07:21:43.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;服务器搭建-Moon-节点指南&quot;&gt;&lt;a href=&quot;#服务器搭建-Moon-节点指南&quot; class=&quot;headerlink&quot; title=&quot;服务器搭建 Moon 节点指南&quot;&gt;&lt;/a&gt;服务器搭建 Moon 节点指南&lt;/h3&gt;&lt;h4 id=&quot;一、前期准备&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>梦见自己开了一家小酒馆</title>
+    <link href="https://v-li.com/archives/83/"/>
+    <id>https://v-li.com/archives/83/</id>
+    <published>2024-11-17T01:00:34.000Z</published>
+    <updated>2024-11-18T08:19:19.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在那悠长而温柔的梦境里，我悄然成为了一家微醺小酒馆的主人，它宛如从旧日电影中走出，带着一抹不经意的复古风情，静静坐落在喧嚣都市的一隅。这家小酒馆，不大，却足以容纳每一个渴望逃离尘嚣、寻觅片刻宁静的心灵。&lt;/p&gt;
+&lt;p&gt;这里没有繁复的装饰，只有暖黄的灯光温柔地洒在每一个角落，</summary>
+        
+      
+    
+    
+    
+    <category term="游&amp;记" scheme="https://v-li.com/categories/%E6%B8%B8-%E8%AE%B0/"/>
+    
+    
+    <category term="个人感悟" scheme="https://v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>去了一趟北方——哈尔滨</title>
+    <link href="https://v-li.com/archives/83/"/>
+    <id>https://v-li.com/archives/83/</id>
+    <published>2024-10-09T01:00:34.000Z</published>
+    <updated>2024-11-18T08:19:01.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自小便对北方抱有无限的憧憬，这份情愫或许源于对饺子的痴迷。第一次品尝那皮薄馅厚的饺子时，我便被其美味深深吸引，以至于后来从电视上得知北方逢年过节必吃饺子的习俗后，更是对北方充满了无限的向往，梦想着有一天能亲身体验那份属于北方的幸福。&lt;/p&gt;
+&lt;p&gt;这次哈尔滨之行，得益于妹妹</summary>
+        
+      
+    
+    
+    
+    <category term="游&amp;记" scheme="https://v-li.com/categories/%E6%B8%B8-%E8%AE%B0/"/>
+    
+    
+    <category term="个人感悟" scheme="https://v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="游记" scheme="https://v-li.com/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NAS内网穿透工具ZeroTier——Docker Compose配置方案</title>
+    <link href="https://v-li.com/archives/82/"/>
+    <id>https://v-li.com/archives/82/</id>
+    <published>2024-10-08T01:00:34.000Z</published>
+    <updated>2025-04-15T09:07:11.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;NAS内网穿透工具ZeroTier——Docker-Compose配置方案&quot;&gt;&lt;a href=&quot;#NAS内网穿透工具ZeroTier——Docker-Compose配置方案&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>外贸行业ChatGPT提示词有哪些？</title>
+    <link href="https://v-li.com/archives/81/"/>
+    <id>https://v-li.com/archives/81/</id>
+    <published>2024-08-26T01:00:34.000Z</published>
+    <updated>2024-08-26T08:48:51.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在研究coze,希望通过这个coze来实现自动创作一些高质量的营销内容，从而达到让我有更多时间摸鱼的效果。&lt;/p&gt;
+&lt;p&gt;在这个过程中，发现很多外贸营销可能用上的一些ChatGPT提示词，在这里做个记录，能用上的自取。&lt;/p&gt;
+&lt;h2 id=&quot;广告创意&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="ChatGPT" scheme="https://v-li.com/tags/ChatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对同文件夹内所有文件进行批量重命名</title>
+    <link href="https://v-li.com/archives/80/"/>
+    <id>https://v-li.com/archives/80/</id>
+    <published>2024-08-09T01:00:34.000Z</published>
+    <updated>2024-08-09T02:43:48.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天将blog内容从服务器打包到自己新弄的黑群里面，准备搭一个本地的玩玩。但是发现一个问题，由于我的post都是中文命名，打包下载解压之后变成了乱码……这就有点难搞！虽然我这边链接规则是使用id,网页的链接展示都没有问题，但是看到这个还是很不习惯，于是就在网上找找有没有什么</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生活的随笔：小妹的大学、健康小记与回家的思绪</title>
+    <link href="https://v-li.com/archives/78/"/>
+    <id>https://v-li.com/archives/78/</id>
+    <published>2024-07-31T14:00:34.000Z</published>
+    <updated>2024-08-01T08:37:48.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这个七月发生了很多事情，我觉得还是值得纪念一下。主要还是小妹从高中毕业成功的成为了一名大学生，对于我和我的家庭来说都是一个难得的喜讯。算是从我确证以来最高兴的事情了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一、小妹的飞跃&lt;/strong&gt;&lt;br&gt;在我毕业那么多年，看到很多学历比我高</summary>
+        
+      
+    
+    
+    
+    <category term="每日思考" scheme="https://v-li.com/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"/>
+    
+    
+    <category term="个人感悟" scheme="https://v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="计划" scheme="https://v-li.com/tags/%E8%AE%A1%E5%88%92/"/>
+    
+    <category term="吐槽" scheme="https://v-li.com/tags/%E5%90%90%E6%A7%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google广告投放完整笔记</title>
+    <link href="https://v-li.com/archives/79/"/>
+    <id>https://v-li.com/archives/79/</id>
+    <published>2024-07-30T01:00:34.000Z</published>
+    <updated>2024-08-01T07:45:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-了解Google-Ads基础&quot;&gt;&lt;a href=&quot;#1-了解Google-Ads基础&quot; class=&quot;headerlink&quot; title=&quot;1. 了解Google Ads基础&quot;&gt;&lt;/a&gt;1. 了解Google</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+</feed>

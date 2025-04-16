@@ -1,0 +1,678 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>多功能文本工具 | 飞鲤的自留地 | 飞鲤的自留地</title><meta name="author" content="飞鲤"><meta name="copyright" content="飞鲤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="财务金额大写转换、字符级文本比较以及字符计数、字数、段落、句子计数等统计功能">
+<meta property="og:type" content="website">
+<meta property="og:title" content="多功能文本工具 | 飞鲤的自留地">
+<meta property="og:url" content="https://v-li.com/tool.html">
+<meta property="og:site_name" content="飞鲤的自留地">
+<meta property="og:description" content="财务金额大写转换、字符级文本比较以及字符计数、字数、段落、句子计数等统计功能">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/39393864?v=4">
+<meta property="article:published_time" content="2021-03-30T07:57:51.000Z">
+<meta property="article:modified_time" content="2025-04-09T06:09:52.818Z">
+<meta property="article:author" content="飞鲤">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/39393864?v=4"><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://v-li.com/tool.html"><link rel="preconnect"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c3b47e462e0d37228d939555eff17bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '多功能文本工具 | 飞鲤的自留地',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css_js/v-li.css"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"JngdjtGDf2twJL8Y",ck:"JngdjtGDf2twJL8Y",autoTrack:true,screenRecord:true})</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="飞鲤的自留地" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-tags"></i><span> 标签</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-archive"></i><span> 汇总</span></a></li><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-archive"></i><span> 软考高项</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><i class="fa-fw fas fa-folder-open"></i><span> 知识充电</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><i class="fa-fw fas fa-folder-open"></i><span> 生活小贴士</span></a></li><li><a class="site-page child" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><i class="fa-fw fas fa-folder-open"></i><span> 每日思考</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fas fa-tool"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fas fa-link"></i><span> 活动</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://bf.zzxworld.com/"><span> BlogFinder</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.boyouquan.com/planet-shuttle"><span> 博友圈</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://bokelu.suijiboke.gs/"><span> 博客录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://foreverblog.cn/go.html"><span> 十年之约</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/img/bk_img/background6.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/icon/favicon.ico" alt="Logo"><span class="site-name">飞鲤的自留地</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-tags"></i><span> 标签</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-archive"></i><span> 汇总</span></a></li><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-archive"></i><span> 软考高项</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><i class="fa-fw fas fa-folder-open"></i><span> 知识充电</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><i class="fa-fw fas fa-folder-open"></i><span> 生活小贴士</span></a></li><li><a class="site-page child" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><i class="fa-fw fas fa-folder-open"></i><span> 每日思考</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fas fa-tool"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fas fa-link"></i><span> 活动</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://bf.zzxworld.com/"><span> BlogFinder</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.boyouquan.com/planet-shuttle"><span> 博友圈</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://bokelu.suijiboke.gs/"><span> 博客录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://foreverblog.cn/go.html"><span> 十年之约</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">多功能文本工具 | 飞鲤的自留地</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><link rel="stylesheet" href="/css_js/tailwind.min.css">
+    <style>
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .diff-add {
+            background-color: #e6ffed;
+            text-decoration: none;
+            color: #22863a;
+        }
+        .diff-remove {
+            background-color: #ffeef0;
+            text-decoration: line-through;
+            color: #cb2431;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .counter-result {
+            transition: all 0.3s;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">多功能文本工具</h1>
+            <div class="flex justify-center mb-4 no-print">
+                <nav class="bg-white rounded-lg shadow-md inline-flex">
+                    <button id="tab-counter" class="tab-btn px-6 py-3 font-medium rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none transition active">字符计数器</button>
+                    <button id="tab-compare" class="tab-btn px-6 py-3 font-medium rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none transition">文本比较</button>
+                    <button id="tab-amount" class="tab-btn px-6 py-3 font-medium rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none transition">金额大写转换</button>
+                </nav>
+            </div>
+        </header>        
+        <section id="counter-section" class="tab-content active bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">字符计数器</h2>
+            <div class="mb-6">
+                <textarea id="counter-input" class="w-full h-64 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="在此处键入文字，或复制并粘贴文本..."></textarea>
+            </div>            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-lg font-medium mb-3 text-gray-700">基本统计</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">字符数</div>
+                            <div id="char-count" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">单词数</div>
+                            <div id="word-count" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">段落数</div>
+                            <div id="paragraph-count" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">句子数</div>
+                            <div id="sentence-count" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-lg font-medium mb-3 text-gray-700">其他信息</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">不含空格的字符数</div>
+                            <div id="char-no-space" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">独特单词数</div>
+                            <div id="unique-words" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">阅读时间(分钟)</div>
+                            <div id="read-time" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm">
+                            <div class="text-sm text-gray-600">演讲时间(分钟)</div>
+                            <div id="speech-time" class="counter-result text-xl font-bold text-blue-600">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="bg-blue-50 p-5 rounded-lg">
+                <h3 class="text-lg font-medium mb-3 text-blue-800">常见问题</h3>
+                <div class="space-y-4">
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">什么是字符数？</summary>
+                        <p class="mt-2 text-gray-700">虽然有人认为字符数是字母总数，但实际上它是所有字符的总数，包含空格。当文本有字符限制时，就需要统计字符数。此外，有些翻译人员按不计空格的字符数来确定翻译价格。</p>
+                    </details>
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">单词数和字符数有何区别？</summary>
+                        <p class="mt-2 text-gray-700">单词数是文本中的单词数量，而字符数是文本中的字符数量。如要计算文本中的字符数，需要将所有字符（包括特殊字符）计算在内。</p>
+                    </details>
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">各大社交网络的字符限制如何？</summary>
+                        <p class="mt-2 text-gray-700">以下是各大社交网络的字符限制：</p>
+                        <ul class="list-disc list-inside mt-1 text-gray-700">
+                            <li>Facebook：每帖63206个字符</li>
+                            <li>Instagram：每段说明2200个字符</li>
+                            <li>Twitter：每条推特280个字符</li>
+                            <li>YouTube：视频标题70个字符，视频描述5000个字符</li>
+                            <li>Twitch：每条150个字符</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- 文本比较 -->
+        <section id="compare-section" class="tab-content bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">文本比较</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-gray-700 mb-2 font-medium">原始文本</label>
+                    <textarea id="text-original" class="w-full h-64 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="在此处粘贴原始文本..."></textarea>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2 font-medium">修改后文本</label>
+                    <textarea id="text-modified" class="w-full h-64 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="在此处粘贴修改后的文本..."></textarea>
+                </div>
+            </div>            
+            <div class="mb-6 flex justify-center">
+                <button id="compare-btn" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">比较文本</button>
+            </div>            
+            <div id="diff-result" class="bg-gray-50 p-5 rounded-lg mb-6 hidden whitespace-pre-wrap"></div>            
+            <div class="bg-blue-50 p-5 rounded-lg">
+                <h3 class="text-lg font-medium mb-3 text-blue-800">使用指南</h3>
+                <div class="space-y-4">
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">什么是文本比较？</summary>
+                        <p class="mt-2 text-gray-700">文本比较是一种找出两个文本之间差异的方法。这个工具使用字符级比较算法，能精确显示哪些字符被添加、删除或修改，帮助您快速识别文档的变化。</p>
+                    </details>
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">如何使用在线文本比较工具？</summary>
+                        <p class="mt-2 text-gray-700">使用方法非常简单：</p>
+                        <ol class="list-decimal list-inside mt-1 text-gray-700">
+                            <li>在左侧文本框中粘贴原始文本</li>
+                            <li>在右侧文本框中粘贴修改后的文本</li>
+                            <li>点击"比较文本"按钮</li>
+                            <li>查看下方显示的差异结果，绿色表示添加的内容，红色表示删除的内容</li>
+                        </ol>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- 金额大写转换 -->
+        <section id="amount-section" class="tab-content bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">财务金额大写转换</h2>
+            <div class="mb-6">
+                <label class="block text-gray-700 mb-2 font-medium">数字金额</label>
+                <input type="text" id="amount-input" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="请输入数字金额，如：1234.56">
+            </div>            
+            <div class="mb-6 flex justify-center">
+                <button id="convert-btn" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">转换为大写</button>
+            </div>            
+            <div id="amount-result" class="bg-gray-50 p-5 rounded-lg mb-6 hidden">
+                <h3 class="text-lg font-medium mb-2 text-gray-700">转换结果</h3>
+                <div id="amount-uppercase" class="p-4 bg-white rounded border border-gray-300 text-xl font-bold text-blue-600"></div>
+            </div>            
+            <div class="bg-blue-50 p-5 rounded-lg">
+                <h3 class="text-lg font-medium mb-3 text-blue-800">使用说明</h3>
+                <div class="space-y-4">
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">什么是财务金额大写转换？</summary>
+                        <p class="mt-2 text-gray-700">财务金额大写转换是将阿拉伯数字表示的金额转换为中文大写金额的过程。在合同、财务报表等正式文件中，通常需要用中文大写表示金额，以防止篡改和确保金额清晰无误。</p>
+                    </details>
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">如何使用金额大写转换工具？</summary>
+                        <p class="mt-2 text-gray-700">使用方法很简单：</p>
+                        <ol class="list-decimal list-inside mt-1 text-gray-700">
+                            <li>在输入框中输入阿拉伯数字金额（如：1234.56）</li>
+                            <li>点击"转换为大写"按钮</li>
+                            <li>查看转换后的中文大写金额结果</li>
+                        </ol>
+                    </details>
+                    <details class="bg-white p-3 rounded shadow-sm">
+                        <summary class="font-medium text-blue-700 cursor-pointer">支持什么格式的金额输入？</summary>
+                        <p class="mt-2 text-gray-700">本工具支持：</p>
+                        <ul class="list-disc list-inside mt-1 text-gray-700">
+                            <li>整数金额（如：1234）</li>
+                            <li>带小数点的金额（如：1234.56）</li>
+                            <li>最大支持16位数的金额转换</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <footer class="text-center text-gray-600 mt-8 text-sm">
+            <p>© 2025 多功能文本工具 | 一站式文本处理解决方案</p>
+        </footer>
+    </div>
+    <script>
+        // 标签切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // 移除所有活动状态
+                    tabs.forEach(t => t.classList.remove('active', 'bg-blue-500', 'text-white'));
+                    contents.forEach(c => c.classList.remove('active'));                    
+                    // 添加活动状态
+                    tab.classList.add('active', 'bg-blue-500', 'text-white');                    
+                    // 显示对应内容
+                    const target = tab.id.replace('tab-', '');
+                    document.getElementById(`${target}-section`).classList.add('active');
+                });
+            });            
+            // 字符计数器功能
+            const counterInput = document.getElementById('counter-input');            
+            function updateCounts() {
+                const text = counterInput.value;                
+                // 基本计数
+                document.getElementById('char-count').textContent = text.length;
+                document.getElementById('char-no-space').textContent = text.replace(/\s/g, '').length;                
+                // 单词计数 (支持中英文)
+                const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+                document.getElementById('word-count').textContent = words.length;                
+                // 独特单词
+                const uniqueWords = new Set(words.map(w => w.toLowerCase()));
+                document.getElementById('unique-words').textContent = uniqueWords.size;                
+                // 段落计数
+                const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
+                document.getElementById('paragraph-count').textContent = paragraphs.length;                
+                // 句子计数 (支持中英文)
+                const sentences = text.split(/[.!?。！？]+\s*/).filter(s => s.trim().length > 0);
+                document.getElementById('sentence-count').textContent = sentences.length;                
+                // 阅读时间 (假设平均阅读速度为每分钟250个单词)
+                const readTime = Math.max(1, Math.ceil(words.length / 250));
+                document.getElementById('read-time').textContent = readTime;                
+                // 演讲时间 (假设平均演讲速度为每分钟130个单词)
+                const speechTime = Math.max(1, Math.ceil(words.length / 130));
+                document.getElementById('speech-time').textContent = speechTime;
+            }            
+            counterInput.addEventListener('input', updateCounts);            
+            // 文本比较功能
+            const compareBtn = document.getElementById('compare-btn');
+            const textOriginal = document.getElementById('text-original');
+            const textModified = document.getElementById('text-modified');
+            const diffResult = document.getElementById('diff-result');            
+            // 字符级差异比较实现
+            function diffChars(oldText, newText) {
+                if (oldText === newText) return newText;                
+                const diffResult = [];
+                let i = 0, j = 0;                
+                // 寻找最长公共子序列
+                const lcs = findLCS(oldText, newText);                
+                while (i < oldText.length || j < newText.length) {
+                    // 如果两字符匹配，则添加共同字符
+                    if (i < oldText.length && j < newText.length && oldText[i] === newText[j] && lcs.includes(oldText[i])) {
+                        diffResult.push(oldText[i]);
+                        i++;
+                        j++;
+                    } 
+                    // 否则，处理添加或删除
+                    else {
+                        // 探测前向匹配
+                        let foundMatch = false;                        
+                        // 检查是否有添加的字符
+                        if (j < newText.length) {
+                            diffResult.push(`<span class="diff-add">${newText[j]}</span>`);
+                            j++;
+                            foundMatch = true;
+                        }                        
+                        // 检查是否有删除的字符
+                        if (i < oldText.length) {
+                            diffResult.push(`<span class="diff-remove">${oldText[i]}</span>`);
+                            i++;
+                            foundMatch = true;
+                        }                        
+                        if (!foundMatch) break;
+                    }
+                }                
+                return diffResult.join('');
+            }            
+            // 寻找最长公共子序列 (LCS)
+            function findLCS(text1, text2) {
+                const m = text1.length;
+                const n = text2.length;
+                const dp = Array(m + 1).fill().map(() => Array(n + 1).fill(0));                
+                // 填充DP表
+                for (let i = 1; i <= m; i++) {
+                    for (let j = 1; j <= n; j++) {
+                        if (text1[i - 1] === text2[j - 1]) {
+                            dp[i][j] = dp[i - 1][j - 1] + 1;
+                        } else {
+                            dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                        }
+                    }
+                }                
+                // 反向构建LCS
+                let lcs = '';
+                let i = m, j = n;
+                while (i > 0 && j > 0) {
+                    if (text1[i - 1] === text2[j - 1]) {
+                        lcs = text1[i - 1] + lcs;
+                        i--;
+                        j--;
+                    } else if (dp[i - 1][j] > dp[i][j - 1]) {
+                        i--;
+                    } else {
+                        j--;
+                    }
+                }                
+                return lcs;
+            }            
+            compareBtn.addEventListener('click', () => {
+                const original = textOriginal.value;
+                const modified = textModified.value;                
+                if (!original && !modified) {
+                    alert('请输入需要比较的文本');
+                    return;
+                }                
+                // 分行处理，对每行进行字符级比较
+                const originalLines = original.split('\n');
+                const modifiedLines = modified.split('\n');                
+                // 使用简化的行级比较来匹配行
+                const lineResults = [];                
+                // 如果行数不同，使用更复杂的行级比较
+                if (originalLines.length !== modifiedLines.length) {
+                    // 字符级的完整文本比较
+                    lineResults.push(diffChars(original, modified));
+                } else {
+                    // 行数相同时，逐行进行字符级比较
+                    for (let i = 0; i < originalLines.length; i++) {
+                        lineResults.push(diffChars(originalLines[i], modifiedLines[i]));
+                    }
+                }                
+                diffResult.innerHTML = lineResults.join('<br>');
+                diffResult.classList.remove('hidden');
+            });            
+            // 金额大写转换功能
+            const convertBtn = document.getElementById('convert-btn');
+            const amountInput = document.getElementById('amount-input');
+            const amountResult = document.getElementById('amount-result');
+            const amountUppercase = document.getElementById('amount-uppercase');            
+            // 数字金额转中文大写函数
+            function convertToChineseUppercase(num) {
+                if (!/^(0|[1-9]\d*)(\.\d+)?$/.test(num)) {
+                    return '请输入有效的金额数字';
+                }                
+                const cnNums = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'];
+                const cnIntRadice = ['', '拾', '佰', '仟'];
+                const cnIntUnits = ['', '万', '亿', '兆'];
+                const cnDecUnits = ['角', '分', '厘', '毫'];
+                const cnInteger = '整';
+                const cnIntLast = '元';
+                // 分离整数部分和小数部分
+                const parts = num.toString().split('.');
+                const integerNum = parts[0];
+                const decimalNum = parts[1] || '';                
+                // 处理整数部分
+                let chineseStr = '';
+                if (parseInt(integerNum, 10) > 0) {
+                    let zeroCount = 0;
+                    for (let i = 0; i < integerNum.length; i++) {
+                        const n = parseInt(integerNum.charAt(i), 10);
+                        const p = integerNum.length - i - 1;
+                        const q = p / 4;
+                        const m = p % 4;                        
+                        if (n === 0) {
+                            zeroCount++;
+                        } else {
+                            if (zeroCount > 0) {
+                                chineseStr += cnNums[0];
+                            }
+                            zeroCount = 0;
+                            chineseStr += cnNums[n] + cnIntRadice[m];
+                        }                        
+                        if (m === 0 && zeroCount < 4) {
+                            chineseStr += cnIntUnits[q];
+                        }
+                    }
+                    chineseStr += cnIntLast;
+                }                
+                // 处理小数部分
+                if (decimalNum) {
+                    for (let i = 0; i < decimalNum.length; i++) {
+                        const n = parseInt(decimalNum.charAt(i), 10);
+                        if (n !== 0) {
+                            chineseStr += cnNums[n] + cnDecUnits[i];
+                        }
+                    }
+                }                
+                // 如果没有小数部分或小数部分全为0，则添加"整"
+                if (!decimalNum || decimalNum.replace(/0/g, '').length === 0) {
+                    chineseStr += cnInteger;
+                }                
+                // 如果金额为0，返回"零元整"
+                if (parseInt(integerNum, 10) === 0 && (decimalNum === '' || parseInt(decimalNum, 10) === 0)) {
+                    return '零元整';
+                }                
+                return chineseStr;
+            }            
+            convertBtn.addEventListener('click', () => {
+                const amount = amountInput.value.trim();                
+                if (!amount) {
+                    alert('请输入金额');
+                    return;
+                }                
+                const result = convertToChineseUppercase(amount);
+                amountUppercase.textContent = result;
+                amountResult.classList.remove('hidden');
+            });            
+            // 输入限制，只允许数字和小数点
+            amountInput.addEventListener('input', function() {
+                this.value = this.value.replace(/[^\d.]/g, '');
+                // 确保只有一个小数点
+                const parts = this.value.split('.');
+                if (parts.length > 2) {
+                    this.value = parts[0] + '.' + parts.slice(1).join('');
+                }
+                // 限制小数点后最多4位
+                if (parts.length === 2 && parts[1].length > 4) {
+                    this.value = parts[0] + '.' + parts[1].substring(0, 4);
+                }
+            });
+        });
+    </script>
+</body>
+
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">飞鲤</div><div class="author-info-description">独辟心园一亩田，耕耘往事与今缘。<br>闲来拾笔书心事，留与清风共月眠。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/225919844" target="_blank" title="BiliBili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=928836584" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">每天都是新的一天！新增一个字符的计数工具</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/97/" title="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南"><img src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南"/></a><div class="content"><a class="title" href="/archives/97/" title="2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南">2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南</a><time datetime="2025-04-16T01:00:34.000Z" title="发表于 2025-04-16 09:00:34">2025-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/96/" title="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略"><img src="/img/bk_img/background7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略"/></a><div class="content"><a class="title" href="/archives/96/" title="Memos：你的私有化知识管理神器，飞牛NAS部署全攻略">Memos：你的私有化知识管理神器，飞牛NAS部署全攻略</a><time datetime="2025-04-14T01:00:34.000Z" title="发表于 2025-04-14 09:00:34">2025-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/95/" title="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南"><img src="/img/bk_img/background9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南"/></a><div class="content"><a class="title" href="/archives/95/" title="高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南">高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南</a><time datetime="2025-03-28T01:00:34.000Z" title="发表于 2025-03-28 09:00:34">2025-03-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/94/" title="Linux常用代码大集锦"><img src="/img/bk_img/background10.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux常用代码大集锦"/></a><div class="content"><a class="title" href="/archives/94/" title="Linux常用代码大集锦">Linux常用代码大集锦</a><time datetime="2025-03-01T01:00:34.000Z" title="发表于 2025-03-01 09:00:34">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/93/" title="BAT 文件进阶用法：10 个高效自动化示例"><img src="/img/bk_img/background4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BAT 文件进阶用法：10 个高效自动化示例"/></a><div class="content"><a class="title" href="/archives/93/" title="BAT 文件进阶用法：10 个高效自动化示例">BAT 文件进阶用法：10 个高效自动化示例</a><time datetime="2025-02-28T01:00:34.000Z" title="发表于 2025-02-28 09:00:34">2025-02-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"><span class="card-category-list-name">每日思考</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8-%E8%AE%B0/"><span class="card-category-list-name">游&记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%B4%B4%E5%A3%AB/"><span class="card-category-list-name">生活小贴士</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"><span class="card-category-list-name">知识充电</span><span class="card-category-list-count">87</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/" style="font-size: 1.35em; color: #99a3b0">软考高项</a> <a href="/tags/SEO/" style="font-size: 1.16em; color: #999b9f">SEO</a> <a href="/tags/docker/" style="font-size: 1.28em; color: #99a0ab">docker</a> <a href="/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" style="font-size: 1.32em; color: #99a2ad">书籍推荐</a> <a href="/tags/%E7%BD%91%E7%AB%99%E7%99%BE%E7%A7%91/" style="font-size: 1.5em; color: #99a9bf">网站百科</a> <a href="/tags/%E8%87%AA%E5%AA%92%E4%BD%93/" style="font-size: 1.1em; color: #999">自媒体</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.41em; color: #99a5b6">记录</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 1.1em; color: #999">分享</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 1.44em; color: #99a7b9">资源分享</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 1.1em; color: #999">游记</a> <a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" style="font-size: 1.38em; color: #99a4b3">经验分享</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 1.19em; color: #999da2">吐槽</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" style="font-size: 1.47em; color: #99a8bc">技术笔记</a> <a href="/tags/pdf%E4%B8%8B%E8%BD%BD/" style="font-size: 1.32em; color: #99a2ad">pdf下载</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" style="font-size: 1.38em; color: #99a4b3">学习经验</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 1.22em; color: #999ea5">计划</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/" style="font-size: 1.25em; color: #999fa8">个人感悟</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE/" style="font-size: 1.1em; color: #999">结构化数据</a> <a href="/tags/ChatGPT/" style="font-size: 1.1em; color: #999">ChatGPT</a> <a href="/tags/%E7%BD%91%E7%AB%99%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: #99a9bf">网站技巧</a> <a href="/tags/%E6%B4%BB%E7%9D%80/" style="font-size: 1.13em; color: #999a9c">活着</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">97</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-16T02:30:41.771Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div class="footer-copyright"> <div class="footer-copyright-wrapper"> <p class="footer-copyright-text"> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>赣ICP备2024020403号</span></a> | <a href="https://beian.mps.gov.cn/#/query/webSearch?code=36073202360902" rel="noreferrer" target="_blank"><img class="logos" src="/img/icp-logo.png" height="14px;">赣公网安备36073202360902</a> | 互联网违法和不良信息举报邮箱：hcshi@outlook.com | <a href="https://v-li.com/sitemap.xml">网站地图</a> </p> </div> </div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
