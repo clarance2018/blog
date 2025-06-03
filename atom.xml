@@ -6,7 +6,7 @@
   <link href="https://v-li.com/atom.xml" rel="self"/>
   
   <link href="https://v-li.com/"/>
-  <updated>2025-05-14T07:56:00.000Z</updated>
+  <updated>2025-06-03T06:52:00.000Z</updated>
   <id>https://v-li.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客维护操作全记录</title>
+    <link href="https://v-li.com/archives/100/"/>
+    <id>https://v-li.com/archives/100/</id>
+    <published>2025-06-03T06:54:55.868Z</published>
+    <updated>2025-06-03T06:52:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;部署架构演进&quot;&gt;&lt;a href=&quot;#部署架构演进&quot; class=&quot;headerlink&quot; title=&quot;部署架构演进&quot;&gt;&lt;/a&gt;部署架构演进&lt;/h2&gt;&lt;h3 id=&quot;第一阶段：纯服务器部署&quot;&gt;&lt;a href=&quot;#第一阶段：纯服务器部署&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="git" scheme="https://v-li.com/tags/git/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Fliki网站SEO技巧总结</title>
@@ -582,33 +613,6 @@
     <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
     <category term="ChatGPT" scheme="https://v-li.com/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对同文件夹内所有文件进行批量重命名</title>
-    <link href="https://v-li.com/archives/80/"/>
-    <id>https://v-li.com/archives/80/</id>
-    <published>2024-08-09T01:00:34.000Z</published>
-    <updated>2024-08-09T02:43:48.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天将blog内容从服务器打包到自己新弄的黑群里面，准备搭一个本地的玩玩。但是发现一个问题，由于我的post都是中文命名，打包下载解压之后变成了乱码……这就有点难搞！虽然我这边链接规则是使用id,网页的链接展示都没有问题，但是看到这个还是很不习惯，于是就在网上找找有没有什么</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
