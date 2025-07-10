@@ -6,7 +6,7 @@
   <link href="https://v-li.com/atom.xml" rel="self"/>
   
   <link href="https://v-li.com/"/>
-  <updated>2025-06-03T06:52:00.000Z</updated>
+  <updated>2025-07-10T08:08:22.032Z</updated>
   <id>https://v-li.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://v-li.com/archives/cmcx40lou00000ro5dwvkcwgg/"/>
+    <id>https://v-li.com/archives/cmcx40lou00000ro5dwvkcwgg/</id>
+    <published>2025-07-10T08:08:22.032Z</published>
+    <updated>2025-07-10T08:08:22.032Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo博客维护操作全记录</title>
@@ -582,37 +595,6 @@
     <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
     <category term="docker" scheme="https://v-li.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>外贸行业ChatGPT提示词有哪些？</title>
-    <link href="https://v-li.com/archives/81/"/>
-    <id>https://v-li.com/archives/81/</id>
-    <published>2024-08-26T01:00:34.000Z</published>
-    <updated>2024-08-26T08:48:51.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近在研究coze,希望通过这个coze来实现自动创作一些高质量的营销内容，从而达到让我有更多时间摸鱼的效果。&lt;/p&gt;
-&lt;p&gt;在这个过程中，发现很多外贸营销可能用上的一些ChatGPT提示词，在这里做个记录，能用上的自取。&lt;/p&gt;
-&lt;h2 id=&quot;广告创意&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-    <category term="ChatGPT" scheme="https://v-li.com/tags/ChatGPT/"/>
     
   </entry>
   
