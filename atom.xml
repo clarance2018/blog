@@ -6,7 +6,7 @@
   <link href="https://v-li.com/atom.xml" rel="self"/>
   
   <link href="https://v-li.com/"/>
-  <updated>2025-07-10T08:05:00.000Z</updated>
+  <updated>2025-07-22T01:32:00.000Z</updated>
   <id>https://v-li.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>江湖算命秘术——《英耀篇·拿心赋》详解</title>
+    <link href="https://v-li.com/archives/97/"/>
+    <id>https://v-li.com/archives/97/</id>
+    <published>2025-07-22T01:36:09.252Z</published>
+    <updated>2025-07-22T01:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一次偶然的机会在小视频刷到了《英耀篇》，跑去找来看了看觉得这是一个很有意思的内容。我觉得这个对自己在生活学习中也有很多值得学习和借鉴的地方，所有分享给大家。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://v-li.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打造你的专属卡通人数字分身：三步搞定！</title>
@@ -584,35 +614,6 @@
     <category term="个人感悟" scheme="https://v-li.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
     
     <category term="游记" scheme="https://v-li.com/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NAS内网穿透工具ZeroTier——Docker Compose配置方案</title>
-    <link href="https://v-li.com/archives/82/"/>
-    <id>https://v-li.com/archives/82/</id>
-    <published>2024-10-08T01:00:34.000Z</published>
-    <updated>2025-04-15T09:07:11.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;NAS内网穿透工具ZeroTier——Docker-Compose配置方案&quot;&gt;&lt;a href=&quot;#NAS内网穿透工具ZeroTier——Docker-Compose配置方案&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://v-li.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://v-li.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="记录" scheme="https://v-li.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-    <category term="docker" scheme="https://v-li.com/tags/docker/"/>
     
   </entry>
   
