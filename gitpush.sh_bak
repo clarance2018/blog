@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# 检查是否提供了 commit 参数
+if [ -z "$1" ]; then
+    echo "Error: Please provide a commit message as the first argument."
+    echo "Usage: ./gitpush.sh 'commit message'"
+    exit 1
+fi
+
+# 进入 Hexo 博客的 Docker 容器
+sudo docker exec -it hexo-blog bash -c "hexo g && exit"
+
+# 切换到 Hexo 博客的公共目录
+cd /vol3/1000/docker/hexo-blog/public
+
+# 添加所有更改到 Git 仓库
+echo -e "\nAdding all changes to Git repository..."
+git add .
+
+# 提交更改
+echo -e "\nCommitting changes with message: '$1'..."
+git commit -m "$1"
+
+# 推送到远程仓库的 main 分支
+echo -e "\nPushing changes to remote repository..."
+git push origin main
+
+echo -e "\nOperation completed successfully!"

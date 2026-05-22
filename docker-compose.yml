@@ -1,0 +1,21 @@
+version: '3'  # 使用合适的 Docker Compose 文件版本
+services:
+  hexo-blog:
+    image: spurin/hexo  # 使用指定的 Docker 镜像
+    container_name: hexo-blog  # 指定容器的名称
+    environment:
+      - HEXO_SERVER_PORT=4000  # 设置环境变量 HEXO_SERVER_PORT
+      - GIT_USER="clarance2018"  # 设置环境变量 GIT_USER
+      - GIT_EMAIL="hcshi@outlook.com"  # 设置环境变量 GIT_EMAIL
+    volumes:
+      - /vol3/1000/docker/hexo-blog:/app  # 挂载主机目录到容器内
+    ports:
+      - "8056:4000"  # 映射主机端口到容器端口
+   # on-failure:3表示在容器非正常退出时最多重启3次
+    restart: on-failure:3
+    networks:
+      - web_network
+ 
+networks:
+  web_network:
+    external: true
