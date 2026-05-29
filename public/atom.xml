@@ -6,7 +6,7 @@
   <link href="https://6mal.com/atom.xml" rel="self"/>
   
   <link href="https://6mal.com/"/>
-  <updated>2026-05-28T06:53:08.852Z</updated>
+  <updated>2026-05-29T07:34:32.515Z</updated>
   <id>https://6mal.com/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每月$20还是$100？四大AI工具最新定价，我帮你算清楚了</title>
+    <link href="https://6mal.com/archives/108/"/>
+    <id>https://6mal.com/archives/108/</id>
+    <published>2026-05-29T02:00:00.000Z</published>
+    <updated>2026-05-29T07:34:32.515Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;p&gt;这个月，AI行业做了一件集体疯狂的事：&lt;strong&gt;所有主要厂商同时调整了订阅定价&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Google把AI</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="ChatGPT" scheme="https://6mal.com/tags/ChatGPT/"/>
+    
+    <category term="AI工具" scheme="https://6mal.com/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Claude" scheme="https://6mal.com/tags/Claude/"/>
+    
+    <category term="Gemini" scheme="https://6mal.com/tags/Gemini/"/>
+    
+    <category term="定价" scheme="https://6mal.com/tags/%E5%AE%9A%E4%BB%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记最近的若干事情</title>
+    <link href="https://6mal.com/archives/107/"/>
+    <id>https://6mal.com/archives/107/</id>
+    <published>2026-05-29T01:00:34.000Z</published>
+    <updated>2026-05-29T07:34:00.072Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近所在公司回款困难，上班搭子及时止损走了，一时间陷入了一个内耗当中。&lt;/p&gt;
+&lt;p&gt;情绪都不是很高，我一直是一个极度社恐的人，加上最近发生的事情，总觉得自己做不好任何事情，同样的整个人变得很低迷。&lt;/p&gt;
+&lt;h2 id=&quot;工作的困境&quot;&gt;&lt;a href=&quot;#工作的困境&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="每日思考" scheme="https://6mal.com/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"/>
+    
+    
+    <category term="个人感悟" scheme="https://6mal.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="吐槽" scheme="https://6mal.com/tags/%E5%90%90%E6%A7%BD/"/>
+    
+    <category term="生活" scheme="https://6mal.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>让DeepSeek和豆包主动推荐你的5个GEO优化方法</title>
@@ -562,69 +627,6 @@
     <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
     <category term="docker" scheme="https://6mal.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装部署指南：使用Lucky实现IPv6动态解析和HTTPS访问NAS服务</title>
-    <link href="https://6mal.com/archives/87/"/>
-    <id>https://6mal.com/archives/87/</id>
-    <published>2024-12-09T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.761Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-    <category term="docker" scheme="https://6mal.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>百度Url提交的两种方式</title>
-    <link href="https://6mal.com/archives/86/"/>
-    <id>https://6mal.com/archives/86/</id>
-    <published>2024-11-26T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.761Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;自从百度取消小站的sitemap权限，提交链接到百度的方式真是越来越少。&lt;br&gt;我这边找到两种方法，或者说只有一种，另外一种是基于我自己的Nas,通过青龙面板自动执行。在这里记录一下。&lt;/p&gt;
-&lt;h3 id=&quot;方法一：通过curl主动提交&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="SEO" scheme="https://6mal.com/tags/SEO/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
