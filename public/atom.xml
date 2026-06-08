@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>飞鲤的自留地</title>
   <icon>https://6mal.com/icon.png</icon>
-  <subtitle>闲来拾笔书心事，留与清风共月眠</subtitle>
+  <subtitle>探索 AI 产品、数据智能和知识工作的未来。</subtitle>
   <link href="https://6mal.com/atom.xml" rel="self"/>
   
   <link href="https://6mal.com/"/>
@@ -268,37 +268,6 @@
   </entry>
   
   <entry>
-    <title>打造你的专属卡通人数字分身：三步搞定！</title>
-    <link href="https://6mal.com/archives/101/"/>
-    <id>https://6mal.com/archives/101/</id>
-    <published>2026-05-26T01:01:58.762Z</published>
-    <updated>2025-07-10T08:05:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;想拥有一个会说话、能互动的卡通版自己？跟着这三步走，轻松创建超逼真的数字分身！&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;🎤-第一步：克隆你的声音-海螺AI&quot;&gt;&lt;a href=&quot;#🎤-第一步：克隆你的声音-海螺AI&quot; class=&quot;headerlink&quot; title=&quot;🎤</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo博客维护操作全记录</title>
     <link href="https://6mal.com/archives/100/"/>
     <id>https://6mal.com/archives/100/</id>
@@ -322,6 +291,37 @@
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
     <category term="git" scheme="https://6mal.com/tags/git/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打造你的专属卡通人数字分身：三步搞定！</title>
+    <link href="https://6mal.com/archives/101/"/>
+    <id>https://6mal.com/archives/101/</id>
+    <published>2026-05-26T01:01:58.762Z</published>
+    <updated>2025-07-10T08:05:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;想拥有一个会说话、能互动的卡通版自己？跟着这三步走，轻松创建超逼真的数字分身！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;🎤-第一步：克隆你的声音-海螺AI&quot;&gt;&lt;a href=&quot;#🎤-第一步：克隆你的声音-海螺AI&quot; class=&quot;headerlink&quot; title=&quot;🎤</summary>
+        
+      
+    
+    
+    
+    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
     <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
     
@@ -569,18 +569,18 @@
   </entry>
   
   <entry>
-    <title>安装本地音乐套件：music-tags-web + musicn + navidrome</title>
-    <link href="https://6mal.com/archives/89/"/>
-    <id>https://6mal.com/archives/89/</id>
+    <title>使用Frp实现内网穿透详细步骤</title>
+    <link href="https://6mal.com/archives/88/"/>
+    <id>https://6mal.com/archives/88/</id>
     <published>2024-12-24T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-05-26T01:01:58.761Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;如果你希望在你的本地环境中搭建一个功能强大的音乐管理系统，那么将 &lt;code&gt;music-tags-web&lt;/code&gt;、&lt;code&gt;musicn&lt;/code&gt; 和 &lt;code&gt;navidrome&lt;/code&gt; 这三个服务结合起来是一个很好的选择。本文将指导你如何使用</summary>
+    <summary type="html">&lt;p&gt;在实现内网穿透时，若IPv6访问受限（例如公司网络未启用IPv6），Lucky等工具将无法正常工作。这时，我们可以使用Frp这样的内网穿透软件。Frp部署包括服务端（frps）和客户端（frpc），需要在拥有固定公网IP的云服务器上部署frps，在内网设备（如飞牛）上部署f</summary>
         
       
     
@@ -600,18 +600,18 @@
   </entry>
   
   <entry>
-    <title>使用Frp实现内网穿透详细步骤</title>
-    <link href="https://6mal.com/archives/88/"/>
-    <id>https://6mal.com/archives/88/</id>
+    <title>安装本地音乐套件：music-tags-web + musicn + navidrome</title>
+    <link href="https://6mal.com/archives/89/"/>
+    <id>https://6mal.com/archives/89/</id>
     <published>2024-12-24T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.761Z</updated>
+    <updated>2026-05-26T01:01:58.762Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;在实现内网穿透时，若IPv6访问受限（例如公司网络未启用IPv6），Lucky等工具将无法正常工作。这时，我们可以使用Frp这样的内网穿透软件。Frp部署包括服务端（frps）和客户端（frpc），需要在拥有固定公网IP的云服务器上部署frps，在内网设备（如飞牛）上部署f</summary>
+    <summary type="html">&lt;p&gt;如果你希望在你的本地环境中搭建一个功能强大的音乐管理系统，那么将 &lt;code&gt;music-tags-web&lt;/code&gt;、&lt;code&gt;musicn&lt;/code&gt; 和 &lt;code&gt;navidrome&lt;/code&gt; 这三个服务结合起来是一个很好的选择。本文将指导你如何使用</summary>
         
       
     

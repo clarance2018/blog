@@ -5,7 +5,7 @@ date: 2020-06-11 14:37:31
 id: 0026
 ---
 在互联网时代，我们无论是浏览网页、发送电子邮件，还是网上购物、网络办公，这些都涉及到信息传输。那么你知道吗？所有这些信息在理论上都是可以被截获的，如果信息传输不被加密和对应识别，就容易发生泄密和欺诈事件。网络安全越来越重要，也是重点工作，如果你想确保网站的安全性，那么你一定要了解SSL、HTTPS这些关键词，SSL可确保访客和网站之间保持私密状态，HTTPS则是实现网站安全最基础有效的方式。下面就给大家具体讲解什么是SSL和HTTPS，以及如何申请SSL证书，本文将详细的进行介绍。
-<p style="text-align: center;"><img class="aligncenter" src="https://www.v-li.com/img/2020/202003241585032437751584.jpeg" /></p>
+<p style="text-align: center;"><img class="aligncenter" src="https://www.6mal.com/img/2020/202003241585032437751584.jpeg" /></p>
 &nbsp;
 
 一、SSL（安全套接字层）

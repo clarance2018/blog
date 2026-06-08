@@ -7,7 +7,7 @@ id: 0033
 <strong>什么是字体图标？</strong>
 
 简单的说，就是将一种特殊的字体，通过特定方式，在网页上像传统图片一样显示的图标。如下图：
-<p style="text-align: center;"><img title="1635.jpg" src="https://www.v-li.com/img/2020/201809291538190606795978.jpg" alt="1635.jpg" /></p>
+<p style="text-align: center;"><img title="1635.jpg" src="https://www.6mal.com/img/2020/201809291538190606795978.jpg" alt="1635.jpg" /></p>
 字体图标(font-icon)通常是将一套图标集以字体文件的形式封装，并通过 CSS 的 @font-face 方式作为 Web Font 调用。为了解决不同环境不同浏览器的兼容和效率问题，常见封装文件格式有otf、eot、svg、ttf、woff、woff2等。比较知名的字体图标库有Glyphicons（Bootstrap）、Font Awesome（奥森图标）、Iconfont（阿里巴巴）、IcoMoon等，前两种是各自统一风格并且所有图标整体封装，文件相对较大但使用方便，后两种则更像是一种平台，需要自定义选取封装，按需生成文件在网页中加载时更有优势，但更新增减操作稍显麻烦。
 
 <strong>为什么要用字体图标？</strong>

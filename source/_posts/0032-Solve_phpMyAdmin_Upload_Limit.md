@@ -20,7 +20,7 @@ $cfg['SaveDir'] = ‘save’;</blockquote>
 
 然后在 phpMyAdmin 的目录下创建两个空目录，upload 和 save，并且把要导入的sql文件（必须是sql格式，非zip格式），上传到 upload 目录下，重新刷新打开登录phpMyAdmin，点导入（import） 发现多了一个网站服务器上传文件夹，如下图所示：
 
-<img title="1.png" src="http://www.v-li.com/img/2020/201804231524453296552576.png" />
+<img title="1.png" src="http://www.6mal.com/img/2020/201804231524453296552576.png" />
 
 <strong><span style="font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif; font-size: 14px;">解决方案二：</span></strong>
 
@@ -30,7 +30,7 @@ $cfg['SaveDir'] = ‘save’;</blockquote>
 
 然后打开 phpmyadmin 目录下的 import.php 文件 修改 $memory_limit 的值：
 
-<img title="2.jpg" src="http://www.v-li.com/img/2020/201804231524453297614275.jpg" />
+<img title="2.jpg" src="http://www.6mal.com/img/2020/201804231524453297614275.jpg" />
 
 说明：首选读取php.ini配置文件中的内存配置选项memory_limit，如果为空则默认内存大小限制为2M，如果没有限制则内存大小限制为10M，你可以结合你php.ini配置文件中的相关信息修改这段代码。
 

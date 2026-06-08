@@ -4,7 +4,7 @@ tags: [网站百科,网站技巧]
 date: 2020-06-11 14:38:00
 id: 0001
 ---
-<p style="text-align: center;"><img title="timg.jpg" src="http://www.v-li.com/img/2020/201708041501838119764018.jpg" alt="timg.jpg" /></p>
+<p style="text-align: center;"><img title="timg.jpg" src="http://www.6mal.com/img/2020/201708041501838119764018.jpg" alt="timg.jpg" /></p>
 Table要比其它html标记占更多的字节。
 (延迟下载时间，占用服务器更多的流量资源。)
 

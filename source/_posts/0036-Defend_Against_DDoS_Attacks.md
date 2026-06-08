@@ -9,7 +9,7 @@ DDoS攻击全名叫做分布式拒绝服务(DDoS：Distributed Denial of Service
 DDoS攻击出现至今已将近三十年，可是至今依然未能出现有效的应对手段。上次里约奥运会期间，DDoS攻击再次大行其道。全球攻击峰值达到了今年的最高值，可见只是一种人来疯而且还不怕见光的攻击手段。
 
 那么DDoS攻击为何如此无解呢?因为DDoS攻击常常会采用通过大量合法的请求的手段占用服务器网络资源，由此而达到瘫痪网络的目的。服务器在面对DDoS攻击时很难合理的判定和区分请求，因此遭受攻击时往往束手无策，只能等待攻击者停止攻击。
-<p style="text-align: center;"><img title="u=1783229805,4175447346&amp;fm=26&amp;gp=0.jpg" src="https://www.v-li.com/img/2020/201902211550761329535265.jpg" alt="u=1783229805,4175447346&amp;fm=26&amp;gp=0.jpg" /></p>
+<p style="text-align: center;"><img title="u=1783229805,4175447346&amp;fm=26&amp;gp=0.jpg" src="https://www.6mal.com/img/2020/201902211550761329535265.jpg" alt="u=1783229805,4175447346&amp;fm=26&amp;gp=0.jpg" /></p>
 <strong>拒绝服务攻击的发展</strong>
 
 从拒绝服务攻击诞生到现在已经有了很多的发展，从最初的简单Dos到现在的DdoS。那么什么是Dos和DdoS呢？DoS是一种利用单台计算机的攻击 方式。而DdoS(Distributed Denial of Service，分布式拒绝服务)是一种基于DoS的特殊形式的拒绝服务攻击，是一种分布、协作的大规模攻击方式，主要瞄准比较大的站点，比如一些商业公 司、搜索引擎和政府部门的站点。

@@ -7,7 +7,7 @@ id: 0011
 我们先来认识下favicon，它是英文Favorites Icon的缩写，顾名思义，其本意是让浏览器的收藏夹中除显示相应的文字标题外，还能以图标的方式区别不同的网站。一般业界中文俗称站标，现在多数浏览器都已支持直接在窗口标签上或地址栏中显示站标。一个好的网站想在推广方面取得成功，不仅需要良好的页面设计、令人印象深刻的网站Logo，也应该有独树一帜的favicon站标。今天我们就针对新手站长来探讨一下，如何为自己网站添加favicon.ico站标？
 
 实际上favicon.ico就是一个特殊格式的图片，按照既定规则准备好这样的图片放到网站，浏览器就能识别并显示出来，网站站标favicon.ico的尺寸通常是64X64、48X48、32X32像素这几种规格。既然是图片，那么我们首先就需要用制图软件设计出来，要求高的话还可以请专业设计人员制作，有的制图软件可以直接保存为.ico格式，如果不能也可以通过在线转换工具将jpg、png等格式转为ico格式。
-<p style="text-align: center;"><img class="aligncenter" title="20171108100751.png" src="https://www.v-li.com/img/2020/201711081510107620813955.png" alt="20171108100751.png" /></p>
+<p style="text-align: center;"><img class="aligncenter" title="20171108100751.png" src="https://www.6mal.com/img/2020/201711081510107620813955.png" alt="20171108100751.png" /></p>
 现在我们来说一下规则，一般情况下浏览器只能识别名为favicon.ico的图标文件作为站标，且必须是真实的.ico格式（扩展名），只改扩展名可能导致浏览器无法识别。将favicon.ico文件放在网站根目录下（到底什么是网站根目录？），也就是网站首页文件（如index.html/index.php等）所在目录（注意与模板目录区别开），浏览器就能自动读取。如果需要考虑兼容相对老旧浏览器，则可以在网站首页或头部模板文件head部分加上如下声明代码：
 <blockquote>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;
 

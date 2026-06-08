@@ -3,12 +3,12 @@
   hundredSuffix: ""
   link_list:
     - name: 胖子君
-      link: https://www.v-li.com
+      link: https://www.6mal.com
       avatar: https://avatars.githubusercontent.com/u/39393864?v=4
       descr: 简简单单的个人blog!
       recommend: true
     - name: 胖子君起始页
-      link: https://nav.v-li.com
+      link: https://nav.6mal.com
       avatar: https://avatars.githubusercontent.com/u/39393864?v=4
       descr: 一个包含各种搜索的起始页，也可以添加自己常用的页面。不断优化中。。
 

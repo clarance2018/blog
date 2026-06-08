@@ -19,7 +19,7 @@ cover:
 * 文档二：将下面代码复制到文档内，保存，改为.bat的文件后缀。
 
  ```bash
-    curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=https://v-li.com&token=XXXXXXXXXXX"
+    curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=https://6mal.com&token=XXXXXXXXXXX"
     pause
  ```
 PS:记得修改为自己的网站地址及token
@@ -38,8 +38,8 @@ from urllib.parse import urlparse
 import os
 
 # 参数配置
-SITEMAP_URL = 'https://v-li.com/sitemap.xml'  # 要获取的 sitemap URL
-BAIDU_API_URL = 'http://data.zz.baidu.com/urls?site=https://v-li.com&token=XXXXXXXXXXXXX'  # 百度收录 API 地址
+SITEMAP_URL = 'https://6mal.com/sitemap.xml'  # 要获取的 sitemap URL
+BAIDU_API_URL = 'http://data.zz.baidu.com/urls?site=https://6mal.com&token=XXXXXXXXXXXXX'  # 百度收录 API 地址
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }

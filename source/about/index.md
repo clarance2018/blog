@@ -1,46 +1,326 @@
 ---
-title: 关于
-date: 2021-03-30 15:57:51
+title: About
+date: 2026-06-08 15:57:51
 aside: false
+type: "about"
 top_img: 
 background: "#f8f9fe"
 comments: false
 ---
 
-### 👋 嗨，我是飞鲤
+-----------
 
-一个正在努力"鲤鱼跃龙门"的普通人。
+# 👋 Hello, I'm Clarance
 
-**关于这个名字**：2024年4月24日改的。一是瘦了不再胖（虽然现在还在努力），二是鲤鱼跃龙门——总希望自己能跳出现在这个状态。
+### Building a Personal Operating System for the AI Era
 
-### 🧑‍💻 日常在折腾什么
+> Researching AI · Building Systems · Sharing Ideas
 
-白天写代码，晚上搞AI。最近沉迷于：
+<br>
 
-- **生成式AI应用落地** — 把大模型从"能聊天"变成"能干活"
-- **AI Workflow设计** — 让重复的工作自动化，省下时间摸鱼
-- **Prompt Engineering** — 和AI对话的艺术（也是一门玄学）
-- **企业知识库建设** — 让AI真正理解业务，而不是胡说八道
-
-### 📚 生活里的我
-
-- 一个儿子的爹，正在学习怎么当好爸爸
-- 超级社恐，所以不开评论（没人评论 = 没人看 = 可以继续写）
-- 软考备考中（信息系统项目管理师），目标是"稍微有点用的废物"
-- 最近在研究NAS，想搞个私人服务器实现云盘自由
-
-### 🎯 这个博客是什么
-
-这是我的数字自留地。记录技术踩坑、生活碎碎念、偶尔的胡思乱想。
-
-不追求流量，不追求完美，就是想找个地方写点东西。毕竟，当未来某天问自己"时间都去哪了"，还能掏出来说——看，都在这里呢。
-
-### 📮 联系我
-
-- GitHub：[clarance2018](https://github.com/clarance2018)
-- Email：hcshi@outlook.com
-- B站：[飞鲤](https://space.bilibili.com/225919844)
+<kbd>AI Product</kbd> <kbd>Agent</kbd> <kbd>Data Intelligence</kbd> <kbd>Enterprise AI</kbd> <kbd>Knowledge Management</kbd>
 
 ---
 
-> *"闲来拾笔书心事，留与清风共月眠。"*
+{% note simple %}
+
+## 👨 About Me
+
+欢迎来到我的数字花园（Digital Garden）。
+
+这里记录我对 AI 产品、数据智能、知识管理和未来工作的思考。
+
+相比追逐短期热点，我更关注：
+
+* 长期主义
+* 第一性原理
+* 系统思维
+* Human × AI
+* 知识资产积累
+
+这个网站既是公开知识库，也是持续演进的 Personal Operating System。
+
+{% endnote %}
+
+---
+
+# 🚀 What I'm Exploring
+
+{% tabs research %}
+
+<!-- tab 🤖 AI Product -->
+
+关注：
+
+* AI Product Design
+* AI Workflow
+* Human × AI Collaboration
+* AI Native Applications
+
+探索如何构建真正有价值的 AI 产品。
+
+<!-- endtab -->
+
+<!-- tab 🧠 Agent -->
+
+持续研究：
+
+* AI Agents
+* Multi-Agent Systems
+* Memory
+* MCP
+* Context Engineering
+* Evaluation
+
+我相信 Agent 将重新定义未来的软件形态。
+
+<!-- endtab -->
+
+<!-- tab 📊 Data Intelligence -->
+
+研究：
+
+* Data Agent
+* AI Analytics
+* BI
+* Semantic Layer
+* Text-to-SQL
+
+探索 AI 如何重构数据分析。
+
+<!-- endtab -->
+
+<!-- tab 🏢 Enterprise AI -->
+
+相比 Demo，
+
+更关注：
+
+> AI 如何真正进入生产环境。
+
+持续关注：
+
+* Reliability
+* Governance
+* ROI
+* AI Commercialization
+
+<!-- endtab -->
+
+{% endtabs %}
+
+---
+
+# 🌱 Principles
+
+{% note success %}
+
+### Long-term Thinking
+
+关注长期价值，而不是短期噪音。
+
+{% endnote %}
+
+{% note info %}
+
+### First Principles
+
+回到问题本质，而不是停留在表面现象。
+
+{% endnote %}
+
+{% note warning %}
+
+### Simplicity
+
+将复杂问题简单化。
+
+{% endnote %}
+
+{% note primary %}
+
+### Human × AI
+
+人与 AI 的关系不是竞争，而是协作。
+
+{% endnote %}
+
+{% note danger %}
+
+### Continuous Learning
+
+持续学习，持续进化。
+
+{% endnote %}
+
+---
+
+# 🔄 Learning Workflow
+
+```text
+Input
+ ↓
+Understand
+ ↓
+Think
+ ↓
+Write
+ ↓
+Share
+ ↓
+Refine
+ ↓
+Compound
+```
+
+> Learn → Think → Write → Share → Compound
+
+---
+
+# 🔥 Current Focus
+
+### AI Agent
+
+⭐⭐⭐⭐⭐
+
+### Memory & MCP
+
+⭐⭐⭐⭐⭐
+
+### Enterprise AI
+
+⭐⭐⭐⭐
+
+### Data Agent
+
+⭐⭐⭐⭐
+
+### Context Engineering
+
+⭐⭐⭐⭐
+
+---
+
+# 📚 Current Interests
+
+* AI Product
+* Agent Architecture
+* Memory
+* MCP
+* Context Engineering
+* Data Intelligence
+* Enterprise AI
+* Knowledge Management
+* Future of Work
+
+---
+
+# 🧰 My Toolbox
+
+## AI
+
+* ChatGPT
+* Claude
+* Gemini
+* DeepSeek
+
+## Development
+
+* Claude Code
+* VS Code
+* GitHub
+
+## Productivity
+
+* Obsidian
+* Notion
+
+## Writing
+
+* Hexo
+* Markdown
+* WorkBuddy
+---
+
+# 💡 Philosophy
+
+> AI 不会取代所有知识工作者，
+>
+> 但会放大那些善于思考、表达和创造的人。
+
+未来属于：
+
+> * 持续学习者；
+> * 系统思考者；
+> * 善于与 AI 协作的人；
+> * 能够将知识转化为资产的人。
+
+---
+
+# 🌎 Beyond Work
+
+<details>
+<summary>✍️ Writing</summary>
+
+喜欢把复杂问题结构化。
+
+</details>
+
+<br>
+
+<details>
+<summary>📚 Reading</summary>
+
+持续学习和公开学习。
+
+</details>
+
+<br>
+
+<details>
+<summary>🧠 Knowledge Management</summary>
+
+建立属于自己的 Personal Operating System。
+
+</details>
+
+<br>
+
+<details>
+<summary>🚀 Future of Work</summary>
+
+探索 AI 时代知识工作的未来。
+
+</details>
+
+---
+
+# 📈 Growth Loop
+
+```text
+Learn
+ ↓
+Build
+ ↓
+Write
+ ↓
+Share
+ ↓
+Repeat
+```
+
+---
+
+# ☕ Connect
+
+如果我的文章对你有所启发，
+
+欢迎交流。
+
+让我们一起探索 AI 时代知识工作的未来。
+
+---
+
+### Researching AI · Building Systems · Sharing Ideas
+
+##### Building a Personal Operating System for the AI Era.

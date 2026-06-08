@@ -74,4 +74,4 @@ Open Graph Protocol（开放图谱协议），简称 OG 协议或 OGP。它是 F
     <?php endif; ?>  
 
 
-  [1]: https://www.v-li.com/Technical-Notes/174.html
+  [1]: https://www.6mal.com/Technical-Notes/174.html
