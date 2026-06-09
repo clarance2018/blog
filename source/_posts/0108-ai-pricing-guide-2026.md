@@ -1,6 +1,6 @@
 ---
 title: 每月$20还是$100？四大AI工具最新定价，我帮你算清楚了
-categories: 知识充电
+categories: AI探索
 tags: [AI工具,ChatGPT,Claude,Gemini,定价]
 date: 2026-05-29 10:00:00
 id: 0108

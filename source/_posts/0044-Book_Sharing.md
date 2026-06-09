@@ -1,6 +1,6 @@
 ---
 title: 糖尿病饮食推荐
-categories: 生活小贴士
+categories: 生活随笔
 tags: [资源分享,书籍推荐,活着,pdf下载]
 date: 2023-11-17 15:32:34
 id: 0044

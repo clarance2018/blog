@@ -1,5 +1,5 @@
 title: 解决phpMyAdmin最大上传限制问题
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:38:00
 id: 0032

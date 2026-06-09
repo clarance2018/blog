@@ -1,6 +1,6 @@
 ---
 title: 轻松搭建个人博客：Docker中Hexo的详细安装与配置指南
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,docker]
 date: 2024-07-09 09:00:34
 id: 0077

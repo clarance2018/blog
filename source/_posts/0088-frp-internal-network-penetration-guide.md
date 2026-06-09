@@ -1,6 +1,6 @@
 ---
 title: 使用Frp实现内网穿透详细步骤
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享,docker]
 date: 2024-12-24 09:00:34
 id: 0088

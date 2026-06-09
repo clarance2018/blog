@@ -1,6 +1,6 @@
 ---
 title: 用 Docker Compose 一键跑起 Halo 2.21：从 0 到可访问的完整记
-categories: 知识充电
+categories: Docker运维
 tags:
   - 技术笔记
   - 记录

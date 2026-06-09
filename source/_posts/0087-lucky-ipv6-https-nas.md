@@ -1,6 +1,6 @@
 ---
 title: 安装部署指南：使用Lucky实现IPv6动态解析和HTTPS访问NAS服务
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享,docker]
 date: 2024-12-09 09:00:34
 id: 0087

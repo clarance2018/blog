@@ -1,5 +1,5 @@
 title: 各大知名邮箱介绍及SMTP群发送量限制情况
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:37:41
 id: 0034

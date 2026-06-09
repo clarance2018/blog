@@ -1,6 +1,6 @@
 ---
 title: Blossom笔记软件Docker Compose部署指南
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享,docker]
 date: 2025-01-17 09:00:34
 id: 0092

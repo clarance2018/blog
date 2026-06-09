@@ -1,6 +1,6 @@
 ---
 title: Fliki网站SEO技巧总结
-categories: 知识充电
+categories: Web开发
 tags:
   - 技术笔记
   - 记录

@@ -1,6 +1,6 @@
 ---
 title: 一个简单的记录
-categories: 每日思考
+categories: 生活随笔
 tags: [个人感悟,计划,吐槽]
 date: 2024-01-01 22:00:34
 id: 0073

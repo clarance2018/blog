@@ -1,6 +1,6 @@
 ---
 title: 梦见自己开了一家小酒馆
-categories: 游&记
+categories: 生活随笔
 tags: [个人感悟,记录]
 date: 2024-11-17 09:00:34
 id: 0083

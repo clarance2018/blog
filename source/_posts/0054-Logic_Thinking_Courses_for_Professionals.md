@@ -1,6 +1,6 @@
 ---
 title: 职场人的5堂逻辑思考课
-categories: 知识充电
+categories: 学习成长
 tags: [pdf下载,书籍推荐,资源分享]
 date: 2024-04-21 22:00:34
 id: 0054

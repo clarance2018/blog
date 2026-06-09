@@ -1,5 +1,5 @@
 title: GB2312、GBK与UTF-8网页编码区别解惑
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:37:34
 id: 0008

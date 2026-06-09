@@ -1,6 +1,6 @@
 ---
 title: 打造你的专属卡通人数字分身：三步搞定！
-categories: 知识充电
+categories: AI探索
 tags:
   - 技术笔记
   - 记录

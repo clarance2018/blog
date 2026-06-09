@@ -1,6 +1,6 @@
 ---
 title: 去了一趟北方——哈尔滨
-categories: 游&记
+categories: 生活随笔
 tags: [游记,个人感悟]
 date: 2024-10-09 09:00:34
 id: 0083

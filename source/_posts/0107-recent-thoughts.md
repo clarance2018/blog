@@ -1,6 +1,6 @@
 ---
 title: 记最近的若干事情
-categories: 每日思考
+categories: 生活随笔
 tags: [吐槽,个人感悟,生活]
 date: 2026-05-29 09:00:34
 id: 0107

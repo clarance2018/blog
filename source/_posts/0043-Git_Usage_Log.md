@@ -1,6 +1,6 @@
 ---
 title: git 使用记录
-categories: 知识充电
+categories: 效率工具
 tags: [技术笔记,git]
 date: 2023-11-06 15:38:03
 id: 0043

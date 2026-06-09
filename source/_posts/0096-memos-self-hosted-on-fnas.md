@@ -1,6 +1,6 @@
 ---
 title:  Memos：你的私有化知识管理神器，飞牛NAS部署全攻略
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享]
 date: 2025-04-14 09:00:34
 id: 0096

@@ -1,6 +1,6 @@
 ---
 title: 外贸行业ChatGPT提示词有哪些？
-categories: 知识充电
+categories: AI探索
 tags: [技术笔记,记录,ChatGPT]
 date: 2024-08-26 09:00:34
 id: 0081

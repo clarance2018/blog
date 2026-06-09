@@ -1,5 +1,5 @@
 title: 如何为typecho&amp;wordpress添加og标签
-categories: 知识充电
+categories: Web开发
 tags: [技术笔记,SEO]
 date: 2023-02-03 10:11:00
 id: 0029

@@ -10,25 +10,21 @@ nav:
 # Menu 目錄
 menu:
   首页: / || fas fa-home
+  技术 || fas fa-code:
+    Web开发: /categories/Web开发/ || fas fa-laptop-code
+    Docker运维: /categories/Docker运维/ || fab fa-docker
+    AI探索: /categories/AI探索/ || fas fa-robot
+    效率工具: /categories/效率工具/ || fas fa-tools
+  学习 || fas fa-graduation-cap:
+    软考高项: /tags/软考高项/ || fas fa-file-alt
+    读书笔记: /categories/学习成长/ || fas fa-book
+  生活 || fas fa-heart:
+    生活随笔: /categories/生活随笔/ || fas fa-feather-alt
+    相册: /album/ || fas fa-images
+    工具箱: /tool.html || fa-solid fa-screwdriver-wrench
   归档: /archives/ || fas fa-archive
-  标签|| fas fa-tags:
-    汇总: /tags/ || fas fa-archive
-    软考高项: /tags/软考高项/ || fas fa-archive
-  类别 || fas fa-folder-open:
-     知识充电: /categories/知识充电/ || fas fa-folder-open
-     生活小贴士:  /categories/生活小贴士/ || fas fa-folder-open
-     每日思考: /categories/每日思考/ || fas fa-folder-open
-  其他||fas fa-list:
-      # Music: /music/ || fas fa-music
-      相册: /album/ || fas fa-video
-      工具: /tool.html || fa-solid fa-screwdriver-wrench      
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
-  活动 || fas fas fa-link:
-     BlogFinder: https://bf.zzxworld.com/
-     博友圈: https://www.boyouquan.com/planet-shuttle
-     博客录: https://suiji.ru
-     十年之约: https://foreverblog.cn/go.html
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -281,7 +277,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: Building a Personal Operating System for the AI Era.<br>探索 AI 产品、数据智能和知识工作的未来。
+    description: 探索 AI 产品、数据智能和知识工作的未来。
     button:
       enable: true
       icon: fab fa-github

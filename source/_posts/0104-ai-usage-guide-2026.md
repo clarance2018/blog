@@ -1,6 +1,6 @@
 ---
 title: 2026年，普通创作者如何用好AI：从工具到思维的系统升级
-categories: 知识充电
+categories: AI探索
 tags:
   - 技术笔记
   - 记录

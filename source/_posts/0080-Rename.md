@@ -1,6 +1,6 @@
 ---
 title: 对同文件夹内所有文件进行批量重命名
-categories: 知识充电
+categories: 效率工具
 tags: [技术笔记,记录]
 date: 2024-08-09 09:00:34
 id: 0080

@@ -1,6 +1,6 @@
 ---
 title: 在Ubuntu上配置SSH
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录]
 date: 2024-06-17 22:00:34
 id: 0074

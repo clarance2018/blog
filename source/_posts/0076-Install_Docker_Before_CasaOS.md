@@ -1,6 +1,6 @@
 ---
 title: 安装 CasaOS 之前需要先安装 Docker
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录]
 date: 2024-06-19 22:00:34
 id: 0076

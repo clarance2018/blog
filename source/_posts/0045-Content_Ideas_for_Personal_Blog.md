@@ -1,6 +1,6 @@
 ---
 title: 个人blog可以更新哪些内容？
-categories: 每日思考
+categories: 生活随笔
 tags: [技术笔记,资源分享,经验分享]
 date: 2023-11-17 15:32:34
 id: 0045

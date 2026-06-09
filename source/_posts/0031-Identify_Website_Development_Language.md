@@ -1,5 +1,5 @@
 title: 判断一个网站是由哪种语言开发的方法
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:38:42
 id: 0031

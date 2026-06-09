@@ -1,6 +1,6 @@
 ---
 title: 信息系统项目管理师备考
-categories: 知识充电
+categories: 学习成长
 tags: [记录,计划,学习经验]
 date: 2024-03-01 22:00:34
 id: 0059

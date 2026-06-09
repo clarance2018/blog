@@ -1,6 +1,6 @@
 ---
 title:  BAT 文件进阶用法：10 个高效自动化示例
-categories: 知识充电
+categories: 效率工具
 tags: [技术笔记,记录,经验分享]
 date: 2025-02-28 09:00:34
 id: 0093

@@ -1,6 +1,6 @@
 ---
 title:  Linux常用代码大集锦
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享]
 date: 2025-03-01 09:00:34
 id: 0094

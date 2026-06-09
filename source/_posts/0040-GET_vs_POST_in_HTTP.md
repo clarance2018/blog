@@ -1,5 +1,5 @@
 title: 99%的人都搞不懂HTTP中GET与POST的区别？
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:38:21
 id: 0040

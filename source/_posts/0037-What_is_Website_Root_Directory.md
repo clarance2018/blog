@@ -1,5 +1,5 @@
 title: 到底什么是网站根目录？
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:37:58
 id: 0037

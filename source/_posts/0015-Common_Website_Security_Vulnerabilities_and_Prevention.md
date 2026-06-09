@@ -1,5 +1,5 @@
 title: 网站有哪些常见安全漏洞，如何防范？
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:38:20
 id: 0015

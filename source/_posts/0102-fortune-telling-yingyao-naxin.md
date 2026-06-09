@@ -1,6 +1,6 @@
 ---
 title: 江湖算命秘术——《英耀篇·拿心赋》详解
-categories: 知识充电
+categories: 生活随笔
 tags:
   - 技术笔记
   - 记录

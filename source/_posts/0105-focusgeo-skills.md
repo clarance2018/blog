@@ -1,6 +1,6 @@
 ---
 title: FocusGEO Skills：让AI大模型主动推荐你的品牌
-categories: 知识充电
+categories: AI探索
 tags:
   - 技术笔记
   - 开源项目

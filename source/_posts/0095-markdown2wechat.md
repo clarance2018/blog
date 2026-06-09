@@ -1,6 +1,6 @@
 ---
 title:  高效排版神器：doocs/md 微信Markdown编辑器全栈部署指南
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享,docker]
 date: 2025-03-28 09:00:34
 id: 0095

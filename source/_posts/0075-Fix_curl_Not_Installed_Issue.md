@@ -1,6 +1,6 @@
 ---
 title: curl 未安装而不能运行的问题
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录]
 date: 2024-06-18 22:00:34
 id: 0075

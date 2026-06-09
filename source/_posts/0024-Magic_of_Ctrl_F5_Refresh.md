@@ -1,5 +1,5 @@
 title: 使用Ctrl+F5按键刷新网页的神奇之处？
-categories: 知识充电
+categories: Web开发
 tags: [网站百科,网站技巧]
 date: 2020-06-11 14:38:15
 id: 0024

@@ -1,6 +1,6 @@
 ---
 title: 软考高项笔记·考前精要
-categories: 知识充电
+categories: 学习成长
 tags: [软考高项,学习经验,资源分享]
 date: 2024-05-09 22:00:34
 id: 0068

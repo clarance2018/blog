@@ -31,6 +31,27 @@
       color: vip
       tag: 技术
 
+- class_name: 博客圈
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: BlogFinder
+      link: https://bf.zzxworld.com/
+      avatar: https://bf.zzxworld.com/favicon.ico
+      descr: 发现更多优质博客
+    - name: 博友圈
+      link: https://www.boyouquan.com/planet-shuttle
+      avatar: https://www.boyouquan.com/favicon.ico
+      descr: 博客交流社区
+    - name: 博客录
+      link: https://suiji.ru
+      avatar: https://suiji.ru/favicon.ico
+      descr: 随机发现博客
+    - name: 十年之约
+      link: https://foreverblog.cn/go.html
+      avatar: https://foreverblog.cn/favicon.ico
+      descr: 博客十年之约
+
 
 
 

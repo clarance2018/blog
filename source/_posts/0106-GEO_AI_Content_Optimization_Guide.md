@@ -1,6 +1,6 @@
 ---
 title: 让DeepSeek和豆包主动推荐你的5个GEO优化方法
-categories: 知识充电
+categories: AI探索
 tags: [GEO,SEO,AI优化,内容营销,DeepSeek,豆包]
 date: 2026-05-28 14:30:00
 id: 0106

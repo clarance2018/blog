@@ -1,6 +1,6 @@
 ---
 title: 《策略思考》与《非理性决策》书评
-categories: 知识充电
+categories: 学习成长
 tags: [pdf下载,书籍推荐,资源分享]
 date: 2024-02-24 22:00:34
 id: 0058

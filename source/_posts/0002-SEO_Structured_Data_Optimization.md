@@ -1,5 +1,5 @@
 title: SEO|网站结构化数据优化该展示哪些内容
-categories: 知识充电
+categories: Web开发
 tags: [技术笔记,SEO,结构化数据]
 date: 2023-01-31 09:05:25
 id: 0002

@@ -1,6 +1,6 @@
 ---
 title: Hexo博客维护操作全记录
-categories: 知识充电
+categories: Web开发
 tags:
   - 技术笔记
   - 记录

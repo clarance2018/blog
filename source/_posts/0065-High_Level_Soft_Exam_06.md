@@ -1,6 +1,6 @@
 ---
 title: 软考高项笔记·论文
-categories: 知识充电
+categories: 学习成长
 tags: [软考高项,学习经验,资源分享]
 date: 2024-05-06 22:00:34
 id: 0065

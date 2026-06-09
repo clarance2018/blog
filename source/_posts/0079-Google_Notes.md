@@ -1,6 +1,6 @@
 ---
 title: Google广告投放完整笔记
-categories: 知识充电
+categories: Web开发
 tags: [技术笔记,记录]
 date: 2024-07-30 09:00:34
 id: 0079

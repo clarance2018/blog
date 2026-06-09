@@ -1,5 +1,5 @@
 title: AI内容创作常用指令分享
-categories: 知识充电
+categories: AI探索
 tags: [技术笔记,资源分享,经验分享,SEO]
 date: 2024-02-22 11:50:00
 id: 0046

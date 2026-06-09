@@ -1,6 +1,6 @@
 ---
 title: 从咸鱼躺到生活记录员：我的数字手账养成记
-categories: 知识充电
+categories: 生活随笔
 tags: [每日思考,个人感悟,吐槽]
 id: 98
 top_img: 

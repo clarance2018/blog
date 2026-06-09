@@ -1,6 +1,6 @@
 ---
 title: Clash for Linux 配置指南：轻松解决 Docker 镜像拉取难题
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享]
 date: 2025-01-06 09:00:34
 id: 0090

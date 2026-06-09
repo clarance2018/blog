@@ -1,6 +1,6 @@
 ---
 title: 百度Url提交的两种方式
-categories: 知识充电
+categories: Web开发
 tags: [技术笔记,记录,SEO,经验分享]
 date: 2024-11-26 09:00:34
 id: 0086

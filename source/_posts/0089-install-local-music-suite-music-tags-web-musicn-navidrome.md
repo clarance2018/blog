@@ -1,6 +1,6 @@
 ---
 title: 安装本地音乐套件：music-tags-web + musicn + navidrome
-categories: 知识充电
+categories: Docker运维
 tags: [技术笔记,记录,经验分享,docker]
 date: 2024-12-24 09:00:34
 id: 0089

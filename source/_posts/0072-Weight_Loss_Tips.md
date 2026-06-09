@@ -1,6 +1,6 @@
 ---
 title: 闭眼掉秤的50条冷知识分享
-categories: 生活小贴士
+categories: 生活随笔
 tags: [个人感悟,计划,吐槽]
 date: 2024-06-03 16:33:34
 id: 0072
