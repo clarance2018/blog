@@ -6,7 +6,7 @@
   <link href="https://6mal.com/atom.xml" rel="self"/>
   
   <link href="https://6mal.com/"/>
-  <updated>2026-05-29T07:34:32.515Z</updated>
+  <updated>2025-10-11T01:35:00.000Z</updated>
   <id>https://6mal.com/</id>
   
   <author>
@@ -17,11 +17,254 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用 Docker Compose 一键跑起 Halo 2.21：从 0 到可访问的完整记</title>
+    <link href="https://6mal.com/archives/103/"/>
+    <id>https://6mal.com/archives/103/</id>
+    <published>2026-06-09T12:28:42.928Z</published>
+    <updated>2025-10-11T01:35:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-为什么要写这篇&quot;&gt;&lt;a href=&quot;#0-为什么要写这篇&quot; class=&quot;headerlink&quot; title=&quot;0. 为什么要写这篇&quot;&gt;&lt;/a&gt;0. 为什么要写这篇&lt;/h2&gt;&lt;p&gt;Halo 2.x 官方文档已经给出了 Docker&amp;#x2F;Compose</summary>
+        
+      
+    
+    
+    
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>江湖算命秘术——《英耀篇·拿心赋》详解</title>
+    <link href="https://6mal.com/archives/102/"/>
+    <id>https://6mal.com/archives/102/</id>
+    <published>2026-06-09T12:28:28.399Z</published>
+    <updated>2025-07-22T01:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一次偶然的机会在小视频刷到了《英耀篇》，跑去找来看了看觉得这是一个很有意思的内容。我觉得这个对自己在生活学习中也有很多值得学习和借鉴的地方，所有分享给大家。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="生活随笔" scheme="https://6mal.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从咸鱼躺到生活记录员：我的数字手账养成记</title>
+    <link href="https://6mal.com/archives/98/"/>
+    <id>https://6mal.com/archives/98/</id>
+    <published>2026-06-09T12:28:28.397Z</published>
+    <updated>2025-05-13T09:34:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近总觉得自己像条咸鱼干，每天睁眼就是刷手机-吃饭-躺平的三点一线。某天半夜刷到个”Project50”的帖子，说是用50天养成新习惯。虽然没打算照搬挑战（毕竟我连5天都坚持不了），但突然被戳中了：是该给生活按个记录键了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;▌折腾工具的血泪史&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随笔" scheme="https://6mal.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="个人感悟" scheme="https://6mal.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="吐槽" scheme="https://6mal.com/tags/%E5%90%90%E6%A7%BD/"/>
+    
+    <category term="每日思考" scheme="https://6mal.com/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FocusGEO Skills：让AI大模型主动推荐你的品牌</title>
+    <link href="https://6mal.com/archives/105/"/>
+    <id>https://6mal.com/archives/105/</id>
+    <published>2026-06-09T12:28:28.212Z</published>
+    <updated>2026-05-26T02:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你好，我是飞鲤。&lt;/p&gt;
+&lt;p&gt;今天想和你聊聊一个我最近在做的事情——&lt;strong&gt;FocusGEO Skills&lt;/strong&gt;，一个开源的 AI 助手技能集，目标很简单：让</summary>
+        
+      
+    
+    
+    
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="开源项目" scheme="https://6mal.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="GEO" scheme="https://6mal.com/tags/GEO/"/>
+    
+    <category term="AI搜索优化" scheme="https://6mal.com/tags/AI%E6%90%9C%E7%B4%A2%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2026年，普通创作者如何用好AI：从工具到思维的系统升级</title>
+    <link href="https://6mal.com/archives/104/"/>
+    <id>https://6mal.com/archives/104/</id>
+    <published>2026-06-09T12:28:28.209Z</published>
+    <updated>2026-01-22T01:35:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2026年，普通创作者如何用好AI：从工具到思维的系统升级&quot;&gt;&lt;a href=&quot;#2026年，普通创作者如何用好AI：从工具到思维的系统升级&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打造你的专属卡通人数字分身：三步搞定！</title>
+    <link href="https://6mal.com/archives/101/"/>
+    <id>https://6mal.com/archives/101/</id>
+    <published>2026-06-09T12:28:28.207Z</published>
+    <updated>2025-07-10T08:05:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;想拥有一个会说话、能互动的卡通版自己？跟着这三步走，轻松创建超逼真的数字分身！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;🎤-第一步：克隆你的声音-海螺AI&quot;&gt;&lt;a href=&quot;#🎤-第一步：克隆你的声音-海螺AI&quot; class=&quot;headerlink&quot; title=&quot;🎤</summary>
+        
+      
+    
+    
+    
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客维护操作全记录</title>
+    <link href="https://6mal.com/archives/100/"/>
+    <id>https://6mal.com/archives/100/</id>
+    <published>2026-06-09T12:28:28.142Z</published>
+    <updated>2025-06-03T06:52:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;部署架构演进&quot;&gt;&lt;a href=&quot;#部署架构演进&quot; class=&quot;headerlink&quot; title=&quot;部署架构演进&quot;&gt;&lt;/a&gt;部署架构演进&lt;/h2&gt;&lt;h3 id=&quot;第一阶段：纯服务器部署&quot;&gt;&lt;a href=&quot;#第一阶段：纯服务器部署&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web开发" scheme="https://6mal.com/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="git" scheme="https://6mal.com/tags/git/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fliki网站SEO技巧总结</title>
+    <link href="https://6mal.com/archives/99/"/>
+    <id>https://6mal.com/archives/99/</id>
+    <published>2026-06-09T12:28:28.140Z</published>
+    <updated>2025-05-14T07:56:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现在的网站都是在通过各种AI工具不同的内卷，Fliki和Faceless</summary>
+        
+      
+    
+    
+    
+    <category term="Web开发" scheme="https://6mal.com/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="SEO" scheme="https://6mal.com/tags/SEO/"/>
+    
+    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>每月$20还是$100？四大AI工具最新定价，我帮你算清楚了</title>
     <link href="https://6mal.com/archives/108/"/>
     <id>https://6mal.com/archives/108/</id>
     <published>2026-05-29T02:00:00.000Z</published>
-    <updated>2026-05-29T07:34:32.515Z</updated>
+    <updated>2026-06-09T12:28:28.217Z</updated>
     
     
       
@@ -35,7 +278,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
     
     
     <category term="ChatGPT" scheme="https://6mal.com/tags/ChatGPT/"/>
@@ -55,7 +298,7 @@
     <link href="https://6mal.com/archives/107/"/>
     <id>https://6mal.com/archives/107/</id>
     <published>2026-05-29T01:00:34.000Z</published>
-    <updated>2026-05-29T07:34:00.072Z</updated>
+    <updated>2026-06-09T12:28:28.403Z</updated>
     
     
       
@@ -70,7 +313,7 @@
     
     
     
-    <category term="每日思考" scheme="https://6mal.com/categories/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"/>
+    <category term="生活随笔" scheme="https://6mal.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
     <category term="个人感悟" scheme="https://6mal.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
@@ -86,7 +329,7 @@
     <link href="https://6mal.com/archives/106/"/>
     <id>https://6mal.com/archives/106/</id>
     <published>2026-05-28T06:30:00.000Z</published>
-    <updated>2026-05-28T06:53:08.852Z</updated>
+    <updated>2026-06-09T12:28:28.215Z</updated>
     
     
       
@@ -99,7 +342,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
     
     
     <category term="SEO" scheme="https://6mal.com/tags/SEO/"/>
@@ -117,254 +360,11 @@
   </entry>
   
   <entry>
-    <title>FocusGEO Skills：让AI大模型主动推荐你的品牌</title>
-    <link href="https://6mal.com/archives/105/"/>
-    <id>https://6mal.com/archives/105/</id>
-    <published>2026-05-26T02:56:40.523Z</published>
-    <updated>2026-05-26T02:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;你好，我是飞鲤。&lt;/p&gt;
-&lt;p&gt;今天想和你聊聊一个我最近在做的事情——&lt;strong&gt;FocusGEO Skills&lt;/strong&gt;，一个开源的 AI 助手技能集，目标很简单：让</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="开源项目" scheme="https://6mal.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    
-    <category term="GEO" scheme="https://6mal.com/tags/GEO/"/>
-    
-    <category term="AI搜索优化" scheme="https://6mal.com/tags/AI%E6%90%9C%E7%B4%A2%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026年，普通创作者如何用好AI：从工具到思维的系统升级</title>
-    <link href="https://6mal.com/archives/104/"/>
-    <id>https://6mal.com/archives/104/</id>
-    <published>2026-05-26T01:47:45.944Z</published>
-    <updated>2026-01-22T01:35:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2026年，普通创作者如何用好AI：从工具到思维的系统升级&quot;&gt;&lt;a href=&quot;#2026年，普通创作者如何用好AI：从工具到思维的系统升级&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用 Docker Compose 一键跑起 Halo 2.21：从 0 到可访问的完整记</title>
-    <link href="https://6mal.com/archives/103/"/>
-    <id>https://6mal.com/archives/103/</id>
-    <published>2026-05-26T01:01:58.763Z</published>
-    <updated>2025-10-11T01:35:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-为什么要写这篇&quot;&gt;&lt;a href=&quot;#0-为什么要写这篇&quot; class=&quot;headerlink&quot; title=&quot;0. 为什么要写这篇&quot;&gt;&lt;/a&gt;0. 为什么要写这篇&lt;/h2&gt;&lt;p&gt;Halo 2.x 官方文档已经给出了 Docker&amp;#x2F;Compose</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从咸鱼躺到生活记录员：我的数字手账养成记</title>
-    <link href="https://6mal.com/archives/98/"/>
-    <id>https://6mal.com/archives/98/</id>
-    <published>2026-05-26T01:01:58.762Z</published>
-    <updated>2025-05-13T09:34:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近总觉得自己像条咸鱼干，每天睁眼就是刷手机-吃饭-躺平的三点一线。某天半夜刷到个”Project50”的帖子，说是用50天养成新习惯。虽然没打算照搬挑战（毕竟我连5天都坚持不了），但突然被戳中了：是该给生活按个记录键了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;▌折腾工具的血泪史&lt;</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="个人感悟" scheme="https://6mal.com/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/"/>
-    
-    <category term="吐槽" scheme="https://6mal.com/tags/%E5%90%90%E6%A7%BD/"/>
-    
-    <category term="每日思考" scheme="https://6mal.com/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fliki网站SEO技巧总结</title>
-    <link href="https://6mal.com/archives/99/"/>
-    <id>https://6mal.com/archives/99/</id>
-    <published>2026-05-26T01:01:58.762Z</published>
-    <updated>2025-05-14T07:56:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;现在的网站都是在通过各种AI工具不同的内卷，Fliki和Faceless</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="SEO" scheme="https://6mal.com/tags/SEO/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客维护操作全记录</title>
-    <link href="https://6mal.com/archives/100/"/>
-    <id>https://6mal.com/archives/100/</id>
-    <published>2026-05-26T01:01:58.762Z</published>
-    <updated>2025-06-03T06:52:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;部署架构演进&quot;&gt;&lt;a href=&quot;#部署架构演进&quot; class=&quot;headerlink&quot; title=&quot;部署架构演进&quot;&gt;&lt;/a&gt;部署架构演进&lt;/h2&gt;&lt;h3 id=&quot;第一阶段：纯服务器部署&quot;&gt;&lt;a href=&quot;#第一阶段：纯服务器部署&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="git" scheme="https://6mal.com/tags/git/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打造你的专属卡通人数字分身：三步搞定！</title>
-    <link href="https://6mal.com/archives/101/"/>
-    <id>https://6mal.com/archives/101/</id>
-    <published>2026-05-26T01:01:58.762Z</published>
-    <updated>2025-07-10T08:05:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;想拥有一个会说话、能互动的卡通版自己？跟着这三步走，轻松创建超逼真的数字分身！&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;🎤-第一步：克隆你的声音-海螺AI&quot;&gt;&lt;a href=&quot;#🎤-第一步：克隆你的声音-海螺AI&quot; class=&quot;headerlink&quot; title=&quot;🎤</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>江湖算命秘术——《英耀篇·拿心赋》详解</title>
-    <link href="https://6mal.com/archives/102/"/>
-    <id>https://6mal.com/archives/102/</id>
-    <published>2026-05-26T01:01:58.762Z</published>
-    <updated>2025-07-22T01:32:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一次偶然的机会在小视频刷到了《英耀篇》，跑去找来看了看觉得这是一个很有意思的内容。我觉得这个对自己在生活学习中也有很多值得学习和借鉴的地方，所有分享给大家。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>2025年必看的15个数据分析宝藏博客 | 附RSS订阅指南</title>
     <link href="https://6mal.com/archives/97/"/>
     <id>https://6mal.com/archives/97/</id>
     <published>2025-04-16T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:28.414Z</updated>
     
     
       
@@ -378,7 +378,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="效率工具" scheme="https://6mal.com/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -394,7 +394,7 @@
     <link href="https://6mal.com/archives/96/"/>
     <id>https://6mal.com/archives/96/</id>
     <published>2025-04-14T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:42.926Z</updated>
     
     
       
@@ -407,7 +407,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -423,7 +423,7 @@
     <link href="https://6mal.com/archives/95/"/>
     <id>https://6mal.com/archives/95/</id>
     <published>2025-03-28T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:42.923Z</updated>
     
     
       
@@ -436,7 +436,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -454,7 +454,7 @@
     <link href="https://6mal.com/archives/94/"/>
     <id>https://6mal.com/archives/94/</id>
     <published>2025-03-01T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:42.920Z</updated>
     
     
       
@@ -468,7 +468,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -484,7 +484,7 @@
     <link href="https://6mal.com/archives/93/"/>
     <id>https://6mal.com/archives/93/</id>
     <published>2025-02-28T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:28.411Z</updated>
     
     
       
@@ -497,7 +497,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="效率工具" scheme="https://6mal.com/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -513,7 +513,7 @@
     <link href="https://6mal.com/archives/92/"/>
     <id>https://6mal.com/archives/92/</id>
     <published>2025-01-17T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:42.917Z</updated>
     
     
       
@@ -526,7 +526,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -544,7 +544,7 @@
     <link href="https://6mal.com/archives/90/"/>
     <id>https://6mal.com/archives/90/</id>
     <published>2025-01-06T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:42.912Z</updated>
     
     
       
@@ -557,7 +557,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -573,7 +573,7 @@
     <link href="https://6mal.com/archives/88/"/>
     <id>https://6mal.com/archives/88/</id>
     <published>2024-12-24T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.761Z</updated>
+    <updated>2026-06-09T12:28:42.905Z</updated>
     
     
       
@@ -586,7 +586,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
@@ -604,7 +604,7 @@
     <link href="https://6mal.com/archives/89/"/>
     <id>https://6mal.com/archives/89/</id>
     <published>2024-12-24T01:00:34.000Z</published>
-    <updated>2026-05-26T01:01:58.762Z</updated>
+    <updated>2026-06-09T12:28:42.908Z</updated>
     
     
       
@@ -617,7 +617,7 @@
     
     
     
-    <category term="知识充电" scheme="https://6mal.com/categories/%E7%9F%A5%E8%AF%86%E5%85%85%E7%94%B5/"/>
+    <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
