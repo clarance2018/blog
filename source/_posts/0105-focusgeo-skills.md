@@ -10,8 +10,8 @@ id: 105
 top_img:
 swiper_index:
 cover:
-created: 2026-05-26 10:00
-updated: 2026-05-26T10:00
+date: 2026-05-26 10:00:00
+updated: 2026-05-26 10:00:00
 
 ---
 
