@@ -5,5 +5,3 @@ db.json
 node_modules/
 .deploy*/
 _multiconfig.yml
-# Build output
-public/
