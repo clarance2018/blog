@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Claude Code Subagents：让 AI 分身帮你干活 | 飞鲤的自留地</title><meta name="author" content="飞鲤"><meta name="copyright" content="飞鲤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前六篇我们聊了 Claude Code 的安装配置、快捷键、命令、CLAUDE.md 配置、Skills 和 MCP。这篇来说说真正让我效率飙升的高级功能——Subagents。 说实话，用了一个月基础功能后，我觉得 Claude Code 也就那样——比 Cursor 好用，但没到”降维打击”的程度。 直到我发现了 Subagents 这个功能。 什么是 SubagentsSubagents 是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Code Subagents：让 AI 分身帮你干活">
+<meta property="og:url" content="https://6mal.com/archives/116/index.html">
+<meta property="og:site_name" content="飞鲤的自留地">
+<meta property="og:description" content="前六篇我们聊了 Claude Code 的安装配置、快捷键、命令、CLAUDE.md 配置、Skills 和 MCP。这篇来说说真正让我效率飙升的高级功能——Subagents。 说实话，用了一个月基础功能后，我觉得 Claude Code 也就那样——比 Cursor 好用，但没到”降维打击”的程度。 直到我发现了 Subagents 这个功能。 什么是 SubagentsSubagents 是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://6mal.com/img/bk_img/background10.webp">
+<meta property="article:published_time" content="2026-06-18T07:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-18T01:20:21.991Z">
+<meta property="article:author" content="飞鲤">
+<meta property="article:tag" content="Claude Code">
+<meta property="article:tag" content="AI编程">
+<meta property="article:tag" content="效率工具">
+<meta property="article:tag" content="Subagents">
+<meta property="article:tag" content="子代理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://6mal.com/img/bk_img/background10.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Claude Code Subagents：让 AI 分身帮你干活",
+  "url": "https://6mal.com/archives/116/",
+  "image": "https://6mal.com/img/bk_img/background10.webp",
+  "datePublished": "2026-06-18T07:00:00.000Z",
+  "dateModified": "2026-06-18T01:20:21.991Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "飞鲤",
+      "url": "https://6mal.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/icon/favicon.ico"><link rel="canonical" href="https://6mal.com/archives/116/index.html"><link rel="preconnect"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c3b47e462e0d37228d939555eff17bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Claude Code Subagents：让 AI 分身帮你干活',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"JngdjtGDf2twJL8Y",ck:"JngdjtGDf2twJL8Y",autoTrack:true,screenRecord:true})</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="飞鲤的自留地" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">116</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">57</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-code"></i><span> 技术</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Web%E5%BC%80%E5%8F%91/"><i class="fa-fw fas fa-laptop-code"></i><span> Web开发</span></a></li><li><a class="site-page child" href="/categories/Docker%E8%BF%90%E7%BB%B4/"><i class="fa-fw fab fa-docker"></i><span> Docker运维</span></a></li><li><a class="site-page child" href="/categories/AI%E6%8E%A2%E7%B4%A2/"><i class="fa-fw fas fa-robot"></i><span> AI探索</span></a></li><li><a class="site-page child" href="/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 效率工具</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-graduation-cap"></i><span> 学习</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 软考高项</span></a></li><li><a class="site-page child" href="/categories/%E5%AD%A6%E4%B9%A0%E6%88%90%E9%95%BF/"><i class="fa-fw fas fa-book"></i><span> 读书笔记</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><i class="fa-fw fas fa-feather-alt"></i><span> 生活随笔</span></a></li><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fa-solid fa-screwdriver-wrench"></i><span> 工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/bk_img/background10.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/icon/favicon.ico" alt="Logo"><span class="site-name">飞鲤的自留地</span></a><a class="nav-page-title" href="/"><span class="site-name">Claude Code Subagents：让 AI 分身帮你干活</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-code"></i><span> 技术</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Web%E5%BC%80%E5%8F%91/"><i class="fa-fw fas fa-laptop-code"></i><span> Web开发</span></a></li><li><a class="site-page child" href="/categories/Docker%E8%BF%90%E7%BB%B4/"><i class="fa-fw fab fa-docker"></i><span> Docker运维</span></a></li><li><a class="site-page child" href="/categories/AI%E6%8E%A2%E7%B4%A2/"><i class="fa-fw fas fa-robot"></i><span> AI探索</span></a></li><li><a class="site-page child" href="/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"><i class="fa-fw fas fa-tools"></i><span> 效率工具</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-graduation-cap"></i><span> 学习</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"><i class="fa-fw fas fa-file-alt"></i><span> 软考高项</span></a></li><li><a class="site-page child" href="/categories/%E5%AD%A6%E4%B9%A0%E6%88%90%E9%95%BF/"><i class="fa-fw fas fa-book"></i><span> 读书笔记</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-heart"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><i class="fa-fw fas fa-feather-alt"></i><span> 生活随笔</span></a></li><li><a class="site-page child" href="/album/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/tool.html"><i class="fa-fw fa-solid fa-screwdriver-wrench"></i><span> 工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Claude Code Subagents：让 AI 分身帮你干活</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-18T07:00:00.000Z" title="发表于 2026-06-18 15:00:00">2026-06-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-18T01:20:21.991Z" title="更新于 2026-06-18 09:20:21">2026-06-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI%E6%8E%A2%E7%B4%A2/">AI探索</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>前六篇我们聊了 Claude Code 的安装配置、快捷键、命令、CLAUDE.md 配置、Skills 和 MCP。这篇来说说真正让我效率飙升的高级功能——Subagents。</p>
+<p>说实话，用了一个月基础功能后，我觉得 Claude Code 也就那样——比 Cursor 好用，但没到”降维打击”的程度。</p>
+<p>直到我发现了 Subagents 这个功能。</p>
+<h2 id="什么是-Subagents"><a href="#什么是-Subagents" class="headerlink" title="什么是 Subagents"></a>什么是 Subagents</h2><p>Subagents 是处理特定类型任务的专门 AI 助手。当一个辅助任务会用搜索结果、日志或文件内容充斥您的主对话，而您不会再次引用这些内容时，请使用一个 subagent：该 subagent 在自己的上下文中完成这项工作，仅返回摘要。</p>
+<p><strong>一句话理解</strong>：如果说主对话是一个”项目经理”，那 Subagents 就是它的”程序员团队”。</p>
+<h2 id="为什么需要-Subagents"><a href="#为什么需要-Subagents" class="headerlink" title="为什么需要 Subagents"></a>为什么需要 Subagents</h2><p>Subagents 帮助您：</p>
+<ul>
+<li><strong>保留上下文</strong>，通过将探索和实现保持在主对话之外</li>
+<li><strong>强制执行约束</strong>，通过限制 subagent 可以使用的工具</li>
+<li><strong>跨项目重用配置</strong>，使用用户级 subagents</li>
+<li><strong>专门化行为</strong>，为特定领域使用专注的系统提示</li>
+<li><strong>控制成本</strong>，通过将任务路由到更快、更便宜的模型（如 Haiku）</li>
+</ul>
+<h2 id="内置-Subagents"><a href="#内置-Subagents" class="headerlink" title="内置 Subagents"></a>内置 Subagents</h2><p>Claude Code 包括几个内置 subagents，Claude 在适当时自动使用。</p>
+<h3 id="Explore：代码探索"><a href="#Explore：代码探索" class="headerlink" title="Explore：代码探索"></a>Explore：代码探索</h3><p>一个快速的、只读的代理，针对搜索和分析代码库进行了优化。</p>
+<ul>
+<li><strong>Model</strong>：Haiku（快速、低延迟）</li>
+<li><strong>Tools</strong>：只读工具（拒绝访问 Write 和 Edit 工具）</li>
+<li><strong>Purpose</strong>：文件发现、代码搜索、代码库探索</li>
+</ul>
+<p>当 Claude 需要搜索或理解代码库而不进行更改时，它会委托给 Explore。这样可以将探索结果保持在主对话上下文之外。</p>
+<p><strong>使用场景</strong>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用 Explore 子代理分析 src/ 目录的架构</span><br></pre></td></tr></table></figure>
+
+<h3 id="Plan：方案规划"><a href="#Plan：方案规划" class="headerlink" title="Plan：方案规划"></a>Plan：方案规划</h3><p>一个研究代理，在 plan mode 期间使用，以在呈现计划之前收集上下文。</p>
+<ul>
+<li><strong>Model</strong>：从主对话继承</li>
+<li><strong>Tools</strong>：只读工具（拒绝访问 Write 和 Edit 工具）</li>
+<li><strong>Purpose</strong>：用于规划的代码库研究</li>
+</ul>
+<p>当您处于 plan mode 并且 Claude 需要理解您的代码库时，它会将研究委托给 Plan subagent，以便探索输出保持在单独的上下文窗口中，而主对话保持只读。</p>
+<p><strong>使用场景</strong>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用 Plan 子代理规划用户认证功能的实现方案</span><br></pre></td></tr></table></figure>
+
+<h3 id="General-purpose：通用代理"><a href="#General-purpose：通用代理" class="headerlink" title="General-purpose：通用代理"></a>General-purpose：通用代理</h3><p>一个能够处理复杂、多步骤任务的代理，需要探索和操作。</p>
+<ul>
+<li><strong>Model</strong>：从主对话继承</li>
+<li><strong>Tools</strong>：所有工具</li>
+<li><strong>Purpose</strong>：复杂研究、多步骤操作、代码修改</li>
+</ul>
+<p>当任务需要探索和修改、复杂推理来解释结果或多个依赖步骤时，Claude 会委托给 general-purpose。</p>
+<p><strong>使用场景</strong>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用 general-purpose 子代理实现用户认证功能</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他内置代理"><a href="#其他内置代理" class="headerlink" title="其他内置代理"></a>其他内置代理</h3><table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Model</th>
+<th>Claude 何时使用它</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>statusline-setup</td>
+<td>Sonnet</td>
+<td>当您运行 <code>/statusline</code> 来配置您的状态行时</td>
+</tr>
+<tr>
+<td>claude-code-guide</td>
+<td>Haiku</td>
+<td>当您提出关于 Claude Code 功能的问题时</td>
+</tr>
+</tbody></table>
+<h2 id="快速入门：创建您的第一个-Subagent"><a href="#快速入门：创建您的第一个-Subagent" class="headerlink" title="快速入门：创建您的第一个 Subagent"></a>快速入门：创建您的第一个 Subagent</h2><h3 id="步骤1：打开-subagents-界面"><a href="#步骤1：打开-subagents-界面" class="headerlink" title="步骤1：打开 subagents 界面"></a>步骤1：打开 subagents 界面</h3><p>在 Claude Code 中，运行：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/agents</span><br></pre></td></tr></table></figure>
+
+<h3 id="步骤2：选择一个位置"><a href="#步骤2：选择一个位置" class="headerlink" title="步骤2：选择一个位置"></a>步骤2：选择一个位置</h3><p>切换到 <strong>Library</strong> 选项卡，选择 <strong>Create new agent</strong>，然后选择 <strong>Personal</strong>。这会将 subagent 保存到 <code>~/.claude/agents/</code>，以便在所有项目中可用。</p>
+<h3 id="步骤3：使用-Claude-生成"><a href="#步骤3：使用-Claude-生成" class="headerlink" title="步骤3：使用 Claude 生成"></a>步骤3：使用 Claude 生成</h3><p>选择 <strong>Generate with Claude</strong>。出现提示时，描述 subagent：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A code improvement agent that scans files and suggests improvements</span><br><span class="line">for readability, performance, and best practices. It should explain</span><br><span class="line">each issue, show the current code, and provide an improved version.</span><br></pre></td></tr></table></figure>
+
+<p>Claude 为您生成标识符、描述和系统提示。</p>
+<h3 id="步骤4：选择工具"><a href="#步骤4：选择工具" class="headerlink" title="步骤4：选择工具"></a>步骤4：选择工具</h3><p>对于只读审查者，取消选择除 <strong>Read-only tools</strong> 之外的所有内容。如果您保持所有工具被选中，subagent 会继承主对话可用的所有工具。</p>
+<h3 id="步骤5：选择模型"><a href="#步骤5：选择模型" class="headerlink" title="步骤5：选择模型"></a>步骤5：选择模型</h3><p>选择 subagent 使用的模型。对于此示例代理，选择 <strong>Sonnet</strong>，它在分析代码模式的能力和速度之间取得平衡。</p>
+<h3 id="步骤6：选择颜色"><a href="#步骤6：选择颜色" class="headerlink" title="步骤6：选择颜色"></a>步骤6：选择颜色</h3><p>为 subagent 选择背景颜色。这有助于您在 UI 中识别哪个 subagent 正在运行。</p>
+<h3 id="步骤7：配置内存"><a href="#步骤7：配置内存" class="headerlink" title="步骤7：配置内存"></a>步骤7：配置内存</h3><p>选择 <strong>User scope</strong> 为 subagent 提供一个 persistent memory directory，位于 <code>~/.claude/agent-memory/</code>。Subagent 使用这个来在对话中积累见解，例如代码库模式和重复出现的问题。</p>
+<h3 id="步骤8：保存并尝试"><a href="#步骤8：保存并尝试" class="headerlink" title="步骤8：保存并尝试"></a>步骤8：保存并尝试</h3><p>查看配置摘要。按 <code>s</code> 或 <code>Enter</code> 保存，或按 <code>e</code> 在编辑器中保存并编辑文件。Subagent 立即可用。尝试它：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use the code-improver agent to suggest improvements in this project</span><br></pre></td></tr></table></figure>
+
+<p>Claude 委托给您的新 subagent，它扫描代码库并返回改进建议。</p>
+<h2 id="配置-Subagents"><a href="#配置-Subagents" class="headerlink" title="配置 Subagents"></a>配置 Subagents</h2><h3 id="选择-Subagent-范围"><a href="#选择-Subagent-范围" class="headerlink" title="选择 Subagent 范围"></a>选择 Subagent 范围</h3><p>Subagents 是带有 YAML frontmatter 的 Markdown 文件。根据范围将它们存储在不同的位置。</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Scope</th>
+<th>Priority</th>
+<th>如何创建</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>托管设置</td>
+<td>组织范围</td>
+<td>1（最高）</td>
+<td>通过 managed settings 部署</td>
+</tr>
+<tr>
+<td><code>--agents</code> CLI 标志</td>
+<td>当前会话</td>
+<td>2</td>
+<td>启动 Claude Code 时传递 JSON</td>
+</tr>
+<tr>
+<td><code>.claude/agents/</code></td>
+<td>当前项目</td>
+<td>3</td>
+<td>交互式或手动</td>
+</tr>
+<tr>
+<td><code>~/.claude/agents/</code></td>
+<td>所有您的项目</td>
+<td>4</td>
+<td>交互式或手动</td>
+</tr>
+<tr>
+<td>Plugin 的 <code>agents/</code> 目录</td>
+<td>启用 plugin 的位置</td>
+<td>5（最低）</td>
+<td>与 plugins 一起安装</td>
+</tr>
+</tbody></table>
+<p><strong>项目 subagents</strong>（<code>.claude/agents/</code>）非常适合特定于代码库的 subagents。将它们检入版本控制，以便您的团队可以协作使用和改进它们。</p>
+<p><strong>用户 subagents</strong>（<code>~/.claude/agents/</code>）是在所有项目中可用的个人 subagents。</p>
+<h3 id="编写-Subagent-文件"><a href="#编写-Subagent-文件" class="headerlink" title="编写 Subagent 文件"></a>编写 Subagent 文件</h3><p>Subagent 文件使用 YAML frontmatter 进行配置，然后是 Markdown 中的系统提示：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: code-reviewer</span><br><span class="line">description: Reviews code for quality and best practices</span><br><span class="line">tools: Read, Glob, Grep</span><br><span class="line"><span class="section">model: sonnet</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">You are a code reviewer. When invoked, analyze the code and provide</span><br><span class="line">specific, actionable feedback on quality, security, and best practices.</span><br></pre></td></tr></table></figure>
+
+<p>Frontmatter 定义了 subagent 的元数据和配置。正文成为指导 subagent 行为的系统提示。</p>
+<h3 id="支持的-Frontmatter-字段"><a href="#支持的-Frontmatter-字段" class="headerlink" title="支持的 Frontmatter 字段"></a>支持的 Frontmatter 字段</h3><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>必需</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>name</code></td>
+<td>是</td>
+<td>使用小写字母和连字符的唯一标识符</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>是</td>
+<td>Claude 何时应该委托给此 subagent</td>
+</tr>
+<tr>
+<td><code>tools</code></td>
+<td>否</td>
+<td>subagent 可以使用的工具。如果省略，继承所有工具</td>
+</tr>
+<tr>
+<td><code>disallowedTools</code></td>
+<td>否</td>
+<td>要拒绝的工具，从继承或指定的列表中删除</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>否</td>
+<td>使用的模型：<code>sonnet</code>、<code>opus</code>、<code>haiku</code>、<code>fable</code>、完整模型 ID 或 <code>inherit</code></td>
+</tr>
+<tr>
+<td><code>permissionMode</code></td>
+<td>否</td>
+<td>权限模式：<code>default</code>、<code>acceptEdits</code>、<code>auto</code>、<code>dontAsk</code>、<code>bypassPermissions</code> 或 <code>plan</code></td>
+</tr>
+<tr>
+<td><code>maxTurns</code></td>
+<td>否</td>
+<td>subagent 停止前的最大代理轮数</td>
+</tr>
+<tr>
+<td><code>skills</code></td>
+<td>否</td>
+<td>在启动时加载到 subagent 的上下文中的技能</td>
+</tr>
+<tr>
+<td><code>mcpServers</code></td>
+<td>否</td>
+<td>对此 subagent 可用的 MCP 服务器</td>
+</tr>
+<tr>
+<td><code>hooks</code></td>
+<td>否</td>
+<td>限定于此 subagent 的生命周期 hooks</td>
+</tr>
+<tr>
+<td><code>memory</code></td>
+<td>否</td>
+<td>持久内存范围：<code>user</code>、<code>project</code> 或 <code>local</code></td>
+</tr>
+<tr>
+<td><code>background</code></td>
+<td>否</td>
+<td>设置为 <code>true</code> 以始终将此 subagent 作为后台任务运行</td>
+</tr>
+<tr>
+<td><code>effort</code></td>
+<td>否</td>
+<td>此 subagent 活跃时的努力级别</td>
+</tr>
+<tr>
+<td><code>isolation</code></td>
+<td>否</td>
+<td>设置为 <code>worktree</code> 以在临时 git worktree 中运行 subagent</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>否</td>
+<td>Subagent 在任务列表和转录中的显示颜色</td>
+</tr>
+<tr>
+<td><code>initialPrompt</code></td>
+<td>否</td>
+<td>当此代理作为主会话代理运行时，自动提交为第一个用户轮次</td>
+</tr>
+</tbody></table>
+<h3 id="选择模型"><a href="#选择模型" class="headerlink" title="选择模型"></a>选择模型</h3><p><code>model</code> 字段控制 subagent 使用的 AI model：</p>
+<ul>
+<li><strong>Model alias</strong>：使用可用的别名之一：<code>sonnet</code>、<code>opus</code>、<code>haiku</code> 或 <code>fable</code></li>
+<li><strong>Full model ID</strong>：使用完整的模型 ID，如 <code>claude-opus-4-8</code> 或 <code>claude-sonnet-4-6</code></li>
+<li><strong>inherit</strong>：使用与主对话相同的模型</li>
+<li><strong>Omitted</strong>：如果未指定，默认为 <code>inherit</code></li>
+</ul>
+<h3 id="控制-Subagent-能力"><a href="#控制-Subagent-能力" class="headerlink" title="控制 Subagent 能力"></a>控制 Subagent 能力</h3><h4 id="可用工具"><a href="#可用工具" class="headerlink" title="可用工具"></a>可用工具</h4><p>Subagents 默认继承主对话中可用的内部工具和 MCP 工具。</p>
+<p>要限制工具，使用 <code>tools</code> 字段（允许列表）或 <code>disallowedTools</code> 字段（拒绝列表）。</p>
+<p><strong>示例1：使用 tools 允许列表</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">safe-researcher</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Research</span> <span class="string">agent</span> <span class="string">with</span> <span class="string">restricted</span> <span class="string">capabilities</span></span><br><span class="line"><span class="attr">tools:</span> <span class="string">Read,</span> <span class="string">Grep,</span> <span class="string">Glob,</span> <span class="string">Bash</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例2：使用 disallowedTools 拒绝列表</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="literal">no</span><span class="string">-writes</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Inherits</span> <span class="string">every</span> <span class="string">tool</span> <span class="string">except</span> <span class="string">file</span> <span class="string">writes</span></span><br><span class="line"><span class="attr">disallowedTools:</span> <span class="string">Write,</span> <span class="string">Edit</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="权限模式"><a href="#权限模式" class="headerlink" title="权限模式"></a>权限模式</h4><p><code>permissionMode</code> 字段控制 subagent 如何处理权限提示。</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>default</code></td>
+<td>标准权限检查，带有提示</td>
+</tr>
+<tr>
+<td><code>acceptEdits</code></td>
+<td>自动接受文件编辑</td>
+</tr>
+<tr>
+<td><code>auto</code></td>
+<td>Auto mode：后台分类器审查命令</td>
+</tr>
+<tr>
+<td><code>dontAsk</code></td>
+<td>自动拒绝权限提示</td>
+</tr>
+<tr>
+<td><code>bypassPermissions</code></td>
+<td>跳过权限提示</td>
+</tr>
+<tr>
+<td><code>plan</code></td>
+<td>Plan mode（只读探索）</td>
+</tr>
+</tbody></table>
+<h4 id="预加载技能"><a href="#预加载技能" class="headerlink" title="预加载技能"></a>预加载技能</h4><p>使用 <code>skills</code> 字段在启动时将技能内容注入到 subagent 的上下文中。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">api-developer</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Implement</span> <span class="string">API</span> <span class="string">endpoints</span> <span class="string">following</span> <span class="string">team</span> <span class="string">conventions</span></span><br><span class="line"><span class="attr">skills:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">api-conventions</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">error-handling-patterns</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">Implement</span> <span class="string">API</span> <span class="string">endpoints.</span> <span class="string">Follow</span> <span class="string">the</span> <span class="string">conventions</span> <span class="string">and</span> <span class="string">patterns</span> <span class="string">from</span> <span class="string">the</span> <span class="string">preloaded</span> <span class="string">skills.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="启用持久内存"><a href="#启用持久内存" class="headerlink" title="启用持久内存"></a>启用持久内存</h4><p><code>memory</code> 字段为 subagent 提供一个在对话中幸存的持久目录。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">code-reviewer</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Reviews</span> <span class="string">code</span> <span class="string">for</span> <span class="string">quality</span> <span class="string">and</span> <span class="string">best</span> <span class="string">practices</span></span><br><span class="line"><span class="attr">memory:</span> <span class="string">user</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">You</span> <span class="string">are</span> <span class="string">a</span> <span class="string">code</span> <span class="string">reviewer.</span> <span class="string">As</span> <span class="string">you</span> <span class="string">review</span> <span class="string">code,</span> <span class="string">update</span> <span class="string">your</span> <span class="string">agent</span> <span class="string">memory</span> <span class="string">with</span></span><br><span class="line"><span class="string">patterns,</span> <span class="string">conventions,</span> <span class="string">and</span> <span class="string">recurring</span> <span class="string">issues</span> <span class="string">you</span> <span class="string">discover.</span></span><br></pre></td></tr></table></figure>
+
+<p>根据内存应该应用的广泛程度选择范围：</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Location</th>
+<th>使用时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>user</code></td>
+<td><code>~/.claude/agent-memory/&lt;name&gt;/</code></td>
+<td>subagent 应该在所有项目中记住学习</td>
+</tr>
+<tr>
+<td><code>project</code></td>
+<td><code>.claude/agent-memory/&lt;name&gt;/</code></td>
+<td>subagent 的知识是特定于项目的并可通过版本控制共享</td>
+</tr>
+<tr>
+<td><code>local</code></td>
+<td><code>.claude/agent-memory-local/&lt;name&gt;/</code></td>
+<td>subagent 的知识是特定于项目的但不应检入版本控制</td>
+</tr>
+</tbody></table>
+<h4 id="使用-Hooks-的条件规则"><a href="#使用-Hooks-的条件规则" class="headerlink" title="使用 Hooks 的条件规则"></a>使用 Hooks 的条件规则</h4><p>为了更动态地控制工具使用，使用 <code>PreToolUse</code> hooks 在执行前验证操作。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">db-reader</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Execute</span> <span class="string">read-only</span> <span class="string">database</span> <span class="string">queries</span></span><br><span class="line"><span class="attr">tools:</span> <span class="string">Bash</span></span><br><span class="line"><span class="attr">hooks:</span></span><br><span class="line">  <span class="attr">PreToolUse:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">matcher:</span> <span class="string">&quot;Bash&quot;</span></span><br><span class="line">      <span class="attr">hooks:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">command</span></span><br><span class="line">          <span class="attr">command:</span> <span class="string">&quot;./scripts/validate-readonly-query.sh&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-Subagents"><a href="#使用-Subagents" class="headerlink" title="使用 Subagents"></a>使用 Subagents</h2><h3 id="理解自动委托"><a href="#理解自动委托" class="headerlink" title="理解自动委托"></a>理解自动委托</h3><p>Claude 根据您请求中的任务描述、subagent 配置中的 <code>description</code> 字段和当前上下文自动委托任务。要鼓励主动委托，在您的 subagent 的 description 字段中包含”use proactively”之类的短语。</p>
+<h3 id="显式调用-Subagents"><a href="#显式调用-Subagents" class="headerlink" title="显式调用 Subagents"></a>显式调用 Subagents</h3><p>当自动委托不够时，您可以自己请求 subagent。</p>
+<p><strong>自然语言</strong>：在提示中命名 subagent；Claude 决定是否委托</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Use the test-runner subagent to fix failing tests</span><br><span class="line">Have the code-reviewer subagent look at my recent changes</span><br></pre></td></tr></table></figure>
+
+<p><strong>@-mention subagent</strong>：保证 subagent 为一个任务运行</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@&quot;code-reviewer (agent)&quot; look at the auth changes</span><br></pre></td></tr></table></figure>
+
+<p><strong>将整个会话作为 subagent 运行</strong>：传递 <code>--agent &lt;name&gt;</code> 以启动一个会话，其中主线程本身采用该 subagent 的系统提示、工具限制和模型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude --agent code-reviewer</span><br></pre></td></tr></table></figure>
+
+<h3 id="在前台或后台运行-Subagents"><a href="#在前台或后台运行-Subagents" class="headerlink" title="在前台或后台运行 Subagents"></a>在前台或后台运行 Subagents</h3><p>Subagents 可以在前台（阻塞）或后台（并发）运行：</p>
+<ul>
+<li><strong>前台 subagents</strong> 阻塞主对话直到完成。权限提示会在出现时传递给您。</li>
+<li><strong>后台 subagents</strong> 在您继续工作时并发运行。它们使用会话中已授予的权限运行，并自动拒绝任何会提示的工具调用。</li>
+</ul>
+<p>要禁用所有后台任务功能，请将 <code>CLAUDE_CODE_DISABLE_BACKGROUND_TASKS</code> 环境变量设置为 <code>1</code>。</p>
+<h3 id="常见模式"><a href="#常见模式" class="headerlink" title="常见模式"></a>常见模式</h3><h4 id="隔离高容量操作"><a href="#隔离高容量操作" class="headerlink" title="隔离高容量操作"></a>隔离高容量操作</h4><p>subagents 最有效的用途之一是隔离产生大量输出的操作。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use a subagent to run the test suite and report only the failing tests with their error messages</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行并行研究"><a href="#运行并行研究" class="headerlink" title="运行并行研究"></a>运行并行研究</h4><p>对于独立的调查，生成多个 subagents 以同时工作：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Research the authentication, database, and API modules in parallel using separate subagents</span><br></pre></td></tr></table></figure>
+
+<h4 id="链接-Subagents"><a href="#链接-Subagents" class="headerlink" title="链接 Subagents"></a>链接 Subagents</h4><p>对于多步骤工作流，要求 Claude 按顺序使用 subagents：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use the code-reviewer subagent to find performance issues, then use the optimizer subagent to fix them</span><br></pre></td></tr></table></figure>
+
+<h3 id="分叉当前对话"><a href="#分叉当前对话" class="headerlink" title="分叉当前对话"></a>分叉当前对话</h3><p>分叉是一个 subagent，它继承到目前为止的整个对话，而不是从头开始。</p>
+<p>要启动分叉，使用 <code>/fork</code> 后跟指令：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/fork draft unit tests for the parser changes so far</span><br></pre></td></tr></table></figure>
+
+<p>分叉出现在提示下方的面板中，并在您继续工作时在后台运行。</p>
+<h2 id="示例-Subagents"><a href="#示例-Subagents" class="headerlink" title="示例 Subagents"></a>示例 Subagents</h2><h3 id="代码审查者"><a href="#代码审查者" class="headerlink" title="代码审查者"></a>代码审查者</h3><p>一个只读 subagent，审查代码而不修改它。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: code-reviewer</span><br><span class="line">description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.</span><br><span class="line">tools: Read, Grep, Glob, Bash</span><br><span class="line"><span class="section">model: inherit</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">You are a senior code reviewer ensuring high standards of code quality and security.</span><br><span class="line"></span><br><span class="line">When invoked:</span><br><span class="line"><span class="bullet">1.</span> Run git diff to see recent changes</span><br><span class="line"><span class="bullet">2.</span> Focus on modified files</span><br><span class="line"><span class="bullet">3.</span> Begin review immediately</span><br><span class="line"></span><br><span class="line">Review checklist:</span><br><span class="line"><span class="bullet">-</span> Code is clear and readable</span><br><span class="line"><span class="bullet">-</span> Functions and variables are well-named</span><br><span class="line"><span class="bullet">-</span> No duplicated code</span><br><span class="line"><span class="bullet">-</span> Proper error handling</span><br><span class="line"><span class="bullet">-</span> No exposed secrets or API keys</span><br><span class="line"><span class="bullet">-</span> Input validation implemented</span><br><span class="line"><span class="bullet">-</span> Good test coverage</span><br><span class="line"><span class="bullet">-</span> Performance considerations addressed</span><br><span class="line"></span><br><span class="line">Provide feedback organized by priority:</span><br><span class="line"><span class="bullet">-</span> Critical issues (must fix)</span><br><span class="line"><span class="bullet">-</span> Warnings (should fix)</span><br><span class="line"><span class="bullet">-</span> Suggestions (consider improving)</span><br><span class="line"></span><br><span class="line">Include specific examples of how to fix issues.</span><br></pre></td></tr></table></figure>
+
+<h3 id="调试器"><a href="#调试器" class="headerlink" title="调试器"></a>调试器</h3><p>一个可以分析和修复问题的 subagent。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: debugger</span><br><span class="line">description: Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues.</span><br><span class="line"><span class="section">tools: Read, Edit, Bash, Grep, Glob</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">You are an expert debugger specializing in root cause analysis.</span><br><span class="line"></span><br><span class="line">When invoked:</span><br><span class="line"><span class="bullet">1.</span> Capture error message and stack trace</span><br><span class="line"><span class="bullet">2.</span> Identify reproduction steps</span><br><span class="line"><span class="bullet">3.</span> Isolate the failure location</span><br><span class="line"><span class="bullet">4.</span> Implement minimal fix</span><br><span class="line"><span class="bullet">5.</span> Verify solution works</span><br><span class="line"></span><br><span class="line">Debugging process:</span><br><span class="line"><span class="bullet">-</span> Analyze error messages and logs</span><br><span class="line"><span class="bullet">-</span> Check recent code changes</span><br><span class="line"><span class="bullet">-</span> Form and test hypotheses</span><br><span class="line"><span class="bullet">-</span> Add strategic debug logging</span><br><span class="line"><span class="bullet">-</span> Inspect variable states</span><br><span class="line"></span><br><span class="line">For each issue, provide:</span><br><span class="line"><span class="bullet">-</span> Root cause explanation</span><br><span class="line"><span class="bullet">-</span> Evidence supporting the diagnosis</span><br><span class="line"><span class="bullet">-</span> Specific code fix</span><br><span class="line"><span class="bullet">-</span> Testing approach</span><br><span class="line"><span class="bullet">-</span> Prevention recommendations</span><br><span class="line"></span><br><span class="line">Focus on fixing the underlying issue, not the symptoms.</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据科学家"><a href="#数据科学家" class="headerlink" title="数据科学家"></a>数据科学家</h3><p>一个用于数据分析工作的特定领域 subagent。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: data-scientist</span><br><span class="line">description: Data analysis expert for SQL queries, BigQuery operations, and data insights. Use proactively for data analysis tasks and queries.</span><br><span class="line">tools: Bash, Read, Write</span><br><span class="line"><span class="section">model: sonnet</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">You are a data scientist specializing in SQL and BigQuery analysis.</span><br><span class="line"></span><br><span class="line">When invoked:</span><br><span class="line"><span class="bullet">1.</span> Understand the data analysis requirement</span><br><span class="line"><span class="bullet">2.</span> Write efficient SQL queries</span><br><span class="line"><span class="bullet">3.</span> Use BigQuery command line tools (bq) when appropriate</span><br><span class="line"><span class="bullet">4.</span> Analyze and summarize results</span><br><span class="line"><span class="bullet">5.</span> Present findings clearly</span><br><span class="line"></span><br><span class="line">Key practices:</span><br><span class="line"><span class="bullet">-</span> Write optimized SQL queries with proper filters</span><br><span class="line"><span class="bullet">-</span> Use appropriate aggregations and joins</span><br><span class="line"><span class="bullet">-</span> Include comments explaining complex logic</span><br><span class="line"><span class="bullet">-</span> Format results for readability</span><br><span class="line"><span class="bullet">-</span> Provide data-driven recommendations</span><br><span class="line"></span><br><span class="line">For each analysis:</span><br><span class="line"><span class="bullet">-</span> Explain the query approach</span><br><span class="line"><span class="bullet">-</span> Document any assumptions</span><br><span class="line"><span class="bullet">-</span> Highlight key findings</span><br><span class="line"><span class="bullet">-</span> Suggest next steps based on data</span><br><span class="line"></span><br><span class="line">Always ensure queries are efficient and cost-effective.</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库查询验证器"><a href="#数据库查询验证器" class="headerlink" title="数据库查询验证器"></a>数据库查询验证器</h3><p>一个允许 Bash 访问但验证命令以仅允许只读 SQL 查询的 subagent。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">name: db-reader</span><br><span class="line">description: Execute read-only database queries. Use when analyzing data or generating reports.</span><br><span class="line">tools: Bash</span><br><span class="line">hooks:</span><br><span class="line">  PreToolUse:</span><br><span class="line"><span class="bullet">    -</span> matcher: &quot;Bash&quot;</span><br><span class="line"><span class="code">      hooks:</span></span><br><span class="line"><span class="code">        - type: command</span></span><br><span class="line"><span class="code">          command: &quot;./scripts/validate-readonly-query.sh&quot;</span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">You are a database analyst with read-only access. Execute SELECT queries to answer questions about the data.</span><br><span class="line"></span><br><span class="line">When asked to analyze data:</span><br><span class="line"><span class="bullet">1.</span> Identify which tables contain the relevant data</span><br><span class="line"><span class="bullet">2.</span> Write efficient SELECT queries with appropriate filters</span><br><span class="line"><span class="bullet">3.</span> Present results clearly with context</span><br><span class="line"></span><br><span class="line">You cannot modify data. If asked to INSERT, UPDATE, DELETE, or modify schema, explain that you only have read access.</span><br></pre></td></tr></table></figure>
+
+<h2 id="我的-Subagents-使用习惯"><a href="#我的-Subagents-使用习惯" class="headerlink" title="我的 Subagents 使用习惯"></a>我的 Subagents 使用习惯</h2><p>经过一个月的使用，我形成了自己的 Subagents 习惯：</p>
+<p><strong>1. 常用子代理</strong></p>
+<ul>
+<li><code>code-reviewer</code>：代码审查</li>
+<li><code>debugger</code>：调试问题</li>
+<li><code>test-generator</code>：测试生成</li>
+</ul>
+<p><strong>2. 子代理管理</strong></p>
+<ul>
+<li>把子代理配置放在项目仓库中</li>
+<li>团队共享同一套子代理</li>
+<li>定期更新和维护</li>
+</ul>
+<p><strong>3. 子代理调用</strong></p>
+<ul>
+<li>大量代码阅读：用 Explore 子代理</li>
+<li>方案规划：用 Plan 子代理</li>
+<li>代码验证：用 Verify 子代理</li>
+</ul>
+<p><strong>4. 性能优化</strong></p>
+<ul>
+<li>使用子代理隔离上下文</li>
+<li>定期清理不需要的子代理</li>
+<li>选择合适的模型</li>
+</ul>
+<h2 id="实际工作流"><a href="#实际工作流" class="headerlink" title="实际工作流"></a>实际工作流</h2><h3 id="场景1：重构一个模块"><a href="#场景1：重构一个模块" class="headerlink" title="场景1：重构一个模块"></a>场景1：重构一个模块</h3><p><strong>任务</strong>：重构一个认证模块，涉及 20 多个文件</p>
+<p><strong>工作流</strong>：</p>
+<ol>
+<li>用 <code>Explore</code> 子代理分析现有代码</li>
+<li>用 <code>Plan</code> 子代理规划重构方案</li>
+<li>主对话执行重构</li>
+<li>用 <code>Verify</code> 子代理验证重构结果</li>
+</ol>
+<p><strong>效果</strong>：整个过程，主对话的上下文始终保持在 30% 以下，Claude 的表现一直很稳定。</p>
+<h3 id="场景2：分析大型代码库"><a href="#场景2：分析大型代码库" class="headerlink" title="场景2：分析大型代码库"></a>场景2：分析大型代码库</h3><p><strong>任务</strong>：分析一个有 1000 个文件的代码库</p>
+<p><strong>工作流</strong>：</p>
+<ol>
+<li>用 <code>Explore</code> 子代理分析代码库</li>
+<li>子代理返回架构报告</li>
+<li>主对话继续讨论</li>
+</ol>
+<p><strong>效果</strong>：主对话的上下文完全不受影响。</p>
+<h3 id="场景3：并行处理多个任务"><a href="#场景3：并行处理多个任务" class="headerlink" title="场景3：并行处理多个任务"></a>场景3：并行处理多个任务</h3><p><strong>任务</strong>：同时处理 3 个不同的任务</p>
+<p><strong>工作流</strong>：</p>
+<ol>
+<li>启动 3 个后台子代理</li>
+<li>每个子代理处理一个任务</li>
+<li>主对话继续做其他事情</li>
+</ol>
+<p><strong>效果</strong>：效率提升 3 倍。</p>
+<h2 id="下一篇预告"><a href="#下一篇预告" class="headerlink" title="下一篇预告"></a>下一篇预告</h2><p>这篇讲了 Subagents 子代理。下一篇文章，我会详细介绍 Claude Code 的踩坑经验——这些经验能帮你避免常见的问题。</p>
+<hr>
+<p><strong>相关推荐：</strong></p>
+<ul>
+<li><a href="/archives/0110/">Claude Code 入门：从安装到模型配置，以 DeepSeek 为例</a></li>
+<li><a href="/archives/0111/">Claude Code 快捷键：这 15 个键让我效率翻倍</a></li>
+<li><a href="/archives/0112/">Claude Code 命令大全：这 20 个命令你必须掌握</a></li>
+<li><a href="/archives/0113/">Claude Code 配置：CLAUDE.md 与上下文管理的艺术</a></li>
+<li><a href="/archives/0114/">Claude Code Skills：让 AI 记住你的工作流程</a></li>
+<li><a href="/archives/0115/">Claude Code MCP：连接外部世界的桥梁</a></li>
+<li><a href="/archives/0117/">Claude Code 踩坑经验：这些教训你一定要知道</a>（即将发布）</li>
+</ul>
+<p><strong>P.S.</strong> Subagents 这个功能，真的改变了我对 AI 编程的认知。以前我觉得 AI 只能帮我写写代码，现在它能帮我分析、规划、验证，几乎能参与整个开发流程。如果你有需要并行处理的场景，一定要试试 Subagents！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://6mal.com">飞鲤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://6mal.com/archives/116/">https://6mal.com/archives/116/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://6mal.com" target="_blank">飞鲤的自留地</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Claude-Code/">Claude Code</a><a class="post-meta__tags" href="/tags/AI%E7%BC%96%E7%A8%8B/">AI编程</a><a class="post-meta__tags" href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/">效率工具</a><a class="post-meta__tags" href="/tags/Subagents/">Subagents</a><a class="post-meta__tags" href="/tags/%E5%AD%90%E4%BB%A3%E7%90%86/">子代理</a></div><div class="post-share"><div class="social-share" data-image="/img/bk_img/background10.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wx.png" target="_blank"><img class="post-qr-code-img" src="/img/wx.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/zfb.png" target="_blank"><img class="post-qr-code-img" src="/img/zfb.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/archives/117/" title="Claude Code 踩坑一个月，这些经验你一定要知道"><img class="cover" src="/img/bk_img/background1.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Claude Code 踩坑一个月，这些经验你一定要知道</div></div><div class="info-2"><div class="info-item-1">前七篇我们聊了 Claude Code 的安装配置、快捷键、命令、CLAUDE.md 配置、Skills、MCP 和 Subagents。这篇来说说实战经验和踩坑经历。 说实话，用了一个月，踩了不少坑。有些是文档里没写的，有些是自己摸索出来的。希望我的经验能帮你少走弯路。 踩坑一：上下文管理是核心技能这是我踩得最深的坑。 刚开始用的时候，我只顾着让 Claude 干活，完全没注意上下文用量。结果聊了 20 分钟，它就开始”变笨”——忘记之前的讨论，重复提问，给出不相关的回答。 症状识别： 当 Claude 开始：  忘记之前讨论的内容 重复问同样的问题 给出不相关的回答 建议你已经做过的事情  这些通常是因为上下文快满了。 我的解决方案：  定期检查：每隔 30 分钟用 /context 看一下用量 及时压缩：超过 50% 就执行 /compact 任务切换：开始新任务时用 /clear 彻底重开 隔离任务：大量代码阅读任务用 Subagent  一个真实案例： 有一次我在分析一个复杂的代码库，让 Claude 读了 50 多个文件。聊了 20 分钟后，它开始忘记之前分析的内容，...</div></div></div></a><a class="pagination-related" href="/archives/115/" title="Claude Code MCP：连接外部世界的桥梁"><img class="cover" src="/img/bk_img/background4.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Claude Code MCP：连接外部世界的桥梁</div></div><div class="info-2"><div class="info-item-1">前五篇我们聊了 Claude Code 的安装配置、快捷键、命令、CLAUDE.md 配置和 Skills。这篇来说说真正让 Claude “连接外部世界”的功能——MCP。 说实话，刚用 Claude Code 的时候，我只把它当成一个”本地的 AI 助手”。直到我发现了 MCP 这个功能，才明白为什么有人说它是”程序员的终极武器”——因为它真的能连接你的所有工具。 什么是 MCPMCP（Model Context Protocol）是一个用于 AI 工具集成的开源标准。MCP 服务器为 Claude Code 提供对您的工具、数据库和 API 的访问权限。 一句话理解：如果说 Claude 是一个”AI 程序员”，那 MCP 就是它的”工具箱”。 使用 MCP 可以做什么连接 MCP 服务器后，您可以要求 Claude Code： 1. 从问题跟踪器实现功能 1添加 JIRA 问题 ENG-4521 中描述的功能，并在 GitHub 上创建 PR。  2. 分析监控数据 1检查 Sentry 和 Statsig 以检查 ENG-4521 中描述的功能的使用情况。  3. 查询...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/archives/115/" title="Claude Code MCP：连接外部世界的桥梁"><img class="cover" src="/img/bk_img/background4.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Claude Code MCP：连接外部世界的桥梁</div></div><div class="info-2"><div class="info-item-1">前五篇我们聊了 Claude Code 的安装配置、快捷键、命令、CLAUDE.md 配置和 Skills。这篇来说说真正让 Claude “连接外部世界”的功能——MCP。 说实话，刚用 Claude Code 的时候，我只把它当成一个”本地的 AI 助手”。直到我发现了 MCP 这个功能，才明白为什么有人说它是”程序员的终极武器”——因为它真的能连接你的所有工具。 什么是 MCPMCP（Model Context Protocol）是一个用于 AI 工具集成的开源标准。MCP 服务器为 Claude Code 提供对您的工具、数据库和 API 的访问权限。 一句话理解：如果说 Claude 是一个”AI 程序员”，那 MCP 就是它的”工具箱”。 使用 MCP 可以做什么连接 MCP 服务器后，您可以要求 Claude Code： 1. 从问题跟踪器实现功能 1添加 JIRA 问题 ENG-4521 中描述的功能，并在 GitHub 上创建 PR。  2. 分析监控数据 1检查 Sentry 和 Statsig 以检查 ENG-4521 中描述的功能的使用情况。  3. 查询...</div></div></div></a><a class="pagination-related" href="/archives/113/" title="Claude Code 配置：CLAUDE.md 与上下文管理的艺术"><img class="cover" src="/img/bk_img/background6.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Claude Code 配置：CLAUDE.md 与上下文管理的艺术</div></div><div class="info-2"><div class="info-item-1">前三篇我们聊了 Claude Code 的安装配置、快捷键和命令。这篇来说说真正让 Claude “懂你”的配置——CLAUDE.md 和上下文管理。 说实话，刚用 Claude Code 的时候，我只把它当成一个”通用的 AI 助手”。直到我学会了配置 CLAUDE.md，才明白为什么有人说它是”程序员的终极武器”——因为它真的能记住你的习惯和规范。 CLAUDE.md 是什么CLAUDE.md 是 Claude Code 的”记忆”文件。每次启动时，它会自动读取这个文件，了解你的项目、规范和习惯。 一句话理解：如果说 Claude 是一个新来的程序员，那 CLAUDE.md 就是给他的”入职指南”。 三层配置结构Claude Code 支持三层 CLAUDE.md 配置，所有层级是叠加的，不会互相覆盖： 1. 全局配置：~&#x2F;.claude&#x2F;CLAUDE.md位置：~/.claude/CLAUDE.md 作用：所有项目通用的配置 适合放：  语言偏好（中文&#x2F;英文） 代码风格（缩进、引号等） Git 规范（commit message 格式） 个人习...</div></div></div></a><a class="pagination-related" href="/archives/114/" title="Claude Code Skills：让 AI 记住你的工作流程"><img class="cover" src="/img/bk_img/background2.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Claude Code Skills：让 AI 记住你的工作流程</div></div><div class="info-2"><div class="info-item-1">前四篇我们聊了 Claude Code 的安装配置、快捷键、命令和 CLAUDE.md 配置。这篇来说说真正让我效率飙升的功能——Skills。 说实话，用了一周基础功能后，我觉得 Claude Code 也就那样——比 Cursor 好用，但没到”降维打击”的程度。 直到我发现了 Skills 这个功能。 什么是 SkillsSkills 扩展了 Claude 能做的事情。创建一个 SKILL.md 文件，其中包含说明，Claude 会将其添加到其工具包中。Claude 在相关时使用 skills，或者你可以使用 /skill-name 直接调用一个。 一句话理解：如果说 CLAUDE.md 是”入职指南”，那 Skills 就是”操作手册”。 与 CLAUDE.md 的区别： 与 CLAUDE.md 内容不同，skill 的正文仅在使用时加载，因此长参考资料在你需要它之前几乎不花费任何成本。 什么时候该创建 Skill： 当你不断将相同的说明、检查清单或多步骤程序粘贴到聊天中时，或者当 CLAUDE.md 的一部分已经演变成程序而不是事实时，创建一个 skill。 捆绑 Sk...</div></div></div></a><a class="pagination-related" href="/archives/112/" title="Claude Code 命令大全：这 20 个命令你必须掌握"><img class="cover" src="/img/bk_img/background8.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Claude Code 命令大全：这 20 个命令你必须掌握</div></div><div class="info-2"><div class="info-item-1">前两篇我们聊了 Claude Code 的安装配置和快捷键。这篇来说说真正让我效率翻倍的命令。 说实话，刚用 Claude Code 的时候，我只把它当成一个”能跑命令的 ChatGPT”。直到我发现了这些命令，才明白为什么有人说它是”程序员的终极武器”。 典型工作流程中的命令大多数命令在会话的特定点很有用，从设置项目到发布更改。 首次在存储库中的会话运行 /init 以生成启动器 CLAUDE.md，然后运行 /memory 以完善它。使用 /mcp 和 /agents 来设置项目需要的任何服务器或子代理，并使用 /permissions 来设置您想要的批准规则。 在任务期间/plan 在大型更改前切换到 Plan Mode。/model 和 /effort 调整您花费的推理量。当对话变长时，/context 显示窗口的去向，/compact 将其总结下来；使用 /btw 进行快速附加说明，不应该增加历史记录。 并行运行工作/agents 打开管理器以处理子代理，Claude 可以将侧面任务委派给这些子代理，/tasks 列出当前会话后台运行的内容。/background 分离...</div></div></div></a><a class="pagination-related" href="/archives/111/" title="Claude Code 快捷键：这 15 个键让我效率翻倍"><img class="cover" src="/img/bk_img/background10.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Claude Code 快捷键：这 15 个键让我效率翻倍</div></div><div class="info-2"><div class="info-item-1">上一篇我们聊了 Claude Code 的安装和模型配置。这篇来说说真正让我效率翻倍的快捷键。 说实话，刚用 Claude Code 的时候，我只会打字提问。直到有一天，我看到一个同事用快捷键操作得飞快，我才发现：原来 Claude Code 有这么多好用的快捷键，我之前都浪费了！ 为什么快捷键重要先说一个真实数据：我统计过自己一天的操作，用了快捷键之后：  操作速度：提升了 50%（不用打那么多字了） 切换时间：从 3 秒降到 0.5 秒（权限模式切换） 取消操作：从 2 秒降到 0.1 秒（Ctrl+C 一下搞定）  一句话总结：快捷键让你从”打字员”变成”指挥官”。 常规控制快捷键1. Shift+Tab：权限模式切换（最常用！）这个快捷键是我用得最多的，没有之一。 功能：循环切换权限模式 5 种权限模式：    模式 行为 我什么时候用    Normal（默认） 每个危险操作都要确认 日常使用   Auto-Accept Edits 自动批准文件编辑 重构代码时   Plan Mode 只读模式，不做修改 探索新项目时   Don’t Ask 自动拒绝所有 基本不用  ...</div></div></div></a><a class="pagination-related" href="/archives/110/" title="Claude Code 入门：从安装到模型配置，以 DeepSeek 为例"><img class="cover" src="/img/bk_img/background9.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-18</div><div class="info-item-2">Claude Code 入门：从安装到模型配置，以 DeepSeek 为例</div></div><div class="info-2"><div class="info-item-1">上个月，我决定认真试试 Claude Code。 之前一直用 Cursor 写代码，但总觉得差点意思——每次都要在编辑器里切来切去，而且对于一些复杂的项目分析，Cursor 的理解能力总是不够深入。 直到有个朋友跟我说：”你试试 Claude Code，用命令行的那个。” 我当时想，命令行？这不是倒退吗？结果用了一个月，我发现：这根本不是倒退，这是降维打击。 为什么我要从 Cursor 换到 Claude Code先说说我之前的痛点：  上下文理解不够深：Cursor 只能理解当前打开的文件，对于整个项目的架构、依赖关系，它经常搞不清楚 操作受限：想让 AI 帮我运行测试、查看 git 状态，还得我自己复制粘贴结果 多文件协作差：让它重构一个跨 5 个文件的功能，经常改了这个忘了那个  Claude Code 解决了这些问题。它不是一个”编辑器里的助手”，而是一个能直接操作你整个项目的 AI 程序员。 安装：3 分钟搞定前置要求很简单：  Node.js 18+（必须） Git（必须）  然后一行命令： 1npm install -g @anthropic-ai/claude-c...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/39393864?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">飞鲤</div><div class="author-info-description">探索 AI 产品、数据智能和知识工作的未来。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">116</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">57</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/clarance2018"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/clarance2018" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:hcshi@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/225919844" target="_blank" title="BiliBili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=928836584" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">每天都是新的一天！新增一个字符的计数工具。<br><br>如果你需要流量卡：<a target="_blank" rel="noopener" href="https://h5.lot-ml.com/ProductEn/Index/065fa2558d71f921"><span>https://h5.lot-ml.com/ProductEn/Index/065fa2558d71f921</span></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Subagents"><span class="toc-number">1.</span> <span class="toc-text">什么是 Subagents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-Subagents"><span class="toc-number">2.</span> <span class="toc-text">为什么需要 Subagents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E7%BD%AE-Subagents"><span class="toc-number">3.</span> <span class="toc-text">内置 Subagents</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Explore%EF%BC%9A%E4%BB%A3%E7%A0%81%E6%8E%A2%E7%B4%A2"><span class="toc-number">3.1.</span> <span class="toc-text">Explore：代码探索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plan%EF%BC%9A%E6%96%B9%E6%A1%88%E8%A7%84%E5%88%92"><span class="toc-number">3.2.</span> <span class="toc-text">Plan：方案规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#General-purpose%EF%BC%9A%E9%80%9A%E7%94%A8%E4%BB%A3%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">General-purpose：通用代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%86%85%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-number">3.4.</span> <span class="toc-text">其他内置代理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%82%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA-Subagent"><span class="toc-number">4.</span> <span class="toc-text">快速入门：创建您的第一个 Subagent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A41%EF%BC%9A%E6%89%93%E5%BC%80-subagents-%E7%95%8C%E9%9D%A2"><span class="toc-number">4.1.</span> <span class="toc-text">步骤1：打开 subagents 界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A42%EF%BC%9A%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE"><span class="toc-number">4.2.</span> <span class="toc-text">步骤2：选择一个位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A43%EF%BC%9A%E4%BD%BF%E7%94%A8-Claude-%E7%94%9F%E6%88%90"><span class="toc-number">4.3.</span> <span class="toc-text">步骤3：使用 Claude 生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A44%EF%BC%9A%E9%80%89%E6%8B%A9%E5%B7%A5%E5%85%B7"><span class="toc-number">4.4.</span> <span class="toc-text">步骤4：选择工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A45%EF%BC%9A%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.5.</span> <span class="toc-text">步骤5：选择模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A46%EF%BC%9A%E9%80%89%E6%8B%A9%E9%A2%9C%E8%89%B2"><span class="toc-number">4.6.</span> <span class="toc-text">步骤6：选择颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A47%EF%BC%9A%E9%85%8D%E7%BD%AE%E5%86%85%E5%AD%98"><span class="toc-number">4.7.</span> <span class="toc-text">步骤7：配置内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A48%EF%BC%9A%E4%BF%9D%E5%AD%98%E5%B9%B6%E5%B0%9D%E8%AF%95"><span class="toc-number">4.8.</span> <span class="toc-text">步骤8：保存并尝试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-Subagents"><span class="toc-number">5.</span> <span class="toc-text">配置 Subagents</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9-Subagent-%E8%8C%83%E5%9B%B4"><span class="toc-number">5.1.</span> <span class="toc-text">选择 Subagent 范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99-Subagent-%E6%96%87%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text">编写 Subagent 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84-Frontmatter-%E5%AD%97%E6%AE%B5"><span class="toc-number">5.3.</span> <span class="toc-text">支持的 Frontmatter 字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B"><span class="toc-number">5.4.</span> <span class="toc-text">选择模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6-Subagent-%E8%83%BD%E5%8A%9B"><span class="toc-number">5.5.</span> <span class="toc-text">控制 Subagent 能力</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">5.5.1.</span> <span class="toc-text">可用工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.5.2.</span> <span class="toc-text">权限模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%84%E5%8A%A0%E8%BD%BD%E6%8A%80%E8%83%BD"><span class="toc-number">5.5.3.</span> <span class="toc-text">预加载技能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E7%94%A8%E6%8C%81%E4%B9%85%E5%86%85%E5%AD%98"><span class="toc-number">5.5.4.</span> <span class="toc-text">启用持久内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Hooks-%E7%9A%84%E6%9D%A1%E4%BB%B6%E8%A7%84%E5%88%99"><span class="toc-number">5.5.5.</span> <span class="toc-text">使用 Hooks 的条件规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Subagents"><span class="toc-number">6.</span> <span class="toc-text">使用 Subagents</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E8%87%AA%E5%8A%A8%E5%A7%94%E6%89%98"><span class="toc-number">6.1.</span> <span class="toc-text">理解自动委托</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E5%BC%8F%E8%B0%83%E7%94%A8-Subagents"><span class="toc-number">6.2.</span> <span class="toc-text">显式调用 Subagents</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%89%8D%E5%8F%B0%E6%88%96%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-Subagents"><span class="toc-number">6.3.</span> <span class="toc-text">在前台或后台运行 Subagents</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.4.</span> <span class="toc-text">常见模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%94%E7%A6%BB%E9%AB%98%E5%AE%B9%E9%87%8F%E6%93%8D%E4%BD%9C"><span class="toc-number">6.4.1.</span> <span class="toc-text">隔离高容量操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%B9%B6%E8%A1%8C%E7%A0%94%E7%A9%B6"><span class="toc-number">6.4.2.</span> <span class="toc-text">运行并行研究</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5-Subagents"><span class="toc-number">6.4.3.</span> <span class="toc-text">链接 Subagents</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%8F%89%E5%BD%93%E5%89%8D%E5%AF%B9%E8%AF%9D"><span class="toc-number">6.5.</span> <span class="toc-text">分叉当前对话</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-Subagents"><span class="toc-number">7.</span> <span class="toc-text">示例 Subagents</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5%E8%80%85"><span class="toc-number">7.1.</span> <span class="toc-text">代码审查者</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E5%99%A8"><span class="toc-number">7.2.</span> <span class="toc-text">调试器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%B6"><span class="toc-number">7.3.</span> <span class="toc-text">数据科学家</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E9%AA%8C%E8%AF%81%E5%99%A8"><span class="toc-number">7.4.</span> <span class="toc-text">数据库查询验证器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84-Subagents-%E4%BD%BF%E7%94%A8%E4%B9%A0%E6%83%AF"><span class="toc-number">8.</span> <span class="toc-text">我的 Subagents 使用习惯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">9.</span> <span class="toc-text">实际工作流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF1%EF%BC%9A%E9%87%8D%E6%9E%84%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97"><span class="toc-number">9.1.</span> <span class="toc-text">场景1：重构一个模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF2%EF%BC%9A%E5%88%86%E6%9E%90%E5%A4%A7%E5%9E%8B%E4%BB%A3%E7%A0%81%E5%BA%93"><span class="toc-number">9.2.</span> <span class="toc-text">场景2：分析大型代码库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF3%EF%BC%9A%E5%B9%B6%E8%A1%8C%E5%A4%84%E7%90%86%E5%A4%9A%E4%B8%AA%E4%BB%BB%E5%8A%A1"><span class="toc-number">9.3.</span> <span class="toc-text">场景3：并行处理多个任务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E7%AF%87%E9%A2%84%E5%91%8A"><span class="toc-number">10.</span> <span class="toc-text">下一篇预告</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/117/" title="Claude Code 踩坑一个月，这些经验你一定要知道"><img src="/img/bk_img/background1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Claude Code 踩坑一个月，这些经验你一定要知道"/></a><div class="content"><a class="title" href="/archives/117/" title="Claude Code 踩坑一个月，这些经验你一定要知道">Claude Code 踩坑一个月，这些经验你一定要知道</a><time datetime="2026-06-18T08:00:00.000Z" title="发表于 2026-06-18 16:00:00">2026-06-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/116/" title="Claude Code Subagents：让 AI 分身帮你干活"><img src="/img/bk_img/background10.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Claude Code Subagents：让 AI 分身帮你干活"/></a><div class="content"><a class="title" href="/archives/116/" title="Claude Code Subagents：让 AI 分身帮你干活">Claude Code Subagents：让 AI 分身帮你干活</a><time datetime="2026-06-18T07:00:00.000Z" title="发表于 2026-06-18 15:00:00">2026-06-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/115/" title="Claude Code MCP：连接外部世界的桥梁"><img src="/img/bk_img/background4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Claude Code MCP：连接外部世界的桥梁"/></a><div class="content"><a class="title" href="/archives/115/" title="Claude Code MCP：连接外部世界的桥梁">Claude Code MCP：连接外部世界的桥梁</a><time datetime="2026-06-18T06:00:00.000Z" title="发表于 2026-06-18 14:00:00">2026-06-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/114/" title="Claude Code Skills：让 AI 记住你的工作流程"><img src="/img/bk_img/background2.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Claude Code Skills：让 AI 记住你的工作流程"/></a><div class="content"><a class="title" href="/archives/114/" title="Claude Code Skills：让 AI 记住你的工作流程">Claude Code Skills：让 AI 记住你的工作流程</a><time datetime="2026-06-18T05:00:00.000Z" title="发表于 2026-06-18 13:00:00">2026-06-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/113/" title="Claude Code 配置：CLAUDE.md 与上下文管理的艺术"><img src="/img/bk_img/background6.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Claude Code 配置：CLAUDE.md 与上下文管理的艺术"/></a><div class="content"><a class="title" href="/archives/113/" title="Claude Code 配置：CLAUDE.md 与上下文管理的艺术">Claude Code 配置：CLAUDE.md 与上下文管理的艺术</a><time datetime="2026-06-18T04:00:00.000Z" title="发表于 2026-06-18 12:00:00">2026-06-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-flex"><div class="footer-flex-items"><div class="footer-flex-item"><div class="footer-flex-title">常用链接</div><div class="footer-flex-content"><a href="/" target="_blank" title="🏠 首页">🏠 首页</a><a href="/archives/" target="_blank" title="📚 归档">📚 归档</a><a href="/about/" target="_blank" title="💖 关于">💖 关于</a><a href="/link/" target="_blank" title="🔗 友链">🔗 友链</a></div></div></div><div class="footer-flex-items"><div class="footer-flex-item"><div class="footer-flex-title">技术分类</div><div class="footer-flex-content"><a href="/categories/Web%E5%BC%80%E5%8F%91/" target="_blank" title="💻 Web开发">💻 Web开发</a><a href="/categories/Docker%E8%BF%90%E7%BB%B4/" target="_blank" title="🐳 Docker运维">🐳 Docker运维</a><a href="/categories/AI%E6%8E%A2%E7%B4%A2/" target="_blank" title="🤖 AI探索">🤖 AI探索</a><a href="/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" target="_blank" title="🔧 效率工具">🔧 效率工具</a></div></div></div><div class="footer-flex-items"><div class="footer-flex-item"><div class="footer-flex-title">更多</div><div class="footer-flex-content"><a href="/album/" target="_blank" title="📷 相册">📷 相册</a><a href="/tool.html" target="_blank" title="🛠️ 工具箱">🛠️ 工具箱</a><a href="/sitemap.xml" target="_blank" title="📋 网站地图">📋 网站地图</a><a href="/atom.xml" target="_blank" title="📡 RSS订阅">📡 RSS订阅</a></div></div></div><div class="footer-flex-items"><div class="footer-flex-item"><div class="footer-flex-title">框架支持</div><div class="footer-flex-content"><a href="https://hexo.io/zh-cn/" target="_blank" title="Hexo">Hexo</a><a href="https://butterfly.js.org/" target="_blank" title="Butterfly">Butterfly</a></div></div></div></div><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2024 - 2026 By 飞鲤</span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>赣ICP备2024020403号</span></a> | <a href="https://beian.mps.gov.cn/#/query/webSearch?code=36073202360902" rel="noreferrer" target="_blank"><img class="logos" src="/img/icp-logo.png" height="14px;">赣公网安备36073202360902</a> | 互联网违法和不良信息举报邮箱：hcshi@outlook.com | <a href="https://6mal.com/sitemap.xml">网站地图</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
