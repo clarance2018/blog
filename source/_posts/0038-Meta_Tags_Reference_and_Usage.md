@@ -1,7 +1,146 @@
-title: 常见Meta标签大全和用途介绍
+---
+title: 常见 Meta 标签参考和用途介绍——前端开发的速查表
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [Meta标签,HTML,前端开发,SEO,移动端,编码]
 date: 2020-06-11 14:38:28
+updated: 2026-07-24 10:00:00
 id: 0038
 ---
-  <p>网页Meta标签是HTML网页源代码中一个重要的html标签，通常位于HTML文档头部的head标记和title标记之间，它提供用户不可见的信息。Meta标签可用于浏览器识别（如何显示内容或重新加载页面），搜索引擎声明，或其他web服务，如作者、日期和时间、网页描述、关键词、页面刷新等。随着移动互联网的兴起，移动端web开发用到的meta标签也越来越多，今天益吾库就稍作整理供大家需要时查阅。</p><p>1、申明文档使用的字符编码</p><blockquote><p>&lt;meta&nbsp;charset=&#039;utf-8&#039;&gt;&nbsp;<br /></p></blockquote><p>或</p><blockquote><p>&lt;meta&nbsp;http-equiv=&quot;Content-Type&quot;&nbsp;content=&quot;text/html;&nbsp;charset=utf-8&quot;&gt;&nbsp;<br /></p></blockquote><p>该 meta 标签定义了 HTML 页面所使用的字符集为 utf-8 ，就是万国码。它可以在同一页面显示中文简体、繁体及其它语言（如日文，韩文）等。当然，你也可以使用gb2312（简体中文），big5（繁体中文）等等其他字符集。</p><p>而目前我们一般推荐使用第一种写法，也是HTML5使用的写法。</p><p>2、声明使用的浏览器及版本</p><blockquote><p>&lt;meta&nbsp;http-equiv=&quot;X-UA-Compatible&quot;&nbsp;content=&quot;IE=edge,chrome=1&quot;&gt;&nbsp;<br /></p></blockquote><p>当指定的content值为IE=edge,chrome=1时，优先使用 IE 最新版本和 Chrome。假定客户端安装了Google Chrome Frame，则在IE中使用chrome的渲染引擎来渲染页面，否则，将会使用客户端IE最高的标准模式对页面进行渲染。</p><p>还有以下几种设置方式：</p><blockquote><p>&lt;meta&nbsp;http-equiv=&quot;X-UA-Compatible&quot;&nbsp;content=&quot;IE=6&quot;&gt;&lt;!--&nbsp;使用IE6&nbsp;--&gt;</p><p>&lt;meta&nbsp;http-equiv=&quot;X-UA-Compatible&quot;&nbsp;content=&quot;IE=EmulateIE7&quot;&gt;&lt;!--&nbsp;使用IE7&nbsp;--&gt;</p><p>&lt;meta&nbsp;http-equiv=&quot;X-UA-Compatible&quot;&nbsp;content=&quot;IE=8&quot;&gt;&lt;!--&nbsp;使用IE8&nbsp;--&gt;</p><p>&lt;meta&nbsp;http-equiv=&quot;X-UA-Compatible&quot;&nbsp;content=&quot;IE=edge&quot;&gt;&nbsp;&lt;!--指示IE以目前可用的最高模式显示内容--&gt;&nbsp;<br /></p></blockquote><p>3、SEO优化相关</p><p>页面描述，每个网页都应有一个不超过 150 个字符且能准确反映网页内容的描述标签。</p><blockquote><p>&lt;meta&nbsp;name=&quot;description&quot;&nbsp;content=&quot;不超过150个字符&quot;&gt;&nbsp;<br /></p></blockquote><p>页面关键词，每个网页应具有描述该网页内容的一组唯一的关键字。</p><p>使用人们可能会搜索，并准确描述网页上所提供信息的描述性和代表性关键字及短语。</p><blockquote><p>&lt;meta&nbsp;name=&quot;keywords&quot;&nbsp;content=&quot;html5,&nbsp;css3,&nbsp;关键字&quot;&gt;&nbsp;&nbsp;<br /></p></blockquote><p>定义网页作者，非必要</p><blockquote><p>&lt;meta&nbsp;name=&quot;author&quot;&nbsp;content=&quot;益吾库&quot;&gt;&nbsp;<br /></p></blockquote><p>4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url,则会重定向到指定网页。</p><blockquote><p>&lt;meta&nbsp;http-equiv=&quot;Refresh&quot;&nbsp;&nbsp;contect=&quot;3;url=http://www.yiwuku.com&quot;&gt;&nbsp;<br /></p></blockquote><p>上述代码表示停留3秒钟后自动刷新跳转到URL网址http://www.yiwuku.com。</p><p>5、Expires网页过期时间</p><blockquote><p>&lt;meta&nbsp;http-equiv=&quot;Expires&quot;&nbsp;contect=&quot;Mon,12&nbsp;May&nbsp;2016&nbsp;00:20:00&nbsp;GMT&quot;&gt;&nbsp;<br /></p></blockquote><p>设定网页的到期时间，一旦过期则必须到服务器上重新调用，需要注意的是必须使用GMT时间格式，或直接设为0(不缓存)。</p><p>6、Pragma禁止本地缓存</p><blockquote><p>&lt;meta&nbsp;http-equiv=&quot;Pragma&quot;&nbsp;contect=&quot;no-cache&quot;&gt;&nbsp;<br /></p></blockquote><p>设定网页不保存在缓存中，每次访问都刷新页面。这样设定，访问者将无法脱机浏览。</p><p>7、禁止搜索引擎蜘蛛抓取收录缓存网页内容</p><blockquote><p>&lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow,noarchive&quot;&gt;</p></blockquote><p>noindex是禁止网页被收录和索引，nofollow是禁止通过当页链接来搜寻新网页，noarchive是禁止缓存生成网页快照。</p><p>8、禁止搜索引擎将电脑网页自动转为手机网页声明，主要是对百度</p><blockquote><p>&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-transform&quot;&gt;</p></blockquote><p>Cache-Control更常见是与content=&quot;no-cache&quot;一起使用，意思是禁止浏览器缓存网页。</p><p>9、viewport移动设备屏幕可视区域（自适应网页必需）</p><p>由于移动设备屏幕宽度不同于传统 web，因此我们需要改变 viewport 值。</p><p>大部分4.7-5寸设备的viewport宽设为360px；5.5寸设备设为400px；iphone6设为375px；ipone6 plus设为414px。</p><p>width – viewport 的宽度 （范围从 200 到 10,000，默认为 980 像素）</p><p>height – viewport 的高度 （范围从 223 到 10,000 ）</p><p>initial-scale – 初始的缩放比例 （范围从 &gt; 0 到 10）</p><p>minimum-scale – 允许用户缩放到的最小比例</p><p>maximum-scale – 允许用户缩放到的最大比例</p><p>user-scalable – 用户是否可以手动缩放 (no，yes)</p><blockquote><p>&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;width=device-width,&nbsp;initial-scale=1.0,&nbsp;maximum-scale=1.0,&nbsp;user-scalable=no&quot;&gt;&nbsp;<br /></p></blockquote><p>强制让文档与设备的宽度保持 1:1 ；</p><p>文档最大的宽度比列是1.0（ initial-scale 初始刻度值和 maximum-scale 最大刻度值）；<br /></p><p>user-scalable 定义用户是否可以手动缩放（ no 为不缩放），使页面固定设备上面的大小；</p><p>注意：实际测试中发现，有些安卓系统自带的浏览器并不支持这一条规则，能够对页面进行放大，一旦放大响应的 box 也随之放大，导致页面出现错乱问题，解决方法：定义页面的最小宽度。</p><p>body&nbsp;{min-width:&nbsp;320px;&nbsp;}&nbsp;<br /></p><p>注意，很多人使用initial-scale=1到非响应式网站上，这会让网站以100%宽度渲染，用户需要手动移动页面或者缩放。如果和initial-scale=1同时使用user-scalable=no或maximum-scale=1，则用户将不能放大/缩小网页来看到全部的内容。移动设备上还有以下一些meta设置：</p><p>10、WebApp全屏模式：伪装app，离线应用。</p><blockquote><p>&lt;meta&nbsp;name=&quot;apple-mobile-web-app-capable&quot;&nbsp;content=&quot;yes&quot;&gt;&nbsp;<br /></p></blockquote><p>11、隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。</p><blockquote><p>&lt;meta&nbsp;name=&quot;apple-mobile-web-app-status-bar-style&quot;&nbsp;content=&quot;black-translucent&quot;&gt;&nbsp;<br /></p></blockquote><p>12、添加到主屏后的标题</p><blockquote><p>&lt;meta&nbsp;name=&quot;apple-mobile-web-app-title&quot;&nbsp;content=&quot;标题&quot;&gt;&nbsp;<br /></p></blockquote><p>13、忽略数字自动识别为电话号码</p><blockquote><p>&lt;meta&nbsp;content=&quot;telephone=no&quot;&nbsp;name=&quot;format-detection&quot;&gt;&nbsp;&nbsp;<br /></p></blockquote><p>14、忽略识别邮箱</p><blockquote><p>&lt;meta&nbsp;content=&quot;email=no&quot;&nbsp;name=&quot;format-detection&quot;&gt;&nbsp;</p></blockquote>  
+
+我刚开始做前端的时候，Meta 标签对我来说就是"一堆要复制粘贴的东西"。
+
+直到后来面试被问到"viewport 的 `user-scalable=no` 有什么问题"——我才意识到 Meta 标签不仅仅是"加上就行"，**每个标签背后都有它为什么要这样用的道理。**
+
+**一句话理解：** Meta 标签是网页的"配置信息"，告诉浏览器、搜索引擎和其他工具"该怎么处理这个页面"。
+
+## 速查表（2026 年推荐配置）
+
+### 必加项
+
+```html
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>页面标题 - 站点名</title>
+<meta name="description" content="页面描述，建议 80-120 字符">
+```
+
+### SEO 相关
+
+```html
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="关键词1,关键词2,关键词3">
+<!-- ↑ 关键词标签搜索引擎已经基本不参考了，但加上无妨 -->
+```
+
+### 社交分享
+
+```html
+<meta property="og:title" content="分享标题">
+<meta property="og:description" content="分享描述">
+<meta property="og:image" content="https://example.com/cover.jpg">
+<meta property="og:url" content="https://example.com/page">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="站点名称">
+
+<meta name="twitter:card" content="summary_large_image">
+```
+
+### 移动端和 PWA
+
+```html
+<!-- 主题色——手机浏览器顶部栏颜色 -->
+<meta name="theme-color" content="#2d8cf0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
+
+<!-- 自动识别控制 -->
+<meta name="format-detection" content="telephone=no, email=no">
+
+<!-- iOS 添加到主屏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="站点名称">
+
+<!-- 颜色方案适配 -->
+<meta name="color-scheme" content="light dark">
+```
+
+### 安全相关
+
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- ↑ IE 已退役，这个主要是兼容老系统 -->
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- Content Security Policy（高级） -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+```
+
+## 一些注意事项
+
+### theme-color：最被低估的 Meta 标签
+
+`theme-color` 是我认为性价比最高的 Meta 标签——只用一行代码，就能让你的网站在手机浏览器上看起来更专业。
+
+```html
+<!-- 不同主题色 -->
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+```
+
+效果：Android Chrome 顶部栏、任务视图中的颜色会变成你设置的颜色。
+
+### viewport 中不要禁用缩放
+
+```html
+<!-- ❌ 错误做法：user-scalable=no 违反了 WCAG 无障碍标准 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- ✅ 正确做法：允许用户缩放 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+WCAG 2.1 标准要求页面内容必须可以放大到 200%。`user-scalable=no` 直接违反了这条规则。
+
+### robots 和搜索引擎控制
+
+```html
+<!-- 允许收录和跟踪链接 -->
+<meta name="robots" content="index, follow">
+
+<!-- 禁止收录 -->
+<meta name="robots" content="noindex">
+
+<!-- 禁止跟踪链接 -->
+<meta name="robots" content="nofollow">
+
+<!-- 禁止收录和跟踪 -->
+<meta name="robots" content="noindex, nofollow">
+```
+
+需要注意的是，`robots` meta 标签只是一个"请求"，搜索引擎可以选择忽略。但正规的搜索引擎（Google、百度、Bing）都会遵守。
+
+## 我的建议
+
+对于大多数网站，加上以下这些 Meta 标签就足够了：
+
+```html
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="页面描述">
+<meta name="theme-color" content="#2d8cf0">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="页面标题">
+<meta property="og:description" content="页面描述">
+<meta property="og:image" content="封面图">
+```
+
+其他标签按需添加。**不要为了"越多越全"而加一堆用不到的 Meta 标签。**
+
+## 相关推荐
+
+- [Meta 标签功能大全——你可能不知道的 20 种用法](/archives/0006/)
+- [SEO 结构化数据优化——JSON-LD 实战指南](/archives/0002/)
+- [如何给你的网站添加 OG 标签——社交分享优化](/archives/0029/)
+
+**P.S.** 我自己的博客的 `<head>` 里大概有 20 多个 Meta 标签——但重要的其实就前面那 5 个。多出来的那些里，一半是主题自带的，一半是插件生成的。**加上 Meta 标签不难，难的是知道哪些该删掉。** 有空的话，看看你网站的 `<head>`，删掉那些没用的标签，它会变轻一些。

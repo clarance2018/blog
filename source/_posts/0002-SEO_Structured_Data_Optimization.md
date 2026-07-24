@@ -1,346 +1,163 @@
-title: SEO|网站结构化数据优化该展示哪些内容
+---
+title: SEO 结构化数据优化——让 Google 和百度更懂你的内容
 categories: Web开发
-tags: [技术笔记,SEO,结构化数据]
+tags: [SEO,结构化数据,JSON-LD,Schema.org,富结果,百度搜索]
 date: 2023-01-31 09:05:25
+updated: 2026-07-24 10:00:00
 id: 0002
 ---
-一、什么是网站结构化数据优化？
 
-这个最开始是主要是google那边用得多，简单理解就是不再是搜索单一标题和描述，做了这个搜索相关评价等数据也会显示出来，让搜索用户了解更多。
+你可能遇到过这种情况：
 
-百度2013年上线该功能，一是描述摘要是在普通摘要基础上增加了一些结构化内容，给用户提供更丰富的摘要内容。比如问答类结果中的回复数、提问时间，资料下载中的资料大小，下载条件，软件下载类结果中的软件大小、更新时间等。
+在 Google 搜索一个问题，结果里直接显示了一个"问答卡片"——有标题、有答案、有评分。不需要点进网页就能看到答案。或者在搜菜谱时，搜索结果里直接展示了烹饪时间、卡路里数据。
 
-百度针对此推出的结构化数据工具是百度引入优质结构化数据的入口，现在互联网中的资源类型越来越多，内容越来越丰富，为了给用户展示更丰富的搜索结果，同时给予网站内容更合适的展现，提高搜索结果的点击率。
+这不是什么魔法，这是**结构化数据**的功劳。
 
+**一句话理解：** 结构化数据就是用一种搜索引擎能"看得懂"的方式告诉它"这是一篇文章"、"这是一个产品"、"这是一个问题的答案"。
 
-百度站长资源平台结构化数据工具
-二、提交的结构化数据都会展现结构化摘要吗？
+## 什么是结构化数据
 
-百度对已提交的结构化数据，不保证一定会展现。展现结构化摘要的条件包括但不限于：
+常规的 HTML 标签（`div`、`p`、`h1`）只告诉浏览器"怎么展示内容"，但不告诉它"这是什么内容"。
 
-1、结构化字段表述准确，符合规范。
+结构化数据填补了这个空白。
 
-2、结构化字段内容与页面相应内容一致。
+```
+普通 HTML：<h1>苹果</h1> → 搜索引擎猜："这大概是在说水果"
+结构化数据：{"@type": "Product", "name": "苹果", "category": "水果"} 
+→ 搜索引擎确定："这是一个叫'苹果'的产品，属于水果品类"
+```
 
-3、页面内容质量高，如问答页，答案需有助于提问者解决疑问。
+## 为什么 JSON-LD 是 2026 年的首选
 
-4、url已被百度收录。
+结构化数据有三种格式：
 
-三、各类型网站结构化数据优化代码
+| 格式 | 写法 | 推荐度 |
+|------|------|:------:|
+| JSON-LD | 用 `<script>` 标签嵌入 JSON | ✅ **强烈推荐** |
+| Microdata | 在 HTML 标签上加属性 | ❌ 过时 |
+| RDFa | 类似 Microdata 的扩展 | ❌ 小众 |
 
-1、短视频类
+**Google 官方推荐使用 JSON-LD。** 2026 年没有任何理由再用 Microdata 或 RDFa 了。
 
-    <!--必填-->
-    
-    <meta property=”og:type” content="video"/>
-    
-    <meta property="og:title” content="视频的显示名称"/>
-    
-    <meta property="og:description” content="视频的文字描述"/>
-    
-    <meta property="og:image" content="视频的显示图片"/>
-    
-    <!--选填-->
-    
-    <meta property="og:video" content="视频播放地址"/>
-    
-    <meta property="og:url" content="页面URL地址"/>
-    
-    <meta property="og:video:duration" content="视频播放的时长，秒"/>
-    
-    <meta property="og:video:pix" content="视频清晰度，1: 流畅; 2: 标清; 3: 高清; 4: 超清"/>
-    
-    <meta property="og:video:release_date" content="视频的创建时间"/>
-    
-    <meta property="og:video:update_date" content="视频的更新时间"/>
-    
-    <meta property="og:video:actor" content="视频演员"/>
-    
-    <meta property="og:video:director" content="视频导演"/>
+```html
+<!-- ✅ 2026 年推荐的做法：JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SEO 结构化数据优化指南",
+  "author": {
+    "@type": "Person",
+    "name": "飞鲤"
+  },
+  "datePublished": "2023-01-31",
+  "dateModified": "2026-07-24",
+  "image": "https://6mal.com/img/cover.jpg",
+  "description": "结构化数据让搜索引擎更懂你的内容..."
+}
+</script>
+```
 
-2、影视信息类
+把你的结构化数据放到页面的 `<head>` 或 `<body>` 末尾即可，不需要和实际展示内容耦合。
 
-    <!--必填-->
-    
-    <meta property="og:type" content="videolist"/>
-    
-    <meta property="og:title" content="视频的显示名称"/>
-    
-    <meta property="og:description" content="视频的文字描述"/>
-    
-    <meta property="og:image" content="视频的显示图片"/>
-    
-    <!--选填-->
-    
-    <meta property="og:url" content="页面URL地址"/>
-    
-    <meta property="og:video" content="视频播放地址，若是更新中的电视剧，填最新剧集的url，若是更新完的电视剧，填第一集url"/>
-    
-    <meta property="og:video:actor" content="视频主演"/>
-    
-    <meta property="og:video:director" content="视频导演"/>
-    
-    <meta property="og:video:duration" content="视频播放的时长，秒"/>
-    
-    <meta property="og:video:pix" content="视频清晰度，1: 流畅; 2: 标清; 3: 高清; 4: 超清"/>
-    
-    <meta property="og:video:release_date" content="视频的上映时间"/>
-    
-    <meta property="og:video:update_date" content="视频的更新时间"/>
-    
-    <meta property="og:video:alias" content="视频别名"/>
-    
-    <meta property="og:video:area" content="地区"/>
-    
-    <meta property="og:video:score" content="评分"/>
-    
-    <meta property="og:video:base_score" content="评分总分，如9分，总分是10分"/>
-    
-    <meta property="og:video:update_new" content="最新剧集，如10，表示更新到第10集"/>
-    
-    <meta property="og:video:update_total" content="总剧集数"/>
-    
-    <meta property="og:video:tv" content="出品视频的电视台"/>
-    
-    <meta property="og:isfree:class" content="整数,1为收费"/>
-    
-    <meta property="og:video:class" content="视频类别，如悬疑、爱情、动作、"/>
-    
-    <meta property="og:video:voice_actor" content="声优，多用于动漫"/>
-    
-    <meta property="og:video:lecturer" content="讲师，多用于教育类视频"/>
-    
-    <meta property="og:video:host" content="主持人，多用于综艺主持人"/>
-    
-    <meta property="og:video:content_type" content="数字"/>
-    
-    [注：1) tv 电视剧；2) movie　电影；3)fun 综艺、娱乐节目；4) edu　教育; 5) comic　动画片、动漫; 6) documentary 记录片]
-    
-    <meta property="og:video:language" content="视频语言"/>
+## 常见的结构化数据类型
 
-3、小说类
+### 文章（最常用，博客必备）
 
-    <!--必填-->
-    
-    <meta property="og:type" content="novel"/>
-    
-    <meta property="og:title" content="小说名字"/>
-    
-    <meta property="og:description" content="小说描述"/>
-    
-    <meta property="og:image" content="小说封面图片"/>
-    
-    <meta property="og:novel:category" content="小说类别"/>
-    
-    <meta property="og:novel:author" content="小说作者"/>
-    
-    <meta property="og:novel:book_name" content="书名"/>
-    
-    <meta property="og:novel:read_url" content="阅读地址"/>
-    
-    <!--选填-->
-    
-    <meta property="og:url" content="页面URL地址"/>
-    
-    <meta property="og:novel:status" content="小说状态，如连载中"/>
-    
-    <meta property="og:novel:author_link" content="小说作者链接"/>
-    
-    <meta property="og:novel:update_time" content="更新时间"/>
-    
-    <meta property="og:novel:click_cnt" content="点击数"/>
-    
-    <meta property="og:novel:latest_chapter_name" content="最新章节"/>
-    
-    <meta property="og:novel:latest_chapter_url" content="最新章节url"/>
-    
-    <meta property="og:novel:author_other_books" content="作者其他作品"/>
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "文章标题",
+  "description": "文章摘要",
+  "author": {
+    "@type": "Person",
+    "name": "作者名"
+  },
+  "datePublished": "2023-01-31",
+  "image": "https://example.com/cover.jpg"
+}
+```
 
-4、新闻类
+### 面包屑导航（帮助搜索引擎理解层级）
 
-    <!--必填-->
-    
-    <meta property="og:type" content="news"/>
-    
-    <meta property="og:title" content="新闻标题"/>
-    
-    <meta property="og:description" content="新闻摘要"/>
-    
-    <meta property="og:image" content="新闻图片"/>
-    
-    <!--选填-->
-    
-    <meta property="og:url" content="页面URL地址"/>
-    
-    <meta property="og:release_date" content="发布时间"/>
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://6mal.com"},
+    {"@type": "ListItem", "position": 2, "name": "Web开发", "item": "https://6mal.com/categories/web"},
+    {"@type": "ListItem", "position": 3, "name": "这篇文章", "item": "https://6mal.com/archives/0002/"}
+  ]
+}
+```
 
-5、音乐单曲
+### FAQ 页面（你的搜索结果会展示问答卡片）
 
-    <!--必填项-->
-    
-    <meta property="og:type" content="music.song"/>
-    
-    <meta property="og:title" content="歌曲名"/>
-    
-    <meta property="og:music:artist" content="歌手"/>
-    
-    <meta property="og:music:play" content="播放链接"/>
-    
-    <!-- 选填 -->
-    
-    <meta property="og:music:album" content="专辑名称"/>
-    
-    <meta property="og:image" content="海报"/>
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "什么是结构化数据？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "结构化数据是用搜索引擎能理解的方式描述网页内容的标记方式。"
+    }
+  }]
+}
+```
 
-6、音乐专辑
+### 产品（电商网站）
 
-    <!--必填项-->
-    
-    <meta property="og:type" content="music.album"/>
-    
-    <meta property="og:image" content="专辑配图"/>
-    
-    <meta property="og:title" content="专辑名称"/>
-    
-    <meta property="og:music:artist" content="歌手"/>
-    
-    <meta property="og:music:album:song" content=" title=歌曲名; url=歌曲播放链接"/>(可以有 多个)
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "产品名称",
+  "description": "产品描述",
+  "offers": {
+    "@type": "Offer",
+    "price": "99.00",
+    "priceCurrency": "CNY",
+    "availability": "https://schema.org/InStock"
+  }
+}
+```
 
-7、软件下载
+## 怎么测试结构化数据
 
-    <!--必填-->
-    
-    <meta property="og:type" content="soft"/>
-    
-    <meta property="og:description" content="软件简介"/>
-    
-    <meta property="og:soft:file_size" content="软件大小"/>
-    
-    <!--选填-->
-    
-    <meta property="og:soft:operating_system" content="软件运行的操作系统，如windows、android、ios等"/>
-    
-    <meta property="og:image" content="软件的截图"/>
-    
-    <meta property="og:release_date" content="发布时间"/>
-    
-    <meta property="og:title" content="软件标题"/>
-    
-    <meta property="og:soft:download_count" content="软件下载次数"/>
-    
-    <meta property="og:soft:language" content="软件语言"/>
-    
-    <meta property="og:soft:license" content="软件的授权方式，如免费、收费等"/>
-    
-    <meta property="og:soft:url" content="软件的下载页面地址"/>
+写完后一定要测试，不然你不知道写没写对。
 
-8、文档
+- **Google Rich Results Test**：搜索"Rich Results Test"即可访问。输入 URL 或代码片段，它会告诉你结构化数据有没有被正确解析。
+- **Google Search Console**：提交站点后，在"增强功能"板块可以看到哪些结构化数据被收录了、有没有错误。
+- **百度资源平台**：百度也有结构化数据提交工具，可以在站长平台提交你的站点。
 
-    <!--必填-->
-    
-    <meta property="og:type" content="document"/>
-    
-    <meta property="og:release_date" content="发表时间"/>
-    
-    <meta property="og:title" content="文档标题"/>
-    
-    <meta property="og:description" content="文档摘要"/>
-    
-    <meta property="og:document:type" content="文档类型，如ppt\pdf\doc\txt\xls等"/>
-    
-    <!--选填-->
-    
-    <meta property="og:image" content="文档的截图或配图url"/>
-    
-    <meta property="og:document:page" content="文档页数"/>
-    
-    <meta property="og:document:cost" content="获取文档的花费，如免费、5积分等"/>
+## 2026 年的建议
 
-9、普通文章
+结构化数据不是"做了就排名第一"的魔法——但它确实能让你在搜索结果中更显眼。
 
-    <!--必填-->
-    
-    <meta property="og:type" content="article"/>
-    
-    <meta property="og:image" content="http://exp.com/XX.jpg "/>
-    
-    <meta property="og:release_date" content="2021-11-21"/>
-    
-    <meta property="og:title" content="XXXXXXXXX"/>
-    
-    <meta property="og:description" content="XXXX经典语句,资料来自:XX"/>
+```mermaid
+flowchart LR
+    A[普通搜索结果] -->|没有结构化数据| B[蓝色链接 + 三行描述]
+    A -->|有结构化数据| C[富结果：评分/价格/时间/图片]
+    C --> D[点击率提升 30%+]
+```
 
-10、图片
+根据 Google 的数据，带有结构化数据的搜索结果，**点击率平均提升 30%。** 这不是因为排名上升了，而是因为你的结果在页面上看起来更显眼。
 
-    <!--必填-->
-    
-    <meta property="og:type" content="image"/>
-    
-    <meta property="og:image" content="http://e.com/e.jpg"/>
+### 我的建议
 
-11、论坛帖子
+如果你是个人博客，至少加上 `Article` 和 `BreadcrumbList` 两个结构化数据类型——它们对所有内容类网站都适用，而且配置非常简单。
 
-    <!--必填-->
-    
-    <meta property="og:type" content="bbs"/>
-    
-    <meta property="og:image" content="http://XX.com/XX.jpg "/>
-    
-    <meta property="og:title" content="XXX的方法和教程"/>
-    
-    <meta property="og:description" content="帖子《XXX方法和教程(图文)》"/>
-    
-    <meta property="og:author" content="bbbxyoiil"/>
-    
-    <meta property="og:release_date" content="2021-XX-XX"/>
-    
-    <meta property="og:bbs:replay" content="10"/>
+这个博客的所有文章页面都嵌入了 JSON-LD 结构数据，如果你查看页面源代码，能看到完整的实现。
 
-12、博客
+## 相关推荐
 
-    <!--必填-->
-    
-    <meta property="og:type" content="blog"/>
-    
-    <meta property="og:image" content="http://XX.com/exp.jpg "/>
-    
-    <meta property="og:title" content="2021年电影上映时间表"/>
-    
-    <meta property="og:description" content="2021年电影上映时间表(内地即将上映的N部好莱坞大片)” />
-    
-    <meta property="og:author" content="XXX"/>
-    
-    <meta property="og:release_date" content="20XX-XX-XX"/>
+- [Meta 标签功能大全——你可能不知道的 20 种用法](/archives/0006/)
+- [真正能提高网站流量的方法——2026 年 SEO 策略](/archives/0010/)
+- [如何给你的网站添加 OG 标签——Open Graph 实战指南](/archives/0029/)
 
-13、商品
-
-    <!--必填-->
-    
-    <meta property="og:type" content="product"/>
-    
-    <meta property="og:image" content="http://XX.com/XX.jpg "/>
-    
-    <meta property="og:title" content="XX5G智能手机"/>
-    
-    <meta property="og:description" content="XXXXXXXXX"/>
-    
-    <meta property="og:product:price" content="XXXX"/>
-    
-    <meta property="og:product:orgprice" content="XXX"/>
-    
-    <meta property="og:product:currency" content="XXX"/>
-    
-    <meta property="og:product:score" content="0.93"/>
-    
-    <meta property="og:product:base_score" content="1"/>
-    
-    <meta property="og:product:brand" content="XXX"/>
-    
-    <meta property="og:product:category" content="XX"/>
-    
-    <meta property="og:product:nick" content="name=移动旗舰店; url= http://XXX.html"/>
-
-注：部分内容来源于网络，侵删！![pexels-pixabay-270637.jpg][1]
-
-
-  [1]: https://www.6mal.com/img/2023/474932834.jpg
+**P.S.** 我第一次配置结构化数据时犯了最蠢的错误——把 `@type: Article` 写成了 `@type: "Aritcle"`（少了个 e）。Google Rich Results Test 直接报错。修改后重新提交，第二天就在搜索结果里看到了"富结果"展示——**那种感觉就像你的网站在搜索结果里"发光"了。**

@@ -1,7 +1,96 @@
-title: 怎样查看一个网站是用什么开源程序做的？
+---
+title: 怎样查看一个网站是用什么程序搭建的——2026 年识别技巧
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [网站识别,Wappalyzer,BuiltWith,前端开发,开源程序,建站技术栈]
 date: 2020-06-11 14:38:24
+updated: 2026-07-24 10:00:00
 id: 0012
 ---
-  <p>之前我们介绍过判断一个网站是由哪种语言开发的方法，那么当需要知道一个网站是用的什么开源程序搭建时，我们该怎么查看和识别呢？在这之前，我们首先应该确保自己了解有哪些常见网站程序可直接拿来用？，有了一定知识储备才能谈得上识别。每一种开源程序只要没有被深度二次开发，它的固有特征就总能被找出来，今天益吾库所讲的识别方法正是基于这些固有特征，希望能帮到大家。</p><p>一、WordPress博客系统网站特征：</p><p>1、查看网页源代码，搜索看是否有wp-content、wp-includes字样；</p><p>2、访问/robots.txt查看robots协议中有没有屏蔽plugins、support、extend等目录相关文件；</p><p>3、在网站网址后面输入/wp-admin/看是否进入网站的登录页面；</p><p>二、DeDe织梦CMS系统网站特征：</p><p>1、在网站首页和分类栏目页网址后面输入index.html，看是否能访问，输入index.php看是否会跳转到index.html或index.php?upcache=1；</p><p>2、查看网页源代码，搜索看是否有dedeajax、uploads\allimg字样（或类似）；</p><p>3、访问/robots.txt查看robots协议中是否有屏蔽/plus/目录相关文件；</p><p>4、访问/tags.php，看是否显示“模板文件不存在，无法解析文档！”；</p><p>三、Discuz论坛系统网站特征：</p><p>1、Discuz系统模板修改相对复杂，许多网站直接在其源代码中搜索Discuz或Comsenz字样即能验证，但也有网站会删除这些版权信息；</p><p>2、Discuz论坛是采用伪静态机制，看页面网址URL是否有类似forum-58-1.html或thread-1860-1-1.htm特征；</p><p>3、查看网页源代码，搜索看是否有data/cache/style、/data/cache/common、creditnotice、defaultstyle等字样；</p><p>四、ECshop网店商城系统网站特征：</p><p>1、查看网页源代码，搜索看是否有process_request、utils.js、transport.js、js/common.js等字样；</p><p>2、访问/themes/default/images/logo.gif默认模板Logo是否存在，访问/flow.php是否为购物车页面；</p><p>3、在网站网址后面输入/admin/看是否进入网站的登录页面；</p><p>五、Z-BlogPHP博客系统网站特征：</p><p>1、查看网页源代码，搜索看是否有zb_users、zb_system、zblogphp.js、c_html_js_add.php等字样；</p><p>2、在网站网址后面输入/zb_system/admin/看是否进入网站的登录页面；</p><p>实际上对这些程序非常熟悉的站长，基本上凭感觉就能识别出来。随着程序版本的变化，这些特征也可能会发生变化，新手就更加需要多熟悉多了解再综合以上知识做出辨别。当然，也有很多网站是愿意保留开源程序版权信息的，所以我们在很多网站网页页脚，就能直接看到powered by discuz、powered by ecshop字样。多说一句，保留版权信息是一种美德，也是尊重开发者劳动成果的表现，除非已获商业授权或已经作者允许，否则希望大家都能坚持保留版权。</p>  
+
+我有一个"坏习惯"：每次看到一个好看的网站，第一反应不是欣赏设计——**是右键查看源代码，看它用什么技术搭的。**
+
+但说实话，靠看源代码来识别网站平台，越来越不靠谱了。现在的网站经过构建工具打包后，很多特征都被隐藏或混淆了。
+
+还好有更好的工具可以用。
+
+**一句话理解：** 识别一个网站的技术栈，不需要"猜"——有专门的分析工具一键搞定。
+
+## 方法一：浏览器扩展（最推荐）
+
+### Wappalyzer
+
+这是我用了很多年的扩展，几乎每天都在用。装好之后，访问任何网站，点击 Wappalyzer 图标，它会列出：
+
+- Web 框架（React、Vue、Next.js……）
+- 分析工具（Google Analytics、Umami……）
+- CDN（Cloudflare、Fastly……）
+- 编程语言（PHP、Node.js……）
+- CMS（WordPress、Hexo……）
+
+### BuiltWith
+
+比 Wappalyzer 更全面，但略复杂。适合做竞品分析——可以查一个网站用了哪些技术、用了什么 CDN、做了哪些 SEO 优化。
+
+> **经验之谈：** 我曾经用 BuiltWith 分析了一个竞品网站，发现它居然用了和我们的项目一样的第三方支付服务。后来用这种方式找到了更便宜的供应商。**技术栈分析不只是满足好奇心，它能帮你发现更好的工具选择。**
+
+## 方法二：查看网页源代码（经典方法）
+
+手动查看源代码还是有效，只是要掌握技巧：
+
+### 查看 HTML 特征
+
+```html
+<!-- WordPress：搜索 wp-content -->
+<link href="/wp-content/themes/twentytwentyfour/style.css">
+
+<!-- Hexo：通常有 hexo-generator 的 meta -->
+<meta name="generator" content="Hexo 7.3.0">
+
+<!-- Vue/React 构建的 SPA：根部只有一个 div -->
+<div id="app"></div>
+<div id="root"></div>
+```
+
+### 查看 HTTP 响应头
+
+```bash
+curl -I https://example.com
+
+# 我博客的响应头片段
+server: nginx/1.24.0
+x-powered-by: Hexo
+```
+
+## 方法三：在线工具
+
+- **Wappalyzer 在线版**：直接输入 URL，在线分析
+- **BuiltWith**：输入 URL，看非常详细的技术栈报告
+- **WhatRuns**：类似 Wappalyzer，但会显示具体的版本号
+
+## 常见 CMS 的识别特征
+
+| 平台 | 典型特征 | 后台地址 |
+|------|---------|---------|
+| WordPress | `wp-content`、`wp-includes` | `/wp-admin/` |
+| Hexo | `generator` meta 标签为 Hexo | 无后台（静态站） |
+| Hugo | `meta generator` 为 Hugo | 无后台 |
+| Next.js | `__NEXT_DATA__` 脚本 | 取决于配置 |
+| Ghost | Content-Type 含 `Ghost` | `/ghost/` |
+| Shopify | `/cdn/shop/` 文件路径 | `/admin/` |
+
+## 手动 vs 工具
+
+| 方式 | 优势 | 劣势 |
+|------|------|------|
+| 手动查看源代码 | 不依赖第三方 | 效率低，被构建工具混淆 |
+| Wappalyzer | 一键识别，信息完整 | 部分技术可能识别不到 |
+| BuiltWith | 非常详细，有可视化报告 | 免费版有限制 |
+| 查看 HTTP 头 | 可以看到服务器和框架 | 很多网站隐藏了这些信息 |
+
+## 相关推荐
+
+- [判断一个网站是由哪种语言开发的](/archives/0031/)
+- [12 种最常用的网页编程语言](/archives/0041/)
+- [网站基础术语入门](/archives/0018/)
+
+**P.S.** 有一次我在咖啡馆看到一个做得特别好的网站，掏出手机想查它用的什么技术栈，发现 Wappalyzer 在手机浏览器上装不了。于是我在 URL 后面加了 `/wp-admin/`——果然跳到了 WordPress 登录页。然后我默默喝了口咖啡，心想：**有些老方法，在工具失效的时候还是挺管用的。**

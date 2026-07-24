@@ -1,7 +1,90 @@
-title: 判断一个网站是由哪种语言开发的方法
+---
+title: 判断一个网站是用什么语言开发的——从前端到后端的全链路分析
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [网站开发,技术栈,识别语言,Wappalyzer,后端,前端]
 date: 2020-06-11 14:38:42
+updated: 2026-07-24 10:00:00
 id: 0031
 ---
-  <p>现在网页开发语言有很多种，有时出于某种需要，或者一时好奇，很想查看一个网站是由哪种语言所写，那么有没有什么方法和技巧呢？</p><p>一般而言，对于许多没有使用静态和伪静态技术的网站，我们可以直接查看网站页面的后缀名，例如：</p><p>Server&nbsp;Side&nbsp;Includes&nbsp;技术，拓展名为.shtml或.html或.htm&nbsp;</p><p>PHP技术，拓展名为.php&nbsp;</p><p>JSP技术，拓展名为.jsp或.jsf(JSF技术是JSP技术的拓展)&nbsp;</p><p>ASP.NET技术，拓展名为.aspx&nbsp;(x&nbsp;代表extension)&nbsp;</p><p>ASP技术，拓展名为.asp</p><p>ColdFusion技术，拓展名为.cfc</p><p>而大型一点的网站，一般用资源转向功能（就像JSP中web.xml定义的名字，把HOME转向到home.jsp，这样就隐藏了拓展名）。或者用Apache有一个URL&nbsp;Rewriting的Module，PHP网站的拓展名改变，就常用这个URL&nbsp;Rewriting，可以把.php拓展名改成任意名字。此时我们仍有5种方法进行判断：</p><p>方法（1）：&nbsp; 查看该网站的开发开放平台。&nbsp; 比如：GOOGLE有个Google&nbsp;Code，里面提供GOOGLE各种Search&nbsp;Engine&nbsp;API，还有Google&nbsp;AJAX。那么GOOGLE提供的API全是JAVA的（全无PHP，ASP等），由此可以判断GOOGLE必定就是JSP。</p><p>再比如：去维基百科，当你点到某些提交信息的按钮时候，IE的状态栏（下方）会马上呈现.php的拓展名。正常在地址栏上看不到.php的原因是，Wikipedia会把你提交信息后，转到另一个.html页面，而不会直接显示那个.php页面。</p><p>方法（2）：&nbsp; 学习JSP，PHP等相关技术，就能了解用这些技术开发的网站的特点，根据结构就可以判断。&nbsp; 比如：人人网，他们在招聘开发者只要求回JSP，Struts（JSP&nbsp;MVC的结构之一）。而且人人网大部分开放平台开发的游戏都是JSP写的，由此断定，人人网就是用JSP的(其实校内拓展名.do是典型的JSP Struts)。 &nbsp;再比如：百度，从它贴吧，知道上提交模式，以及百度大部分拓展名都被隐藏（PHP网站经常用apache里的功能来隐藏拓展名）来看，百度是用的PHP。</p><p>方法（3）： &nbsp;可以尝试查找该网站的招聘信息，从招聘要求中，看看应聘网站后台程序员，需要会什么语言。 人人网自己的招聘网页，就是个好例子。</p><p>方法（4）： 查看网站COOKIE特征。打开网站后在地址栏里输入&nbsp; javascript:alert(document.cookie);&nbsp; 然后回车，可以看到JSESSIONID=****&nbsp; 可以知道，这是JSP写的&nbsp;&nbsp;&nbsp;&nbsp;//PHP的是SESSIONID=...，而.net网站就不会是这两种情况。</p><p>方法（5）：&nbsp;域名后面加上/index.php或者/index.asp/或者index.jsp或者/index.aspx哪个能打开就说明是那种语言.比如百度的http://www.baidu.com/index.php就能打开，百度是用的php，人人网是jsp，淘宝也是php。</p><p>最后要说的是，尽管方法有很多种，也不能排除有些网站使用以上所有方法都不能判断出开发语言。有的网站同时用到了好几种语言，而有的扩展名则是可以修改的：<br /></p><p>比如.php的可以伪装成.html，使用rewrite和反向代理后，实际的资源文件名也可能被隐藏，对于python、ruby这些语言开发网站，并没有约定的扩展名，可以用firebug或者chrome的开发者工具来查看网页的Response Headers：</p><p>Response Headers<br />HTTP/1.1 200 OK&nbsp;<br />Date: Thu, 29 Nov 2012 01:08:16 GMT&nbsp;<br />Server: Apache/2.2.15 (CentOS)&nbsp;<br />X-Powered-By: PHP/5.2.17&nbsp;<br />Connection: close&nbsp;<br />Transfer-Encoding: chunked&nbsp;<br />Content-Type: text/html; charset=UTF-8</p>  
+
+我有个习惯：每次看到一个体验很好的网站，我都会忍不住去想——**它的技术栈是什么？**
+
+这个习惯让我学到了很多东西。因为当你去研究一个优秀的产品用了什么技术时，你不是在"偷窥"，你是在**学习别人做技术选择时的思考方式。**
+
+**一句话理解：** 判断网站的开发语言，2026 年用 Wappalyzer 一键完成，但了解背后的原理更有趣。
+
+## 方法一：看 URL 后缀（不太靠谱了）
+
+老方法：看页面 URL 是什么后缀。
+
+```text
+.php → PHP 开发
+.aspx → ASP.NET
+.jsp → Java JSP
+.shtml → 服务端包含
+```
+
+但 2026 年大部分网站都启用了 URL 重写/美化，`.php` 后缀基本看不到了。比如这个博客的 URL 是 `/archives/0031/`，不是 `.html` 也不是 `.php`。
+
+## 方法二：看响应头（比较靠谱）
+
+```bash
+curl -I https://example.com
+
+# 返回的响应头可能包含：
+Server: nginx/1.24.0
+X-Powered-By: PHP/8.3
+X-Generator: Hexo 7.3
+```
+
+但响应头也可能被隐藏——很多网站为了安全会去掉 `X-Powered-By`。
+
+## 方法三：用工具分析（最推荐）
+
+### Wappalyzer
+
+浏览器扩展，访问网站后一键显示技术栈。它不只是检测语言，还检测框架、CMS、CDN 等。
+
+## 常见后端技术的特征
+
+| 技术 | 典型特征 | 如何识别 |
+|------|---------|---------|
+| PHP | 响应头 `X-Powered-By: PHP`、文件后缀 `.php` | WordPress/Hexo 常见后端 |
+| Node.js | 响应头 `X-Powered-By: Express`、无 Server 头 | 现代 API 服务 |
+| Python | 响应头 `Server: Python/3.x`、`WSGIServer` | Django/Flask 应用 |
+| Java | `JSESSIONID` Cookie、`.jsp` 后缀 | 企业级应用 |
+| Go | 响应头无特殊标识、编译型特征 | API 网关、CLI 工具 |
+| .NET | 响应头 `X-AspNet-Version`、`ASP.NET_SessionId` Cookie | 企业应用 |
+
+## 常见前端框架的识别
+
+```html
+<!-- React：页面根部有 <div id="root"> 或 <div id="__next"> -->
+<div id="root"></div>
+<script src="/static/js/main.abc123.js"></script>
+
+<!-- Vue：页面根部有 <div id="app"> -->
+<div id="app"></div>
+
+<!-- 查看构建产物特征 -->
+<!-- React 通常有 .js 文件名带 hash -->
+<!-- Vue 通常有 .vue 文件引用 -->
+```
+
+## 综合判断
+
+最好的方式不是单独依赖某一种方法，而是**综合判断**：
+
+1. 先用 Wappalyzer 快速扫描
+2. 再用 DevTools 查看 Network 面板中的响应头
+3. 最后查看页面源代码中的特征标签
+
+比如这个博客的技术栈：`Hexo → 静态站点 → Nginx 服务器 → Cloudflare CDN`——在 Wappalyzer 中一眼就能看出来。
+
+## 相关推荐
+
+- [怎样查看一个网站是用什么程序搭建的](/archives/0012/)
+- [12 种最常用的网页编程语言——2026 年最新版](/archives/0041/)
+- [网站基础术语入门——前后端相关概念](/archives/0018/)
+
+**P.S.** 我经常用 Wappalyzer 来看一些知名网站的技术栈变化——比如几年前某个大站从 jQuery 换到了 React，又比如某个网站从 PHP 后端迁移到了 Go。**通过观察这些变化，你能感受到技术趋势的脉搏。** 下次遇到一个让你眼前一亮的网站，别光顾着看界面，看一眼它的"里子"。

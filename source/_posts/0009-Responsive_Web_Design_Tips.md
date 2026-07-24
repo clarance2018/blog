@@ -1,19 +1,156 @@
-title: 自适应网页设计制作技巧
+---
+title: 响应式网页设计实战——从百分比到容器查询的进化
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [响应式设计,CSS,前端开发,移动端,clamp,容器查询,媒体查询]
 date: 2020-06-11 14:38:37
+updated: 2026-07-24 10:00:00
 id: 0009
 ---
-  <p>自适应网页设计（Adaptive Web Design）是指能使网页自适应显示在不同大小终端设备上新网页设计方式及技术。</p><p>随着4G的普及，越来越多的人使用手机上网。移动设备正超过桌面设备，成为访问互联网的最常见终端。于是，网页设计师不得不面对一个难题：如何才能在不同大小的设备上呈现同样的网页？</p><p>手机的屏幕比较小，宽度通常在640像素以下；PC的屏幕宽度，一般都在1000像素以上（目前主流宽度是1920×1080），有的还达到了2000像素以上。同样的内容，要在大小迥异的屏幕上，都呈现出满意的效果，并不是一件容易的事。</p><p>很多网站的解决方法，是为不同的设备提供不同的网页，比如专门提供一个mobile版本，或者iPhone / iPad版本。这样做固然保证了效果，但是比较麻烦，同时要维护好几个版本，而且如果一个网站有多个portal（入口），会大大增加架构设计的复杂度。于是，很早就有人设想，能不能&quot;一次设计，普遍适用&quot;，让同一张网页自动适应不同大小的屏幕，根据屏幕宽度，自动调整布局（layout）。</p><p>网上关于这方面的文章有很多，重复的东西本文不再赘述，仅提供思路，并解释一些其他文章讲述模糊的地方。&nbsp;</p><p>1、使用meta标签，这也是普遍使用的方法，理论上讲使用这个标签是可以适应所有尺寸的屏幕的，但是各设备对该标签的解释方式及支持程度不同造成了不能兼容所有浏览器或系统。</p><p>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;<br /></p><p>首先需要了解该标签的含义，如果你完全不了解这个标签的使用需要先百度一下。</p><p>解释：content中的“width” 这个width指的是什么宽度，我看过的文章对这个都没有解释的很清楚，有几个备选：虚拟窗口的宽度、手机屏幕的宽度、还是页面的宽度等等？经试验这个指的是虚拟窗口的宽度。了解宽度之后，对后续的各种scale，就应该知道是谁与谁的比例，是 虚拟窗口宽度 / 页面宽度，这样就会有问题出现安卓设备尺寸差异很大光主流的就有宽度为 320 480 720 1080 等各种尺寸而以上标签只能支持一种尺寸，当然有些浏览器会自动缩放使其适应屏幕，但这不是统一标准，正确的做法是用js动态生成此标签，当然，应该先获取屏幕尺寸。</p><p>此标签其它属性说明：<br /></p><p>1)、user-scalable=no就一定可以保证页面不可以缩放吗？NO，有些浏览器不吃这一套，还有一招就是minimum-scale=1.0, maximum-scale=1.0 最大与最小缩放比例都设为1.0就可以了。</p><p>2)、initial-scale=1.0&nbsp;&nbsp; 初始缩放比例受user-scalable控制吗？不一定，有些浏览器会将user-scalable理解为用户手动缩放，如果user-scalable=no，initial-scale将无法生效。</p><p>3)、手机页面可以触摸移动，但是如果有需要禁止此操作，就是页面宽度等于屏幕宽度是页面正好适应屏幕才可以保证页面不能移动。</p><p>4)、如果页面是经过缩小适应屏幕宽度的，会出现一个问题，当文本框被激活（获取焦点）时，页面会放大至原来尺寸。</p><p>以上是使用viewport标签的一些小体会，分享给大家。</p><p>3、百分比法，首先应明确一个概年，CSS中的百分比中的百指的是什么，我告诉你指的是父元素，所有百分比都是这样的。子元素宽度50%，那么父元素的宽度就是百，子元素的padding-left：50%，父元素的宽度是百，子元素的margin-top:20%，那么父元素的高是百。所以body默认宽度是屏幕宽度（PC中指的是浏览器宽度）子孙元素按百分比定位（或指定尺寸）就可以了，这只适合布局简单的页面，复杂的页面实现很困难。</p><p>4、使用css3单位rem，有人这样解释rem，root-em，就是根部的em，想必em大家都懂的，那么rem就是将根节点html的font-size的值作为整个页面的基准尺寸，默认html的font-size是16px，即1rem=16px，如果某div宽度为32px你可以设为2rem。当我们把html的font-size设为20px时，1rem=20px，那么32px=1.6rem了。到这里我们也就了解了rem的用法了，那么怎么用rem来实现不同尺寸屏幕的自适应呢？在页面载入开始时首先判断window的宽度（是window的宽度($(window).width())，不是屏幕分辩率的宽度（screen.width），两者的差别请自行查阅），假设宽度为W，一个div在宽度为640px的设计稿的下的宽度为dW1，这样如果html的font-size为100px，那么这个div的宽度用rem表示是多少呢？计算：div宽度dW2=dW1/100,px与rem之间很好换算，除以100就可以，这是假定屏幕宽度为640的，而不同宽度的屏幕怎么处理，为了能保证换算容易那就要为html设置一个合适的font-size，计算：100 / 640 = fontSize / W, fontSize = W / 640 * 100 = W / 6.4;</p><p>解释一下为什么把100作为一个缩放比例，用10或1不是更方便吗，这是因为大多数浏览器font-size的最小值为12px，所以只能用100了。所以会在头部加上这个JS代码</p><pre class="prism-highlight prism-language-javascript">&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
-&nbsp;&nbsp;var&nbsp;html&nbsp;=&nbsp;document.querySelector(‘html‘);
-&nbsp;&nbsp;var&nbsp;rem&nbsp;=&nbsp;html.offsetWidth&nbsp;/&nbsp;6.4;
-&nbsp;&nbsp;html.style.fontSize&nbsp;=&nbsp;rem&nbsp;+&nbsp;&quot;px&quot;;
-&lt;/script&gt;</pre><p>5、媒体查询，媒体查询也是css3的方法，我们要解决的问题是适应手机屏幕，这个媒体查询正是为解决这个问题而生，媒体查询的功能就是为不同的媒体设置不同的css样式，这里的“媒体”包括页面尺寸，设备屏幕尺寸等，比如我们要为宽度小于480px的页面中的class=&quot;icon&quot;的元素设置样式，可以这样写，@media screen and (max-width=480px) {.icon{ some styles }};这里仅介绍这种思路，关于媒体查询的详细用法请参阅css手册。</p><p>参考实例：</p><pre class="prism-highlight prism-language-css">@media&nbsp;only&nbsp;screen&nbsp;and&nbsp;(max-width:&nbsp;480px)&nbsp;{
-　　　　.column&nbsp;{
-　　　　　　float:&nbsp;none;
-　　　　　　width:auto;
-　　　　}
-　　　　#sidebar&nbsp;{
-　　　　　　display:none;
-　　　　}
-}</pre><p>以上CSS3代码的意思是，如果屏幕宽度小于480像素，则column块取消浮动（float:none）、宽度自动调节（width:auto），sidebar块不显示（display:none）。</p><p>实际上自适应网页制作并没有一种完全适应各种屏幕的万能方法，只能根据页面特点选择不同的方法，多种方法灵活运用，这里仅仅通过此文浅析，希望能帮助大家解决HTML5+CSS3自适应手机屏幕宽度的问题，谢谢大家对益吾库网站的支持！</p>  
+
+我做的第一个"响应式"网站，是用 `@media` 写了十几种屏幕尺寸的断点。
+
+320px、360px、375px、414px、480px、640px、768px、1024px、1280px、1440px、1920px……
+
+每次新增一种设备尺寸，我就要加一个断点。后来我受不了了——**这不是响应式，这是穷举法。**
+
+**一句话理解：** 响应式设计的终极目标不是"适配所有屏幕尺寸"，而是"在任何屏幕上都能提供良好的阅读体验"。
+
+## 2026 年的响应式方案
+
+### 1. 流体排版：clamp() 一统江湖
+
+```css
+/* 不需要媒体查询了 */
+h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+}
+
+.content {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  max-width: 65ch;  /* 每行不超过 65 个字符，提升可读性 */
+}
+```
+
+### 2. 响应式网格：Grid + auto-fill
+
+```css
+/* 一劳永逸的响应式网格 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* 侧边栏布局 */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, 100%) 1fr;
+}
+
+.layout > * {
+  grid-column: 2;
+}
+
+/* 全宽元素（如图片） */
+.full-width {
+  grid-column: 1 / -1;
+}
+```
+
+### 3. 容器查询：组件级别的响应式
+
+容器查询是 2024 年后最值得关注的新 CSS 特性。和媒体查询不同——**它根据"容器"的宽度来决定样式，而不是"视口"的宽度。**
+
+```css
+/* 定义容器 */
+.card-container {
+  container-type: inline-size;
+  container-name: card;
+}
+
+/* 容器查询 */
+@container card (max-width: 400px) {
+  .card {
+    flex-direction: column;
+  }
+  .card-image {
+    width: 100%;
+  }
+}
+
+@container card (min-width: 401px) {
+  .card {
+    flex-direction: row;
+  }
+  .card-image {
+    width: 200px;
+  }
+}
+```
+
+这意味着：**同一个组件，放在窄的 sidebar 里和放在宽的 main 区域里，可以自动调整布局。** 这是媒体查询做不到的。
+
+### 4. 现代 CSS 选择器的力量
+
+`:has()` 选择器让很多以前需要 JS 或额外类名的响应式方案变得简单：
+
+```css
+/* 如果卡片组少于 3 个，用不同的布局 */
+.card-group:has(.card:only-child) {
+  grid-template-columns: 1fr;
+  max-width: 400px;
+}
+
+.card-group:has(.card:nth-child(2):last-child) {
+  grid-template-columns: 1fr 1fr;
+}
+```
+
+## 响应式图片
+
+```html
+<!-- srcset + sizes：最基础的响应式图片 -->
+<img
+  alt="description"
+  src="img-800.jpg"
+  srcset="
+    img-400.jpg 400w,
+    img-800.jpg 800w,
+    img-1200.jpg 1200w
+  "
+  sizes="
+    (max-width: 600px) 100vw,
+    (max-width: 1024px) 50vw,
+    800px
+  "
+  loading="lazy"
+  decoding="async"
+>
+
+<!-- 使用 <picture> 选择不同格式 -->
+<picture>
+  <source srcset="img.avif" type="image/avif">
+  <source srcset="img.webp" type="image/webp">
+  <img src="img.jpg" alt="" loading="lazy" width="800" height="600">
+</picture>
+```
+
+## 从媒体查询到容器查询：什么时候用哪个
+
+| 场景 | 用哪个 | 原因 |
+|------|--------|------|
+| 页面整体布局 | `@media` | 布局依赖视口尺寸 |
+| 可复用组件 | `@container` | 组件不知道会放在什么容器里 |
+| 字体大小 | `clamp()` | 一行搞定，不需要查询 |
+| 网格布局 | `auto-fill` + `minmax` | Grid 自带响应式能力 |
+
+> **经验之谈：** 我现在写 CSS 的顺序是：先用 `clamp()` 搞定字号，再用 Grid + `auto-fill` 搞定网格，最后用 `@media` 处理页面级布局问题。如果遇到需要"在窄容器里自动调整"的组件，才上 `@container`。**尽量用更少的代码做更多的事，这才是好的 CSS。**
+
+## 相关推荐
+
+- [HTML5 移动端前端开发要点](/archives/0004/)
+- [网页打开太慢？性能优化实战指南](/archives/0021/)
+- [网页配色技巧——从十六进制到现代 CSS 颜色](/archives/0019/)
+
+**P.S.** 响应式设计发展到今天，经历了"百分比→媒体查询→flex/grid→容器查询"的进化。但万变不离其宗——**核心是"灵活"，不是"覆盖"。** 你不需要保证你的网站在每一款设备上都完美无瑕，只需要保证它在任何设备上都"可用"。这个目标的达成，用 `clamp() + Grid + 容器查询` 就够了。

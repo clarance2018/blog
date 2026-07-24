@@ -1,46 +1,112 @@
-title: 关于字体图标那些事你知道多少？
+---
+title: 关于字体图标和 SVG 图标——2026 年你该知道的选择
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [字体图标,SVG图标,Icon,前端开发,Font Awesome,网页设计]
 date: 2020-06-11 14:37:55
+updated: 2026-07-24 10:00:00
 id: 0033
 ---
-<strong>什么是字体图标？</strong>
 
-简单的说，就是将一种特殊的字体，通过特定方式，在网页上像传统图片一样显示的图标。如下图：
-<p style="text-align: center;"><img title="1635.jpg" src="https://www.6mal.com/img/2020/201809291538190606795978.jpg" alt="1635.jpg" /></p>
-字体图标(font-icon)通常是将一套图标集以字体文件的形式封装，并通过 CSS 的 @font-face 方式作为 Web Font 调用。为了解决不同环境不同浏览器的兼容和效率问题，常见封装文件格式有otf、eot、svg、ttf、woff、woff2等。比较知名的字体图标库有Glyphicons（Bootstrap）、Font Awesome（奥森图标）、Iconfont（阿里巴巴）、IcoMoon等，前两种是各自统一风格并且所有图标整体封装，文件相对较大但使用方便，后两种则更像是一种平台，需要自定义选取封装，按需生成文件在网页中加载时更有优势，但更新增减操作稍显麻烦。
+我早期做网站时，图标全部用的是图片——每个图标一张 PNG。
 
-<strong>为什么要用字体图标？</strong>
+后来我发现了字体图标（Font Icon），感觉就像发现了新大陆：**一套字体搞定所有图标，用 CSS 就能控制颜色和大小。**
 
-轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染显示，不需要下载一个个图像。与css sprite技术一样，可以减少HTTP的请求次数，而且和HTML5的离线存储配合，可以对性能做出优化。
-灵活性：可以像网页中的文字一样，通过font-size属性来对其进行大小的设置，而且还可以添加各种文字效果，如color、hover、background、filter、text-shadow、transform等效果。
-兼容性：字体图标支持现代浏览器，甚至是低版本的IE浏览器，所以可以放心的使用它。
-保真性：相比于传统图片放大图片会出现失真、缩小又会浪费掉像素点，字体图标因为是矢量格式所以不存在这种情况。
+但字体图标也有它的问题。2026 年，我大部分项目开始转向 SVG 图标了。
 
-当然了，相对于真正的图片，它也有一定劣势，比如字体图标只能被渲染成单色，或者是CSS3的渐变色；创作图标字体比较耗费时间，相比制作传统图片图标可能也不会轻松多少，所以后期维护成本也比较高。如果不是商用，那么在拿来主义的指导下，咱们也可以在网上找到很多现成的免费字体图标使用。
+**一句话理解：** 字体图标是把图标放进"字体文件"，用字符来显示；SVG 图标是用 HTML 标签直接画图标——各有优劣，看场景选择。
 
-<strong>使用字体图标常见问题？</strong>
+## 字体图标 vs SVG 图标
 
-1，css样式文件与font字体文件目录位置不对导致相对路径引用失败
+| 维度 | 字体图标 | SVG 图标 |
+|------|---------|---------|
+| 渲染原理 | 字体渲染 | 矢量图形渲染 |
+| 颜色支持 | 单色（或 CSS 渐变色） | **多色、多层级** |
+| 缩放 | 矢量，不失真 | 矢量，不失真 |
+| 性能 | 好（字体文件一次加载） | 好（每个图标独立加载） |
+| 可访问性 | 可用 aria-label | 支持 title/desc |
+| 深色模式 | 通过 CSS 控制 | 通过 CSS 变量控制 |
+| CSS 控制 | font-size/color | width/height/fill/stroke |
 
-一般而言，css目录与fonts目录是同级存放，如果发生改变则需要修改css文件中的相对路径，实在弄不明白相对路径写法就用绝对路径，以自己网站域名http://www.****.com开头。
+## 字体图标的时代
 
-2，某些网站服务器空间字体图标文件格式被限制
+Font Awesome 和 Iconfont（阿里巴巴矢量图标库）是字体图标的代表：
 
-比如很多Windows主机的IIS环境默认就不支持.svg、.woff和.woff2后缀的文件，这个与不支持mp3、mp4媒体文件是一样道理，需要修改IIS环境中的MIME类型配置，添加支持类型让IIS支持相应文件的访问即可。也可以修改网站根目录下的web.config文件添加规则，代码如下：
-<blockquote>&lt;system.webServer&gt;
+```html
+<!-- 引入 Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-&lt;staticContent&gt;
+<!-- 使用图标 -->
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-heart" style="color: red;"></i>
+```
 
-&lt;remove fileExtension=".woff" /&gt;
+字体图标的优点：**方便、快速、一套字体解决图标需求。**
 
-&lt;mimeMap fileExtension=".woff" mimeType="font/x-font-woff" /&gt;
+字体图标的缺点：
+- **只有单色**——不能在一个图标里用两种颜色
+- **依赖字体文件**——加载失败所有图标变方块
+- **可访问性差**——屏幕阅读器可能把它们当成文字读出来
 
-&lt;/staticContent&gt;
+## SVG 图标：更现代的选择
 
-&lt;/system.webServer&gt;</blockquote>
-remove和mimeMap可以重复添加以便添加多种文件类型。
+```html
+<!-- 内联 SVG 图标：最灵活的方式 -->
+<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor">
+  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+</svg>
+```
 
-3，字体文件远程跨域引用受限制
+SVG 图标的优点：
+- **多色**——一个图标可以有多种颜色
+- **可样式化**——通过 CSS 控制 fill、stroke、透明度
+- **可访问**——可以加 title 和 desc 元素
+- **无外部依赖**——不需要加载字体文件
 
-远程引用失败的情况各不相同，网上也有很多解决方案，但最佳解决办法还是本地化。
+### 流行的 SVG 图标库
+
+| 库 | 特点 | 使用方式 |
+|------|------|---------|
+| **Lucide** | 开源，轻量 | npm 包或 CDN |
+| **Heroicons** | 由 Tailwind CSS 团队制作 | React/Vue 组件 |
+| **Phosphor Icons** | 6 种风格 | 灵活多变 |
+| **Tabler Icons** | 4000+ 图标 | SVG sprite |
+
+```bash
+# 以 Lucide 为例
+npm install lucide
+
+# 在 React 中使用
+import { User, Heart } from 'lucide-react';
+
+function MyComponent() {
+  return (
+    <div>
+      <User size={24} />
+      <Heart className="text-red-500" size={24} />
+    </div>
+  );
+}
+```
+
+> **经验之谈：** 我从 Font Awesome 切换到 Lucide 的主要原因有两个：**一是图标可以多色了，二是按需加载**——Font Awesome 加载整个字体文件（几百 KB），Lucide 按组件打包（几 KB）。在性能敏感的页面上，这个差异很明显。
+
+## 怎么选
+
+**选字体图标：**
+- 项目需要快速集成、不需要多色图标
+- 团队对字体图标更熟悉
+- 站点已经用了 Font Awesome，没必要换
+
+**选 SVG 图标：**
+- 需要多色图标或自定义样式
+- 性能敏感（按需加载优于字体文件）
+- 使用 React/Vue 等组件化框架
+- 需要更好的无障碍支持
+
+## 相关推荐
+
+- [网页字体格式详解——font-display 和可变字体](/archives/0035/)
+- [网页配色技巧——从十六进制到现代 CSS 颜色](/archives/0019/)
+- [网页前端性能优化——图标加载策略](/archives/0021/)
+
+**P.S.** 说到字体图标的"单色缺陷"，我以前有个项目要求图标在不同状态下显示不同颜色，但还要求 hover 时变成渐变色。字体图标做不到，最后用 SVG 图标解决了。**有时候限制会逼你发现更好的方案。** 如果字体图标完全满足你的需求，继续用——但如果它的限制开始成为问题，是时候看看 SVG 图标了。

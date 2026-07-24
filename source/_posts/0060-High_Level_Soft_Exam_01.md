@@ -165,7 +165,7 @@ RFID射频技术
 1）会话Bean(Session Bean)
 2）实体Bean(Entity Bean)
 3）消息驱动Bean (Message-driven Bean)
-http://32.COM（重要）
+### DCOM（重要）
 
 DCOM是COM的进一步扩展，DCOM具有位置独立性，DCOM具有语言无关性；COM+“并不是COM的新版本”，我们可以把它理解为COM的新发展；
 

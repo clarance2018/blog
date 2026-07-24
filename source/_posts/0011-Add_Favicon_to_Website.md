@@ -1,47 +1,112 @@
-title: 怎样给自己网站加上favicon.ico图标？
+---
+title: 怎样给自己的网站加上 Favicon——2026 年最佳实践
 categories: Web开发
-tags: [网站百科,网站技巧]
+tags: [Favicon,网站图标,SVG,前端开发,PWA,apple-touch-icon]
 date: 2020-06-11 14:38:36
+updated: 2026-07-24 10:00:00
 id: 0011
 ---
-我们先来认识下favicon，它是英文Favorites Icon的缩写，顾名思义，其本意是让浏览器的收藏夹中除显示相应的文字标题外，还能以图标的方式区别不同的网站。一般业界中文俗称站标，现在多数浏览器都已支持直接在窗口标签上或地址栏中显示站标。一个好的网站想在推广方面取得成功，不仅需要良好的页面设计、令人印象深刻的网站Logo，也应该有独树一帜的favicon站标。今天我们就针对新手站长来探讨一下，如何为自己网站添加favicon.ico站标？
 
-实际上favicon.ico就是一个特殊格式的图片，按照既定规则准备好这样的图片放到网站，浏览器就能识别并显示出来，网站站标favicon.ico的尺寸通常是64X64、48X48、32X32像素这几种规格。既然是图片，那么我们首先就需要用制图软件设计出来，要求高的话还可以请专业设计人员制作，有的制图软件可以直接保存为.ico格式，如果不能也可以通过在线转换工具将jpg、png等格式转为ico格式。
-<p style="text-align: center;"><img class="aligncenter" title="20171108100751.png" src="https://www.6mal.com/img/2020/201711081510107620813955.png" alt="20171108100751.png" /></p>
-现在我们来说一下规则，一般情况下浏览器只能识别名为favicon.ico的图标文件作为站标，且必须是真实的.ico格式（扩展名），只改扩展名可能导致浏览器无法识别。将favicon.ico文件放在网站根目录下（到底什么是网站根目录？），也就是网站首页文件（如index.html/index.php等）所在目录（注意与模板目录区别开），浏览器就能自动读取。如果需要考虑兼容相对老旧浏览器，则可以在网站首页或头部模板文件head部分加上如下声明代码：
-<blockquote>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;
+你有没有在浏览器标签栏的一堆标签页里，靠图标来找你想看的那个网页？
 
-&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</blockquote>
-以上代码需加在&lt;/head&gt;标签之前，第一行为必须且所有浏览器都支持，第二行仅在需要区别IE和标准浏览器并使用不同图标时使用，使用声明代码后，站标图片文件则可以不必限于favicon.ico名称，使用GIF 文件type应为 image/gif， PNG 文件则为 image/png，也可以放在其它目录，同时也可以为不同目录的首页文件各自声明不同的站标。
+我就是这样。当 tab 开多了，文字标题被遮挡，**唯一能帮我定位网页的就是那个小图标。**
 
-随着老旧浏览器的淘汰，现在各种较新版本浏览器基本都能自动识别网站根目录下的favicon.ico站标，所以也有很多站长已不再使用声明代码这种方式，而且大家比较公认的通常做法也是将favicon.ico文件上传到网站根目录，这种方式对同一域名下全站目录有效。
+这就是 favicon 的作用——不显眼，但没有它，你的网站在浏览器里就是"无名氏"。
 
-对于站标到底要不要放根目录、要不要起另外的名称，可以参考看看以下知名网站的站标：
+**一句话理解：** Favicon 是网站的"头像"——它出现在浏览器标签页、收藏夹、地址栏旁边，是用户第一眼识别你网站的标志。
 
-https://www.baidu.com/favicon.ico
+## 2026 年推荐方案
 
-https://www.taobao.com/favicon.ico
+### SVG Favicon（推荐）
 
-http://www.qq.com/favicon.ico
+以前 favicon 只能用 `.ico` 格式，现在可以用 SVG 了：
 
-http://www.163.com/favicon.ico
+```html
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+```
 
-http://www.sina.com.cn/favicon.ico
+SVG 的好处：
+- **矢量**：任何分辨率下都清晰，Retina 屏也没问题
+- **多色**：可以包含多种颜色
+- **体积小**：通常几百字节到几 KB
+- **支持 dark mode**：可以跟随系统主题
 
-下面我们顺便讲一下Apple设备私有的apple-touch-icon图标属性：
-<blockquote>&lt;link rel="apple-touch-icon" href="appleicon.png"&gt;</blockquote>
-添加该语句后，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户从主屏中随时点击访问，相当于Windows系统的桌面快捷方式。实现方法是在HTML文档的&lt;head&gt;标签加入以上代码即可。
+### 多尺寸兼容
 
-apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备：57×57（默认值）的图标对应320×640的iphone老设备、72×72对应ipad、114×114对应retina屏的iPhone及iTouch、ipad3对应144×144的高分辨率。
+虽然 SVG 是趋势，但不是所有地方都支持它。稳妥的做法是提供多个尺寸：
 
-所以，理论上完善的写法是：
-<blockquote>&lt;link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone.png"&gt;
+```html
+<!-- 推荐方案 -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+```
 
-&lt;link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png"&gt;
+### 深色主题支持
 
-&lt;link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png"&gt;
+```html
+<!-- 浅色主题用彩色图标 -->
+<link rel="icon" type="image/svg+xml" href="/favicon-light.svg" 
+      media="(prefers-color-scheme: light)">
+<!-- 深色主题用白色或浅色图标 -->
+<link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" 
+      media="(prefers-color-scheme: dark)">
+```
 
-&lt;link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad3-144.png"&gt;</blockquote>
-但实际上很多网站并没有用到sizes属性，而是只预置了一种尺寸的图标让其自动缩放。虽然苹果官方都用的png图片做说明，但实际测试jpg格式也可用（不推荐），图片无需做圆角和高光效果，同Native App一样，系统会自动为图标添加圆角及高光。如果不想系统对图标添加该效果，可以用apple-touch-icon-precomposed代替apple-touch-icon，为了独具特色就可以自己做圆角和高亮效果了。
+### Apple Touch Icon
 
-如果您的网站是由ZBlogPHP程序架构，那么以上知识大致读读就好，这里安利一款由本站站长制作的《Favicon站标设置》免费插件，不必修改模板代码就可以轻松实现站标的设置和添加操作，可以在自己网站后台应用中心搜索“Favicon站标设置”找到插件直接下载启用。
+iOS 用户把网站添加到主屏时需要这个：
+
+```html
+<!-- 基础版 -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- 完整版 -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120.png">
+```
+
+> **经验之谈：** Apple touch icon 不需要自己做圆角——iOS 系统会自动给图标加上圆角和高光。你只需要提供一个 180×180 的纯方形图标就好了。我做第一次时花了半小时给图标加圆角，后来发现 iOS 会自动加——白忙活了。
+
+## 完整配置
+
+这是我的博客目前的 favicon 配置：
+
+```html
+<!-- 基础 favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- 深色模式适配 -->
+<link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" 
+      media="(prefers-color-scheme: dark)">
+
+<!-- Apple touch icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- PWA manifest -->
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Windows 磁贴 -->
+<meta name="msapplication-TileColor" content="#2d8cf0">
+<meta name="theme-color" content="#2d8cf0">
+```
+
+## 制作工具
+
+2026 年不需要手动做 ico 了：
+
+1. **SVG 图标**：用 Figma 或 Sketch 设计，导出为 SVG
+2. **Favicon 生成器**：传入一张图片，自动生成所有尺寸（推荐：realfavicongenerator.net）
+3. **Emoji 临时方案**：没设计好图标前，可以用 Emoji 当 Favicon（通过 SVG 内嵌 Emoji）
+
+## 相关推荐
+
+- [到底什么是网站根目录？](/archives/0037/)
+- [Meta 标签功能大全——Apple-touch-icon 配置](/archives/0006/)
+- [2026 年如何给你的网站添加 OG 标签](/archives/0029/)
+
+**P.S.** 我博客的 favicon 是一个很简单的"飞鲤"首字母变形——一共花了半小时设计。但就是这半小时的投入，让朋友第一次看到我的博客时说"这个图标挺有意思"。**很多时候，好的细节不是花了很多时间做的，是用心做的。** 如果你还没有 favicon，今天花 10 分钟做一个吧。
