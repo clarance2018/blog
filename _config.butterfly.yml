@@ -101,7 +101,7 @@ category_img: /img/bk_img/background4.webp
 category_per_img: /img/bk_img/background7.webp
 
 # The background image of footer
-footer_img: false
+footer_img: /img/bk_img/background6.webp
 
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
