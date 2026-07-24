@@ -103,8 +103,8 @@ document.body.innerHTML = document.body.innerHTML.replace(/﻿/g, '');
 
 ## 相关推荐
 
-- [GB2312、GBK 和 UTF-8 的区别——2026 年还在纠结编码？](/archives/0008/)
-- [Meta 标签功能大全——编码标签的正确用法](/archives/0006/)
-- [常见 Meta 标签参考和用途介绍](/archives/0038/)
+- [GB2312、GBK 和 UTF-8 的区别——2026 年还在纠结编码？](/archives/8/)
+- [Meta 标签功能大全——编码标签的正确用法](/archives/6/)
+- [常见 Meta 标签参考和用途介绍](/archives/38/)
 
 **P.S.** 那次排查 BOM 问题花了我一个多小时——现在回想起来，如果当时知道看 `xxd` 输出或者 `git diff` 就知道是 BOM 问题了。**有些问题不是难，是你还不知道看哪个地方。** 下次遇到页面顶部空白，不要调 CSS margin 了，先查文件编码。

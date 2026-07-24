@@ -88,7 +88,7 @@ id: 0002
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://6mal.com"},
     {"@type": "ListItem", "position": 2, "name": "Web开发", "item": "https://6mal.com/categories/web"},
-    {"@type": "ListItem", "position": 3, "name": "这篇文章", "item": "https://6mal.com/archives/0002/"}
+    {"@type": "ListItem", "position": 3, "name": "这篇文章", "item": "https://6mal.com/archives/2/"}
   ]
 }
 ```
@@ -156,8 +156,8 @@ flowchart LR
 
 ## 相关推荐
 
-- [Meta 标签功能大全——你可能不知道的 20 种用法](/archives/0006/)
-- [真正能提高网站流量的方法——2026 年 SEO 策略](/archives/0010/)
-- [如何给你的网站添加 OG 标签——Open Graph 实战指南](/archives/0029/)
+- [Meta 标签功能大全——你可能不知道的 20 种用法](/archives/6/)
+- [真正能提高网站流量的方法——2026 年 SEO 策略](/archives/10/)
+- [如何给你的网站添加 OG 标签——Open Graph 实战指南](/archives/29/)
 
 **P.S.** 我第一次配置结构化数据时犯了最蠢的错误——把 `@type: Article` 写成了 `@type: "Aritcle"`（少了个 e）。Google Rich Results Test 直接报错。修改后重新提交，第二天就在搜索结果里看到了"富结果"展示——**那种感觉就像你的网站在搜索结果里"发光"了。**

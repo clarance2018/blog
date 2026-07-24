@@ -60,7 +60,7 @@ server {
 ```nginx
 # root：会把路径附加到根目录后
 root /var/www/6mal.com;
-# 请求 /archives/0037/ → 找 /var/www/6mal.com/archives/0037/
+# 请求 /archives/37/ → 找 /var/www/6mal.com/archives/37/
 
 # alias：会直接替换路径前缀
 location /blog {
@@ -132,8 +132,8 @@ docker exec -it my-nginx ls /usr/share/nginx/html
 
 ## 相关推荐
 
-- [绝对路径和相对路径：让我吃过亏才真正理解的区别](/archives/0028/)
-- [网站基础术语入门——你该知道的 20 个核心概念](/archives/0018/)
-- [到底什么是 SSL 和 HTTPS？](/archives/0026/)
+- [绝对路径和相对路径：让我吃过亏才真正理解的区别](/archives/28/)
+- [网站基础术语入门——你该知道的 20 个核心概念](/archives/18/)
+- [到底什么是 SSL 和 HTTPS？](/archives/26/)
 
 **P.S.** 回到开头那个故事——后来我学乖了：上传文件前先 `pwd` 或在 FTP 里看一眼确认目录。再后来我连 FTP 都不用了，全改成 `rsync` 自动部署。手动操作的次数越少，犯错的概率就越低。**自动化不仅仅是提高效率，更是减少人为失误的最后一道防线。**

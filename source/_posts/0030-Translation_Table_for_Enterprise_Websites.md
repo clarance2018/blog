@@ -118,8 +118,8 @@ Home → Products → About Us → Contact
 
 ## 相关推荐
 
-- [网站基础术语入门——你该知道的 20 个核心概念](/archives/0018/)
-- [企业网站应该选择哪种建站方式？](/archives/0014/)
-- [虚拟主机到 Docker——网站部署方案怎么选？](/archives/0016/)
+- [网站基础术语入门——你该知道的 20 个核心概念](/archives/18/)
+- [企业网站应该选择哪种建站方式？](/archives/14/)
+- [虚拟主机到 Docker——网站部署方案怎么选？](/archives/16/)
 
 **P.S.** 我去年看到某大厂的英文官网，把"解决方案"翻译成了 "Solution Plan Scheme"——三个词都是对的，但放一起就成了"搞笑"。写代码的人都知道 DRY（Don't Repeat Yourself）原则，翻译也是。**一个意思，说一次就够了。**

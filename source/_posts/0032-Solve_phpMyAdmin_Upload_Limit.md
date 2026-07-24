@@ -128,8 +128,8 @@ docker exec -i mysql-container mysql -u root -p123456 mydb < large-file.sql
 
 ## 相关推荐
 
-- [虚拟主机到 Docker——网站部署方案怎么选？](/archives/0016/)
-- [网站基础术语入门——数据库相关概念](/archives/0018/)
-- [各大邮箱 SMTP 限制对比——2026 年版](/archives/0034/)
+- [虚拟主机到 Docker——网站部署方案怎么选？](/archives/16/)
+- [网站基础术语入门——数据库相关概念](/archives/18/)
+- [各大邮箱 SMTP 限制对比——2026 年版](/archives/34/)
 
 **P.S.** 这篇文章其实是写给以前的我自己的——当年我为了改 phpMyAdmin 的上传限制，花了好几个小时。后来换了 Adminer 发现什么配置都不用改——**有时候不是问题太难，是工具没选对。**

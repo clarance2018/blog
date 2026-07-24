@@ -74,7 +74,7 @@ Meta 标签看起来多，其实可以分成 6 组，每组 2-5 个标签。分�
 <meta name="twitter:image" content="https://example.com/cover.jpg">
 ```
 
-关于 OG 标签的具体用法，我在[另一篇文章](/archives/0029/)里有详细介绍，这里不展开了。
+关于 OG 标签的具体用法，我在[另一篇文章](/archives/29/)里有详细介绍，这里不展开了。
 
 ### 4. 浏览器行为控制
 
@@ -160,8 +160,8 @@ Meta 标签看起来多，其实可以分成 6 组，每组 2-5 个标签。分�
 
 ## 相关推荐
 
-- [H1 标签到底怎么用才正确？一个被低估的 SEO 因素](/archives/0007/)
-- [如何给你的网站添加 OG 标签——Open Graph 实战指南](/archives/0029/)
-- [常见 Meta 标签参考和用途介绍（速查表）](/archives/0038/)
+- [H1 标签到底怎么用才正确？一个被低估的 SEO 因素](/archives/7/)
+- [如何给你的网站添加 OG 标签——Open Graph 实战指南](/archives/29/)
+- [常见 Meta 标签参考和用途介绍（速查表）](/archives/38/)
 
 **P.S.** 写完这篇文章之后我又去翻了一遍 MDN，果然发现了一个之前没注意到的 meta——`<meta name="google" content="notranslate">`，用来禁止 Google 翻译对页面进行自动翻译。说实话，这些 meta 标签就像武功秘籍，你以为你练完了，翻到下一页发现还有新招式。

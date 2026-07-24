@@ -41,7 +41,7 @@ GET 和 POST 的**本质区别**不是技术实现，而是**语义**。
 
 ```http
 // GET：我需要这个资源
-GET /archives/0040/ HTTP/1.1
+GET /archives/40/ HTTP/1.1
 Host: 6mal.com
 
 // POST：我创建了一个新资源
@@ -64,7 +64,7 @@ Content-Type: application/json
 
 ```bash
 # 第 1 次：去服务器请求
-curl https://6mal.com/archives/0040/  # 200 OK
+curl https://6mal.com/archives/40/  # 200 OK
 
 # 第 2 次：浏览器直接从缓存取
 # 点击同一个链接 → 浏览器缓存命中 → 几乎瞬间展示
@@ -146,8 +146,8 @@ graph TD
 
 ## 相关推荐
 
-- [标记语言、脚本语言、编译语言的区别——理清你的技术栈](/archives/0039/)
-- [12 种最常用的网页编程语言——2026 年最新排名](/archives/0041/)
-- [判断一个网站是由哪种语言开发的](/archives/0031/)
+- [标记语言、脚本语言、编译语言的区别——理清你的技术栈](/archives/39/)
+- [12 种最常用的网页编程语言——2026 年最新排名](/archives/41/)
+- [判断一个网站是由哪种语言开发的](/archives/31/)
 
 **P.S.** 每次面试问完这个问题的候选人，我都会再问一句："那你知道 OPTIONS 请求是干嘛的吗？"大部分人又卡住了。所以这篇文章其实只说了 REST 里最基础的四个动词——HTTP 其实定义了 9 种方法，还有 HEAD、OPTIONS、TRACE、CONNECT 没讲。你如果能把 GET 和 POST 的区别说清楚，已经超越了 90% 的面试者了。

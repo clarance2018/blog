@@ -109,8 +109,8 @@ Flexbox 适合"一行或一列"的排列：
 
 ## 相关推荐
 
-- [HTML5 div、article、section 到底怎么选？](/archives/0005/)
-- [响应式设计从 Table 到 Grid 的进化](/archives/0009/)
-- [网页配色技巧——从十六进制到 OKLCH](/archives/0019/)
+- [HTML5 div、article、section 到底怎么选？](/archives/5/)
+- [响应式设计从 Table 到 Grid 的进化](/archives/9/)
+- [网页配色技巧——从十六进制到 OKLCH](/archives/19/)
 
 **P.S.** 我家里现在还存着一本 2008 年的《Dreamweaver 网页设计教程》，里面有一整章在教怎么用 table 做页面布局。现在翻出来看，感觉像在看考古文献一样。技术的迭代就是这么快——**五年前的主流实践，五年后可能就成了反面教材。** 保持学习，保持怀疑，是我在这行学到的最重要的事。
