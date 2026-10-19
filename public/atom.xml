@@ -6,7 +6,7 @@
   <link href="https://6mal.com/atom.xml" rel="self"/>
   
   <link href="https://6mal.com/"/>
-  <updated>2026-08-13T01:27:02.803Z</updated>
+  <updated>2026-10-19T07:21:43.810Z</updated>
   <id>https://6mal.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Meta 押注的东西，Codex 和 Claude Code 两周内也全上了：Agent 记忆之战开打</title>
+    <link href="https://6mal.com/archives/120/"/>
+    <id>https://6mal.com/archives/120/</id>
+    <published>2026-10-19T02:00:00.000Z</published>
+    <updated>2026-10-19T07:21:43.810Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果你在九月底问一个 AI 从业者“大模型下一步卷什么”，答案大概率是推理能力、多模态或者更便宜的 token。但十月中旬的两周里，几乎所有头部玩家不约而同地给出了同一个答案：&lt;strong&gt;记忆&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Meta</summary>
+        
+      
+    
+    
+    
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
+    
+    
+    <category term="Claude Code" scheme="https://6mal.com/tags/Claude-Code/"/>
+    
+    <category term="上下文管理" scheme="https://6mal.com/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="Meta" scheme="https://6mal.com/tags/Meta/"/>
+    
+    <category term="Muse Wonder" scheme="https://6mal.com/tags/Muse-Wonder/"/>
+    
+    <category term="Agent记忆" scheme="https://6mal.com/tags/Agent%E8%AE%B0%E5%BF%86/"/>
+    
+    <category term="Codex" scheme="https://6mal.com/tags/Codex/"/>
+    
+  </entry>
   
   <entry>
     <title>不要随意介入他人的因果——成年人最难得的清醒</title>
@@ -629,37 +665,6 @@
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客维护操作全记录</title>
-    <link href="https://6mal.com/archives/100/"/>
-    <id>https://6mal.com/archives/100/</id>
-    <published>2025-06-02T08:44:00.000Z</published>
-    <updated>2025-06-03T06:52:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;部署架构演进&quot;&gt;&lt;a href=&quot;#部署架构演进&quot; class=&quot;headerlink&quot; title=&quot;部署架构演进&quot;&gt;&lt;/a&gt;部署架构演进&lt;/h2&gt;&lt;h3 id=&quot;第一阶段：纯服务器部署&quot;&gt;&lt;a href=&quot;#第一阶段：纯服务器部署&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Web开发" scheme="https://6mal.com/categories/Web%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="git" scheme="https://6mal.com/tags/git/"/>
     
     <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
     
