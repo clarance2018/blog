@@ -6,7 +6,7 @@
   <link href="https://6mal.com/atom.xml" rel="self"/>
   
   <link href="https://6mal.com/"/>
-  <updated>2026-10-19T07:21:43.810Z</updated>
+  <updated>2026-10-27T02:09:02.353Z</updated>
   <id>https://6mal.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QQ 接入 DeepSeek Harness：全程提示词教程</title>
+    <link href="https://6mal.com/archives/212/"/>
+    <id>https://6mal.com/archives/212/</id>
+    <published>2026-10-27T01:00:00.000Z</published>
+    <updated>2026-10-27T02:09:02.353Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近「把 AI Agent 接进 QQ 群」这件事突然火了起来——让模型像一个真实的群友一样读消息、接话、甚至主动发言，体验相当奇妙。我自己完整走了一遍：QQ 客户端通过 SnowLuma 注入并翻译成 OneBot v11 协议，再由 qq-bridge 接入</summary>
+        
+      
+    
+    
+    
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
+    
+    
+    <category term="DeepSeek" scheme="https://6mal.com/tags/DeepSeek/"/>
+    
+    <category term="MCP" scheme="https://6mal.com/tags/MCP/"/>
+    
+    <category term="QQ机器人" scheme="https://6mal.com/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    
+    <category term="Agent" scheme="https://6mal.com/tags/Agent/"/>
+    
+    <category term="提示词" scheme="https://6mal.com/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/"/>
+    
+    <category term="教程" scheme="https://6mal.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Meta 押注的东西，Codex 和 Claude Code 两周内也全上了：Agent 记忆之战开打</title>
@@ -631,37 +666,6 @@
     
     
     <category term="生活随笔" scheme="https://6mal.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打造你的专属卡通人数字分身：三步搞定！</title>
-    <link href="https://6mal.com/archives/101/"/>
-    <id>https://6mal.com/archives/101/</id>
-    <published>2025-07-09T16:00:00.000Z</published>
-    <updated>2025-07-10T08:05:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;想拥有一个会说话、能互动的卡通版自己？跟着这三步走，轻松创建超逼真的数字分身！&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;🎤-第一步：克隆你的声音-海螺AI&quot;&gt;&lt;a href=&quot;#🎤-第一步：克隆你的声音-海螺AI&quot; class=&quot;headerlink&quot; title=&quot;🎤</summary>
-        
-      
-    
-    
-    
-    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>

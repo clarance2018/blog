@@ -26,9 +26,8 @@ npm run clean
 # 清理 + 重新生成
 npm run clean && npm run build
 
-# 部署（通过 Docker 容器构建 + git push + rsync 同步到远程服务器）
-./gitpush.sh "提交信息"        # 仅生成（默认）
-./gitpush.sh "提交信息" cl     # 清理后重新生成
+# 部署（Docker 容器内 hexo 清理重建 + 重启容器 + 提交推送到 GitHub）
+./deploy.sh "提交信息"
 ```
 
 ## Architecture
@@ -60,14 +59,13 @@ Hexo 的约定：主题配置文件命名为 `_config.<theme>.yml` 时，会覆�
 
 ### Deployment Pipeline
 
-部署通过 `gitpush.sh` 完成，流程：
-1. 在 `hexo-blog` Docker 容器中执行 `hexo g`（或 `hexo clean && hexo g`）
-2. 将 `public/` 目录推送到 GitHub（`clarance2018/blog`）的 main 分支
-3. 通过 rsync + SSH 同步到远程服务器（OpenResty/nginx）
+部署通过 `deploy.sh` 一键完成（详见 `.claude/skills/deploy-blog/SKILL.md`）：
+1. 前置检查 `hexo-blog` 容器存在且在运行
+2. 在 `hexo-blog` Docker 容器内依次执行 `hexo clean`、`hexo generate`
+3. 重启 `hexo-blog` 容器
+4. `git add -A`（含 `public/` 静态产物）→ commit → push 到 GitHub（`clarance2018/blog`）的 main 分支
 
-Docker 容器配置见 `docker-compose.yml`，使用 `spurin/hexo` 镜像，端口映射 8056:4000。
-- 容器挂载路径：`/vol3/1000/docker/hexo-blog:/app`
-- 远程服务器部署路径：`/opt/1panel/apps/openresty/openresty/www/sites/blog/index`
+Docker 容器使用 `spurin/hexo` 镜像，端口映射 8056:4000，本机运行时实际挂载：`/home/clarance/gitcode/blog:/app`（`docker-compose.yml` 中的 `/vol3/...` 为旧 NAS 配置残留，以 `docker inspect` 为准）。部署流程终点为 GitHub；同步到线上服务器另行处理。
 
 ### Installed Plugins
 
@@ -89,6 +87,5 @@ Docker 容器配置见 `docker-compose.yml`，使用 `spurin/hexo` 镜像，端�
 ## Important Notes
 
 - `source/` 目录和 `themes/butterfly/` 目录在新 clone 后需要通过 `npm install` 安装依赖（butterfly 主题通过 npm 包管理）
-- `public/` 和 `node_modules/` 被 `.gitignore` 忽略，不入版本控制
+- `node_modules/` 被 `.gitignore` 忽略；`public/` 静态产物是入库的（随每次部署提交更新）
 - Butterfly 主题定制全部在 `_config.butterfly.yml` 中完成，不要直接改主题目录下的文件
-- 部署脚本 `gitpush.sh` 使用 SSH 密钥认证，密钥路径：`/root/.ssh/124.220.71.26_20250416093341_id_rsa`
