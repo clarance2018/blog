@@ -6,7 +6,6 @@ date: 2022-10-23 15:57:51
 ![](/img/bk_img/background1.webp)
 ![](/img/bk_img/background2.webp)
 ![](/img/bk_img/background3.webp)
-![](/img/bk_img/background3.webp)
 ![](/img/bk_img/background4.webp)
 ![](/img/bk_img/background5.webp)
 ![](/img/bk_img/background6.webp)
@@ -14,4 +13,6 @@ date: 2022-10-23 15:57:51
 ![](/img/bk_img/background8.webp)
 ![](/img/bk_img/background9.webp)
 ![](/img/bk_img/background10.webp)
+![](/img/bk_img/background11.webp)
+![](/img/bk_img/background12.webp)
 {% endgallery %}
