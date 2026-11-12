@@ -6,7 +6,7 @@
   <link href="https://6mal.com/atom.xml" rel="self"/>
   
   <link href="https://6mal.com/"/>
-  <updated>2026-10-27T02:09:02.353Z</updated>
+  <updated>2026-11-12T00:36:59.433Z</updated>
   <id>https://6mal.com/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给娃写了个作业工作台：零第三方依赖跑在家庭局域网，还能让 Claude 帮忙录作业</title>
+    <link href="https://6mal.com/archives/213/"/>
+    <id>https://6mal.com/archives/213/</id>
+    <published>2026-11-12T01:30:00.000Z</published>
+    <updated>2026-11-12T00:36:59.433Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;家里有个小学生的人都懂这个流程：老师在群里甩一段作业原文，家长复制到备忘录里手动拆成一条条任务，晚上再盯着娃逐项打卡、检查、签字。市面上的打卡 App</summary>
+        
+      
+    
+    
+    
+    <category term="AI探索" scheme="https://6mal.com/categories/AI%E6%8E%A2%E7%B4%A2/"/>
+    
+    
+    <category term="开源项目" scheme="https://6mal.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="Claude" scheme="https://6mal.com/tags/Claude/"/>
+    
+    <category term="MCP" scheme="https://6mal.com/tags/MCP/"/>
+    
+    <category term="Node.js" scheme="https://6mal.com/tags/Node-js/"/>
+    
+    <category term="SQLite" scheme="https://6mal.com/tags/SQLite/"/>
+    
+    <category term="家庭教育" scheme="https://6mal.com/tags/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2/"/>
+    
+    <category term="自托管" scheme="https://6mal.com/tags/%E8%87%AA%E6%89%98%E7%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>QQ 接入 DeepSeek Harness：全程提示词教程</title>
@@ -636,36 +673,6 @@
     
     
     <category term="Docker运维" scheme="https://6mal.com/categories/Docker%E8%BF%90%E7%BB%B4/"/>
-    
-    
-    <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经验分享" scheme="https://6mal.com/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="记录" scheme="https://6mal.com/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>江湖算命秘术——《英耀篇·拿心赋》详解</title>
-    <link href="https://6mal.com/archives/102/"/>
-    <id>https://6mal.com/archives/102/</id>
-    <published>2025-07-18T01:31:00.000Z</published>
-    <updated>2025-07-22T01:32:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一次偶然的机会在小视频刷到了《英耀篇》，跑去找来看了看觉得这是一个很有意思的内容。我觉得这个对自己在生活学习中也有很多值得学习和借鉴的地方，所有分享给大家。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="生活随笔" scheme="https://6mal.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
     <category term="技术笔记" scheme="https://6mal.com/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
